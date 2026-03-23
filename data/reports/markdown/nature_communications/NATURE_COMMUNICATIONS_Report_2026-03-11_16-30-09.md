@@ -1,0 +1,2188 @@
+# 📊 Nature Communications 研究报告 (2026-03-11)
+
+> 生成时间: 2026-03-11 16:30:09
+> 数据源: Nature Communications
+
+> ⚠️ **注意**: 该数据源不支持PDF下载，仅提供评分和摘要翻译，无深度分析
+
+## 📌 配置信息
+
+### 关键词列表（共 3 个，总权重 3.0）
+
+| 关键词 | 权重 | 类型 |
+|--------|------|------|
+| medical image analysis | 1.0 | 主要 |
+| medical imaging | 1.0 | 主要 |
+| deep learning medical imaging | 1.0 | 主要 |
+
+### 评分设置
+
+- **每个关键词最大分**: 10
+- **及格分公式**: 5.0 + 3.0 × 总权重
+- **当前及格分**: 14.0
+
+## 📈 论文统计
+
+- **总抓取**: 47 篇
+- **及格论文**: 1 篇 (2.1%)
+- **深度分析**: 1 篇
+
+---
+
+## ⭐ 及格论文详细分析
+
+### 1. Heterogeneity in lysosomal dynamics and metabolic functions along the kidney proximal tubule
+
+**作者**: Monika Kamińska, Imene B. Sakhi, Nevena Jankovic, Marcello Polesel, Andrew M. Hall
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70306-5](https://doi.org/10.1038/s41467-026-70306-5)
+
+**评分**: 17.0 / 14.0 ✅
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 8.0/10 | 8.0 |
+| medical imaging | 1.0 | 9.0/10 | 9.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文使用活细胞和活体成像技术（intravital imaging）研究肾脏近端小管中溶酶体的动态行为和代谢功能，这属于医学影像分析范畴，因此与'medical image analysis'和'medical imaging'高度相关（分别评8分和9分）。然而，论文未提及深度学习技术，摘要中未出现'deep learning'、'neural network'、'AI'或相关术语，因此'deep learning medical imaging'评0分。加权总分计算：8.0×1.0 + 9.0×1.0 + 0.0×1.0 = 17.0，高于及格分14.0。作者列表中未包含指定专家。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过活体成像技术揭示了小鼠肾脏近端小管中溶酶体在分布、动态和代谢功能上存在显著的轴向异质性，早期区域主要降解过滤的蛋白质，而后期区域则参与脂质代谢和线粒体相关脂滴的降解。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 肾脏近端小管是一种高度特化的上皮组织，负责转运代谢产物并维持机体稳态。该肾单位区段的衬里细胞中密集分布着溶酶体，但这些细胞器在原位的动态活动尚不明确。本研究通过靶向传感器、活细胞成像及活体成像技术，追踪了小鼠近端小管中酸化溶酶体的活动，并揭示了其在分布特征、细胞器相互作用方面存在显著的轴向异质性。在近端小管起始段，富含组织蛋白酶（cathepsin）的溶酶体频繁接触顶端内体，以接收并降解滤过的血浆蛋白。相反，在近端小管后段，含脂肪酶的溶酶体穿梭于细胞中，动员并降解与线粒体相关的脂滴，促进其排入小管腔。急性消除溶酶体酸度会显著改变其运动模式，导致小管内蛋白质和脂质处理过程发生重大变化。因此，近端小管中的溶酶体具有高度动态性，并适应于不同特化区段执行各异的代谢任务。肾脏近端小管衬里细胞虽富含溶酶体，但其原位动态活动知之甚少。本研究作者利用活体成像及靶向探针，研究了沿肾脏近端小管的溶酶体行为，发现了溶酶体动力学、细胞器相互作用及代谢功能存在显著的轴向异质性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The kidney proximal tubule is a highly specialized epithelium that transports metabolites and maintains body homeostasis. Cells lining this nephron segment are densely packed with lysosomes, but little is known about the dynamic activity of these organelles in situ. Here, using targeted sensors and live cell and intravital imaging we track acidified lysosomes along the mouse proximal tubule and uncover marked axial heterogeneity in their distribution, characteristics and organellar interactions. In the early part, cathepsin-rich lysosomes frequently contact with apical endosomes to receive and catabolize filtered plasma proteins. Conversely, in the later region, lipase-containing lysosomes traverse cells to mobilize and degrade mitochondria-associated lipid droplets and facilitate their extrusion into the tubular lumen. Acutely de-acidifying lysosomes dramatically alters their movement, causing major changes in tubular protein and lipid processing. Thus, lysosomes in proximal tubules are highly dynamic and adapted to perform distinct metabolic tasks within different specialized segments. Cells lining the kidney proximal tubule are densely packed with lysosomes, but little is known about their dynamic activity in situ. Here, the authors use intravital imaging and targeted probes to study lysosomal behavior along the kidney proximal tubule, and discover substantial axial heterogeneity in lysosomal dynamics, organellar interactions and metabolic functions.
+
+</details>
+<br>
+
+**关键词**: kidney proximal tubule, lysosomes, intravital imaging, metabolic functions, organellar interactions, axial heterogeneity, live cell imaging, cathepsin
+
+**深度分析**:
+
+#### 肾脏近端小管中溶酶体动态和代谢功能的异质性
+
+**摘要**:
+
+> 本研究探讨了肾脏近端小管中溶酶体的动态活动和代谢功能异质性。肾脏近端小管是高度特化的上皮组织，负责代谢物转运和维持体内稳态，其细胞富含溶酶体，但对其在体动态活动了解有限。研究采用靶向传感器、活细胞成像和活体成像技术，追踪小鼠近端小管中酸化溶酶体的分布和特征。研究发现，近端小管不同区段的溶酶体在分布、特性和细胞器相互作用方面存在显著轴向异质性：早期区段富含组织蛋白酶的溶酶体频繁与顶端内体接触，接收并降解过滤的血浆蛋白；而晚期区段含脂肪酶的溶酶体则穿梭于细胞中，动员和降解与线粒体相关的脂滴，并促进其排入管腔。急性去酸化溶酶体会显著改变其运动，导致小管蛋白和脂质处理发生重大变化。研究表明，近端小管中的溶酶体高度动态，并适应于不同特化区段执行不同的代谢任务。
+
+**创新点**:
+- 首次在体揭示肾脏近端小管溶酶体的轴向异质性
+- 发现溶酶体在不同区段执行特异性代谢功能：早期区段降解血浆蛋白，晚期区段处理脂滴
+- 证明溶酶体酸化状态对其动态和代谢功能的关键调控作用
+- 建立活细胞和活体成像技术追踪溶酶体动态活动的方法体系
+
+<details>
+<summary>方法</summary>
+
+!!! info
+
+    研究采用多学科技术路线：1）使用靶向溶酶体的荧光传感器标记和追踪酸化溶酶体；2）应用活细胞成像技术观察体外培养的近端小管细胞中溶酶体动态；3）采用活体成像技术在小鼠肾脏中实时观察溶酶体活动；4）结合代谢组学分析脂质代谢变化；5）使用药理学方法急性改变溶酶体酸化状态，观察功能变化。
+
+</details>
+<br>
+
+**关键结果**:
+- 近端小管早期区段溶酶体富含组织蛋白酶，主要与顶端内体相互作用，参与血浆蛋白的接收和降解
+- 晚期区段溶酶体富含脂肪酶，能够穿梭细胞，降解线粒体相关脂滴并促进其排入管腔
+- 溶酶体酸化状态对其运动模式和代谢功能具有关键调控作用
+- 急性去酸化溶酶体会显著改变其动态，影响蛋白质和脂质处理过程
+- 不同区段溶酶体在分布、特性和细胞器相互作用方面存在显著差异
+
+**技术栈**: 靶向荧光传感器技术, 活细胞成像技术, 活体成像技术, 代谢组学分析, 图像分析软件：DiAna（ImageJ插件）, 脂质组学分析平台：LION/web, 多光子激发显微镜技术
+
+<details>
+<summary>优点</summary>
+
+- 研究设计创新，首次系统揭示近端小管溶酶体轴向异质性
+- 技术方法先进，结合活细胞成像、活体成像和代谢组学多维度分析
+- 生理相关性高，在体研究更接近真实生理状态
+- 机制研究深入，不仅描述现象还阐明功能调控机制
+- 临床意义明确，为肾脏代谢疾病研究提供新视角
+
+</details>
+<br>
+
+<details>
+<summary>局限</summary>
+
+- 研究主要基于小鼠模型，人类肾脏可能存在差异
+- 活体成像技术分辨率有限，可能遗漏亚细胞细节
+- 急性干预实验未能完全模拟慢性病理状态
+- 脂质代谢机制研究仍需进一步深入
+- 样本量相对有限，需要更大规模验证
+
+</details>
+<br>
+
+**与研究方向的相关性**:
+
+> 本研究与医学图像分析高度相关：1）大量使用先进的成像技术，包括活细胞成像、活体成像和多光子显微镜；2）依赖图像分析软件（如DiAna）进行细胞器共定位和距离分析；3）研究结果基于对溶酶体动态的图像追踪和分析；4）图像数据是验证溶酶体异质性和功能的主要依据。论文展示了医学图像分析在细胞器动态研究和代谢功能解析中的关键作用。
+
+---
+
+## 📋 所有论文列表
+
+### 1. ✅ Heterogeneity in lysosomal dynamics and metabolic functions along the kidney proximal tubule
+
+**作者**: Monika Kamińska, Imene B. Sakhi, Nevena Jankovic, Marcello Polesel, Andrew M. Hall
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70306-5](https://doi.org/10.1038/s41467-026-70306-5)
+
+**评分**: 17.0 / 14.0 ✅
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 8.0/10 | 8.0 |
+| medical imaging | 1.0 | 9.0/10 | 9.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文使用活细胞和活体成像技术（intravital imaging）研究肾脏近端小管中溶酶体的动态行为和代谢功能，这属于医学影像分析范畴，因此与'medical image analysis'和'medical imaging'高度相关（分别评8分和9分）。然而，论文未提及深度学习技术，摘要中未出现'deep learning'、'neural network'、'AI'或相关术语，因此'deep learning medical imaging'评0分。加权总分计算：8.0×1.0 + 9.0×1.0 + 0.0×1.0 = 17.0，高于及格分14.0。作者列表中未包含指定专家。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过活体成像技术揭示了小鼠肾脏近端小管中溶酶体在分布、动态和代谢功能上存在显著的轴向异质性，早期区域主要降解过滤的蛋白质，而后期区域则参与脂质代谢和线粒体相关脂滴的降解。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 肾脏近端小管是一种高度特化的上皮组织，负责转运代谢产物并维持机体稳态。该肾单位区段的衬里细胞中密集分布着溶酶体，但这些细胞器在原位的动态活动尚不明确。本研究通过靶向传感器、活细胞成像及活体成像技术，追踪了小鼠近端小管中酸化溶酶体的活动，并揭示了其在分布特征、细胞器相互作用方面存在显著的轴向异质性。在近端小管起始段，富含组织蛋白酶（cathepsin）的溶酶体频繁接触顶端内体，以接收并降解滤过的血浆蛋白。相反，在近端小管后段，含脂肪酶的溶酶体穿梭于细胞中，动员并降解与线粒体相关的脂滴，促进其排入小管腔。急性消除溶酶体酸度会显著改变其运动模式，导致小管内蛋白质和脂质处理过程发生重大变化。因此，近端小管中的溶酶体具有高度动态性，并适应于不同特化区段执行各异的代谢任务。肾脏近端小管衬里细胞虽富含溶酶体，但其原位动态活动知之甚少。本研究作者利用活体成像及靶向探针，研究了沿肾脏近端小管的溶酶体行为，发现了溶酶体动力学、细胞器相互作用及代谢功能存在显著的轴向异质性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The kidney proximal tubule is a highly specialized epithelium that transports metabolites and maintains body homeostasis. Cells lining this nephron segment are densely packed with lysosomes, but little is known about the dynamic activity of these organelles in situ. Here, using targeted sensors and live cell and intravital imaging we track acidified lysosomes along the mouse proximal tubule and uncover marked axial heterogeneity in their distribution, characteristics and organellar interactions. In the early part, cathepsin-rich lysosomes frequently contact with apical endosomes to receive and catabolize filtered plasma proteins. Conversely, in the later region, lipase-containing lysosomes traverse cells to mobilize and degrade mitochondria-associated lipid droplets and facilitate their extrusion into the tubular lumen. Acutely de-acidifying lysosomes dramatically alters their movement, causing major changes in tubular protein and lipid processing. Thus, lysosomes in proximal tubules are highly dynamic and adapted to perform distinct metabolic tasks within different specialized segments. Cells lining the kidney proximal tubule are densely packed with lysosomes, but little is known about their dynamic activity in situ. Here, the authors use intravital imaging and targeted probes to study lysosomal behavior along the kidney proximal tubule, and discover substantial axial heterogeneity in lysosomal dynamics, organellar interactions and metabolic functions.
+
+</details>
+<br>
+
+**关键词**: kidney proximal tubule, lysosomes, intravital imaging, metabolic functions, organellar interactions, axial heterogeneity, live cell imaging, cathepsin
+
+---
+
+### 2. ❌ Molecular mapping in DNA-PAINT via modified Gaussian Mixture Modeling
+
+**作者**: Rafal Kowalewski, Susanne C. M. Reinhardt, Isabelle Pachmayr, Shuhan Xu, Luciano A. Masullo, Ralf Jungmann
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70198-5](https://doi.org/10.1038/s41467-026-70198-5)
+
+**评分**: 6.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 3.0/10 | 3.0 |
+| medical imaging | 1.0 | 3.0/10 | 3.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文专注于超分辨率荧光显微镜（DNA-PAINT）中的分子定位算法（G5M），用于生物分子成像和结构解析，属于生物医学成像的底层技术，与'medical image analysis'和'medical imaging'有一定关联（评分3分），但并非针对临床医学影像（如CT、MRI）的分析，且未涉及深度学习，因此'deep learning medical imaging'完全无关（评分0分）。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究针对DNA-PAINT超分辨率显微镜数据中分子位置推断不准确的问题，提出了一种改进的高斯混合模型算法G5M，在仿真和实验中显著提高了分子定位的准确性和结构恢复能力。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：超分辨率荧光显微镜技术，特别是DNA-PAINT技术，能够实现约2纳米的定位精度，使分子分辨率成像成为可能。为了构建单个生物分子的分子图谱，必须从单个荧光分子产生的定位数据中推断出它们的位置。现有的聚类方法未能充分发挥该成像技术的全部潜力。本文介绍G5M，一种专为DNA-PAINT数据设计的改进型高斯混合模型算法。通过整合定位精度、空间约束和DNA杂交动力学的先验知识，G5M能够准确推断真实的分子位置，同时避免过拟合。在对二聚体的真实模拟中，G5M可在瑞利极限下分辨分子，其分子识别率比现有方法高27倍，且假阳性率低于0.1%。应用于实验数据集时，G5M能够重建完整的核孔复合体结构，并检测出抗体处理诱导的高阶CD20寡聚体，其表现优于传统的DNA-PAINT分析方法。G5M已在开源平台Picasso中实现，为超分辨率显微镜领域的高分辨率、高精度分子图谱构建提供了一个易于使用的解决方案。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Super-resolution fluorescence microscopy, and specifically DNA-PAINT, provides localization precision down to ~2 nm enabling molecular-resolution imaging. To produce molecular maps of single biomolecules, their positions must be inferred from localizations stemming from single fluorescent molecules. Current clustering methods fail to exploit the full potential of the imaging method. Here, we introduce G5M, a modified Gaussian Mixture Modeling algorithm tailored to DNA-PAINT data. By incorporating prior knowledge of localization precision, spatial constraints, and DNA hybridization kinetics, G5M accurately infers true molecular positions while avoiding overfitting. In realistic simulations of dimers, G5M resolves molecules at the Rayleigh limit with a 27-fold higher recovery rate than current methods and &lt;0.1% false positives. Applied to experimental datasets, G5M recovers full nuclear pore complex structures and detects higher-order CD20 oligomers induced by antibody treatment, outperforming conventional DNA-PAINT analysis. G5M is implemented in the open-source Picasso platform, offering an accessible solution for high-resolution, high-accuracy molecular mapping in super-resolution microscopy.
+
+</details>
+<br>
+
+**关键词**: DNA-PAINT, super-resolution microscopy, Gaussian Mixture Modeling, molecular mapping, localization precision, nuclear pore complex, Picasso platform
+
+---
+
+### 3. ❌ Compact mid-infrared fiber probe for in vivo multi-compound monitoring demonstrated using ex vivo human skin
+
+**作者**: Tse-Ang Lee, Tanya Hutter
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70300-x](https://doi.org/10.1038/s41467-026-70300-x)
+
+**评分**: 5.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 2.0/10 | 2.0 |
+| medical imaging | 1.0 | 3.0/10 | 3.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是用于体内多化合物监测的中红外光纤探针，属于生物医学传感技术，而非医学图像分析。关键词'medical image analysis'（医学图像分析）评分为2.0，因为论文涉及生物医学应用但未涉及图像处理或分析；'medical imaging'（医学成像）评分为3.0，因为中红外光谱技术可视为一种成像或传感方法，但论文未直接讨论传统医学成像；'deep learning medical imaging'（深度学习医学成像）评分为0.0，因为论文未涉及深度学习或人工智能技术。加权总分计算为：(2.0 × 1.0) + (3.0 × 1.0) + (0.0 × 1.0) = 5.0。作者列表中未包含指定专家。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种紧凑型中红外光纤探针，用于无标记、同时监测乙醇、葡萄糖和乳酸三种生物标志物，并在离体人皮肤中验证了其性能。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 在组织中对多种生物标志物进行同步监测对于生物医学应用至关重要。然而，现有平台鲜少能够实现并发的体内检测。本研究提出了一种紧凑型中红外透反射光纤探头，用于对三种生理相关生物标志物——乙醇、葡萄糖和乳酸——进行无标记同步监测。该探头由两根卤化银光纤组成（一根为斜面尖端，另一根镀金作为反射镜），封装在聚醚醚酮管中，外部包覆半透膜。其外径仅为1.1毫米，是迄今报道的最小中红外透反射探头。该探头与量子级联激光器耦合，对三种化合物的检测限均达到约1 mM。研究采用谱峰解卷积技术以解析重叠的光谱特征，从而实现了混合物中单个化合物的定量分析。通过与人皮肤离体微透析实验进行对比，验证了探头的性能。此外，研究还演示了在皮肤中对三种化合物浓度变化的监测。本研究报道了一种直径1.1毫米的中红外透反射光纤探头（迄今报道的最小尺寸），能够实现乙醇、葡萄糖和乳酸的无标记同步检测，并在离体人皮肤中进行了验证及与微透析技术的对比。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Simultaneous monitoring of multiple biomarkers in tissues is critical for biomedical applications. However, few existing platforms enable concurrent in vivo detection. This study presents a compact mid-infrared transflection optical fiber probe for label-free, simultaneous monitoring of three physiologically relevant biomarkers – ethanol, glucose, and lactate. The probe comprises two silver halide fibers - one with an angled tip and one gold-coated as mirror - housed in polyetheretherketone tubing and surrounded by a semi-permeable membrane. With an outer diameter of only 1.1 mm, this is the smallest mid-infrared transflection probe reported to date. Coupled with a quantum cascade laser, the probe achieves ~1 mM detection limits for the three compounds. Peak deconvolution was deployed to resolve overlapping spectral features, enabling quantification of individual compounds in mixtures. Validation was performed in ex vivo human skin against microdialysis. Additionally, monitoring of the concentration changes for all three compounds in the skin was demonstrated. This study reports a 1.1-mm diameter mid-infrared transflection fiber probe, the smallest reported to date, enabling label-free, simultaneous detection of ethanol, glucose, and lactate, with validation in ex vivo human skin and comparison to microdialysis.
+
+</details>
+<br>
+
+**关键词**: mid-infrared fiber probe, in vivo monitoring, biomarkers, ethanol, glucose, lactate, ex vivo human skin, quantum cascade laser
+
+---
+
+### 4. ❌ Unbiased recording and identification of thymic cellular interactomes using synthetic Notch receptors
+
+**作者**: Raúl Sánchez-Lanzas, Amanda Jimenez-Pompa, Elise Smith, Nital Sumaria, Justin Barclay, Foteini Kalampalika, Daniel J. Pennington, Mirjana Efremova, Miguel Ganuza
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70225-5](https://doi.org/10.1038/s41467-026-70225-5)
+
+**评分**: 4.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 2.0/10 | 2.0 |
+| medical imaging | 1.0 | 2.0/10 | 2.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是使用合成NOTCH受体在体内标记与胸腺细胞物理接触的细胞，并通过单细胞转录组学分析胸腺细胞相互作用组。虽然摘要中提到“previous efforts...have mostly relied on imaging techniques”，但本文的核心方法是遗传学方法（合成NOTCH受体）和单细胞测序，而非医学影像分析或深度学习医学影像。因此，与“medical image analysis”和“medical imaging”仅有微弱关联（提及了成像技术作为背景），与“deep learning medical imaging”完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    本研究开发了一种使用合成NOTCH受体直接标记体内胸腺细胞相互作用细胞的方法，揭示了支持T细胞发育的胸腺细胞相互作用组及其随衰老的变化。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：胸腺细胞与其他免疫细胞及胸腺基质细胞之间的细胞相互作用在T细胞成熟与稳态维持中发挥关键作用。既往研究主要通过成像技术、必需分子因子的基因缺失以及骨髓嵌合体等方法，来解析支持T细胞发育的细胞相互作用网络。本研究采用合成性NOTCH受体，在小鼠体内通过直接且无偏倚的遗传学方法，对与CD4+及CD4+CD8+胸腺细胞发生物理接触的细胞进行荧光标记。通过对相互作用细胞的前瞻性分离及单细胞水平转录特征分析，我们揭示了支持这些T细胞发育的胸腺细胞互作网络，以及衰老过程如何削弱这些相互作用。细胞互作对象包括树突状细胞、B细胞、IL-17+ γδ T细胞、成纤维细胞亚群及胸腺上皮细胞等。配体-受体对分析进一步揭示了涉及细胞存活、分化与抗原呈递的关键信号通路。本研究为探索胸腺细胞相互作用提供了新的研究方法。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Cellular interactions between thymocytes and other immune and stromal thymic cells play a key role in T cell maturation and homeostasis. Previous efforts delineating the cellular interactomes that support T cell development have mostly relied on imaging techniques, genetic deletion of essential molecular factors and bone marrow chimeras. Here, using synthetic NOTCH receptors we took a direct and unbiased genetic approach to fluorescently label cells in physical contact with CD4 + and CD4 + CD8 + thymocytes in vivo in mice. Prospective isolation and transcriptional characterization at single-cell level of the interacting cells exposed the thymic cellular interactome that supports these T cells and how ageing erodes these interactions. Cellular interactors included, among others, dendritic cells, B cells, IL-17 + γδ T cells, fibroblast subsets and thymic epithelial cells. Ligand-receptor pair analyses highlighted signals involved in survival, differentiation and antigen presentation. Our work provides a new means to study thymic cellular interactions.
+
+</details>
+<br>
+
+**关键词**: thymic cellular interactome, synthetic NOTCH receptors, T cell maturation, single-cell transcriptomics, cellular interactions, ageing, immune cells, ligand-receptor pairs
+
+---
+
+### 5. ❌ FLEXTAG: a small and self-renewable protein labeling system for anti-fading multi-color super-resolution imaging
+
+**作者**: Han Zhang, Yuan Yao, Xuye Wang, Yuanmin Zheng, Shaoqing Zhang, Yuan Tao, H. C. Yang, Yinqi Wang, Mengde Liu, Marina Feric, Ruobo Zhou
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-69658-9](https://doi.org/10.1038/s41467-026-69658-9)
+
+**评分**: 4.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 2.0/10 | 2.0 |
+| medical imaging | 1.0 | 2.0/10 | 2.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是超分辨率荧光成像的蛋白质标记系统（FLEXTAG），属于细胞生物学和显微镜技术领域，而非医学图像分析。论文摘要中未提及医学图像、临床诊断或医学影像分析相关内容，也未涉及深度学习技术。因此，与'medical image analysis'和'medical imaging'仅有微弱关联（因超分辨率成像在生物医学研究中可能有间接应用），与'deep learning medical imaging'完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文解决了现有蛋白质标记系统在超分辨率成像中存在的光漂白、标记伪影、固定后标记效率低和多路复用能力受限等问题，开发了一种名为FLEXTAG的自更新蛋白质标记系统，实现了活细胞和固定细胞中长期、多色、高质量的超分辨率成像。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 超分辨率荧光成像技术能够在纳米尺度上可视化亚细胞结构与分子相互作用，但其广泛应用一直受限于当前蛋白质标记系统的长期缺陷，包括快速光漂白、标记诱导的伪影、固定后标记效率低下以及多重标记能力受限。本文提出FLEXTAG（先进通用纳米显微镜中可交换、抗干扰的荧光标记系统），这是一个综合性蛋白质标记系统，包含三种正交、超小（12–18 kDa）且可自我更新的蛋白质标签，共同克服了现有标记系统的主要局限，实现了优化的多色超分辨率成像。通过有机荧光染料的持续交换，FLEXTAG支持在活细胞和固定细胞中进行长时间的高分辨率成像，且光漂白效应极低。该系统兼容主流的超分辨率成像模式，如SIM、STED、STORM和PAINT，并适用于广泛的亚细胞靶标。为进一步解决固定导致的标记效率下降和背景荧光问题，我们开发了一种基于保护的创新固定方法和化学阻断策略，显著保持了标签的可及性并提高了信噪比，这些改进可广泛适用于其他蛋白质标记系统。总体而言，FLEXTAG能够实现对亚细胞靶标动态行为与相互作用的长期追踪，以及对纳米尺度蛋白质组织和细胞结构的图谱绘制，推动了细胞生物学基础研究与转化应用的进展。FLEXTAG是一种多功能、可自我更新的蛋白质标记系统，能够在活细胞和固定细胞中对亚细胞结构进行长期、多色超分辨率荧光成像，同时具有极低的光漂白效应和提升的信号质量。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Super-resolution fluorescence imaging enables visualization of subcellular structures and molecular interactions at the nanoscale, but its broader application has been hindered by long-standing limitations in current protein tagging systems, including rapid photobleaching, tag-induced artifacts, poor post-fixation labeling efficiency, and restricted multiplexing capability. Here, we present FLEXTAG (Fluorescent Labeling for Exchangeable, X-resilient Tagging in Advanced Generic Nanoscopy), a comprehensive protein labeling system comprising three orthogonal, ultrasmall (12–18 kDa), and self-renewable protein tags that collectively overcome these major limitations of existing tagging systems, enabling optimized multi-color super-resolution imaging. Through continuous exchange of organic fluorophores, FLEXTAG supports extended durations of high-resolution imaging in both live and fixed cells with minimal photobleaching. It is compatible with major super-resolution modalities, such as SIM, STED, STORM, and PAINT, and is applicable to a wide range of subcellular targets. To further address fixation-induced labeling inefficiency and background fluorescence, we developed an innovative protection-based fixation method and chemical blocking strategies that significantly preserve tag accessibility and enhance signal-to-noise ratio, improvements that are broadly applicable to other protein tagging systems. Altogether, FLEXTAG enables long-term tracking of dynamic behaviors and interactions of subcellular targets, as well as mapping of nanoscale protein organizations and cellular architecture, advancing both basic research and translational applications in cell biology. FLEXTAG is a versatile, self-renewing protein labeling system that enables long-term, multi-color super-resolution fluorescence imaging of subcellular structures in live and fixed cells, with minimal photobleaching and improved signal quality.
+
+</details>
+<br>
+
+**关键词**: super-resolution imaging, protein labeling system, FLEXTAG, photobleaching, multi-color imaging, live and fixed cells, fluorescence imaging, subcellular structures
+
+---
+
+### 6. ❌ Cerebrospinal fluid NPTX1 and NPTXR predict neurodegeneration and clinical progression in Alzheimer’s disease
+
+**作者**: Linbin Dai, Bjørn-Eivind Kirsebom, Chenxi Wang, Mengguo Zhang, Qiong Wang, Ming Ni, Fernando Gonzalez-Ortiz, K. Blennow, Jiong Shi, Tormod Fladby, Feng Gao, Yong Shen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70472-6](https://doi.org/10.1038/s41467-026-70472-6)
+
+**评分**: 4.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 2.0/10 | 2.0 |
+| medical imaging | 1.0 | 2.0/10 | 2.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究阿尔茨海默病的生物标志物（脑脊液NPTX1和NPTXR），通过认知评估、脑脊液分析和临床随访进行，未涉及医学影像分析或深度学习医学影像技术。关键词相关度低：medical image analysis和medical imaging得2分（仅提及“皮质变薄”和“脑萎缩”等与影像相关的术语，但非核心方法）；deep learning medical imaging得0分（完全未涉及）。加权总分计算：2.0×1.0 + 2.0×1.0 + 0.0×1.0 = 4.0。作者列表中未包含指定专家。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现脑脊液中的NPTX1和NPTXR蛋白水平能有效预测阿尔茨海默病的神经退行性变和临床进展，优于传统生物标志物。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 识别能够精确追踪阿尔茨海默病（AD）神经退行性成分的生物标志物对于有效的临床管理至关重要。本研究显示，脑脊液（CSF）中突触蛋白NPTX1与NPTXR的水平是疾病严重程度和未来临床进展的可靠指标。在涵盖AD连续谱的两个独立、多族裔队列（n = 635）中，较低的CSF NPTX水平与认知功能障碍以及AD易感区域的皮质变薄密切相关。纵向分析表明，基线NPTX水平能够预测加速的脑萎缩以及从轻度认知障碍向痴呆的临床转化，其预测能力常优于或补充了已确立的标志物，如pTau181和神经丝轻链。这些发现确立了NPTX1和NPTXR作为突触完整性与神经退行性变的敏感且具有阶段特异性的标志物。通过准确预测疾病进展，这些生物标志物在增强患者分层方面具有重要潜力，并为临床试验中监测疾病修饰疗法的疗效提供了关键工具。研究人员发现，在中国和挪威，脑脊液NPTX1和NPTXR水平随阿尔茨海默病恶化而下降，可追踪脑变薄和认知变化，并能预测3年内更快的病情衰退及从轻度认知障碍向痴呆的转化。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Identifying biomarkers that precisely track the neurodegenerative component of Alzheimer’s disease (AD) is essential for effective clinical management. Here we show that cerebrospinal fluid (CSF) levels of the synaptic proteins NPTX1 and NPTXR are robust indicators of disease severity and future clinical progression. In two independent, multi-ethnic cohorts spanning the AD continuum (n = 635), lower CSF NPTX levels correlate strongly with cognitive impairment and cortical thinning in AD-vulnerable regions. Longitudinally, baseline NPTX levels predict accelerated brain atrophy and the clinical transition from mild cognitive impairment to dementia, frequently outperforming or complementing established markers such as pTau181 and neurofilament light chain. These findings establish NPTX1 and NPTXR as sensitive, stage-specific markers of synaptic integrity and neurodegeneration. By accurately forecasting disease progression, these biomarkers offer significant potential to enhance patient stratification and provide a crucial tool for monitoring the efficacy of disease-modifying therapies in clinical trials. Researchers found that in China and Norway, cerebrospinal fluid NPTX1 and NPTXR drop as Alzheimer’s worsens, track brain thinning and cognition, and predict faster decline and conversion from mild cognitive impairment to dementia within 3 years.
+
+</details>
+<br>
+
+**关键词**: Alzheimer's disease, cerebrospinal fluid biomarkers, NPTX1, NPTXR, neurodegeneration, clinical progression, mild cognitive impairment, synaptic integrity
+
+---
+
+### 7. ❌ Epilepsy-associated FOXJ3 variants link a transcriptional program of the PTEN-mTOR pathway to neuronal specification and cortical lamination
+
+**作者**: Haw-Yuan Cheng, Chen Liu, Chiao-Wen Nien, Hui-Chin Huang, Hong-Jun Zhao, Fang-Shin Nian, Chao Chen, Helena Martins Custodio, S. Sisodiya, Chien Yi Lu, Hsin‐Hung Chen, Chih-Sin Hsu, Wen‐Chieh Pi, Chia-Chi Chu, Jacob Shujui Hsu, Pisin Chen, Fu-Pang Chang, Chien-Yi Tung, S. M. Chou, Shahryar Alavi
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-69241-2](https://doi.org/10.1038/s41467-026-69241-2)
+
+**评分**: 4.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 2.0/10 | 2.0 |
+| medical imaging | 1.0 | 2.0/10 | 2.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究FOXJ3基因变异如何通过PTEN-mTOR通路影响神经元迁移和皮质层化，导致局灶性皮质发育不良和癫痫。虽然涉及癫痫（一种神经系统疾病），但研究完全基于分子生物学、遗传学和发育神经科学方法（如ChIP-seq、scRNA-seq、子宫内电穿孔），未使用任何医学影像分析技术。因此与'medical image analysis'和'medical imaging'仅有微弱关联（因涉及神经系统疾病背景），与'deep learning medical imaging'完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现FOXJ3基因变异通过调控PTEN-mTOR通路影响神经元迁移和皮质层化，导致局灶性皮质发育不良和癫痫。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 局灶性皮质发育不良（Focal cortical dysplasia, FCD）是药物难治性癫痫的主要病因之一，其涉及神经元迁移异常和皮质结构紊乱，但其分子基础尚不明确。本研究在常染色体显性遗传局灶性癫痫伴FCD患者中鉴定出FOXJ3基因的致病性变异。在小鼠皮质发育过程中，FOXJ3在胚胎期15.5天后的神经祖细胞中急剧下降。通过子宫内电穿孔技术介导的小鼠大脑Foxj3敲低实验发现，其会损害神经元迁移、破坏皮质分层结构并改变神经元特化，导致上层神经元数量增加而深层神经元减少。染色质免疫沉淀测序和单细胞RNA测序分析确定Pten是FOXJ3的关键靶基因。值得注意的是，过表达Pten能够挽救FOXJ3缺失引起的皮质发育缺陷。与FCD相关的FOXJ3变异体无法上调Pten表达，导致mTOR信号通路失调和神经元胞体增大——这是FCD的典型病理特征。这些结果表明，FOXJ3突变可能通过调控PTEN-mTOR通路影响神经元特化与皮质分层，从而引发癫痫和FCD。研究者不仅鉴定了局灶性癫痫与皮质发育不良中的FOXJ3变异，更揭示了FOXJ3通过调控PTEN-mTOR通路介导神经元迁移和皮质分层形成的机制；该过程的破坏将导致大脑发育异常。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Focal cortical dysplasia (FCD), a major cause of drug-resistant epilepsy, involves abnormal neuronal migration and cortical architecture, yet its molecular basis remains poorly defined. Here, we identify FOXJ3 pathogenic variants in patients with autosomal dominant focal epilepsy and FCD. In the developing mouse cortex, FOXJ3 declines sharply in neural progenitors after embryonic day 15.5. In utero electroporation-mediated Foxj3 knockdown in mouse brains impairs neuronal migration, disrupts cortical lamination, and alters neuronal specification, promoting upper-layer neuron production at the expense of deeper-layer neurons. ChIP-seq and scRNA-seq analyses identify Pten as a key FOXJ3 target. Notably, Pten overexpression rescues cortical defects caused by FOXJ3 deficiency. FCD-associated variant fails to upregulate Pten, leading to dysregulated mTOR signaling and enlarged neuronal soma, a hallmark of FCD. These findings suggest that mutations in FOXJ3 may cause epilepsy and FCD and define a transcriptional program that regulates the PTEN-mTOR pathway for neuronal specification and cortical lamination. Researchers identify FOXJ3 variants in focal epilepsy and cortical dysplasia and show that FOXJ3 regulates neuronal migration and cortical layer formation by controlling the PTEN–mTOR pathway; disruption of this process leads to abnormal brain development.
+
+</details>
+<br>
+
+**关键词**: FOXJ3, focal cortical dysplasia, epilepsy, neuronal migration, cortical lamination, PTEN-mTOR pathway, neuronal specification, mouse cortex development
+
+---
+
+### 8. ❌ CXCR4-tropic HIV-1 infection in an immunocompetent monkey model
+
+**作者**: Nicholas R. Meyerson, Vanessa L. Bauer, Will T. Fattor, Cody J. Warren, Arturo Barbachano-Guerrero, Melisa J. Weiss, Obaiah Dirasantha, Bridget L. Burris, Adetunji S. Adesina, Joseph L. Timpona, Emily R. Feldman, Ryan T. Fahy, Paul Gendler, Ava Fainberg, Pramod N. Nehete, Kathryn A. Shelton, Analy Galvan, George W. Tustin, Paul J. Koehle, Maria D. Salinas
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70209-5](https://doi.org/10.1038/s41467-026-70209-5)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是HIV-1感染的动物模型建立（使用猫头鹰猴），涉及病毒学、免疫学和遗传学领域。全文未提及医学图像分析、医学成像或深度学习医学成像相关内容，与所有评分关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究建立了一种使用免疫正常的猫头鹰猴的CXCR4嗜性HIV-1感染动物模型，成功模拟了人类HIV-1感染的关键特征，为HIV研究提供了新的实验工具。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 目前用于HIV-1感染的动物模型存在免疫缺陷或依赖替代病毒而非HIV-1本身的局限性。本研究在夜猴（Aotus nancymaae）中建立了一种针对CXCR4嗜性HIV-1的免疫健全动物模型。通过对191只夜猴的分析，遗传特征鉴定与功能测试表明该物种的CD4和Tetherin蛋白支持HIV-1复制。尽管夜猴携带限制性TRIMCyp和APOBEC3G等位基因，通过对HIV-1基因组进行微小改造即可使病毒突破这些屏障。所得病毒序列仍保持93%的野生型HIV-1特征。完全免疫健全的夜猴在感染该病毒后，重现了人类HIV-1感染的关键特征：病毒复制初期激增、随后建立稳定的病毒血症设定点、血清学转阳以及病毒储存库的形成。夜猴模型拓展了HIV-1研究的实验选择，未来研究将探索其对CCR5嗜性病毒株的应用价值。当前使用猕猴或小鼠的HIV动物模型存在已知缺陷，本研究通过在新热带小型灵长类夜猴中建立HIV-1感染模型，为推进HIV-1研究提供了新的实验途径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Current animal models of HIV-1 infection are either immunocompromised or rely on proxy viruses instead of HIV-1. Here, we establish an immunocompetent animal model for CXCR4-tropic HIV-1 in owl monkeys (Aotus nancymaae). Through analysis of 191 owl monkeys, genetic characterization and functional testing demonstrate that CD4 and Tetherin in this species support HIV-1 replication. Although owl monkeys do carry restrictive TRIMCyp and APOBEC3G alleles, small changes to the HIV-1 genome allow the virus to overcome these barriers. The resulting virus remains 93% wildtype HIV-1 in sequence. Fully immunocompetent owl monkeys can be infected with this virus, recapitulating key aspects of HIV-1 infection in humans: an initial surge of virus replication, subsequent establishment of a durable set point viremia, seroconversion, and the formation of a viral reservoir. The owl monkey model broadens the experimental options for HIV-1 research, and future studies will explore its utility for CCR5-tropic virus strains. Current HIV animal models, which use macaques or mice, have known limitations. Here, the authors develop a model of HIV-1 infection in owl monkeys, small neotropical primates, expanding experimental opportunities for advancing HIV-1 research.
+
+</details>
+<br>
+
+**关键词**: HIV-1, animal model, owl monkey, CXCR4-tropic, immunocompetent, viral replication, viral reservoir, Aotus nancymaae
+
+---
+
+### 9. ❌ NPM3 functions as a lactyltransferase to promote necroptosis in male diabetic cardiomyopathy mice models via FASN transcription modulation
+
+**作者**: Hongjiao Xu, Xinyu Jiang, Fangrui Wang, Fufen Meng, Ying Liu, Jiechun Huang, Jinbao Li, Minmin Zhu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70513-0](https://doi.org/10.1038/s41467-026-70513-0)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究糖尿病心肌病（DCM）的分子机制，聚焦于NPM3作为乳酰转移酶调控组蛋白乳酰化（H3K18la/K27la）、FASN转录和坏死性凋亡的途径，并探讨青蒿琥酯（DHA）的治疗潜力。全文未涉及医学影像分析、医学成像或深度学习医学成像的任何内容，研究完全基于分子生物学、生物化学和动物模型实验，与医学影像领域无直接关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现NPM3作为乳酰转移酶通过调控组蛋白乳酰化促进FASN转录和心肌细胞坏死性凋亡，从而驱动糖尿病心肌病进展，而青蒿琥酯可通过抑制NPM3活性缓解心脏功能障碍。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 糖尿病心肌病（DCM）的特征是舒张功能障碍，其在糖尿病患者中会进展为心力衰竭及异常的电生理改变。乳酸介导的组蛋白乳酸化修饰已被证实参与DCM的发病机制。本研究探讨了在雄性DCM小鼠模型中，乳酸介导的组蛋白H3第18位赖氨酸乳酸化（H3K18la）和H3K27la促进坏死性凋亡的机制。乳酸介导的H3K18la和H3K27la通过调控脂肪酸合酶（FASN）的转录参与DCM中的坏死性凋亡。此外，核磷蛋白3（Nucleophosmin/nucleoplasmin-3, NPM3）被鉴定为一种乳酸转移酶，它调控H3K18la和H3K27la，从而激活FASN转录并触发坏死性凋亡。进一步研究发现，双氢青蒿素（Dihydroartemisinin, DHA）通过竞争乳酸与NPM3之间的结合位点，抑制了NPM3的乳酸转移酶活性。重要的是，DHA处理降低了DCM模型中NPM3、H3K18la、H3K27la和FASN的表达；减轻了坏死性凋亡和心脏组织损伤；并改善了舒张功能障碍和心室肥厚。总之，NPM3作为一种乳酸转移酶调控FASN转录，从而触发坏死性凋亡。此外，通过DHA抑制NPM3诱导的组蛋白乳酸化是治疗DCM的一种有效策略。NPM3促进组蛋白乳酸化（H3K18la/K27la），驱动FASN转录和心肌细胞坏死性凋亡，进而导致糖尿病心肌病。使用双氢青蒿素靶向该通路可缓解心脏功能障碍。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Diabetic cardiomyopathy (DCM) is characterized by diastolic dysfunction, which progresses to heart failure and abnormal electrophysiological changes in patients with diabetes. Lactate-mediated histone lactylation has been implicated in DCM pathogenesis. We investigated the mechanisms by which lactate-mediated histone-H3-lysine-18 lactylation (H3K18la) and H3K27la promote necroptosis in male DCM mice models. Lactate-mediated H3K18la and H3K27la participate in necroptosis via modulating fatty acid synthase (FASN) transcription in DCM. Moreover, Nucleophosmin/nucleoplasmin-3 (NPM3), identified as a lactyltransferase, regulated H3K18la and H3K27la, thereby activating FASN transcription and triggering necroptosis. Furthermore, dihydroartemisinin (DHA) inhibited NPM3 lactyltransferase activity by competing for binding sites between lactate and NPM3. Importantly, DHA treatment reduced the expression of NPM3, H3K18la, H3K27la, and FASN; alleviated necroptosis and cardiac tissue damage; and resolved diastolic dysfunction and ventricular hypertrophy in DCM models. In conclusion, NPM3 acts as a lactyltransferase to modulate FASN transcription, thereby triggering necroptosis. Moreover, inhibiting NPM3-induced histone lactylation via DHA represents an efficacious therapeutic strategy for DCM. NPM3 promotes histone lactylation (H3K18la/K27la) and drives FASN transcription and cardiomyocyte necroptosis in diabetic cardiomyopathy. Targeting this pathway with dihydroartemisinin alleviates cardiac dysfunction.
+
+</details>
+<br>
+
+**关键词**: diabetic cardiomyopathy, NPM3, histone lactylation, FASN transcription, necroptosis, dihydroartemisinin, cardiac dysfunction, therapeutic strategy
+
+---
+
+### 10. ❌ Moisture-tolerant Mg-metal electrodes for practical fabrication of rechargeable Mg batteries
+
+**作者**: Woo Joo No, Jonghyun Han, Jinyeon Hwang, Sibylle Riedel, Minji Jeong, Hyeong Kyu Park, Jae‐Joong Kim, Kwan Young Lee, Minah Lee, Taeeun Yim, Hyun Deog Yoo, Hyung Chul Ham, S. J. Lee, Zhirong Zhao-Karger, S. Oh
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70378-3](https://doi.org/10.1038/s41467-026-70378-3)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是可充电镁电池的电极材料技术，具体涉及镁金属电极的防潮处理、电解质中的镁电镀/剥离性能以及电池制造工艺。所有评分关键词（medical image analysis, medical imaging, deep learning medical imaging）均属于医学影像分析领域，与论文的电池材料研究完全无关，因此相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文解决了可充电镁电池中镁金属电极对水分高度敏感的问题，通过磷酸三甲酯处理创建了牺牲保护层，实现了在潮湿条件下高效的电化学性能，为降低制造成本提供了实用方案。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 尽管可充电镁电池在成本与安全性方面具有显著优势，但其在商业市场的推广仍受限于若干关键技术挑战，包括镁金属对水分固有的高度敏感性——水分易在其表面形成致密的离子绝缘膜。为突破这一关键限制，本研究开发了一种耐湿镁电极，其即便在高湿度电解液中也能实现高效的镁沉积-剥离过程。本文表明，将镁金属短时间浸入磷酸三甲酯中可形成一种含有二甲基镁的磷酸二甲基镁牺牲保护层，该保护层能协同即时清除电解液中的水分子，从而实现在潮湿和/或大气条件下制造镁离子电池。这种简单且可规模化应用的策略为降低可充电镁电池的制造成本提供了实用路径，有望加速其早期商业化进程。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Despite striking advantages in terms of cost and safety, penetration of rechargeable Mg batteries into the commercial market is still hampered by major technical challenges, including intrinsic hypersensitivity of Mg metal to moisture, which readily forms a compact ion-insulating film on the surface. To unlock this critical constraint, a moisture-tolerant Mg electrode is developed that is capable of efficient Mg plating-stripping even in the highly moist electrolytes. Here we show that short immersion of Mg metal in trimethyl phosphate creates a sacrificial protection layer containing dimethyl magnesium in magnesium dimethyl phosphate, which synergistically scavenges water molecules from the electrolytes instantly, enabling manufacturing of Mg-ion cells under moist and/or atmospheric conditions. This simple and scalable strategy provides a practical route to reducing the manufacturing costs of rechargeable Mg batteries, thereby expediting their early commercialization.
+
+</details>
+<br>
+
+**关键词**: rechargeable Mg batteries, Mg-metal electrodes, moisture-tolerant, Mg plating-stripping, trimethyl phosphate, sacrificial protection layer, manufacturing costs, electrolytes
+
+---
+
+### 11. ❌ Unveiling the thermodynamic-kinetic trade-off effect on acid sites in zeolite-catalyzed alcohol dehydration
+
+**作者**: Min Hu, Yueying Chu, Chao Wang, Wenjin Cai, Qiang Wang, Jun Xu, Feng Deng
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70418-y](https://doi.org/10.1038/s41467-026-70418-y)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是沸石催化剂中酸位点在乙醇脱水反应中的热力学-动力学权衡效应，属于化学工程和催化化学领域。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像，因此所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究阐明了ZSM-5沸石催化剂中布朗斯特酸位点和路易斯酸位点在乙醇脱水制乙烯反应中的不同作用机制，揭示了两种酸位点之间存在的热力学-动力学权衡效应。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 理解布朗斯特酸位与路易斯酸位在沸石催化剂设计中的具体作用仍是一个重大挑战，二者的共存常使反应机理难以明晰。本研究结合固态核磁共振谱学与密度泛函理论，阐明了ZSM-5沸石上乙醇脱水制乙烯过程中位点特异性反应路径。我们识别出两类关键中间体：路易斯酸位（LAS）上化学吸附的乙醇，以及布朗斯特酸位（BAS）上形成的表面乙氧基物种。二者均通过-OH基团活化及随后的β-H消除步骤生成乙烯。对比分析揭示了两种酸位间的热力学-动力学权衡关系：路易斯酸位虽能促进低温下的-OH活化，但其β-H消除能垒较高，限制了乙烯生成；相反，布朗斯特酸位需要更高的-OH活化能，却能实现更高效的β-H消除，从而促进乙烯生产。这种由-OH活化热力学主导的内在权衡机制，为理解和调控沸石酸位上的醇类脱水反应提供了机理基础。由于不同酸位功能常相互重叠，阐明其在沸石催化剂中的具体作用至关重要却十分困难。本研究揭示了乙醇制乙烯过程中截然不同的反应路径及控制该过程的关键权衡机制。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Understanding the distinct roles of Brønsted and Lewis acid sites remains a great challenge in designing zeolite catalysts, as their coexistence often obscures mechanistic understanding. Here, we combine solid-state NMR spectroscopy with density functional theory to elucidate the site-specific pathways of ethanol dehydration to ethylene over ZSM-5 zeolite. Two key intermediates are identified: chemisorbed ethanol on Lewis acid sites (LAS) and surface ethoxy species on Brønsted acid sites (BAS), both formed via -OH activation followed by β-H elimination to yield ethylene. Comparative analysis reveals a thermodynamic–kinetic trade-off between the two sites. LAS facilitates low-temperature -OH activation but exhibits high barriers for β-H elimination, limiting ethylene formation. In contrast, BAS requires higher activation energy for -OH activation but enables more facile β-H elimination, promoting ethylene production. This intrinsic trade-off, governed by the thermodynamics of -OH activation, provides a mechanistic basis for understanding and tuning alcohol dehydration on zeolite acid sites. Clarifying how different acid sites function in zeolite catalysts is essential yet difficult due to their overlapping roles. This study uncovers distinct reaction pathways and a key trade-off that governs ethylene formation from ethanol.
+
+</details>
+<br>
+
+**关键词**: zeolite catalysts, acid sites, ethanol dehydration, ethylene formation, thermodynamic-kinetic trade-off, Brønsted acid sites, Lewis acid sites, ZSM-5
+
+---
+
+### 12. ❌ Ribosomal modifications are associated with mesenchymal fate selection in the neural crest lineage
+
+**作者**: Irina Poverennaya, Aliia Murtazina, Lei Li, Lorena Maili, Lukáš Sourada, Luis F. Montaño-Gutierrez, Rozalina Galimullina, Tobias Steinschaden, Markéta Kaiser, Tomáš Zikmund, Adna Goralija, Teng Gao, Aurore Attina, Ornella Clara, Christoph Bartenhagen, Alek Erickson, Yaakov Gershtein, Shiyuan Chen, Kristýna Polášková, Jaroslav Štěrba
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70375-6](https://doi.org/10.1038/s41467-026-70375-6)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是神经嵴细胞分化过程中核糖体修饰与命运决定的关系，以及这些修饰在神经母细胞瘤中的临床意义。研究使用单细胞转录组学、分子生物学和临床数据分析方法，完全不涉及医学影像分析、医学成像或深度学习医学成像技术。论文内容属于发育生物学、分子生物学和肿瘤生物学领域，与医学影像分析领域无直接关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现核糖体RNA修饰和核糖体组装因子在神经嵴细胞间充质命运选择中起关键作用，并揭示了这些修饰在神经母细胞瘤进展中的临床相关性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：神经嵴细胞通过分化为成骨间充质及神经胶质谱系，参与颅面结构的形成。利用Smart-seq2单细胞转录组学技术，我们发现间充质命运定向与rRNA修饰及核糖体组装因子（而非结构核糖体蛋白）的表达特异性相关。值得注意的是，EMG1和NHP2在18S rRNA中引入关键的转录后修饰，包括U1248位点的m¹acp³ψ修饰，该修饰的最终成熟需要TSR3的参与。在体外和体内破坏NHP2或TSR3均会干扰颅神经嵴细胞分化；迁移后阶段条件性敲除Polr1a或Polr1c同样导致颅面畸形。这些发现与神经嵴分化过程中细胞类型特异性的m¹acp³ψ水平变化相吻合。鉴于神经嵴细胞对神经母细胞瘤的贡献，我们通过分析患者数据发现，核糖体调控因子和rRNA修饰蛋白的高表达预示着更差的临床预后。在神经母细胞瘤细胞系中的互补实验进一步揭示了TSR3和WDR74在间充质样肿瘤状态中的功能作用。综上，我们的研究将rRNA修饰与核糖体组装同细胞命运决定相联系，表明核糖体异质性同时塑造了正常发育进程与肿瘤进展路径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Neural crest cells contribute to craniofacial formation by differentiating into skeletogenic mesenchyme and neuro-glial lineages. Using Smart-seq2 single-cell transcriptomics, we show that mesenchymal fate commitment correlates specifically with the expression of rRNA-modifying and ribosome assembly factors, rather than structural ribosomal proteins. Notably, EMG1 and NHP2 introduce key post-transcriptional modifications into 18S rRNA, including m¹acp³ψ at U1248, which requires TSR3 for final maturation. Disrupting NHP2 or TSR3 in vitro and in vivo perturbs cranial neural crest differentiation; post-migratory temporal knockout of Polr1a or Polr1c also causes craniofacial malformations. These findings align with cell type-specific m¹acp³ψ levels during neural crest differentiation. Given the neural crest contribution to neuroblastoma, we analyze patient data to find that elevated ribosomal control and rRNA-modifying proteins predict poorer outcomes. Complementary experiments in neuroblastoma cell lines reveal functional roles for TSR3 and WDR74 in mesenchymal-like tumor states. Together, our results link rRNA modifications and ribosome assembly to fate decisions, suggesting ribosomal heterogeneity shapes both normal development and tumor progression.
+
+</details>
+<br>
+
+**关键词**: neural crest, ribosomal modifications, mesenchymal fate, rRNA modifications, neuroblastoma, craniofacial development, single-cell transcriptomics, ribosome assembly
+
+---
+
+### 13. ❌ Modulation of Pt electron transfer via engineered ultra-thin TiO2-Al2O3 interfaces for coke-resistant methane dry reforming
+
+**作者**: Shuo Zhao, Li Wang, Shuzhen Lyu, Ruichen Liu, Xiangwen Zhang, Rongrong Zhang, J. Liu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70338-x](https://doi.org/10.1038/s41467-026-70338-x)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是甲烷干重整催化剂的设计，通过构建超薄TiO2-Al2O3界面来抑制积碳，属于化学工程和材料科学领域。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像，因此所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过构建超薄TiO2-Al2O3界面来调控Pt电子转移，解决了甲烷干重整中催化剂因积碳而失活的问题，实现了优异的抗积碳性能和长期稳定性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 甲烷干重整反应（DRM）长期受催化剂快速失活问题的困扰，其主要原因在于传统多相载体中暴露的Al2O3表面会加剧碳沉积。本研究通过原位生长策略，在Al2O3上沉积超薄锐钛矿型TiO2覆盖层，构建了明确的Pt/TiO2-Al2O3界面以消除有害的Al2O3暴露。表征结合密度泛函理论（DFT）计算表明，Al2O3载体通过界面应力和电荷转移诱导超薄TiO2层发生晶格收缩并富集电子。这同时活化了晶格氧（Ti-O）并优化了Pt的电荷密度，使催化剂兼具平衡的CH4活化能力与提升的CH* → C*能垒。所制备的Pt/TiO2-Al2O3催化剂表现出卓越的耐久性，在800 °C下运行100小时仍保持91%的CH4转化率，且碳沉积可忽略不计，其性能优于Pt/Al2O3和Pt/TiO2基准催化剂。本工作证明，在Al2O3上构建连续的超薄TiO2覆盖层是优于多相载体的替代方案，为通过精确界面控制设计抗积碳催化剂提供了可推广的蓝图。甲烷干重整反应的发展受限于催化剂因暴露氧化铝表面上的碳沉积而失效的问题。本研究通过在氧化铝上沉积超薄二氧化钛覆盖层来活化晶格氧并调控铂的电子性质，从而确保了催化剂在高温下卓越的抗积碳能力和长期稳定性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Dry reforming of methane (DRM) is plagued by rapid catalyst deactivation, primarily due to carbon deposition exacerbated by exposed Al2O3 surfaces in conventional mixed-phase supports. Herein, we construct a well-defined Pt/TiO2-Al2O3 interface by depositing an ultra-thin anatase TiO2 overlayer onto Al2O3 via an in situ growth strategy to eliminate detrimental Al2O3 exposure. Characterization coupled with DFT calculations reveal that the Al2O3 support induces lattice contraction and electron enrichment of the ultra-thin TiO2 layer through interfacial stress and charge transfer. This concurrently activates lattice oxygen (Ti-O) and optimizes Pt charge density, endowing the catalyst with balanced CH4 activation and a heightened CH* → C* barrier. The resulting Pt/TiO2-Al2O3 catalyst achieves exceptional durability, maintaining 91% CH4 conversion at 800 °C for 100 h with negligible carbon deposition, outperforming Pt/Al2O3 and Pt/TiO2 benchmarks. This work demonstrates that engineering a continuous ultra-thin TiO2 overlayer on Al2O3 is a superior alternative to mixed-phase supports, providing a generalizable blueprint for coke-resistant catalyst design via precise interface control. Dry reforming of methane is limited by catalysts that fail due to carbon deposition on exposed alumina surfaces. This study deposits an ultrathin titania overlayer on alumina to activate lattice oxygen and modulate platinum electronic properties, ensuring exceptional coke resistance and long-term stability at high temperature.
+
+</details>
+<br>
+
+**关键词**: dry reforming of methane, coke-resistant catalyst, Pt/TiO2-Al2O3 interface, ultra-thin TiO2 overlayer, carbon deposition, lattice oxygen activation, DFT calculations, catalyst durability
+
+---
+
+### 14. ❌ The association of physical activity with urological cancer risk: a systematic review and meta-analysis
+
+**作者**: Fangfang Xie, Chaoqu Xie, Hongyu Yue, Jiahe Cui, Jianwen Ma, Jiatuo Xu, Fei Yao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70149-0](https://doi.org/10.1038/s41467-026-70149-0)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示这是一篇关于体育活动与泌尿系统癌症风险关联的系统综述和荟萃分析，属于流行病学、公共卫生和癌症预防研究领域。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像技术，没有使用任何医学图像数据或图像分析方法。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    这篇系统综述和荟萃分析研究了体育活动与泌尿系统癌症风险之间的关联，发现体育活动与降低膀胱癌和肾癌风险相关，但与前列腺癌风险无显著关联。
+
+**关键词**: physical activity, urological cancer, systematic review, meta-analysis, cancer risk, bladder cancer, kidney cancer, prostate cancer
+
+---
+
+### 15. ❌ Orbital-selective band engineering realizes high zT in p-type Ru2Ti1−xHfxSi full-Heusler thermoelectrics
+
+**作者**: Fabian Garmroudi, Illia Serhiienko, Michael Parzer, Andrej Pustogow, R. Podloucky, Takao Mori, Ernst Bauer
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-69799-x](https://doi.org/10.1038/s41467-026-69799-x)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是热电材料（Ru2Ti1−xHfxSi全赫斯勒化合物）的电子结构和热电性能优化，属于材料科学和凝聚态物理领域。论文内容完全不涉及医学图像分析、医学成像或深度学习在医学成像中的应用，因此所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了p型Ru2Ti1−xHfxSi全赫斯勒热电材料，通过轨道选择性能带工程实现了在700-1000K温度范围内高达0.7的热电优值（zT），并提出了进一步提升性能的策略。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：赫斯勒化合物因其兼具优异的电子传输特性、机械鲁棒性与化学稳定性——这些实际器件集成的关键要素——已成为重要的热电材料。尽管多种XYZ型半赫斯勒化合物已在高温应用中得到研究，但X₂YZ型全赫斯勒化合物（通常以较窄带隙为特征）可能在不同温区展现出潜在优势，却仍较少被探索。本工作报道了p型Ru₂Ti₁₋ₓHfₓSi全赫斯勒热电材料的发现，其在700–1000 K的宽温区内表现出高达zT = 0.7的优异性能。这些结果不仅是迄今已知全赫斯勒材料中的最高值，而且证实了早期理论预测，即p型Ru₂TiSi体系将优于其n型对应物。此外，通过双带模型，本研究揭示了Hf在Ti位点取代引发的电子结构变化，并提出了将zT进一步提升至zT > 1的策略。这些发现凸显了新型半导体全赫斯勒相尚未开发的潜力，并强调持续探索这一丰富材料体系对热电应用至关重要。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Heusler compounds have emerged as important thermoelectric materials due to their combination of promising electronic transport properties, mechanical robustness and chemical stability – key aspects for practical device integration. While a wide range of XYZ-type half-Heusler compounds have been studied for high-temperature applications, X 2 YZ-type full-Heuslers, often characterized by narrower band gaps, may offer potential advantages at different temperature regimes but remain less explored. In this work, the discovery of p -type Ru 2 Ti 1−x Hf x Si full-Heusler thermoelectrics, exhibiting a high figure of merit zT = 0.7 over a broad range of temperatures 700–1000 K, is reported. These results not only represent the largest values known to date among full-Heusler materials but confirm earlier theoretical predictions that p -type Ru 2 TiSi systems would be superior to their n -type counterparts. Moreover, using a two-band model, electronic structure changes induced by the Hf substitution at the Ti site are unveiled and strategies to further improve zT up to zT &gt; 1 are outlined. These findings highlight the untapped potential of new semiconducting full-Heusler phases and the crucial need for continued exploration of this rich materials class for thermoelectric applications.
+
+</details>
+<br>
+
+**关键词**: full-Heusler thermoelectrics, Ru2Ti1−xHfxSi, figure of merit zT, orbital-selective band engineering, p-type thermoelectric materials, electronic structure, two-band model, thermoelectric applications
+
+---
+
+### 16. ❌ DPEP2 suppresses hyperinflammation via metabolic reprogramming of macrophages in sepsis
+
+**作者**: Wenchen Luo, Wei Xu, Qimeng Yin, Jieqiong Song, Jie Wang (16762), Yian Guan, Jian Huang, Jian Yu, Kexin Zou, Danfeng Jin, Chao Xu, Min Qiu, Zhixin Qiu, Jing Zhong
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70466-4](https://doi.org/10.1038/s41467-026-70466-4)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要均未提及任何医学影像或图像分析相关内容。论文研究的是脓毒症中DPEP2通过巨噬细胞代谢重编程抑制过度炎症的分子机制，属于免疫学、代谢学和分子生物学领域，与医学影像分析完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现DPEP2通过重编程巨噬细胞代谢来抑制脓毒症中的过度炎症反应。
+
+**关键词**: DPEP2, sepsis, hyperinflammation, macrophages, metabolic reprogramming, immunometabolism
+
+---
+
+### 17. ❌ p38 MAPK orchestrates cross-tissue potassium homeostasis for survival
+
+**作者**: R. Stephanie Huang, Fangchao Hu, Yiyao Li, Qifei Gao, Jintao Huang, Jiarui Wang, Weitian Lu, Liping Wang, Yapeng Fang, T. Keith Blackwell, Ziyun Wu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70641-7](https://doi.org/10.1038/s41467-026-70641-7)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是线虫（Caenorhabditis elegans）中p38 MAPK信号通路调控跨组织钾稳态的分子机制，涉及细胞自主和非自主信号整合、转录调控和生存策略，属于基础生物学、分子生物学和衰老研究领域。全文未涉及任何医学影像的获取、处理、分析或相关技术（如深度学习在医学影像中的应用），与给定的三个关键词完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work shows that a specific p38 MAPK-ATF-7 pathway orchestrates cross-tissue potassium homeostasis in Caenorhabditis elegans, and redefine potassium regulation as a cross-tissue process linked to lifespan, stress signaling, and innate immunity with potential implications for aging and age-related diseases.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了在线虫中，p38 MAPK-ATF-7信号通路通过上调表皮中P型ATP酶泵CATP-3的表达，整合神经元信号，调控跨组织钾稳态以增强机体在钾缺乏环境下的生存能力，这一机制在酵母和哺乳动物细胞中保守，并与寿命、应激信号和先天免疫相关。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 钾元素对生命至关重要，然而在饮食摄入不足的情况下，组织或机体水平如何维持钾稳态仍知之甚少。应激激活信号通路p38 MAPK在免疫反应和衰老中发挥作用，但其在低钾反应中的具体功能尚不明确。本研究揭示，在秀丽隐杆线虫中，一条特定的p38 MAPK-ATF-7通路协调了跨组织钾稳态。该通路特异性驱动关键P型ATP酶泵CATP-3在表皮组织中的转录上调，这一过程整合了细胞自主机制与非自主的ASI神经元信号，从而增强机体在钾缺乏状态下的生存能力。值得注意的是，该调控机制不同于经典的渗透压应激反应，揭示了一种特化且保守的生存策略。类似的p38介导的P型ATP酶调控也存在于酵母和哺乳动物细胞中，表明其具有广泛的生物学相关性。我们的研究重新定义了钾稳态调控——它是一个与寿命、应激信号和先天免疫相关联的跨组织过程，对衰老及年龄相关疾病具有潜在启示意义。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Potassium is vital for life, yet how potassium homeostasis is maintained at the tissue or organismal level under dietary scarcity remains poorly understood. Stress-activated signaling pathway p38 MAPK is implicated in immune response and aging, but its specific role in low potassium response is unclear. Here we show that a specific p38 MAPK-ATF-7 pathway orchestrates cross-tissue potassium homeostasis in Caenorhabditis elegans. It drives transcriptional upregulation of a crucial P-type ATPase pump CATP-3 specifically in the hypodermis, a process that integrates cell-autonomous mechanisms with non-autonomous ASI neuronal signals, thereby enhancing organismal survival during potassium deficiency. Notably, this regulation is distinct from canonical osmotic stress responses, revealing a specialized and conserved survival strategy. Analogous p38-mediated control of P-type ATPases occurs in yeast and mammalian cells, suggesting broad relevance. Our findings redefine potassium regulation as a cross-tissue process linked to lifespan, stress signaling, and innate immunity with potential implications for aging and age-related diseases.
+
+</details>
+<br>
+
+**关键词**: p38 MAPK, potassium homeostasis, cross-tissue regulation, CATP-3, Caenorhabditis elegans, survival strategy, P-type ATPase, stress signaling
+
+---
+
+### 18. ❌ Transcriptional regulation of the pneumococcal capsule can dictate serotype-specific infection
+
+**作者**: Michela Marra, Ozcan Gazioglu, David G. Glanville, Victoria M. Harper-Cummings, Silvia Elena Santana-Krímskaya, Abby R. Kroken, Adonis D’Mello, Feroze A. Ganaie, Moon H. Nahm, Hervé Tettelin, Carlos J. Orihuela, Hasan Yeşilkaya, Andrew T. Ulijasz
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-69722-4](https://doi.org/10.1038/s41467-026-69722-4)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究肺炎链球菌的荚膜转录调控机制及其对血清型特异性感染和疫苗逃逸的影响，属于微生物学、传染病学和疫苗研究领域。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像技术，没有使用任何图像数据或图像分析方法，因此所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现肺炎链球菌通过荚膜转录调控区域的自然变异来改变荚膜大小和感染过程，这解释了病原体如何在不依赖基因重组的情况下快速进化以应对疫苗压力。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 肺炎链球菌是一种人类细菌病原体，也是细菌性肺炎的主要致病原因，并可进一步发展为败血症。该菌已演化出超过107种抗原性不同的血清型，其分类依据是荚膜的化学组成；荚膜既是其主要毒力因子，也是疫苗中的主要保护性抗原。由于荚膜的多样化，已知某些血清型在定植或侵袭能力方面更为突出。历史上普遍认为，这些差异源于荚膜本身的化学特性，其生物合成基因编码于单一的荚膜多糖（cps）操纵子中。本文研究表明，感染结果也可能源于血清型在调控区域的细微自然变异，这种变异导致cps基因座产生独特的转录调控。我们认为，这些数据部分解释了该病原体如何能够在不依赖基因重组的情况下，快速演化其荚膜表达以适应肺炎球菌疫苗带来的进化压力。本文作者揭示了肺炎链球菌通过荚膜转录调控元件的自然变异改变荚膜大小、影响血清型特异性感染进程的机制，这一机制对疫苗逃逸具有潜在意义。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Streptococcus pneumoniae (the pneumococcus) is a human bacterial pathogen and the major cause of bacterial pneumonia, which can further develop into sepsis. The pneumococcus has evolved over 107 antigenically-distinct serotypes that are defined by the chemical composition of its capsule; its major virulence factor and the main protective antigen within the vaccine. Owing to its capsule diversification, certain serotypes are known for being more effective at either colonization or invasiveness. It has historically been accepted that these differences are due to the chemical properties of the capsule itself, whose biosynthetic genes are encoded in a single capsular polysaccharide (cps) operon. Here we show that infection outcomes can also be the result of a serotype’s subtle, natural variations within the regulatory region which results in unique transcriptional control of the cps locus. We propose that these data explain, in part, how this pathogen might rapidly evolve its capsule expression to accommodate evolutionary pressures introduced from pneumococcal vaccines, without having to rely on genetic recombination. Here, the authors show the mechanism by which Streptococcus pneumoniae can, through natural variation of a capsule transcriptional control element, alter capsule size and the course of serotype-specific infection with implications for vaccine escape.
+
+</details>
+<br>
+
+**关键词**: Streptococcus pneumoniae, capsule, serotype, transcriptional regulation, vaccine escape, infection outcomes, cps operon, pneumococcal vaccines
+
+---
+
+### 19. ❌ CAMPER: mechanistic artificial intelligence for designing peptides that target MRSA persisters
+
+**作者**: Fadi Shehadeh, Biswajit Mishra, Raquel Ferrer-Espada, Anindya Basu, LewisOscar Felix, Charilaos Dellis, Narchonai Ganesan, Li Zhang, Andrew T. Martens, Youlian Goulev, M. C. Sherman, Johan Paulsson, Mandar T. Naik, Paul P. Sotiriadis, Eleftherios Mylonakis
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70348-9](https://doi.org/10.1038/s41467-026-70348-9)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是利用人工智能设计靶向MRSA持久菌的抗菌肽，核心内容涉及抗菌肽设计、人工智能框架、微生物感染模型和抗生素耐药性。虽然论文使用了人工智能和机器学习方法，但研究对象是抗菌肽和细菌感染，而非医学图像分析。论文中未提及任何医学图像、影像数据或相关分析技术，因此与所有评分关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种名为CAMPER的机制性人工智能平台，用于设计靶向耐甲氧西林金黄色葡萄球菌（MRSA）持久菌和生物膜的抗菌肽，并在小鼠感染模型中验证了其有效性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 开发短效、稳定且强效的抗菌肽是对抗抗生素耐药性和细菌持留性的重要策略。本研究提出CAMPER（基于约束条件与排序的抗菌肽工程）——一种机制性人工智能框架，该框架将机器学习与生物物理排序相结合，以优先筛选出针对耐甲氧西林金黄色葡萄球菌持留态和生物膜形态具有效力的膜靶向肽。应用CAMPER，我们鉴定出WP-CAMPER1（12肽），其对金黄色葡萄球菌MW2菌株的最小抑菌浓度为4 µg/mL。在小鼠预防性皮肤感染模型中，2%局部给药的WP-CAMPER1制剂使金黄色葡萄球菌MW2的菌载量降低了2.5 log10（p < 0.0002）；而其D型对映体WP-CAMPER1-d在已形成的生物膜感染模型中实现了1.37 log10（p < 0.0001）的降低。利用高通量微流控系统进行的单细胞分析表明，WP-CAMPER1-d能减少金黄色葡萄球菌USA300指数期的持留菌；在深部小鼠大腿感染模型中，它使稳定期金黄色葡萄球菌MW2持留菌降低了1.6 log10（p < 0.0001）。本研究引入了CAMPER这一机制性人工智能平台，用于设计靶向MRSA的抗菌肽。CAMPER鉴定出一种稳定肽，该肽能根除MRSA生物膜和持留细胞，并在小鼠感染模型中表现出活性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Developing short, stable, and potent antimicrobial peptides is a promising strategy to combat antibiotic resistance and persistence. We present CAMPER (Constraint-driven AMP Engineering with Ranking), a mechanistic artificial intelligence framework that integrates machine learning with biophysical ranking to prioritize membrane-targeting peptides effective against persister and biofilm forms of methicillin-resistant Staphylococcus aureus. We apply CAMPER to identify WP-CAMPER1 (12mer) that kills S. aureus MW2 at a minimal inhibitory concentration of 4 µg/mL. A 2% topical WP-CAMPER1 formulation reduces S. aureus MW2 burden by 2.5 log10 (p < 0.0002) in a murine prophylactic skin infection model, while its D-enantiomer, WP-CAMPER1-d, achieves 1.37 log10 (p < 0.0001) reduction in an established biofilm infection model. Single-cell analysis using a high-throughput microfluidic system shows that WP-CAMPER1-d reduces exponential-phase persisters of S. aureus USA300, and, in a deep-seated murine thigh infection model, decreases stationary-phase S. aureus MW2 persisters by 1.6 log10 (p < 0.0001). This study introduces CAMPER, a mechanistic artificial intelligence platform for designing antimicrobial peptides targeting MRSA. CAMPER identified a stable peptide that eradicates MRSA biofilms and persister cells and was active in mouse infection models.
+
+</details>
+<br>
+
+**关键词**: antimicrobial peptides, MRSA persisters, mechanistic artificial intelligence, biofilm infection, machine learning, mouse infection models, antibiotic resistance, CAMPER
+
+---
+
+### 20. ❌ Selective control of prefrontal neural timescales by parietal cortex
+
+**作者**: Orhan Soyuhos, Marc Zirnsak, Rishidev Chaudhuri, Xiaomo Chen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70326-1](https://doi.org/10.1038/s41467-026-70326-1)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是神经科学领域的前额叶皮层神经时间尺度控制机制，涉及猕猴的神经电生理记录和脑区失活实验，与医学影像分析、医学成像或深度学习医学成像完全无关。论文内容聚焦于神经回路、注意力网络和神经动力学，没有涉及任何医学影像数据、成像技术或深度学习在医学影像中的应用。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过失活后顶叶皮层，揭示了前额叶眼动区神经元存在短时间和长时间尺度两类，并证明顶叶输入选择性地调控这些时间尺度和显著性计算，从而影响注意力功能。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 额眼动区（FEF）与后顶叶皮层（PPC）是背侧注意网络的关键枢纽，然而顶叶输入如何塑造前额叶环路的时间动态及注意计算机制仍不甚明了。本研究在雄性恒河猴中测量了FEF神经元的内在时间尺度，并考察了PPC失活期间这些时间尺度的变化。根据内在时间尺度，我们观察到FEF神经元存在两种明显类别：短时间尺度神经元（约25毫秒）与长时间尺度神经元（约100毫秒）。短时间尺度神经元表现出更强的瞬时视觉反应，提示其在快速视觉处理中的作用；与之相反，长时间尺度神经元则展现出更持续的显著性表征，表明其通过时空整合来维持刺激驱动注意的功能。在PPC失活期间，两类神经元的内在时间尺度均出现增长，其中短时间尺度神经元的增幅尤为显著。此外，PPC失活会选择性干扰显著性计算，这一效应在长时间尺度神经元中尤为突出。这些发现为局部神经内在时间尺度与长程跨脑区通信之间的关联提供了因果性证据，并表明FEF内至少存在两种不同的网络基序，以支持不同的神经动态与功能计算。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract The frontal eye field (FEF) and posterior parietal cortex (PPC) are key hubs of the dorsal attention network, yet how parietal inputs shape prefrontal circuit temporal dynamics and attentional computations remains largely unknown. We measured intrinsic timescales of FEF neurons in male rhesus macaques and examined their changes during PPC inactivation. We observed two distinct classes of FEF neurons based on their intrinsic timescales: short-timescale neurons (~25 ms) and long-timescale neurons (~100 ms). Short-timescale neurons showed stronger transient visual responses, suggesting a role in rapid visual processing. In contrast, long-timescale neurons exhibited stronger sustained salience representation, suggesting a role in spatiotemporal integration to maintain stimulus-driven attention. During PPC inactivation, intrinsic timescales increased in both neuron types, with a substantially larger effect in short-timescale neurons. In addition, PPC inactivation selectively disrupted salience computation, particularly in long-timescale neurons. These findings provide causal evidence linking intrinsic local neural timescales to long-range inter-area communication and indicate the presence of at least two distinct network motifs that support different neuronal dynamics and functional computations within the FEF.
+
+</details>
+<br>
+
+**关键词**: prefrontal cortex, parietal cortex, intrinsic timescales, neural dynamics, attention network, frontal eye field, salience computation, neural circuits
+
+---
+
+### 21. ❌ Purkinje cell intrinsic activity shapes cerebellar development and function
+
+**作者**: Catarina Osório, Joshua J. White, Paula Torrents-Solé, Jie Yang, Nienke Mandemaker, Federico Olivero, Freya Kirwan, Laura Post, Zahra Hemmat, Fred de Winter, Eleonora Regolo, Francesca Romana Fiocchi, Inês Serra, Saffira Tjon, Zeliha Özgür, Mirjam CGN van den Hout, Wilfred F. J. van IJcken, Guillermina López-Bendito, Aleksandra Badura, Lynette Lim
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70355-w](https://doi.org/10.1038/s41467-026-70355-w)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是小脑发育过程中浦肯野细胞内在活动对神经回路形成和功能的影响，属于神经科学和发育生物学领域。论文内容完全不涉及医学影像分析、医学成像或深度学习医学成像技术，没有使用任何影像数据或分析方法，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现浦肯野细胞的内在活动在小脑发育早期对树突生长、神经连接建立和运动功能至关重要，其时间调控异常可能导致小脑相关疾病。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：功能性小脑回路的形成受到活动依赖性过程的显著影响。然而，浦肯野细胞内在活动对小脑发育的具体贡献仍不甚明确。本研究证明，在突触网络成熟之前，浦肯野细胞的内在活动对于调控树突生长、建立与小脑核团的连接以及确保小脑正常功能至关重要。在出生后阶段干扰这种活动会损害运动功能，且干扰发生越早，缺陷越严重。重要的是，只有早期发育阶段的干扰才会导致细胞形态的显著缺陷，这揭示了树突生长与成熟的关键时间窗口。转录组分析表明，早期内在活动驱动了活动依赖性基因（包括Prkcg和Car8）的表达，这些基因对树突发育必不可少。我们的研究结果强调了浦肯野细胞中受时间调控的内在活动在指导小脑回路发育中的重要性，并为小脑相关疾病提供了一个潜在的统一机制基础。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract The emergence of functional cerebellar circuits is heavily influenced by activity-dependent processes. However, the contribution of intrinsic Purkinje cell activity to cerebellar development remains less understood. Here, we demonstrate that before synaptic networks mature, Purkinje cell intrinsic activity is essential for regulating dendritic growth, establishing connections with cerebellar nuclei, and ensuring proper cerebellar function. Disrupting this activity during the postnatal period impairs motor function, with earlier perturbations causing more severe deficits. Importantly, only early developmental disruptions lead to pronounced defects in cellular morphology, highlighting key temporal windows for dendritic growth and maturation. Transcriptomic analyses reveal that early intrinsic activity drives the expression of activity-dependent genes, including Prkcg and Car8 , which are essential for dendritic development. Our findings emphasize the importance of temporally regulated intrinsic activity in Purkinje cells in guiding cerebellar circuit development, providing a potential unifying mechanism underlying cerebellum-associated disorders.
+
+</details>
+<br>
+
+**关键词**: Purkinje cell, cerebellar development, intrinsic activity, dendritic growth, motor function, activity-dependent genes, cerebellar circuits, postnatal period
+
+---
+
+### 22. ❌ Nitrogen fixation in a non-equilibrium spatially distributed electric field
+
+**作者**: Shuyan Guo, Yuan Wang, Yuming Guo, Bryan R. Goldsmith, Hao Zhao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70272-y](https://doi.org/10.1038/s41467-026-70272-y)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是等离子体辅助氮固定技术，具体涉及非平衡空间分布电场策略、气体-液体等离子体诊断和化学转化过程。论文内容完全属于化学工程、等离子体物理和可再生能源领域，与医学图像分析、医学成像或深度学习医学成像没有任何关联。所有关键词均与论文主题无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种非平衡空间分布电场策略，用于在环境空气等离子体中高效固定氮，实现了比均匀电场高三倍的NOx−产率，并通过原位气体-液体诊断揭示了其反应机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 氮固定过程高度依赖能源密集型的哈伯-博世法，亟需开发可再生替代方案。本文提出了一种用于常压空气等离子体固氮的非平衡空间分布电场策略。优化后的空间分布电场策略实现了9.8 mmol/h的氮氧化物产率，达到均匀电场产率的三倍；在相同或更低能耗条件下，其氮气转化率比大多数放电构型高出三倍。这种高氮氧化物产率的实现，源于空间分布电场通过同时存在的高电场与低电场区域，协同激活了两个有益动力学网络：臭氧子机制与氮气振动激发子机制。该机制通过开发光子晶体光纤诊断技术得以揭示，该技术实现了气液等离子体中分子与离子（NO、NO₂、N₂O、O₃、NO₃⁻和NO₂⁻）的原位定量分析。空间分布电场策略的建立，结合原位气液诊断技术，可广泛应用于等离子体辅助氮固定过程，并为其他等离子体辅助化学转化过程提供了新思路。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Nitrogen fixation heavily relies on the energy-intensive Haber-Bosch process, necessitating renewable alternatives. Here, we introduce a non-equilibrium spatially distributed electric field (SD-EF) strategy for nitrogen fixation in ambient air plasma. The optimized SD-EF strategy gives a NOx− yield of 9.8 mmol/h, tripling that of a uniform electric field and the N2 conversion is three times higher than most discharge configurations at similar or lower energy consumptions. This high NOx− yield is achieved through simultaneously activating two beneficial kinetic networks via SD-EF by having both high and low electric fields present: O3 and vibrational excitation of N2 (N2(v)) sub-mechanisms, which are revealed by developing a photonic crystal fiber diagnostic for in-situ quantification of molecules and ions (NO, NO2, N2O, O3, NO3−, and NO2−) in gas-liquid plasma. The establishment of the SD-EF strategy, coupled with in-situ gas-liquid diagnostics, is broadly applicable to plasma-assisted nitrogen fixation and holds promise for other plasma-assisted chemical conversion processes. The authors report a non-equilibrium spatially distributed electric field strategy for 2 nitrogen fixation in ambient air plasma.
+
+</details>
+<br>
+
+**关键词**: nitrogen fixation, spatially distributed electric field, ambient air plasma, NOx− yield, gas-liquid plasma diagnostics, plasma-assisted chemical conversion, non-equilibrium plasma, in-situ quantification
+
+---
+
+### 23. ❌ Distinct genomic trajectory among invasive Salmonella Typhimurium ST313 infections
+
+**作者**: Chenghao Jia, Haiyang Zhou, Qianzhe Cao, Chenghu Huang, Hongli An, Yan Li, Lefu Lan, Min Yue
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70196-7](https://doi.org/10.1038/s41467-026-70196-7)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示，该研究聚焦于沙门氏菌ST313感染的基因组学分析，包括基因组测序、系统发育分析、耐药性基因检测和毒力因子分析。所有内容均属于微生物学、传染病学和基因组学领域，与医学影像分析、医学成像或深度学习医学成像完全无关。论文未涉及任何图像数据、影像技术或深度学习在医学影像中的应用。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过基因组测序和系统发育分析，揭示了沙门氏菌ST313菌株在侵袭性感染中的独特基因组进化轨迹，并鉴定了其耐药性和毒力特征。
+
+**关键词**: Salmonella Typhimurium, ST313, genomic sequencing, phylogenetic analysis, antimicrobial resistance, virulence factors, invasive infections
+
+---
+
+### 24. ❌ Perovskite solar cells with enhanced thermal fatigue resistance under extreme temperature cycling
+
+**作者**: Cem Yilmaz, Ali Buyruk, Yating Shi, Sergej Levashov, Xiaole Li, Rik Hooijer, Jian Huang, X. Zhuang, Oliver Fischer, M Schubert, Caner Değer, Ilhan Yavuz, Esma Ugur, Gilles Lubineau, Johanna Eichhorn, F. Q. Zhang, Erkan Aydin
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70293-7](https://doi.org/10.1038/s41467-026-70293-7)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是钙钛矿太阳能电池的热疲劳抵抗性能，属于材料科学和可再生能源领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。论文内容涉及热循环测试、界面粘附、晶界强化等材料工程问题，没有任何医学或图像分析相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了钙钛矿太阳能电池在极端温度循环下热疲劳耐久性不足的问题，通过分子共添加剂策略增强界面粘附和晶界内聚力，使器件在16次极端温度循环后仍保持84%的初始效率。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：金属卤化物钙钛矿太阳能电池兼具高功率密度与低成本制造的优势，但其在重复极端温度循环下的耐久性机制尚未被充分理解。本研究以-80°C至+80°C的循环作为加速应力测试方案，探究其热疲劳行为。钙钛矿吸光层与玻璃基底间的热膨胀失配会诱发双轴拉伸应变，导致基底-钙钛矿界面及晶界处发生降解。为抑制这些失效模式，我们提出一种基于硫辛酸、二氢硫辛酸与硫鎓盐衍生物的共添加剂分子策略，通过增强界面粘附力，并在退火过程中引发原位聚合以强化晶界结合力。这种双重增强机制提升了器件的稳健性与性能，在标准太阳光照下实现了26%的稳态效率。经过16次极端温度循环后，器件仍能保持初始效率的84%。实验表明，热暴露时长比循环次数更为关键，大部分性能衰减发生在初始循环阶段。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Metal halide perovskite solar cells combine high power density with low-cost manufacturing, but durability under repeated extreme temperature cycling remains insufficiently understood. We investigate thermal fatigue under cycling between −80 °C and +80 °C as an accelerated stress protocol. Mismatched thermal expansion between the perovskite absorber and glass substrate induces biaxial tensile strain, leading to degradation at the substrate–perovskite interface and within grain boundaries. To mitigate these failure modes, we introduce a co-additive molecular strategy based on lipoic acid, dihydrolipoic acid, and a sulfonium-based derivative to enhance interfacial adhesion, while in situ polymerization during annealing reinforces grain-boundary cohesion. This dual reinforcement improves robustness and performance, achieving stabilized efficiencies of 26% under standard solar illumination. Devices retain 84% of initial efficiency after 16 extreme temperature cycles. Our experiments reveal that thermal exposure duration is more critical than cycle number, with most degradation occurring during initial cycles.
+
+</details>
+<br>
+
+**关键词**: perovskite solar cells, thermal fatigue resistance, extreme temperature cycling, interfacial adhesion, grain-boundary cohesion, molecular co-additive strategy, stabilized efficiency, accelerated stress protocol
+
+---
+
+### 25. ❌ Site-defined Cu-O ensembles enable hydrogen-conserving light-driven ethane upgrading
+
+**作者**: Qingqing Zhang, Cong Liu, Chang Xu, Dingnan Huang, Cheng Xie, ZhanDong WANG, Xiaoming Cao, Jinlong Zhang, Juying Lei, Ziwei Ye, Lingzhi Wang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70416-0](https://doi.org/10.1038/s41467-026-70416-0)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究是关于化学催化领域，具体涉及铜-氧团簇在光驱动乙烷升级反应中的应用，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容聚焦于材料科学、光催化和化学反应工程，没有任何医学图像相关的内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过设计特定的铜-氧团簇结构，实现了在光驱动条件下高效、节能的乙烷升级反应，同时减少了氢气的消耗。
+
+**关键词**: Cu-O ensembles, hydrogen-conserving, light-driven, ethane upgrading, photocatalysis, catalyst design, reaction efficiency
+
+---
+
+### 26. ❌ Structural and mechanistic insights into the dual-nuclease defense protein Upx as an anti-phage system
+
+**作者**: Ruimin Zhou, Yingcan Liu, Qian zhang, Zhenning Yin, Jing Tong, Chendi Zhang, Lingling Zhang, Xuzichao Li, Yanhao Zhao, Shuqin Zhang, Zhikun Liu, Weichang Chen, Nan Ji, Heng Zhang, Zhuang Li, Hang Yin, Shengkai Zuo, Yong Wei
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70435-x](https://doi.org/10.1038/s41467-026-70435-x)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是细菌防御系统Upx蛋白的结构和抗噬菌体机制，属于结构生物学和微生物学领域，与医学影像分析、医学成像或深度学习医学影像完全无关。论文内容涉及蛋白质结构解析、核酸酶活性、噬菌体防御等，没有任何医学影像相关的内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解析了双核酸酶防御蛋白Upx的结构和机制，揭示了其作为抗噬菌体系统的工作原理。
+
+**关键词**: Upx protein, anti-phage system, dual-nuclease, structural insights, mechanistic insights, defense protein, bacterial defense, nuclease activity
+
+---
+
+### 27. ❌ Learning turbulent flows with generative models for super resolution and sparse flow reconstruction
+
+**作者**: Vivek Oommen, Siavash Khodakarami, Aniruddha Bora, Zhicheng Wang, George Em Karniadakis
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70145-4](https://doi.org/10.1038/s41467-026-70145-4)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确表明研究主题是湍流流动的生成模型，用于超分辨率和稀疏流重建，属于计算流体力学领域。文中未提及任何医学图像、医学成像或相关医学应用，与所有评分关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究使用生成模型解决湍流流动的超分辨率和稀疏流重建问题，结果表明该方法能有效从低分辨率或稀疏数据中重建高分辨率流场。
+
+**关键词**: turbulent flows, generative models, super resolution, sparse flow reconstruction, deep learning, flow reconstruction, computational fluid dynamics
+
+---
+
+### 28. ❌ Restoration of RBM22 overcomes the transcriptional and epigenetic barriers of cardiomyocyte proliferation for heart regeneration
+
+**作者**: Xuewen Duan, Yong Tan, Yunkai Zhang, D. Wang, Sheng Zhang, Xia Li, Xubo Liu, Zhenzhen Zhan
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70235-3](https://doi.org/10.1038/s41467-026-70235-3)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是心脏再生和心肌细胞增殖的分子机制，具体探讨RBM22基因如何通过调控染色质可及性和转录来促进心肌细胞增殖。论文内容完全属于分子生物学、遗传学和心脏再生医学领域，未涉及任何医学影像分析、医学成像或深度学习医学成像技术。论文中未使用或提及影像数据、成像方法或深度学习模型进行图像分析。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现RBM22通过招募SMARCA4增强细胞周期基因启动子的染色质可及性，从而克服心肌细胞增殖的表观遗传障碍，为心脏损伤修复提供了潜在治疗靶点。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 刺激内源性心肌细胞增殖对心脏修复具有重要治疗前景，但染色质重塑如何调控这一过程尚不明确。RNA结合基序蛋白22（RBM22）参与多种生物学过程的调控，但其在心脏再生与修复中的作用仍属未知。本研究首次鉴定RBM22为心肌细胞增殖的关键调控因子。心肌细胞特异性敲除Rbm22会损害新生小鼠的心脏再生能力，并加剧成年小鼠心肌梗死后的心室重构。机制研究表明，RBM22选择性结合关键细胞周期基因（Cdk4、Ccna2和Ccne1）的近端启动子区域，与染色质重塑因子SMARCA4协同增强该区域的转录可及性。此外，RBM22对于RNA聚合酶II向这些基因位点的特异性募集及后续转录驱动至关重要。AAV9介导的Rbm22递送能在心脏损伤后促进体内心肌细胞增殖，并提升人诱导多能干细胞来源心肌细胞的增殖能力。本研究确立了RBM22作为克服心肌细胞周期障碍的转录与表观遗传调控因子，揭示了其在心脏损伤治疗中的潜力。激活内源性心肌细胞增殖对心脏修复具有重要治疗价值。本研究发现RBM22通过募集SMARCA4增强细胞周期基因启动子区域的染色质可及性，从而突破心肌细胞增殖的表观遗传障碍，这使其成为心脏再生治疗的潜在靶点。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Stimulating endogenous cardiomyocyte proliferation holds great therapeutic promise for cardiac repair, but how chromatin remodeling governs this process remains poorly understood. RNA-binding motif 22 (RBM22) participates in the regulation of various biological contexts, whereas its role in cardiac regeneration and repair is largely unknown. Here, we identify RBM22 as a pivotal regulator of cardiomyocyte proliferation. Cardiomyocyte-specific deletion of Rbm22 impairs neonatal heart regeneration and exacerbates post-infarction ventricular remodeling in adult mice. Mechanistically, RBM22 selectively binds to the proximal promoters of key cell cycle genes (Cdk4, Ccna2, and Ccne1), where it cooperates with chromatin remodeler SMARCA4 to enhance transcriptional accessibility. Furthermore, RBM22 is essential for the gene-specific recruitment of RNA Polymerase II to these gene loci to drive transcription. AAV9-mediated delivery of Rbm22 promotes cardiomyocyte proliferation in vivo following cardiac damage and increases the proliferation of human induced pluripotent stem cell-derived cardiomyocytes. Our findings establish RBM22 as a transcriptional and epigenetic regulator that overcomes cell-cycle barriers in cardiomyocytes, highlighting its therapeutic potential for cardiac injury. Activating endogenous cardiomyocyte proliferation holds great therapeutic promise for cardiac repair. Here, the authors find that RBM22 overcomes the epigenetic obstacles of cardiomyocyte proliferation by recruiting SMARCA4 to promote chromatin accessibility at cell cycle gene promoters, establishing it as a potential therapeutic target for cardiac regeneration.
+
+</details>
+<br>
+
+**关键词**: RBM22, cardiomyocyte proliferation, heart regeneration, chromatin accessibility, SMARCA4, cell cycle genes, cardiac repair, epigenetic regulation
+
+---
+
+### 29. ❌ CryoEM structure of mGlu6 captures receptor activation prior to G protein coupling
+
+**作者**: S. Lee, Chu-Ting Chang, Yaejin Yun, Jeong Seok Ji, Kirill A. Martemyanov, Hyung Ho Lee
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70436-w](https://doi.org/10.1038/s41467-026-70436-w)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是代谢型谷氨酸受体6（mGlu6）的冷冻电镜结构，属于结构生物学和神经科学领域，主要涉及蛋白质结构解析、受体激活机制和遗传性视网膜疾病。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像技术，这些关键词与论文主题无任何关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过冷冻电镜解析了激动剂结合的mGlu6结构，揭示了其在G蛋白结合前的不对称二聚体激活状态，为理解先天性静止性夜盲症的发病机制提供了分子框架。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 代谢型谷氨酸受体6（mGlu6）对于视杆光感受器的突触传递至关重要，其突变会导致致盲性疾病。然而，该受体的结构组织机制仍不明确。本研究展示了激动剂结合状态下mGlu6的结构，揭示了其在缺乏G蛋白情况下呈现不对称二聚体排列。这表明仅激动剂结合即可诱导代谢型谷氨酸受体同源二聚体产生不对称性，并通过预先组织跨膜结构域二聚体界面以利于G蛋白结合，从而在结构上为mGlu6的激活做好准备。该结构还发现了富含半胱氨酸结构域与细胞外第二环之间的非经典相互作用，形成了一个可能稳定激活状态的独特界面。对该界面的突变分析揭示了其在维持快速Gαo激活和表面靶向中的作用。该结构进一步支持了对先天性静止性夜盲症的机制研究，揭示了致病突变在表面运输、Gαo偶联和激活动力学（包括意料之外的功能获得性效应）中的多样化影响。这些结果为理解mGlu6的不对称中间态结构提供了关键见解，并为解析遗传性视网膜疾病的发病机制提供了分子框架。代谢型谷氨酸受体6（mGlu6）介导视网膜中的视觉信号传导。本研究通过冷冻电镜解析了mGlu6的结构，为其不对称中间态及先天性静止性夜盲症提供了结构层面的理解。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The metabotropic glutamate receptor 6 (mGlu6) is essential for synaptic communication of rod photoreceptors, and mutations in mGlu6 lead to a blinding disorder. However, its structural organization remains unknown. Here, we present the structure of agonist-bound mGlu6, revealing an asymmetric dimer arrangement in the absence of a G protein. This indicates that agonist binding alone can induce the homodimeric receptor asymmetry in metabotropic glutamate receptors and structurally prime mGlu6 for activation by pre-organizing the transmembrane domain dimer interface for G protein binding. The structure also identifies noncanonical interactions between the cysteine-rich domain and extracellular loop 2, forming a unique interface that likely stabilizes the activation state. Mutational analyses of this interface reveal its role in maintaining rapid Gαo activation and surface targeting. The structure also permits mechanistic investigation of congenital stationary night blindness and reveals diverse effects of pathogenic mutations on surface trafficking, Gαo coupling, and activation dynamics, including unexpected gain-of-function. These results provide critical insight into the intermediate asymmetric structure of mGlu6 and offer a molecular framework for understanding the pathogenesis of inherited retinal disorders. Metabotropic glutamate receptor 6 (mGlu6) mediates visual signaling in the retina. Here, authors report cryo-EM structures of mGlu6, providing structural insight into the asymmetric intermediate state and congenital stationary night blindness.
+
+</details>
+<br>
+
+**关键词**: mGlu6, cryo-EM structure, metabotropic glutamate receptor, asymmetric dimer, G protein coupling, congenital stationary night blindness, retinal disorders, activation mechanism
+
+---
+
+### 30. ❌ Regenerating end-of-life membranes for enhanced sustainability and unexpected performance
+
+**作者**: Chenxin Tian, Jiansuxuan Chen, Zhiwei Qiu, Ruobin Dai, Shihong Lin, Zhiwei Wang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70415-1](https://doi.org/10.1038/s41467-026-70415-1)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是膜技术（水净化、气体分离、资源回收和化学生产中的膜）的再生策略，通过有机溶剂溶解和重铸来再生报废膜，提高水渗透性和污染物截留率，并降低碳排放和成本。论文内容完全围绕膜技术、可持续性和循环经济，与医学图像分析、医学成像或深度学习医学成像没有任何关联。所有关键词均得0分，因为论文主题与医学图像领域完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种通过有机溶剂溶解和重铸来再生报废膜的策略，使再生膜的水渗透性提高五倍以上并改善污染物截留率，同时降低碳排放和成本。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：膜技术在水净化、气体分离、资源回收和化学品生产等领域得到广泛应用。然而，由于结构降解和不可逆污染，膜最终会达到其使用寿命终点（EOL），导致被焚烧或填埋，这与可持续发展和循环经济原则相悖。本文提出一种通过有机溶剂溶解并重新浇铸来再生EOL膜的策略。再生膜的水通量比EOL膜提高五倍以上，污染物截留率也有所提升，甚至优于使用原始聚合物粉末制备的膜。这种性能提升归因于残留污染物作为造孔剂和亲水性添加剂的整合作用。此外，EOL膜缠结密度的降低改善了其与溶剂及污染物的相容性，使再生膜能够形成致密的分离层。该策略可实现38.4%的二氧化碳当量排放降低和75.7%的成本削减，推动了膜产业的可持续性与循环性发展。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Membrane technologies are widely adopted in water purification, gas separation, resource recovery and chemical production. However, membranes eventually reach their end-of-life (EOL) due to structural degradation and irrecoverable fouling, leading to incineration or landfilling which contradicts the sustainability and circular economy principles. Here we present a strategy to regenerate EOL membranes through dissolution in organic solvent followed by re-casting. The regenerated membrane exhibits more than fivefold higher water permeance with improved pollutant rejection compared to the EOL membrane, and even outperforms membrane fabricated from pristine polymer powders. This enhancement is attributed to the integration of residual foulants as pore-forming agents and hydrophilic additives. Moreover, the reduced entanglement density of EOL membrane improves its compatibility with solvent and foulants, enabling the formation of a dense separation layer in the regenerated membrane. This strategy achieves 38.4% lower CO 2 -eq emissions and 75.7% cost reduction, advancing sustainability and circularity of the membrane industry.
+
+</details>
+<br>
+
+**关键词**: membrane regeneration, end-of-life membranes, water purification, sustainability, circular economy, CO2 emissions reduction, organic solvent dissolution, pollutant rejection
+
+---
+
+### 31. ❌ Dual phagocytosis-checkpoint blockade revitalizes immune surveillance in mouse models of glioblastoma
+
+**作者**: JongHoon Ha, Yifan Wang, Yifan Ma, Annette Wu, Shiyan Dong, Seong Dong Jeong, Jared L. Edwards, Mengyu Chang, Yen-Tzu Chang, Xiaotian Wang, Maurice Dufilho, Mylin A. Torres, Shannon McCabe, Weiye Deng, Adam Grippin, Jeffrey S. Weinberg, Shaan M. Raza, Franco DeMonte, Ian E. McCutcheon, Sujit Prabhu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70221-9](https://doi.org/10.1038/s41467-026-70221-9)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要均未提及医学影像分析相关内容。论文研究的是胶质母细胞瘤的免疫治疗机制（双重吞噬检查点阻断），属于肿瘤免疫学领域，与医学影像分析、医学成像或深度学习医学成像完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究在胶质母细胞瘤小鼠模型中探索了双重吞噬检查点阻断如何通过恢复免疫监视功能来增强抗肿瘤免疫反应。
+
+**关键词**: glioblastoma, immune surveillance, phagocytosis, checkpoint blockade, mouse models, immunotherapy, tumor microenvironment, macrophages
+
+---
+
+### 32. ❌ Discovery of an ITK and TRK kinase inhibitor for the potential topical treatment of atopic dermatitis
+
+**作者**: Jennifer Lynn Duffen, Kimberly Crouse, Lin Ji, Amy Brault, Kristen K. Ford, Jonathan Brooks, Scott A. Jelinsky, Yizheng Li, Julia Shin, Y Zhao, Tatyana Andreyeva, Katherine Hammerman, Christina Arnold, Richard Sheldon, Jeonifer Garren, Wes LaBarge, Anthony M. Resek, J Volmer, Scott W. Bagley, Agustin Casimiro-garcia
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70000-6](https://doi.org/10.1038/s41467-026-70000-6)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是特应性皮炎（atopic dermatitis）的局部治疗药物PF-07245303，该药物通过抑制ITK和TRK激酶来阻断T细胞介导的炎症反应和神经生长因子诱导的嗜碱性粒细胞活化。全文聚焦于药物发现、体外实验、皮肤外植体模型和小鼠皮炎模型，未涉及任何医学图像分析、医学成像或深度学习在医学成像中的应用。因此，所有关键词与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文发现了一种局部应用的ITK/TRK激酶抑制剂PF-07245303，通过抑制T细胞炎症和神经生长因子信号通路，在人类皮肤外植体和小鼠皮炎模型中显示出治疗特应性皮炎的潜力。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 白细胞介素-2诱导性T细胞激酶（Interleukin-2-inducible T cell kinase, ITK）由T细胞表达，可放大T细胞受体依赖性信号。删除或抑制ITK会减少白细胞介素-4和白细胞介素-13的产生，这两种细胞因子是特应性皮炎的关键驱动因子。神经生长因子通过受体原肌球蛋白相关激酶A（tropomyosin-related kinase A, TrkA）传递信号，可能促进特应性皮炎皮损中的瘙痒。本文描述了一种化合物PF-07245303，它能有效抑制ITK及原肌球蛋白相关激酶（TRK）家族激酶，从而抑制CD4和CD8 T细胞中T细胞受体介导的细胞因子产生，并抑制神经生长因子诱导的人嗜碱性粒细胞活化。在人皮肤外植体中，PF-07245303显示出对TrkA磷酸化的抑制，抑制了T细胞受体激活的常驻T细胞的细胞因子表达，并逆转了特应性皮炎相关基因的表达。在雌性小鼠的皮炎模型中，局部应用PF-07245303可减轻促炎反应和表皮改变。通过同时抑制这两种致病性炎症机制，PF-07245303可能对特应性皮炎患者具有治疗价值。特应性皮炎是一种由包括IL-4/IL-13在内的细胞因子驱动的免疫性疾病。本研究表明，局部应用的ITK/TRK抑制剂能阻断一系列T细胞因子，抑制神经生长因子诱导的嗜碱性粒细胞活化，并在人皮肤外植体和皮炎模型中减轻炎症，显示出治疗潜力。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Interleukin-2-inducible T cell kinase is expressed by T cells and amplifies T cell receptor-dependent signals. Interleukin-2-inducible T cell kinase deletion or inhibition reduces production of interleukin-4 and interleukin-13, key drivers of atopic dermatitis. Nerve growth factor signals via the receptor tropomyosin-related kinase A and may promote pruritus in atopic dermatitis lesions. Here we describe PF-07245303, a compound which potently inhibits interleukin-2-inducible T cell kinase and tropomyosin-related kinase family kinases capable of inhibiting T cell receptor-mediated cytokine production from CD4 and CD8 T cells and suppressing nerve growth factor-induced human basophil activation. In human skin explants, PF-07245303 demonstrates inhibition of tropomyosin-related kinase A phosphorylation, suppresses cytokine expression from T cell receptor-activated resident T cells and reverses the expression of atopic dermatitis associated genes. Topical application of PF-07245303 reduces proinflammatory and epidermal changes in a dermatitis model using female mice. By inhibiting both pathogenic inflammatory mechanisms, PF-07245303 may have therapeutic value for patients with atopic dermatitis. Atopic dermatitis is an immune disease driven by cytokines including IL-4/IL-13. This study shows that a topical ITK/TRK inhibitor blocks an array of T cell cytokines, inhibits NGF-induced basophil activation, and reduces inflammation in human skin explants and dermatitis models, indicating therapeutic potential.
+
+</details>
+<br>
+
+**关键词**: atopic dermatitis, ITK inhibitor, TRK inhibitor, PF-07245303, topical treatment, T cell cytokines, skin explants, dermatitis model
+
+---
+
+### 33. ❌ Bioengineered ferritin-based lysosome-targeting chimera platform for tumor-targeted therapy
+
+**作者**: Shuai Zhang, Yiliang Jin, Yaxin Hou, Guoheng Tang, Zhuoran Wang, Xuehui Chen, Xiyun Yan, Kelong Fan
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70383-6](https://doi.org/10.1038/s41467-026-70383-6)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确表明这是一篇关于生物工程铁蛋白平台用于肿瘤靶向治疗的研究，属于生物医学工程、纳米技术和癌症治疗领域。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像技术，没有提到任何图像处理、成像方法或深度学习在医学图像中的应用。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种基于生物工程铁蛋白的溶酶体靶向嵌合体平台，用于实现肿瘤靶向治疗，并在体外和体内实验中证明了其有效性。
+
+**关键词**: ferritin-based platform, lysosome-targeting chimera, tumor-targeted therapy, bioengineered, cancer treatment, nanotechnology, drug delivery, biomedical engineering
+
+---
+
+### 34. ❌ Getting robots back on track by reconstituting control in unexpected situations with online learning
+
+**作者**: Maxime Allard, Manon Flageat, Bryan Lim, Antoine Cully
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70256-y](https://doi.org/10.1038/s41467-026-70256-y)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确聚焦于机器人控制、在线学习和扰动恢复，未提及任何医学图像分析、医学成像或深度学习医学成像相关内容。论文研究的是机器人系统在意外情况下的控制恢复问题，使用机器学习方法增强现有控制器，与医学图像领域完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究机器人系统在意外扰动下失去控制的问题，提出了一种基于在线学习的方法，能够快速诊断和补偿扰动，使操作员在225毫秒内恢复控制并达到与未扰动条件下相同的操作效果。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：机器人系统在严格受控环境（如仓库）中的应用日益普遍，但尚未完全融入日常生活。日常场景对机器人控制器构成挑战，原因在于不可预见的状况（如设备损坏、轮胎漏气或阵风）或意外使用方式可能引发干扰。此类情况下，操作者可能失去对系统的控制，导致碰撞或任务失败等潜在灾难性后果。本研究提出的“基于快速学习的即时恢复自适应方法”，通过机器学习增强现有控制器以应对失控问题。该方法每225毫秒更新一次机载模型，可快速诊断并补偿未知扰动。实验表明，即使在仅依赖机载计算的条件下，配备本方法的操作者仍能在多种扰动中恢复控制，其操作效能与无扰动环境相当。相比之下，最优控制和自适应控制基线方法在扰动恢复中的效能仅为本方法的一半，而在线深度强化学习基线则完全失效。本工作证明，该在线学习方法通过降低扰动对系统可操作性的影响，有效提升了机器人的环境适应能力。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Robotic systems are increasingly common in strictly controlled environments (e.g. warehouses), but they have yet to fully integrate into our everyday lives. Everyday scenarios are a challenge for robot controllers due to disturbances that can be caused by unforeseen conditions (e.g., damage, flat tires, or wind gusts) or unexpected usage. In these cases, operators may lose control of their systems, leading to potentially catastrophic outcomes, such as crashes or failed operations. Our method, “Fast Learning-based Adaptation for Immediate Recovery”, uses machine learning to counter loss of control by enhancing existing controllers. It rapidly diagnoses and compensates for unseen perturbations by updating an onboard model every 225 milliseconds. Even in a setting with only onboard compute, we show that operators equipped with our method regain control and operate as effectively as in unperturbed conditions across a wide range of perturbations. Other state-of-the-art methods, such as an optimal control and an adaptive control baseline, were found to be half as effective at recovering from perturbations, while an online Deep Reinforcement Learning baseline proved entirely ineffective. In this work, we demonstrate that our online learning method enhances robotic resilience by mitigating the impact of perturbations on system operability.
+
+</details>
+<br>
+
+**关键词**: robotic systems, online learning, control recovery, perturbations, machine learning, fast adaptation, resilience, onboard model
+
+---
+
+### 35. ❌ Reconstructing fine-scale 3D wind fields with terrain-informed machine learning
+
+**作者**: Chensen Lin, Ruian Tie, Shihong Yi, Dongqing Liu, Xiaohui Zhong, Zixin Hu, Hao Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70562-5](https://doi.org/10.1038/s41467-026-70562-5)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确表明研究主题是3D风场重建，属于气象学、环境科学和机器学习应用领域，与医学图像分析完全无关。论文使用地形信息和机器学习方法进行风场建模，未涉及任何医学图像、医学成像技术或医学领域的深度学习应用。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究利用地形信息结合机器学习方法，解决了精细尺度3D风场重建的问题，实现了更准确的风场预测。
+
+**关键词**: 3D wind field reconstruction, terrain-informed machine learning, fine-scale modeling, wind field prediction, machine learning, terrain information, environmental modeling
+
+---
+
+### 36. ❌ Integrated photonic ultrawideband real-time spectrum sensing for 6G wireless networks
+
+**作者**: Yuansheng Tao, Hanke Feng, Y. Fang, Xiangzhi Xie, Yuansong Zeng, Yan Wu, Tong Ge, Yiwen Zhang, Zhaoxi CHEN, Zihan Tao, Jie Xu, Haowen Shu, Xingjun Wang, Xianghao Yu, C. Q. Wang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**arXiv链接**: [https://arxiv.org/abs/2509.03874](https://arxiv.org/abs/2509.03874)
+**DOI**: [10.1038/s41467-026-70389-0](https://doi.org/10.1038/s41467-026-70389-0)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题为《Integrated photonic ultrawideband real-time spectrum sensing for 6G wireless networks》，摘要内容聚焦于6G无线网络中的实时频谱感知技术、集成光子学平台（薄膜铌酸锂）、宽带测量和低延迟性能验证。全文未提及任何医学图像分析、医学成像或深度学习在医学成像中的应用，研究领域属于通信工程、光子学和无线网络技术，与医学图像分析完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    An integrated photonic RT-SS system capable of ultrabroadband measurement from microwave to sub-terahertz bands, covering the full spectrum for 6G wireless, and achieves an unprecedented spectral measurement range beyond 120 GHz at a low latency of less than 100 ns is presented.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了6G无线网络中实时频谱感知的挑战，提出了一种基于薄膜铌酸锂平台的集成光子学系统，实现了高达120 GHz的宽带测量和纳秒级低延迟，并通过概念验证演示了其在集成感知与通信中的应用。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 实时频谱感知（RT-SS）是未来第六代（6G）网络的一项关键技术，能够通过动态频谱管理来支持新兴的集成感知与通信（ISAC）应用。然而，传统的电子与光子学RT-SS方案难以同时实现超宽测量范围、紧凑尺寸与低延迟。本文中，我们在薄膜铌酸锂（TFLN）平台上展示了一种覆盖微波至亚太赫兹波段的集成光子RT-SS系统。该TFLN芯片集成了用于信号加载的宽带电光（EO）调制器、用于高速并行频率-时间映射的电光微环滤波器组，以及用于通道参考的电光频率梳。系统实现了57.5 GHz的分析带宽和高达120 GHz的可测频率，且延迟低于110纳秒。我们进一步通过概念验证的ISAC演示验证了该RT-SS系统的性能：在动态通信干扰下，雷达能够自适应地利用未充分使用的频谱区域实现高质量测距。本工作为6G ISAC网络中的高效频谱管理提供了一种紧凑的解决方案。实时频谱感知对于6G网络动态管理频谱资源、支持集成感知与通信至关重要。本研究开发了一种基于薄膜铌酸锂的光子系统，可实现高达120 GHz的宽带实时频谱感知，并具备纳秒级延迟。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Real-time spectrum sensing (RT-SS) is an essential technology for the upcoming sixth-generation (6G) networks, enabling dynamic spectrum management to support emerging integrated sensing and communication (ISAC) applications. However, conventional electronic and photonic RT-SS solutions face challenges in achieving ultrawide measurement range, compact size, and low latency, simultaneously. Here, we demonstrate an integrated photonic RT-SS system covering microwave to sub-terahertz bands on a thin-film lithium niobate (TFLN) platform. The TFLN chip integrates a broadband electro-optic (EO) modulator for signal loading, an EO microring filter bank for high-speed parallel frequency-to-time mapping, and an EO comb for channel referencing. The system achieves an analysis bandwidth of 57.5 GHz and measurable frequency up to 120 GHz, at a low latency of < 110 ns. The RT-SS system is further validated through a proof-of-concept ISAC demonstration, where a radar adaptively accesses underutilized spectral regions for high-quality ranging under dynamic communication interferences. Our work provides a compact solution for high-efficiency spectrum management in 6G ISAC networks. Real-time spectrum sensing (RT-SS) is essential for 6G networks to dynamically manage spectral resources and support integrated sensing and communication. Here, the authors develop a thin film lithium niobate photonic system for wideband RT-SS up to 120 GHz with nanosecond-level latency.
+
+</details>
+<br>
+
+**关键词**: real-time spectrum sensing, 6G wireless networks, integrated photonics, thin-film lithium niobate, ultrawideband, low latency, integrated sensing and communication, microwave to sub-terahertz
+
+---
+
+### 37. ❌ Massive-scale spatial multiplexing of multimode VCSELs with a 3D-printed photonic lantern
+
+**作者**: Yoav Dana, Ksenia Shukhin, Yehudit Garcia, Aleksei Kukin, Baruch Kliot, Michaela Peer, Ran Vered, Ariel Roizman, Dan M. Marom
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70458-4](https://doi.org/10.1038/s41467-026-70458-4)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确表明该研究聚焦于光子学、光通信和3D打印技术，具体涉及多模VCSELs的空间复用和光子灯笼的制造。全文未提及任何医学图像分析、医学成像或深度学习在医学成像中的应用，与给定的三个关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了使用3D打印光子灯笼实现大规模多模VCSELs空间复用的方法，并成功展示了高通道数的光信号传输能力。
+
+**关键词**: spatial multiplexing, multimode VCSELs, 3D-printed photonic lantern, optical communication, massive-scale, photonic integration, mode division multiplexing
+
+---
+
+### 38. ❌ Infection-acquired protection against SARS-CoV-2 infection and clinical severity by number of prior infections
+
+**作者**: Hannah E. Maier, Sergio Ojeda, Abigail Shotwell, Roger López, Nery Sanchez, Saira Saborío, Miguel Plazaola, Carlos Barilla, Guillermina Kuan, Angel Balmaseda, Aubree Gordon
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70390-7](https://doi.org/10.1038/s41467-026-70390-7)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究SARS-CoV-2再感染的保护作用和临床严重性，使用流行病学数据和统计分析方法，完全不涉及医学图像分析、医学成像或深度学习医学成像技术。论文内容属于传染病流行病学和免疫学领域，与医学图像分析无任何关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过尼加拉瓜家庭传播数据发现，既往SARS-CoV-2感染次数越多，对再次有症状感染的保护作用越强，且再感染的疾病严重程度低于首次感染。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 自奥密克戎（Omicron）变异株出现以来，SARS-CoV-2（严重急性呼吸综合征冠状病毒2）的再感染现象有所增加且已较为普遍。然而，随着我们接近疫情地方性流行阶段，再感染的频率、严重程度及其后果仍不甚明确。利用在尼加拉瓜马那瓜开展的一项家庭传播研究（2020-2024年）数据，我们评估了既往感染一次、两次和三次及以上所提供的保护力，并比较了经逆转录聚合酶链反应（RT-PCR）确认的首次、第二次和第三次及以上SARS-CoV-2感染的严重程度。与无既往感染者相比，既往感染一次、两次和三次及以上者，对有症状感染的保护力逐级增强，其发病率比（Incidence Rate Ratio）分别为0.39（95%置信区间[CI]：0.26-0.61）、0.24（95%CI：0.13-0.42）和0.20（95%CI：0.09-0.42）。在RT-PCR确认的感染中，再感染与疾病严重程度降低相关；与首次感染相比，第二次感染中亚临床疾病的比例是其1.57倍（95%CI：1.15-2.16），而中度/重度疾病的比例是其0.65倍（95%CI：0.49-0.86）。我们的研究结果表明，既往感染两次所产生的保护力可能强于感染一次，但未明确观察到超过两次感染的额外获益。综合来看，我们的结果提示，我们正接近SARS-CoV-2的地方性流行阶段，其特征是相对于首次感染，疾病严重程度有所降低，但疾病负担仍然很高，这凸显了维持免疫力以管控持续流行的重要性。既往感染对SARS-CoV-2感染具有保护作用，但多次后续感染所提供的保护程度尚不清楚。在此，作者利用尼加拉瓜一项家庭传播研究的数据，并在调整疫苗接种因素后表明，感染1次、2次或3次及以上与针对再感染的保护力增强相关。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> SARS-CoV-2 reinfections have increased since Omicron and are common. Yet, as we approach endemicity, the frequency, severity, and consequences of reinfections remain poorly understood. Using data from a household transmission study in Managua, Nicaragua (2020-2024), we evaluated protection conferred by one, two, and three+ prior infections and compared the severity of first, second, and third+ RT-PCR-confirmed SARS-CoV-2 infections. Compared to those with no prior infections, one, two, and three+ prior infections were associated with increasing protection from symptomatic infection, with incidence rate ratios of 0.39, (95% Confidence Interval [CI]: 0.26-0.61), 0.24 (95%CI: 0.13-0.42), and 0.20 (95%CI: 0.09-0.42), respectively. Among RT-PCR-confirmed infections, reinfections were associated with decreased severity; compared with first infections, second infections had 1.57 (95%CI: 1.15-2.16) times the proportion of subclinical disease and 0.65 (95%CI: 0.49-0.86) times the proportion of moderate/severe disease. Our findings suggest that protection generated from two prior infections may be stronger than one prior infection, although additional benefit beyond the second infection was not clearly observed. Together, our results suggest we are approaching an endemic phase of SARS-CoV-2 characterized by reduced severity relative to first infections, yet the burden remains high, underscoring the importance of maintaining immunity to manage ongoing disease. Prior infection is protective against SARS-CoV-2 infection, but the degree of protection provided by multiple subsequent infections is not clear. Here, the authors use data from a household transmission study in Nicaragua and show that 1, 2 or 3+ infections are associated with increasing protection against reinfection, after adjusting for vaccination.
+
+</details>
+<br>
+
+**关键词**: SARS-CoV-2, reinfection, protection, clinical severity, household transmission, prior infections, endemic phase, immunity
+
+---
+
+### 39. ❌ Directional dynamics in the entorhinal cortex of male mice driven by behavioral constraints
+
+**作者**: Ruojin Liu, Jun Hao, Xiang Zhang, Shidan Wen, Youran Yang, Haiqian Cai, Kai Gao, Emilio Kropff, Chenglin Miao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70289-3](https://doi.org/10.1038/s41467-026-70289-3)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是小鼠内嗅皮层中头部方向细胞的功能动态和可塑性，属于神经科学和系统神经生物学领域。论文内容涉及神经记录、行为实验和神经表征分析，完全不涉及医学图像分析、医学成像或深度学习医学成像。所有关键词与论文主题完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过比较自由探索和头部固定辅助导航条件下小鼠的神经记录，发现内嗅皮层头部方向细胞的功能特性是动态可塑的，能够根据行为约束和环境线索进行自我组织和适应性重组。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 啮齿类动物内侧内嗅皮层包含多种功能定义的细胞类型，包括网格细胞与头方向细胞。尽管有证据表明这些功能类型并不与明确的分子标记相关联，但其形成机制尚不明确。本研究通过比较雄性小鼠在自由探索环境与头部固定于自主驱动推车中探索同一环境时的神经记录，发现相当一部分神经元的头方向功能身份具有动态性，很可能通过自组织过程形成。约半数在自由觅食状态下具有头方向调谐的细胞在辅助导航期间可逆地丧失了方向选择性，而另一些神经元则获得了方向调谐特性，这种现象在感觉线索丰富的环境中尤为明显。这种适应过程具有经验依赖性，能逐步锐化并稳定方向表征，同时整合空间信息成分。我们的研究揭示了内嗅皮层表征具有显著的可塑性，证明其能够根据动物与环境的互动方式进行重组与适应。行为约束如何在内嗅皮层整体网络中重组功能定义的头方向细胞尚未完全阐明。本文作者揭示了某些内嗅皮层亚群中学习与自组织的互补作用，使动物能够在持续行为约束的影响下，自适应地表征自身在环境中的位置。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The medial entorhinal cortex of rodents contains a variety of functionally-defined cell types, including grid and head direction cells. While evidence indicates that functional types are not associated with clear molecular footprints, the factors that define them remain unclear. By comparing neural recordings in male mice exploring the same environment either freely or head-fixed to an autonomous-driving cart, we here show that, for a substantial portion of neurons, the head direction functional identity is dynamic, likely emerging through self-organization. Approximately half of free-foraging head direction cells reversibly lost their tuning during assisted navigation, while other neurons gained directional tuning, especially in environments enriched with sensory cues. This adaptive process is experience-dependent, progressively sharpening and stabilizing directional representations, while also integrating a spatial component. Our findings reveal a remarkable flexibility of entorhinal representations, demonstrating their capacity to reorganize and adapt based on how animals interact with their environment. How behavioral constraints re-organize functionally-defined HD (head direction) cells within the wider entorhinal network is not fully understood. Here authors show the complementary role of learning and self-organization in some entorhinal subpopulations, enabling animals to adaptively represent themselves within their environment, shaped by ongoing behavioral constraints.
+
+</details>
+<br>
+
+**关键词**: entorhinal cortex, head direction cells, neural dynamics, behavioral constraints, self-organization, adaptive representations, rodent navigation, neural plasticity
+
+---
+
+### 40. ❌ An ultraconserved pseudo 5’ splice site fine-tunes development by regulating alternative splicing within TOR-related pathways
+
+**作者**: Zhan Ding, Zhuoya Fang, Hao Li, Xiping Jiang, Yunlong Xie, Wen-Xiu Bian, Yan-Ting Wu, Xiao-Yi Lu, Bao-Liang Song, Jun Fang, Yong-Zhen Xu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70278-6](https://doi.org/10.1038/s41467-026-70278-6)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是分子生物学和遗传学领域，具体涉及RNA剪接调控、TOR信号通路和果蝇卵巢发育，完全不涉及医学影像分析、医学成像或深度学习医学成像。论文内容与所有评分关键词均无任何关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现了一个超保守的假5'剪接位点，通过调控选择性剪接来感知TOR相关通路信号，从而精细调控果蝇卵巢发育，这一机制在人类细胞中也具有保守性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 内含子在进化过程中急剧扩张，其内部序列虽已高度分化，但超保守RNA基序的潜在功能仍是一个悬而未决的重要问题。假5'剪接位点（pseudo-5'SSs）与功能性5'剪接位点（5'SSs）共享序列，广泛存在于内含子中却从不被剪接。通过搜索同源内含子，我们鉴定出八个超保守假5'剪接位点（UCP-5'SSs）。其中最为保守的位点位于动物ENOX1/Enox基因中，该基因参与质膜电子传递和细胞增大。在果蝇体内删除这一9核苷酸的UCP-5'SS会导致卵巢显著增大并提高繁殖力。我们证明，该UCP-5'SS通过与U1小核核糖核蛋白核心蛋白相互作用，成为调控上游一个超保守必需外显子可变剪接的沉默子。在测试的所有dTOR和胰岛素样通路果蝇突变体中均观察到可变剪接的改变。值得注意的是，该UCP-5'SS的缺失能显著减轻这些变化。经mTOR/胰岛素通路抑制剂处理的多来源人类细胞也出现可变剪接改变，并特异性增加U1-70K蛋白的翻译，表明该机制具有高度保守性。本研究揭示了一个超保守调控网络：一个短内含子RNA元件在卵巢发育过程中充当TOR相关通路的传感器。基因的非编码部分——内含子可能隐藏关键功能。本文作者发现一个9核苷酸的内含子RNA元件可作为传感器，解读细胞生长信号以控制可变剪接和果蝇卵巢发育，该机制在人类细胞中同样保守。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Introns have expanded dramatically during evolution, and while their internal sequences have greatly diverged, the potential function of ultraconserved RNA motifs remains an important, unanswered question. Sharing the sequence with the utilized 5’ splice sites (5’SSs), pseudo-5’SSs are widespread in introns but are never spliced. We searched homologous introns and identified eight ultraconserved pseudo-5’SSs (UCP-5’SSs). The most conserved one resides in the animal ENOX1/Enox genes that are involved in plasma membrane electron transport and cell enlargement. In vivo deletion of this 9-nt UCP-5’SS in Drosophila results in a significantly enlarged ovary and increased fecundity. We demonstrate that this UCP-5’SS is a silencer for alternative splicing (AS) regulation of an upstream ultraconserved essential exon through interaction with the U1 snRNP-core proteins. The AS changes are observed in all the tested Drosophila mutants from the dTOR and Insulin-like pathways. Remarkably, loss of this UCP-5’SS significantly mitigates the changes. Multiple-source human cells treated with the mTOR/Insulin pathway inhibitors also change the AS and specifically increase the translation of U1-70K, suggesting remarkable conservation of this mechanism. This study reveals an ultraconserved regulatory network in which a short intronic RNA element functions as a sensor of TOR-related pathways during ovarian development. Introns, non-coding parts of genes, can hide critical functions. Here, the authors find a 9-nucleotide intronic RNA element that acts as a sensor, reading cell growth signals to control alternative splicing and fly ovarian development via a mechanism also conserved in human cells.
+
+</details>
+<br>
+
+**关键词**: ultraconserved pseudo-5' splice site, alternative splicing, TOR-related pathways, ovarian development, Drosophila, U1 snRNP, mTOR/Insulin pathway, intronic RNA element
+
+---
+
+### 41. ❌ Phytochrome B integrates jasmonic acid and warm temperature signaling pathways to regulate cotyledon chloroplast development
+
+**作者**: Peipei Qi, Junling Huai, Nan Gao, Yuanyuan Yao, Ran Lin
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70131-w](https://doi.org/10.1038/s41467-026-70131-w)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究植物生物学中光敏色素B如何整合茉莉酸和温暖温度信号通路调控叶绿体发育，属于植物分子生物学和信号转导领域。所有评分关键词均涉及医学影像分析，与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了拟南芥中光敏色素B通过整合茉莉酸和温暖温度信号，通过HY5-MYCs转录调控网络精细调控叶绿体发育的分子机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 叶绿体的生物合成与发育受内源因子和环境信号协同调控。茉莉酸（JA）与温度在调控叶绿体发育中的相互作用机制尚不明确。本研究证明，茉莉酸甲酯（MeJA）与温暖温度（28 °C）处理会协同抑制拟南芥子叶中的叶绿素积累与叶绿体发育。我们发现，温度传感器光敏色素B（phyB）抑制MeJA与温暖温度介导的叶绿体发育，而JA受体CORONATINE INSENSITIVE 1（COI1）则促进该过程。此外，phyB直接与JASMONATE ZIM-DOMAIN 1（JAZ1）和JAZ3互作，阻止其JA诱导的降解，而温暖温度会减弱这种互作。值得注意的是，我们揭示了转录因子ELONGATED HYPOCOTYL 5（HY5）和MYC2通过直接且差异性地调控下游转录网络，对MeJA和温暖温度作出响应，从而反向调节子叶叶绿体发育。本研究建立了一个分子框架，即phyB通过HY5-MYCs转录调控网络整合JA与温暖温度信号以精细调控叶绿体发育，这凸显了植物生态适应的一种策略。本文报道了光敏色素B通过HY5-MYCs转录调控网络整合JA与温暖温度信号以调控叶绿体发育的机制。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Chloroplast biogenesis and development are coordinated by both endogenous factors and environmental cues. The interplay between jasmonic acid (JA) and temperature in regulating chloroplast development remains poorly understood. Here, we demonstrate that methyl jasmonate (MeJA) and warm temperature (28 °C) treatments additively impair chlorophyll accumulation and chloroplast development in Arabidopsis thaliana cotyledons. We found that the thermosensor phytochrome B (phyB) suppresses, whereas the JA receptor CORONATINE INSENSITIVE 1 (COI1) promotes, MeJA- and warm temperature-mediated chloroplast development. Moreover, phyB directly interacts with JASMONATE ZIM-DOMAIN 1 (JAZ1) and JAZ3, preventing their JA-induced degradation, and warm temperature attenuates this interaction. Strikingly, we reveal that transcription factors ELONGATED HYPOCOTYL 5 (HY5) and MYC2 oppositely regulate cotyledon chloroplast development in response to MeJA and warm temperature by directly and differentially modulating downstream transcriptional networks. Our study establishes a molecular framework in which phyB integrates JA and warm temperature signaling through the HY5-MYCs transcriptional regulatory network to fine-tune chloroplast development, highlighting a plant strategy for ecological adaptation. This paper reports the mechanism by which phytochrome B integrates JA and warm temperature signals in regulating chloroplast development through the HY5-MYCs transcriptional regulatory network.
+
+</details>
+<br>
+
+**关键词**: phytochrome B, jasmonic acid, warm temperature, chloroplast development, HY5-MYCs network, Arabidopsis thaliana, signal integration, transcriptional regulation
+
+---
+
+### 42. ❌ Kibble-Zurek mechanism and beyond in a holographic superfluid disk
+
+**作者**: Chuan-Yin Xia, Hua-Bi Zeng, András Grabarits, A Del Campo
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-69940-w](https://doi.org/10.1038/s41467-026-69940-w)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究主题为全息超流体盘中的Kibble-Zurek机制和拓扑缺陷形成，属于理论物理、凝聚态物理和全息对偶领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。论文内容涉及相变动力学、涡旋形成、AdS/CFT对偶等物理概念，未提及任何医学图像相关技术或应用。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过全息对偶方法研究了圆盘几何中超流体的相变动力学，发现慢淬火下涡旋密度遵循Kibble-Zurek机制标度律，而快淬火下则表现出超越该机制的普适标度行为，并揭示了拓扑缺陷的普适统计分布。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 在有限时间内穿越连续相变会引发自发对称性破缺及拓扑缺陷（如畴壁和涡旋）的形成。AdS/CFT对应关系为通过双重引力理论研究强耦合临界动力学提供了框架。我们通过在AdS4黑洞中求解爱因斯坦-阿贝尔-希格斯模型，研究了圆盘几何中跨越临界温度时的正常流体-超流体相变动力学及自发涡旋形成。对于慢速淬火，涡旋密度遵循基布尔-祖雷克机制（KZM）的冷却速率标度律；而对于快速淬火，其标度行为则普遍依赖于最终温度，超越了KZM的预测范围。尽管涡旋数量分布呈现正态特征，但对累积量的研究揭示了与泊松二项统计一致的非正态特性，这通过其随淬火时间和深度的标度行为得到证实。我们的研究结果支持一种普适的缺陷分布规律，该规律涵盖了KZM标度律、其失效情形以及快速淬火中普适的淬火深度标度行为。基布尔-祖雷克机制描述了有限时间驱动的连续或量子相变动力学中的普适标度律，但其仅适用于慢速淬火过程。本文通过聚焦全息超流体圆盘模型，突破了该理论框架的限制，揭示了适用于慢速与快速淬火的拓扑缺陷普适统计规律。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Crossing a continuous phase transition in finite time induces spontaneous symmetry breaking and the formation of topological defects, such as domain walls and vortices. The AdS/CFT correspondence provides a framework for studying strongly coupled critical dynamics via a dual gravitational theory. We investigate the normal-to-superfluid phase-transition dynamics and the spontaneous vortex formation while crossing the critical temperature in a disk geometry by solving the Einstein-Abelian-Higgs model in an AdS4 black hole. For slow quenches, the vortex density follows the Kibble-Zurek mechanism (KZM) scaling with the cooling rate, whereas for fast quenches it scales universally with the final temperature, beyond the KZM predictions. Although vortex number distributions appear normal, the study of cumulants reveals non-normal features consistent with Poisson binomial statistics, confirmed by their scaling with the quench time and depth. Our results support a universal defect distribution that encompasses KZM scaling, its breakdown, and universal quench-depth scaling at fast quenches. The Kibble-Zurek mechanism describes universal scaling laws in the dynamics across a continuous or quantum phase transition driven in finite time, but it is limited to slow quenches. Here, by focusing on a holographic superfluid disk model, the authors advance beyond this framework and uncover universal statistics of topological defects that holds for both slow and fast quenches.
+
+</details>
+<br>
+
+**关键词**: Kibble-Zurek mechanism, holographic superfluid, phase transition, vortex formation, AdS/CFT correspondence, topological defects, quench dynamics, universal scaling
+
+---
+
+### 43. ❌ Dissecting the contributions to non-photochemical quenching in a land plant under fluctuating light
+
+**作者**: Lam Lam, R.J. Lee, Dhruv Patel-Tupper, Henry E. Lam, Tsung-Yen Lee, Alexa Ma, A. Sophia, Hetty He, Krishna K. Niyogi, Graham R. Fleming
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70414-2](https://doi.org/10.1038/s41467-026-70414-2)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究植物光合作用中的非光化学淬灭（NPQ）过程，涉及叶绿素荧光寿命测量、类胡萝卜素浓度分析和动力学建模，属于植物生理学、光合作用研究领域。所有评分关键词均与医学影像分析相关，而论文完全不涉及医学、影像学或深度学习内容，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A fluorescence lifetime-based quantitative kinetic model is constructed that disentangles individual photoprotection components and accurately predicts wild-type and mutant NPQ behaviors under various light-dark regimes and suggests improved overall quenching efficiency at specific VDE:ZEP:PsbS overexpression stoichiometries.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过叶绿素荧光寿命测量和动力学模型，解析了陆地植物在波动光照下非光化学淬灭（NPQ）的各个组分贡献，并量化了不同类胡萝卜素的淬灭效果，为优化光保护和提高作物产量提供了理论依据。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 光合生物进化出多种非光化学淬灭（NPQ）过程，通过安全耗散过剩激发能量来提供光保护。这些过程涉及多种分子组分，在从秒到天的重叠时间尺度上发挥作用，使得分离和量化其各自动力学具有挑战性。本研究对维管陆地植物本氏烟草的野生型及多种新表征的NPQ突变体进行了全叶片叶绿素荧光寿命和叶黄素浓度测量。基于这些测量结果，我们构建了一个基于荧光寿命的定量动力学模型，该模型能够解析出独立的光保护组分，并且当以加和方式整合时，能准确预测野生型和突变体在不同光暗条件下的NPQ行为。此外，该模型量化了多种叶黄素的单分子淬灭效能，以及六种淬灭组分（qE<sub>V</sub>、qE<sub>A</sub>、qE<sub>Z</sub>、qE<sub>L</sub>、qZ和qI）在不同基因型中的贡献。模型还表明，在特定的VDE:ZEP:PsbS过表达化学计量比下，整体淬灭效率得以提升，这与先前研究一致，并为在动态光环境下优化光保护、提高作物产量的转化研究提供了支持。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Photosynthetic organisms have evolved multiple non-photochemical quenching (NPQ) processes, providing photoprotection by safely dissipating excess excitation energy. These processes involve various molecular players functioning on overlapping timescales from seconds to days, making it challenging to isolate and quantify their individual kinetics. In this study, we perform whole-leaf chlorophyll fluorescence lifetime and xanthophyll concentration measurements on wild-type and various newly characterized NPQ mutants of Nicotiana benthamiana, a vascular land plant. Based on these measurements, we construct a fluorescence lifetime-based quantitative kinetic model that disentangles individual photoprotection components and, when integrated additively, accurately predicts wild-type and mutant NPQ behaviors under various light-dark regimes. Additionally, the model quantifies the per-molecule quenching effectiveness of various xanthophylls and the contributions of six quenching components (qE<sub>V</sub>, qE<sub>A,</sub> qE<sub>Z,</sub> qE<sub>L,</sub> qZ, and qI) across different genotypes. It also suggests improved overall quenching efficiency at specific VDE:ZEP:PsbS overexpression stoichiometries, aligning with previous studies and supporting translational efforts to optimize photoprotection and enhance crop yields under dynamic light environments.
+
+</details>
+<br>
+
+**关键词**: non-photochemical quenching, chlorophyll fluorescence lifetime, photoprotection, kinetic model, xanthophylls, Nicotiana benthamiana, NPQ mutants, crop yield optimization
+
+---
+
+### 44. ❌ Single-cell genomics highlight MYC-associated metabolic activation and altered cell interactions in T-prolymphocytic leukemia progression
+
+**作者**: Linus Wahnschaffe, Dennis Jungherz, Tony Andreas Müller, Tea Pemovska, A. G. Pichler, Stéphanie Poulain, Edith Julia, Sanna Timonen, Martin Böttcher, Qu Jiang, David Beverungen, Julia Bischoff, Marek Franitza, Theodoros Georgomanolis, Kerstin Becker, Michael Hallek, Dimitrios Mougiakakos, Thorsten Zenz, Satu Mustjoki, Emmanuel Bachy
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70185-w](https://doi.org/10.1038/s41467-026-70185-w)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究T-前淋巴细胞白血病（T-PLL）的分子机制，使用单细胞RNA测序和全基因组测序分析基因表达变化，完全不涉及医学图像分析、医学成像或深度学习医学成像。论文专注于基因组学、转录组学和白血病生物学，与医学图像处理领域无任何关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过单细胞RNA测序和全基因组测序揭示了T-前淋巴细胞白血病从惰性阶段向活动阶段转变过程中MYC相关代谢激活和细胞相互作用改变的分子机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 T幼淋巴细胞白血病（T-PLL）通常表现为快速进展的肿瘤负荷。然而，15-25%的病例在疾病进展至活动期前，会经历长达2-3年的惰性阶段，表现为无症状且稳定的低水平淋巴细胞增多。为阐明这一转变背后的分子变化，我们对28例初治样本进行了单细胞RNA测序，其中包括11对纵向获取的惰性/活动期配对样本，并同步进行了纵向全基因组测序。研究揭示了患者特异性病变以及共同的全局基因表达改变。活动期T-PLL样本中MYC靶基因特征的显著上调与增强的能量代谢相关，提示其获得了摆脱能量限制的自主性。T细胞受体信号通路基因的反复下调，以及T-PLL细胞与非白血病细胞类型相互作用的减少，进一步表明其逐渐独立于调控性生存信号，并逃逸了微环境介导的控制。这项针对T-PLL的单细胞及疾病阶段解析的基因组分析，为理解肿瘤演进的共有机制提供了见解，这些机制有待验证其是否可作为可靶向的病变。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract T-prolymphocytic leukemia (T-PLL) typically presents with rapidly progressing tumor burden. However, 15–25% of cases are diagnosed at an indolent stage with asymptomatic and stable low-level blood lymphocytosis over up to 2-3 years before advancing to active-stage disease. To define the molecular changes underlying this transition, we perform single-cell RNA sequencing of 28 treatment-naïve samples including 11 longitudinally acquired indolent/active pairs, paralleled by longitudinal whole genome sequencing. This reveals both patient-specific lesions and common global alterations of gene expression. Strong upregulations of MYC-target gene signatures in active T-PLL samples associated with enhanced energy metabolism implicate acquired autonomy from energetic restrictions. Recurrent downregulation of genes of the T-cell-receptor signaling cascade and reduced interactions of the T-PLL cell with non-leukemic cell types further indicate progressive independence from regulatory survival signals and escape from micromilieu-mediated control. This single-cell and disease-stage resolved genomic analysis of T-PLL provides insights into shared mechanisms of tumor evolution, which have to prove their amenability as targetable lesions.
+
+</details>
+<br>
+
+**关键词**: T-prolymphocytic leukemia, single-cell RNA sequencing, MYC-target genes, energy metabolism, T-cell-receptor signaling, tumor evolution, longitudinal analysis
+
+---
+
+### 45. ❌ Water mass specific genes dominate the Southern Ocean microbiome
+
+**作者**: Emile Faure, Jolann Pommellec, Cyril Noël, Alexandre Cormier, Lisa-Marie Delpech, A. Murat Eren, Antonio Fernàndez-Guerra, Chiara Vanni, Marion Fourquez, Marie-Noëlle Houssais, Ulysse Guyet, Corinne Da Silva, Frédérick Gavory, Aude Perdereau, Karine Labadie, P. Wincker, Julie Poulain, Christel Hassler, Yajuan Lin, Nicolas Cassar
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-69584-w](https://doi.org/10.1038/s41467-026-69584-w)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题《Water mass specific genes dominate the Southern Ocean microbiome》和摘要内容表明，这是一篇关于海洋微生物组学的研究，聚焦于南大洋水团特异性基因对微生物群落的影响。研究涉及海洋学、微生物生态学和基因组学，与医学影像分析（medical image analysis）、医学成像（medical imaging）或深度学习医学影像（deep learning medical imaging）完全无关。这些关键词属于医学和计算机视觉领域，而论文主题是海洋环境科学，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究探讨了南大洋不同水团中微生物群落的基因特异性，发现水团特异性基因主导了微生物组的结构和功能。
+
+**关键词**: Southern Ocean, microbiome, water mass, genes, microbial communities, oceanography, genomics, environmental science
+
+---
+
+### 46. ❌ Amphotericin B promotes respiratory viral entry by enhancing late endosomal maturation and fusion via glucocerebrosidase-mediated ceramide remodeling
+
+**作者**: Di He, Wenting Zuo, Zhiguang Xiang, J. Zhao, Wei Tong, Hongyan Li, Qing Fang, Xu Li, Yun Zhang, Yi Zheng, Xianxia Zhuo, Danni Pu, Yü Huang, Yun Yuan, Weiyang Wang, Yameng Lu, Min Luo, Jing An, Zai Wang, Bin Cao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70095-x](https://doi.org/10.1038/s41467-026-70095-x)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是两性霉素B通过激活葡萄糖脑苷脂酶促进呼吸道病毒进入细胞的分子机制，以及该药物在动物模型和临床队列中增加病毒感染风险的证据。论文内容完全聚焦于病毒学、药理学和临床医学领域，涉及病毒进入机制、药物作用、动物实验和临床数据分析，没有涉及任何医学图像分析、医学成像或深度学习在医学成像中的应用。因此，所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    研究发现两性霉素B通过激活葡萄糖脑苷脂酶促进晚期内体成熟和融合，从而增强流感病毒和SARS-CoV-2的进入，在动物模型和临床患者中证实该药物会增加病毒感染风险。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 呼吸道病毒感染，如流感和COVID-19，构成了重大的全球健康挑战。对于患有侵袭性肺曲霉病的患者，后续的病毒感染可导致临床结局显著恶化。尽管两性霉素B（AmB）仍是抗真菌治疗的基石药物，但我们的研究表明，它反而会增强甲型流感病毒和SARS-CoV-2的进入。从机制上讲，AmB直接结合并激活葡萄糖脑苷脂酶，导致晚期内体中神经酰胺积累和RAB7上调，从而增强晚期内体的成熟及其与病毒的融合。在动物模型中，AmB处理增强了甲型流感病毒感染的小鼠和SARS-CoV-2攻击的仓鼠体内的病毒感染，导致体重加速下降、更高的病毒载量以及更严重的组织损伤。一致地，在我们经倾向评分匹配的、培养确诊的侵袭性肺曲霉病患者队列中（2016–2025年，n = 1,072），与其他抗真菌药物相比，全身性使用AmB与后续病毒感染的发生率显著升高相关（21.55% vs. 7.76%，P = 0.003），多变量分析进一步支持了这一结果，证实AmB是一个独立的危险因素（校正后OR = 3.45，95% CI 2.20–5.41，P = 7.174 × 10 -8）。总之，我们的研究结果为指导抗真菌治疗提供了关键的临床证据，并揭示了葡萄糖脑苷脂酶是开发新型抗病毒策略的一个潜在靶点。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Respiratory viral infections, such as influenza and COVID-19, pose significant global health challenges. For patients with invasive pulmonary aspergillosis, a subsequent viral infection can lead to markedly worse clinical outcomes. Although amphotericin B (AmB) remains a cornerstone antifungal therapy, our investigation demonstrates that it paradoxically enhances the entry of influenza A virus and SARS-CoV-2. Mechanistically, AmB directly binds to and activates glucocerebrosidase, leading to ceramide accumulation and RAB7 upregulation in the late endosomes, thereby enhancing late endosomal maturation and fusion with viruses. In animal models, AmB treatment enhances viral infection in both influenza A virus–infected mice and SARS-CoV-2–challenged hamsters, resulting in accelerated weight loss, higher viral loads, and aggravated tissue damage. Consistently, in our propensity score-matched cohort of patients with culture-confirmed invasive pulmonary aspergillosis (2016–2025, n = 1,072), systemic use of AmB is associated with a significantly higher incidence of subsequent viral infection compared to other antifungals (21.55% vs. 7.76%, P = 0.003), which is further supported by multivariable analysis confirming AmB as an independent risk factor (adjusted OR = 3.45, 95% CI 2.20–5.41, P = 7.174 × 10 -8 ). In summary, our findings provide crucial clinical evidence to guide antifungal therapy and reveal glucocerebrosidase as a potential target for developing novel antiviral strategies.
+
+</details>
+<br>
+
+**关键词**: amphotericin B, respiratory viral entry, glucocerebrosidase, late endosomal maturation, influenza A virus, SARS-CoV-2, invasive pulmonary aspergillosis, antifungal therapy
+
+---
+
+### 47. ❌ Residential green space, air pollution, and related metabolites in association with depression among cancer survivors
+
+**作者**: Jianhui Zhao, Jingyu Ye, Erxu Xue, Liying Xu, Jing Sun, Siyun Zhou, Tengfei Li, Haoze Cao, Zhongquan Sun, Weilin Wang, Yazhou He, Yuan Ding, Xue Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-09
+**DOI**: [10.1038/s41467-026-70393-4](https://doi.org/10.1038/s41467-026-70393-4)
+
+**评分**: 0.0 / 14.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical imaging | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究癌症幸存者抑郁风险与居住环境（绿地、自然环境、空气污染）及血浆代谢组学的关联，完全不涉及医学影像分析、医学成像或深度学习医学成像。论文使用英国生物银行队列数据，通过流行病学方法分析环境暴露与健康结局的关系，未使用任何医学影像数据或技术。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究探讨了癌症幸存者中居住绿地、自然环境和空气污染与抑郁风险的关联，发现较高绿地暴露可降低抑郁风险，而较高氮氧化物暴露增加风险，血浆代谢特征可能部分介导这些关联。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 自然环境暴露与空气污染对癌症幸存者抑郁发病的影响，以及血浆代谢组学在其中的潜在作用，目前尚不明确。本研究对英国生物银行（UK Biobank）中21,507名癌症幸存者进行了中位12.39年的随访分析，发现与低暴露组（三分位第一组）相比，在1000米缓冲区内暴露于更高水平绿地（三分位第三组）与自然环境的个体，其抑郁风险分别降低15.8%（95% CI: 4.0%-26.1%）和18.2%（95% CI: 7.0%-28.1%）。其中乳腺癌幸存者的保护性关联最为显著。相反，较高浓度的二氧化氮与氮氧化物暴露则与抑郁风险升高相关。同时，与绿地及自然环境相关的血浆代谢特征可能部分中介了上述关联。这些发现表明，居住区绿地、自然环境以及较低的空气污染水平可能通过代谢途径降低癌症幸存者的抑郁风险。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract The association of natural environmental exposure and air pollution with depression incidence among cancer survivors, as well as the potential role of plasma metabolomics, remains unclear. Here, we analyze 21,507 cancer survivors from the UK Biobank over a median follow-up of 12.39 years and find that individuals exposed to higher levels of green space and natural environment (tertile 3 vs. tertile 1) within a 1000-m buffer have 15.8% (95% CI: 4.0%-26.1%) and 18.2% (95% CI: 7.0%-28.1%) lower risks of depression, respectively. The strongest protective association is observed among breast cancer survivors. In contrast, higher exposures to nitrogen dioxide and nitrogen oxides are associated with an increased risk of depression. Meanwhile, plasma metabolic signatures associated with green space and natural environment may partially mediate these associations. These findings highlight that residential green space, natural environment, and lower air pollution levels may reduce depression risk among cancer survivors, possibly via metabolic pathways.
+
+</details>
+<br>
+
+**关键词**: cancer survivors, depression, green space, air pollution, plasma metabolomics, UK Biobank, environmental exposure, nitrogen oxides
+
+---

@@ -1,0 +1,1532 @@
+# 📊 Science Advances 研究报告 (2026-03-21)
+
+> 生成时间: 2026-03-21 17:01:47
+> 数据源: Science Advances
+
+> ⚠️ **注意**: 该数据源不支持PDF下载，仅提供评分和摘要翻译，无深度分析
+
+## 📌 配置信息
+
+### 关键词列表（共 8 个，总权重 8.0）
+
+| 关键词 | 权重 | 类型 |
+|--------|------|------|
+| medical image analysis | 1.0 | 主要 |
+| medical image segmentation | 1.0 | 主要 |
+| deep learning medical imaging | 1.0 | 主要 |
+| AI for diagnosis | 1.0 | 主要 |
+| prognosis prediction | 1.0 | 主要 |
+| surgical planning | 1.0 | 主要 |
+| multimodal medical imaging | 1.0 | 主要 |
+| foundation models medical imaging | 1.0 | 主要 |
+
+### 评分设置
+
+- **每个关键词最大分**: 10
+- **及格分公式**: 5.0 + 3.0 × 总权重
+- **当前及格分**: 29.0
+
+## 📈 论文统计
+
+- **总抓取**: 28 篇
+- **及格论文**: 0 篇 (0.0%)
+
+---
+
+## 📋 所有论文列表
+
+### 1. ❌ In situ creation of crystalline channels in ultrathin network polymer membranes for pressurized H 2 /CO 2 separation
+
+**作者**: Xueru Yan, Tianqi Song, Jiao Zhu, Min Li, Kecheng Guan, Hideto Matsuyama, Zheng Wang, Xi Liu
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aeb4957](https://doi.org/10.1126/sciadv.aeb4957)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是用于气体分离的聚合物膜材料（具体为H2/CO2分离），涉及材料科学、化学工程领域。所有评分关键词均属于医学影像分析和人工智能在医疗决策支持中的应用范畴，与论文主题完全无关。论文未涉及任何医学影像、疾病诊断、手术规划或医疗AI相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过竞争反应界面聚合法在超薄网络聚合物膜中原位创建晶体通道，实现了在高压高温条件下优异的H2/CO2分离性能（选择性85，H2渗透率184 GPU）。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 有序通道为在聚合物膜中构建耐受高压高温条件的气体选择性传输路径提供了理想基础。本文提出一种竞争反应界面聚合（CRIP）方法，用于在超薄网络聚合物膜中原位构筑晶体通道，使晶体片段能够紧密附着于无定形聚合物网络。通过调控反应参数实现了膜分离性能的优化，并系统表征了其微观结构。所制备的膜在11 bar和150°C条件下，展现出85的优异混合H<sub>2</sub>/CO<sub>2</sub>选择性，同时保持184气体渗透单位的H<sub>2</sub>渗透通量。该膜表现出卓越的高压与高温耐受性，在氢气制备与二氧化碳捕集领域具有重要应用潜力。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Ordered channels provide an excellent foundation for creating gas-selective pathways in polymeric membranes that endure pressurized and high-temperature conditions. Herein, we present a competitive-reaction interfacial polymerization (CRIP) approach to in situ creation of crystalline channels in ultrathin network polymer membranes, which allows the crystalline segments to attach to the amorphous polymer network tightly. The separation performances of the membrane were regulated by controlling the reaction parameters, and the microstructure was characterized systematically. The as-prepared membrane exhibited an extraordinary mixed H<sub>2</sub>/CO<sub>2</sub> selectivity of 85 with a H<sub>2</sub> permeance of 184 gas permeation units under 11 bar and 150°C. Membranes show outstanding resistance to high pressures and temperatures, which offers high attractiveness for H<sub>2</sub> production and CO<sub>2</sub> capture.
+
+</details>
+<br>
+
+**关键词**: crystalline channels, ultrathin polymer membranes, interfacial polymerization, H2/CO2 separation, gas separation membranes, high-pressure resistance, competitive-reaction approach, network polymer membranes
+
+---
+
+### 2. ❌ PT symmetry enforced twin exchange as the origin of chirality-induced spin selectivity
+
+**作者**: Pius M. Theiler, Sander Driessen, Matthew C. Beard
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aec7069](https://doi.org/10.1126/sciadv.aec7069)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是手性诱导自旋选择性（CISS）的物理机制，属于凝聚态物理、量子化学和分子电子学领域，与医学影像分析、人工智能临床决策支持完全无关。论文内容涉及手性分子、自旋选择性、非厄米哈密顿量、PT对称性等物理化学概念，没有任何医学影像、深度学习、疾病诊断、手术规划或医疗AI相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种基于双对交换机制和PT对称性的理论框架，解释了手性分子中自旋选择性的物理起源，并推导出能够描述传输和平衡态现象的非厄米有效哈密顿量。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 手性分子在化学与生物学中普遍存在，其能够通过电子自旋实现区分，这一现象被称为手性诱导自旋选择性（chirality-induced spin selectivity, CISS）。尽管该效应具有稳健性且具备技术应用价值，但一直难以用传统理论解释：自旋轨道耦合（spin-orbit coupling, SOC）模型无法完全解释其观测到的巨大效应幅度、室温下的持续存在或平衡态特征。本文提出，结构手性通过不可区分性原理强制形成了一种孪生对交换机制，该机制本质上将自旋与空间自由度耦合，使得波函数无法分解为自旋和空间分量。我们推导出一个描述输运与平衡态CISS现象的有效哈密顿量，该量为非厄米型。然而，其固有的伪厄米性（以[公式: see text]对称性为特例）确保了实本征值及热力学一致性。我们证明，该框架为解决CISS长期存在的异常现象迈出了一步。它将CISS与铁磁性和超导性等平衡态对称性破缺现象并列，对自旋电子学、催化以及生物同手性起源等领域具有重要启示。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Chiral molecules, ubiquitous in chemistry and biology, can differentiate electrons by their spin, a phenomenon known as chirality-induced spin selectivity (CISS). Despite its robustness and technological relevance, CISS has resisted conventional explanation: Spin-orbit coupling (SOC) models cannot fully account for the observed magnitude, room-temperature persistence, or equilibrium signatures. Here, we argue that structural chirality enforces a twin-pair exchange mechanism via the indistinguishability principle, which intrinsically couples spin and spatial degrees of freedom such that wave functions cannot be factorized into spin and spatial components. We derive an effective Hamiltonian that describes both transport and equilibrium CISS phenomena and is non-Hermitian. However, the inherent pseudo-Hermiticity, with [Formula: see text] symmetry as a special case, ensures real eigenvalues and thermodynamic consistency. We demonstrate that our framework is a step toward resolving long-standing anomalies of CISS. It situates CISS alongside equilibrium symmetry-breaking phenomena such as ferromagnetism and superconductivity, with implications for spintronics, catalysis, and the origins of biological homochirality.
+
+</details>
+<br>
+
+**关键词**: chirality-induced spin selectivity, CISS, twin exchange, non-Hermitian Hamiltonian, PT symmetry, spin selectivity, chiral molecules, equilibrium phenomena
+
+---
+
+### 3. ❌ Self-inactivating AAV-CRISPR at different ages enables sustained amelioration of Huntington’s disease deficits in BAC226Q mice
+
+**作者**: Yuanyi Dai, Zuliayeti Abudujielili, Yunyi Ding, Wanping Huang, Jianhang Yin, Liqiong Ou, Jiazhi Hu, Sushuang Zheng, Chenjian Li
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea8052](https://doi.org/10.1126/sciadv.aea8052)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究亨廷顿病的基因编辑治疗（CRISPR-Cas9系统），属于神经退行性疾病治疗领域，与医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态影像、基础模型等关键词完全无关。论文未涉及任何医学影像技术或AI在临床决策支持中的应用。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Both conventional and the self-inactivating gene editing systems successfully eliminated mHTT gene, 60 to 90% mHTT protein and 90% of mHTT aggregation in BAC226Q mouse brains, which resulted in significant long-term rescue of neuropathology, motor deficits, weight loss, and shortened life span.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种自失活AAV-CRISPR基因编辑系统，成功在亨廷顿病小鼠模型中消除突变HTT基因和蛋白，显著改善了神经病理学、运动缺陷和寿命，证明了基因编辑作为亨廷顿病治疗策略的有效性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 亨廷顿病（Huntington's disease, HD）是一种单基因常染色体显性遗传神经退行性疾病，由<i>HTT</i>基因第1外显子中的CAG重复序列扩增引起，产生具有毒性功能获得性的突变亨廷顿蛋白（mutant Huntingtin protein, mHTT）。CRISPR-Cas9通过消除突变型<i>HTT</i>基因（m<i>HTT</i>），是一种潜在的强大HD治疗策略。我们开发了一种特异性靶向人类m<i>HTT</i>的SaCas9向导RNA，以及一种自失活基因编辑系统，该系统在短暂瞬时表达后即消除SaCas9，以实现高基因编辑效率并最大限度提升安全性，防止脱靶效应。传统及自失活基因编辑系统均成功在BAC226Q小鼠大脑中消除了m<i>HTT</i>基因、60%至90%的mHTT蛋白以及90%的mHTT聚集，从而显著长期改善了神经病理学异常、运动缺陷、体重减轻及寿命缩短等问题。无论是在病理和行为异常出现之前、出现时，还是出现后相当一段时间进行基因编辑，均观察到了这些有益效应。这些概念验证数据表明，基因编辑可成为治疗HD的一种高效疗法。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Huntington's disease (HD) is a monogenic autosomal dominant neurodegenerative disorder caused by a CAG repeat expansion in exon 1 of the <i>HTT</i> gene, yielding a gain-of-toxic-function mutant Huntingtin protein (mHTT). CRISPR-Cas9 is a potentially powerful therapeutic strategy for HD by eliminating mutant <i>HTT</i> (m<i>HTT</i>) gene. We developed a specific SaCas9 guide RNA to target human m<i>HTT</i> and a self-inactivating gene editing system that abolishes SaCas9 after a short transient expression for high gene editing efficiency and maximal safety to prevent off-target effects. Both conventional and the self-inactivating gene editing systems successfully eliminated m<i>HTT</i> gene, 60 to 90% mHTT protein and 90% of mHTT aggregation in BAC226Q mouse brains, which resulted in significant long-term rescue of neuropathology, motor deficits, weight loss, and shortened life span. These beneficial effects were observed when gene editing was applied before, at, and well after the onset of pathological and behavioral abnormalities. These proof-of-concept data demonstrate that gene editing can be a highly effective therapeutic approach for HD.
+
+</details>
+<br>
+
+**关键词**: Huntington's disease, CRISPR-Cas9, gene editing, self-inactivating AAV, mutant HTT, neurodegenerative disorder, therapeutic strategy, BAC226Q mice
+
+---
+
+### 4. ❌ Isostructural electronic transition in MoS 2 probed by solid-state high-harmonic generation spectroscopy
+
+**作者**: Bailey R. Nebgen, V. W. S. Lee, Jacob A. Spies, Randy M. Sterbentz, Craig P. Schwartz, Dean Smith, Diana Y. Qiu, Michael Zuerch
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**arXiv链接**: [https://arxiv.org/abs/2506.14215](https://arxiv.org/abs/2506.14215)
+**DOI**: [10.1126/sciadv.adz5621](https://doi.org/10.1126/sciadv.adz5621)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是利用固态高次谐波生成光谱探测MoS2在高压下的等结构电子跃迁，属于凝聚态物理、材料科学和光谱学领域。所有评分关键词均涉及医学影像分析、人工智能辅助临床决策等医学应用领域，与论文的物理材料研究内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究利用固态高次谐波生成光谱探测MoS2在高压下的电子结构变化，发现了一种无结构相变伴随的电子跃迁，并揭示了布里渊区不同点竞争激发路径的干涉效应。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 在金刚石对顶砧（DAC）中研究极端压力下的材料是发现物质新奇态的关键，然而目前尚无方法能在此环境下直接测量电子结构。固态高次谐波产生（sHHG）为材料电子结构提供了一个独特的全光学探测窗口。我们通过在DAC内对2H-MoS<sub>2</sub>进行高达30 GPa的sHHG光谱研究，揭示了最低直接带隙在压力诱导下从<b>K</b>点到[公式：见原文]点的交叉转变。尽管未发生结构相变，这一转变表现为谐波强度的急剧极小值以及sHHG偏振各向异性发生30°旋转。第一性原理模拟将这些特征归因于布里渊区内不同点处竞争性激发路径之间的干涉效应。我们的研究结果确立了sHHG可作为高压下电子跃迁的灵敏探针，从而能够探测到传统技术难以观测的量子现象。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Studying materials under extreme pressure in diamond anvil cells (DACs) is key to discovering emergent states of matter, yet no method currently allows the direct measurement of the electronic structure in this environment. Solid-state high-harmonic generation (sHHG) offers a unique all-optical window into the electronic structure of materials. We demonstrate sHHG spectroscopy inside a DAC by probing 2H-MoS<sub>2</sub>, up to 30 GPa, revealing a pressure-induced crossover of the lowest direct bandgap from the <b>K</b>-point to the [Formula: see text]-point. This transition manifests as a sharp minimum in harmonic intensity and a 30° rotation of the sHHG polarization anisotropy, despite the absence of a structural phase change. First-principles simulations attribute these features to interference between competing excitation pathways at distinct points in the Brillouin zone. Our results establish sHHG as a sensitive probe of electronic transitions at high pressure, enabling access to quantum phenomena that evade detection by conventional techniques.
+
+</details>
+<br>
+
+**关键词**: solid-state high-harmonic generation, MoS2, diamond anvil cell, electronic structure, pressure-induced transition, bandgap crossover, Brillouin zone, first-principles simulations
+
+---
+
+### 5. ❌ KLF5 controls subtype-independent highly interactive enhancers in pancreatic cancer to regulate cell survival
+
+**作者**: Thomas L. Ekstrom, Zhangshuai Dai, Julia Thiel, Akshay Kanakan, Bishakha Joyeeta Saha, Meghana Manjunath, Nadine Schacherer, Pavlos Bousounis, Emily L. Siegler, Amro Abdelrahman, Yara Souto, Frank Essmann, Zeynab Najafova, Sven Beyes, Mark J. Truty, Meng Dong, Steven A. Johnsen
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea2106](https://doi.org/10.1126/sciadv.aea2106)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究胰腺导管腺癌（PDAC）的表观遗传调控机制，通过整合ATAC-seq、ChIP-seq和HiChIP等基因组学技术，发现KLF5调控的增强子影响细胞存活。研究内容完全属于分子生物学、癌症基因组学和表观遗传学领域，未涉及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划或多模态医学影像。所有评分关键词均与论文主题无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过整合多组学数据揭示了转录因子KLF5通过调控增强子活性影响胰腺癌细胞存活的共同机制，为靶向高度异质性肿瘤提供了新见解。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 胰腺导管腺癌（PDAC）是一种高致死率癌症，其五年生存率仅为13%。尽管近期研究根据分子特征将肿瘤划分为经典的与基底样两种不同的细胞状态，但多数肿瘤具有异质性并同时包含这两种亚型。因此，仅针对单一亚型的治疗方法不太可能作为独立的PDAC治疗手段取得成效。本研究整合了染色质可及性[转座酶可及染色质测序（ATAC-seq）]、表观遗传状态（H3K27ac）的全基因组占据分析[染色质免疫沉淀测序（ChIP-seq）]以及H3K4me3锚定的染色质拓扑结构分析（HiChIP），以揭示PDAC中与必需基因相互作用的、不依赖于亚型的高互作增强子。基序分析表明，这些共有增强子被KLF5结合，随后耗竭KLF5会通过诱导细胞凋亡导致细胞活力下降。为阐明KLF5在PDAC中发挥功能的转录与表观遗传机制，我们利用dTAG技术快速耗竭KLF5，并通过新生RNA与信使RNA测序动态分析了其对开放活性染色质景观及转录的影响。使用KRAB结构域Zim3-dCas9融合蛋白进行增强子失活实验证实，KLF5结合的增强子可调控包括抗凋亡基因<i>BCL2L1</i>在内的靶基因。多重免疫荧光染色在患者样本中确认了KLF5与Bcl-xL的共定位，而过表达Bcl-xL能够挽救KLF5耗竭后诱导的细胞凋亡。综上，本研究为靶向高度异质性的PDAC肿瘤提供了针对共有机制的见解。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Pancreatic ductal adenocarcinoma (PDAC) remains a highly lethal cancer with a 5-year survival rate of 13%. Despite recent molecular stratification of tumors into distinct classical and basal-like cell states, most tumors are heterogeneous and contain both subtypes. Therefore, therapeutic approaches targeting only one subtype are unlikely to be effective as standalone PDAC treatments. Here, we integrated chromatin accessibility [assay for transposase-accessible chromatin with sequencing (ATAC-seq)], genome-wide occupancy [chromatin immunoprecipitation sequencing (ChIP-seq)] for epigenetic status (H3K27ac), and H3K4me3-anchored chromatin topology (HiChIP) to uncover subtype-independent highly interactive enhancers that interact with essential genes in PDAC. Motif analysis revealed that these common enhancers were bound by KLF5 with subsequent depletion leading to decreased cell viability via induction of apoptosis. To elucidate the transcriptional and epigenetic mechanisms by which KLF5 functions in PDAC, we used rapid depletion of KLF5 with dTAG technology and profiled the effects on the open and active chromatin landscape and transcription with nascent RNA and messenger RNA sequencing over time. Enhancer inactivation via KRAB domain Zim3-dCas9 fusion protein confirmed KLF5-bound enhancers regulate target genes, including the anti-apoptotic gene <i>BCL2L1</i>. Multiplex immunofluorescence confirmed costaining of KLF5 and Bcl-xL in patient samples and overexpression of Bcl-xL rescued the induction of apoptosis after KLF5 depletion. Together, this study provides insights into common mechanisms to target highly heterogeneous PDAC tumors.
+
+</details>
+<br>
+
+**关键词**: pancreatic ductal adenocarcinoma, KLF5, enhancer regulation, epigenetic mechanisms, cell survival, apoptosis, chromatin accessibility, multimodal genomics
+
+---
+
+### 6. ❌ Ground penetrating radar observations of ancient large-scale deltaic structures in Jezero crater, Mars
+
+**作者**: Emily Cardarelli, Uni Árting, D. A. Paige, Svein-Erik Hamran, Patrick Russell, Fredrik Andersson, Adrian Broz, Gwénaël Caravaca, B. Horgan, Tor Berger, Sverre Brovoll
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.adz6095](https://doi.org/10.1126/sciadv.adz6095)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究火星Jezero陨石坑的古三角洲结构，使用探地雷达数据进行分析，属于行星地质学和天体物理学领域。所有评分关键词均涉及医学影像分析、人工智能在医疗诊断和手术规划中的应用，与论文的地质勘探主题完全无关。论文未涉及任何医学影像、深度学习、疾病诊断或医疗应用内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究使用火星车探地雷达数据分析了火星Jezero陨石坑的古三角洲沉积结构，揭示了约42-37亿年前形成的埋藏河流和三角洲前积层，表明火星曾存在流水环境和更温暖的气候。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 火星表面曾存在流动液态水，其气候较今日更为温暖，过去的水-岩相互作用由地表发现的碳酸盐沉积记录。本研究利用火星2020毅力号漫游车搭载的火星地下实验雷达成像仪（RIMFAX）采集的探地雷达数据，分析了杰泽罗陨石坑河流入口附近主要镁碳酸盐沉积单元——边缘单元的沉积环境。我们报告了地下35米以上的探测结果，其深度约为迄今已勘探的杰泽罗其他地质单元的1.75倍。在约6.1公里的漫游车行进路径上，我们识别出大量地下特征以及亚米至百米尺度的层理结构。我们推断地下反射体与埋藏的古河流特征及三角洲前积层一致，这些构造经历了多次侵蚀-沉积事件。这项工作揭示了一个保存完好的古景观，其中三角洲环境的形成早于杰泽罗西部三角洲，可追溯至诺亚纪（约42至37亿年前）。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The surface of Mars once hosted flowing liquid water and a warmer climate than today, with past water-rock interactions recorded by the carbonate deposits found on its surface. Here, we analyze the depositional setting of the Margin unit, a major magnesium-carbonate deposit near the fluvial inlet to Jezero crater using ground penetrating radar data collected by the Mars 2020 Perseverance rover Radar Imager for Mars Subsurface Experiment (RIMFAX) instrument. We report soundings from more than 35 m belowground, ~1.75 times deeper than other Jezero geologic units explored to date. We identify numerous subsurface features and submeter to hundred-meter scale layering across an ~6.1-km rover traverse. We infer that subsurface reflectors are consistent with buried fluvial features and deltaic foresets, which have experienced multiple erosional-depositional episodes. This work illuminates a well-preserved paleolandscape wherein a deltaic environment developed prior to the formation of the Jezero Western Delta, as early as the Noachian (~4.2 to 3.7 billion years ago).
+
+</details>
+<br>
+
+**关键词**: Mars, Jezero crater, ground penetrating radar, deltaic structures, subsurface reflectors, fluvial features, carbonate deposits, paleolandscape
+
+---
+
+### 7. ❌ Bioelectronic synthesis of hydrogen sulfide enables spatiotemporal regulation of protein modification and cellular redox
+
+**作者**: Lian Lim, Changho Lee, Ho‐Joon Lee, M. Lee, Yongha Kim, Tae Kyoung Lee, Gwangbin Lee, Jinsoo Kim, Sang Yeon Oh, Jihan Kim, Jimin Park
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aeb3401](https://doi.org/10.1126/sciadv.aeb3401)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是生物电子平台用于电化学合成硫化氢（H₂S）以调控蛋白质修饰和细胞氧化还原平衡，属于生物电子学、电化学和细胞生物学领域。所有评分关键词均涉及医学影像分析、深度学习、AI诊断、手术规划等医学影像与AI临床决策支持主题，与论文内容完全无关。论文未涉及任何医学影像处理、AI模型或临床诊断相关内容。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A bioelectronic platform that uses electrochemical reactions to directly generate and deliver H2S from biocompatible thiosulfate precursors near living cells is developed and electrosynthesis is established as a modality for dynamic communication between electronics and biology.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种生物电子平台，通过电化学反应从生物相容性硫代硫酸盐前体直接生成和递送硫化氢（H₂S），实现了对蛋白质硫水合和细胞氧化还原平衡的时空调控。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 硫化氢（H<sub>2</sub>S）等活性信号分子能够调节蛋白质功能与细胞氧化还原平衡，但其不稳定性使得在生物系统中实现精准递送具有挑战性。现有的生物电子平台主要针对稳定分子，通常缺乏以时空精度调控瞬态分子的能力。本研究开发了一种生物电子平台，利用电化学反应在活细胞附近直接从生物相容性的硫代硫酸盐前体生成并递送H<sub>2</sub>S。通过电催化剂筛选、理论建模和产物分析，我们证明具有低金属-氢结合能的生物相容性金属阴极能够催化H<sub>2</sub>S生成，同时抑制副反应。可编程的电子输入参数（包括电解时间和施加电压）能够在保持生理相容性的前提下，定量控制生物电子界面处具有距离与时间依赖性的H<sub>2</sub>S释放。这种时空调制的H<sub>2</sub>S合成能够通过蛋白质巯基硫化（sulfhydration）按需激活离子通道，并在氧化应激条件下恢复细胞内氧化还原平衡。我们的平台拓展了生物电子学的功能范畴，并确立了电合成作为电子学与生物学之间动态交互的一种新模式。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Reactive signaling molecules such as hydrogen sulfide (H<sub>2</sub>S) regulate protein function and cellular redox balance, yet their instability makes precise delivery in biological systems challenging. Existing bioelectronic platforms primarily target stable molecules and often lack the ability to control transient molecules with spatiotemporal precision. We develop a bioelectronic platform that uses electrochemical reactions to directly generate and deliver H<sub>2</sub>S from biocompatible thiosulfate precursors near living cells. Through electrocatalyst screening, theoretical modeling, and product analysis, we demonstrate that biocompatible metal cathodes with low metal-hydrogen binding energy catalyze H<sub>2</sub>S production while suppressing side reactions. Programmable electronic inputs, including electrolysis time and applied voltage, quantitatively control distance- and time-dependent H<sub>2</sub>S release at the bioelectronic interface while maintaining physiological compatibility. This spatiotemporally modulated H<sub>2</sub>S synthesis enables on-demand activation of ion channels through protein sulfhydration and restoration of intracellular redox balance under oxidative stress. Our platform broadens the functional scope of bioelectronics and establishes electrosynthesis as a modality for dynamic communication between electronics and biology.
+
+</details>
+<br>
+
+**关键词**: bioelectronic platform, hydrogen sulfide (H₂S) synthesis, electrochemical reactions, protein sulfhydration, cellular redox balance, spatiotemporal regulation, biocompatible thiosulfate, electrocatalyst screening
+
+---
+
+### 8. ❌ Primordial germ cells experience increasing physical confinement and DNA damage during migration in the mouse embryo
+
+**作者**: Katharine Goodwin, Thomas Emrich, Sebastian J. Arnold, Katie McDole
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aec7919](https://doi.org/10.1126/sciadv.aec7919)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究小鼠胚胎中原始生殖细胞（PGCs）的迁移机制、物理限制和DNA损伤，属于发育生物学和细胞生物学领域。所有评分关键词均涉及医学影像分析、人工智能、诊断、预后、手术规划等临床决策支持技术，与论文的生物学基础研究内容完全无关。论文使用高分辨率动态成像技术观察细胞行为，但未涉及医学影像处理、AI算法或临床应用。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过动态成像揭示了小鼠胚胎中原始生殖细胞在迁移过程中经历物理限制导致核变形、破裂和DNA损伤的风险。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 为产生健康后代，生物体必须以高保真度传递其遗传物质。在许多物种中，这一功能由原始生殖细胞（primordial germ cells, PGCs）实现，它们将发育为精子或卵子。PGCs通常在远离未来性腺的位置被确定，并必须迁移穿过发育中的组织以抵达性腺。迁移失败可能导致不育或生殖细胞肿瘤。尽管在某些物种中PGC迁移已得到较好表征，但对其在哺乳动物胚胎中的迁移过程知之甚少。本研究对小鼠胚胎E7.5至E9.5阶段的PGC迁移进行了动态定量分析，首次系统阐述了PGCs从起源点到性腺的迁移特性。我们证明，迁移中的PGCs受到周围环境影响，并且与其他生物体不同，它们通过伸出高度动态、富含肌动蛋白的突起，以穿越细胞外基质（extracellular matrix, ECM）屏障和紧密的细胞间隙。随着PGCs在日益受限的空间中迁移，其细胞核发生显著形变，并易于出现核膜破裂和DNA损伤。这种受限环境下的迁移可能部分得益于核纤层的稀疏化，从而导致核形态皱缩。我们的高分辨率动态成像方法揭示了迁移中PGCs基因组完整性面临的意外风险，这对理解PGCs中的DNA修复机制及核力学适应性具有重要意义。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> To produce healthy offspring, an organism must pass on its genetic material with high fidelity. In many species, this is accomplished by primordial germ cells (PGCs), which give rise to sperm or eggs. PGCs are often specified far from the future gonads and must migrate through developing tissues to reach them. Failure to do so can result in infertility or germ cell tumors. While PGC migration is well characterized in some species, very little is known about their migration in mammalian embryos. Here, we performed dynamic and quantitative analyses of PGC migration from E7.5 to E9.5 in the mouse embryo, providing the first comprehensive study of the migratory characteristics of PGCs from their point of origin to the gonads. We demonstrate that migrating PGCs are influenced by the surrounding environment and, in contrast to other organisms, extend highly dynamic, actin-rich protrusions to navigate through extracellular matrix (ECM) barriers, and tight intercellular spaces. As PGCs migrate through increasingly confined spaces, they undergo significant nuclear deformation and become prone to nuclear rupture and DNA damage. Their migration under confinement may be aided in part by a depleted nuclear lamina that leads to wrinkled nuclear morphology. Our high-resolution and dynamic imaging approaches have uncovered an unexpected risk to genome integrity in migrating PGCs, with implications for DNA repair and adaptations in nuclear mechanics in PGCs.
+
+</details>
+<br>
+
+**关键词**: primordial germ cells, PGC migration, mouse embryo, nuclear deformation, DNA damage, dynamic imaging, extracellular matrix, nuclear lamina
+
+---
+
+### 9. ❌ Synergistic electronic-topological strategy enables spatiotemporal control of covalent adaptable networks
+
+**作者**: Hongfei Huang, Lijie Sun, Yalin Zhang, Luzhi Zhang, Yang Wang, Wei Sun, Zhengwei You
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea6321](https://doi.org/10.1126/sciadv.aea6321)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是高分子材料科学领域，具体涉及共价自适应网络（CANs）的分子工程设计和加工工艺优化，用于实现高性能可持续聚合物的高速熔融纺丝。所有评分关键词均属于医学影像分析和人工智能临床决策支持领域，与论文的化学材料主题完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过分子工程方法解决了共价自适应网络在高速熔融纺丝中动态键反应性不足和网络重排动力学与工业需求不匹配的问题，实现了100米/分钟的高速连续纺丝，并获得了兼具高强度、韧性、可拉伸性、自修复和可回收性的高性能纤维。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 共价适应性网络（CANs）在结合热固性塑料与热塑性塑料优势方面具有巨大潜力。然而，其在高速熔体纺丝中的应用受限于加工温度下动态键反应活性不足，以及网络重排动力学与工业需求之间的不匹配。本研究基于四臂交联拓扑结构中的内部催化肟-氨酯化学，构建了一个时空调控平台。邻近的脲基团提供内部催化作用，在110°C下显著加速肟-氨酯键解离，从而改善熔体流动性。在挤出过程中，微小的温度下降迅速驱动四臂拓扑结构内的键重组，同时氢键提供即时增强以维持熔体强度。这种协同设计实现了在10厘米短距离内以每分钟100米的速度进行连续熔体纺丝。所得纤维兼具高力学性能（拉伸强度：261.7兆帕；韧性：630.1兆焦耳/立方米）与优异的拉伸性、自修复性和可回收性。该分子工程方法克服了共价适应性网络中加工与性能的权衡问题，为工业制造高性能可持续聚合物提供了一条可规模化实施的路径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Covalent adaptable networks (CANs) hold considerable promise for combining the advantages of thermosets and thermoplastics. However, their use in high-speed melt spinning is restricted by insufficient dynamic bond reactivity at processing temperatures and the mismatch between network rearrangement kinetics and industrial requirements. Here, we establish a spatiotemporally regulated platform based on internally catalyzed oxime-urethane chemistry within a four-arm cross-linking topology. Neighboring urea groups provide internal catalysis that greatly accelerates oxime-urethane dissociation at 110°C, improving melt fluidity. During extrusion, the slight temperature drop rapidly drives bond recombination within the four-arm topology, while hydrogen bonds deliver immediate reinforcement to retain melt strength. This synergistic design enables continuous melt spinning at 100 meters per minute over a short 10-centimeter distance. The resulting fibers combine high mechanical performance (tensile strength: 261.7 megapascals; toughness: 630.1 megajoules per cubic meter) with excellent stretchability, self-healing, and recyclability. This molecular engineering approach overcomes the processing-performance tradeoff in CANs, offering a scalable pathway toward high-performance, sustainable polymers for industrial manufacturing.
+
+</details>
+<br>
+
+**关键词**: covalent adaptable networks, melt spinning, oxime-urethane chemistry, internal catalysis, spatiotemporal control, polymer processing, self-healing materials, recyclable polymers
+
+---
+
+### 10. ❌ Searching for surficial water ice in lunar permanently shaded regions (PSRs) with ShadowCam
+
+**作者**: Shuai Li, M. S. Robinson, B. W. Denevi, M. R. Manheim, E. Mazarico, Robert V. Wagner, E. J. Speyerer, Prasun Mahanti
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aec8211](https://doi.org/10.1126/sciadv.aec8211)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究月球永久阴影区（PSRs）中地表水冰的探测，使用ShadowCam的高分辨率观测数据，通过高反射率和前向散射光学特性来搜索水冰。论文主题属于行星科学、天体物理学和遥感领域，与医学图像分析、人工智能临床决策支持、深度学习医学成像、疾病诊断/预后预测、手术规划、多模态医学成像或医学影像基础模型等关键词完全无关。所有关键词均得0分，因为论文内容不涉及任何医学或临床相关主题。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究使用ShadowCam的高分辨率观测数据，通过光学特性分析评估月球永久阴影区中地表水冰的存在，未发现广泛分布的高含量水冰证据，但无法排除低含量水冰的可能性，并识别出少数可能含有>10 wt%水冰的小区域。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 月球、水星及谷神星等无大气天体表面存在永久阴影区（PSRs），这些区域能够通过冷阱作用捕获水冰。水星与谷神星的永久阴影区内已发现大量冰沉积，但月球水冰的分布因探测数据稀疏且有限而仍不明确。本研究利用韩国探路者号月球轨道器搭载的阴影相机（ShadowCam）获取的高分辨率观测数据，对月球永久阴影区的表层水冰进行了评估。我们基于高反射率与强前向散射的光学特性，在月球永久阴影区中搜寻水冰存在的证据。结果表明，在探测限（20至30 wt %）以上未发现广泛分布的水冰，但不能排除存在广泛低含量水冰的可能性。观测到少数同时具备高反射率与前向散射特征的小范围区域，其特性可能与冰含量高于10 wt %的情况相符。未来具备更低水冰探测限（<1 wt %）的探测任务可对本研究的结论进行验证。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Airless bodies such as the Moon, Mercury, and Ceres have permanently shaded regions (PSRs) that can cold trap water ice. Mercury and Ceres have substantial ice deposits in their PSRs, but lunar water ice distribution remains uncertain because of sparse detections and limited data. Here, we assessed surficial water ice in lunar PSRs using high-resolution observations from ShadowCam onboard the Korea Pathfinder Lunar Orbiter. We used the high-reflectance and forward-scattering optical properties to search for water ice in lunar PSRs. We found no evidence of widespread water ice in PSRs at abundances above the detection limit of 20 to 30 wt % but could not rule out widespread low-content water ice. A few small locations with both high reflectance and forward-scattering behavior were observed, which could be consistent with >10 wt % ice. Future missions with low detection limits (<1 wt %) of water ice can test our findings.
+
+</details>
+<br>
+
+**关键词**: lunar permanently shaded regions, water ice detection, ShadowCam, high-resolution observations, optical properties, reflectance, forward-scattering, ice abundance
+
+---
+
+### 11. ❌ Transforming cisplatin into targeted photothermal chemotherapeutics through the platinum-phosphate coordination within a hyaluronan nanogel
+
+**作者**: Yiyi Zhang, Chong Wang, Hua Guo, Xiaorong Gou, Xinxin Hao, Jiayi Li, Hong Deng, Weiqi Zhang
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.adz7615](https://doi.org/10.1126/sciadv.adz7615)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是基于透明质酸纳米凝胶的顺铂靶向光热化疗纳米药物开发，属于纳米医学、药物递送和癌症治疗领域。论文内容完全不涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学成像或基础模型等主题。所有关键词均与论文研究内容无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This HA/PtP nanogel represents a rationally designed Cis nanomedicine integrating the PTT with self-targeting and facile preparation that enables highly efficient PTT and targeted chemotherapy in 4T1 breast tumor xenografts.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种基于透明质酸纳米凝胶的顺铂靶向光热化疗纳米药物，通过铂-磷酸盐相互作用实现光热治疗与化疗的协同作用，在乳腺癌和转移性小鼠模型中显示出增强的抗肿瘤效果并降低毒性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 顺铂（Cis）的抗肿瘤疗效因其非特异性组织分布导致的剂量依赖性毒性而受限。尽管靶向递送与联合疗法能提升治疗效果，开发多功能且结构简化的制剂仍具挑战性。受顺铂与DNA相互作用的启发，本研究通过透明质酸（HA）纳米凝胶内的铂-磷酸（Pt-phos）相互作用，将顺铂转化为可逆光热剂（命名为HA/PtP），以实现协同的光热治疗（PTT）与化疗。HA/PtP纳米凝胶表现出近红外吸收特性和32.08%的光热转换效率，并在酸性条件下通过可逆的Pt-phos相互作用降解释放顺铂。凭借透明质酸固有的CD44靶向能力，HA/PtP纳米凝胶在4T1乳腺肿瘤异种移植模型中同时实现了高效光热治疗与靶向化疗。此外，基于HA/PtP的光热治疗在MC38转移性小鼠模型中成功模拟了腹腔热灌注化疗（HIPEC），同时减轻了顺铂的毒性。该HA/PtP纳米凝胶代表了一种合理设计的顺铂纳米药物，它将光热治疗与自靶向功能和简易制备工艺相结合。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Cisplatin's (Cis's) antitumor efficacy is limited by dose-dependent toxicity due to nonspecific tissue distribution. While targeted Cis delivery and combination therapies boost therapeutic efficacy, developing multifunctional yet simplified formulations remains challenging. Inspired by the Cis's interaction with DNA, here, we transformed Cis into a reversible photothermal agent through the platinum-phosphate (Pt-phos) interaction within a hyaluronan (HA) nanogel (named as HA/PtP) to afford synergistic photothermal therapy (PTT) and chemotherapy. The HA/PtP nanogel exhibits near infrared absorption and 32.08% photothermal conversion efficiency, and degrades to release Cis through the reversible Pt-phos interaction under acidic conditions. Leveraging HA's intrinsic CD44 targeting, HA/PtP nanogel simultaneously enables highly efficient PTT and targeted chemotherapy in 4T1 breast tumor xenografts. Moreover, HA/PtP-based PTT successfully mimics hyperthermic intraperitoneal chemotherapy (HIPEC) but with alleviated Cis toxicity in MC38 metastatic mouse model. This HA/PtP nanogel represents a rationally designed Cis nanomedicine integrating the PTT with self-targeting and facile preparation.
+
+</details>
+<br>
+
+**关键词**: cisplatin, nanogel, photothermal therapy, targeted chemotherapy, hyaluronan, platinum-phosphate interaction, cancer treatment, drug delivery
+
+---
+
+### 12. ❌ The distribution of power and inclusiveness across deep time
+
+**作者**: Gary M. Feinman, David Stasavage, David M. Carballo, Sarah B. Barber, Adam S. Green, Jacob Holland-Lulewicz, Dan Lawrence, Jessica Munson, Linda M. Nicholas, Francesca Fulminante, Sarah Klassen, Keith Kintigh, John G. Douglass
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aec1426](https://doi.org/10.1126/sciadv.aec1426)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是全球历史比较分析中的治理模式（集体-专制轴心），使用考古和文本数据评估权力集中度和公民包容性，与医学图像分析、人工智能诊断、手术规划等医疗技术领域完全无关。所有关键词均涉及医疗影像和AI医疗应用，而论文主题属于考古学、历史学和政治学交叉领域，因此所有相关度评分为0。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    本研究通过考古和文本数据对全球31个政体的治理模式进行定量分析，发现专制治理与外部融资、世袭官僚制、壮观仪式和高不平等性密切相关，而非人口规模或地理区域，挑战了现有新进化论模型。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 本研究提出了一项关于治理的全球性深度历史比较分析，对有关民主制度起源与演变的固有观点提出质疑。基于来自31个政体、40个案例观察的考古学与文本数据，我们构建了一个量化评估框架，用以在“集体-专制”轴向上评估治理模式。该轴向由两个关键维度界定：权力集中度与公民包容性。通过运用桥接论证与稳健代理指标，我们构建了一个专制指数以评估案例在该轴向上的位置，并考察其与人口规模、层级复杂性、地理区域、财政融资模式、官僚结构、仪式实践及社会经济不平等之间的关联。研究显示，政体人口规模与地理区域均未与治理的“集体-专制”轴向呈现紧密关联，这对现有的新进化论模型构成了挑战。相反，专制治理模式最显著的相关因素在于外部融资、世袭官僚制、壮观仪式以及高度不平等。本研究强调了集体治理模式的多样性与持久性，为未来比较研究提供了一种可扩展的方法论，并对历史叙事进行了重构。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> This study presents a global, deep-time comparative analysis of governance, questioning entrenched viewpoints about the origins and evolution of democratic institutions. Drawing on archaeological and textual data from 40 case observations across 31 polities, we develop a quantitative framework to assess governance along a collective-autocratic axis, defined by two key dimensions: concentration of power and citizen inclusiveness. Using bridging arguments and robust proxies, we construct an autocracy index to assess where cases fall on this axis and examine them in relation to population size, hierarchical complexity, geographic region, modes of fiscal financing, bureaucratic structure, ritual practices, and socioeconomic inequality. Neither polity population nor geographic region tightly correlates with the collective-autocratic axis of governance, challenging extant neoevolutionary models. Instead, the strongest associations for autocratic governance are with external financing, patrimonial bureaucracy, spectacular ritual, and high inequality. The study underscores the diversity and persistence of collective governance, offering a scalable methodology for future comparative research and reframing historical narratives.
+
+</details>
+<br>
+
+**关键词**: governance, collective-autocratic axis, archaeological data, autocracy index, power concentration, citizen inclusiveness, comparative analysis, historical narratives
+
+---
+
+### 13. ❌ Predicting mosquito flight behavior using Bayesian dynamical systems learning
+
+**作者**: Chenyu Zuo, Chenyi Fei, Alexander E. Cohen, Soohwan Kim, Ring T. Cardé, Jörn Dunkel, David L. Hu
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**arXiv链接**: [https://arxiv.org/abs/2505.13615](https://arxiv.org/abs/2505.13615)
+**DOI**: [10.1126/sciadv.adz7063](https://doi.org/10.1126/sciadv.adz7063)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究蚊子飞行行为建模，使用贝叶斯动力学系统学习和红外跟踪技术，属于生物物理学和昆虫行为学领域。所有评分关键词均涉及医学影像分析、AI医疗诊断、手术规划等临床医学应用，与论文内容完全无关。论文未涉及任何医学影像、疾病诊断、手术或医疗AI模型。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work combined three-dimensional infrared tracking of Aedes aegypti mosquitoes with Bayesian dynamical systems inference to learn a quantitative biophysical model of mosquito host-seeking behavior, which accurately predicts how mosquitoes respond to human targets.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过三维红外跟踪和贝叶斯动力学系统学习，建立了蚊子宿主寻找行为的定量生物物理模型，以优化蚊子捕获和控制策略。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 蚊媒疾病每年在全球导致数十万人死亡。解析蚊子的宿主搜寻行为对于通过蚊虫捕获与监测来预防疾病传播至关重要。尽管近期已取得显著进展，我们仍缺乏对视觉及其他感官线索如何引导蚊子找到目标的全面定量理解。本研究将埃及伊蚊（<i>Aedes aegypti</i>）的三维红外追踪技术与贝叶斯动力学系统推断相结合，构建了一个定量生物物理模型以阐释蚊子的宿主搜寻行为。该模型基于超过2000万个数据点训练而成——每个数据点对应在视觉和二氧化碳（carbon dioxide）线索存在下记录的蚊子自由飞行轨迹中的瞬时位置与速度——能够准确预测蚊子对人类目标的响应规律。我们的研究结果为优化蚊虫捕获与控制策略提供了定量基础，这是减轻蚊媒疾病影响的关键一步。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Mosquito-borne diseases cause several hundred thousand deaths worldwide every year. Deciphering mosquito host-seeking behavior is essential to prevent disease transmission through mosquito capture and surveillance. Despite recent substantial progress, we still lack a comprehensive quantitative understanding of how visual and other sensory cues guide mosquitoes to their targets. Here, we combined three-dimensional infrared tracking of <i>Aedes aegypti</i> mosquitoes with Bayesian dynamical systems inference to learn a quantitative biophysical model of mosquito host-seeking behavior. Trained on more than 20 million data points, each corresponding to an instantaneous position and velocity in mosquito free-flight trajectories recorded in the presence of visual and carbon dioxide cues, the model accurately predicts how mosquitoes respond to human targets. Our results provide a quantitative foundation for optimizing mosquito capture and control strategies, a key step toward mitigating the impact of mosquito-borne diseases.
+
+</details>
+<br>
+
+**关键词**: mosquito flight behavior, Bayesian dynamical systems, infrared tracking, host-seeking behavior, Aedes aegypti, disease transmission, mosquito control, biophysical model
+
+---
+
+### 14. ❌ Jagged1 regulates extracellular matrix deposition and remodeling in triple-negative breast cancer
+
+**作者**: Marjaana Parikainen, Ujjwal Suwal, Pekka Rappu, Jyrki Heino, Cecilia Sahlgren
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea9562](https://doi.org/10.1126/sciadv.aea9562)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究三阴性乳腺癌中Jagged1蛋白对细胞外基质重塑的调控机制，属于分子生物学、肿瘤微环境和细胞信号传导领域。研究使用转录组学、蛋白质组学、单细胞RNA测序和细胞共培养成像技术，但完全不涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或医学影像基础模型等主题。所有关键词均与论文内容无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现Jagged1通过调控TGFβ活性促进三阴性乳腺癌中细胞外基质纤维的排列和硬化，从而驱动肿瘤侵袭，为靶向治疗提供了潜在策略。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 细胞外基质（ECM）与肿瘤微环境的异质性驱动癌症进展和治疗抵抗。在三阴性乳腺癌（TNBC）中，高表达的Jagged1与患者不良预后相关，并促进肿瘤生长和侵袭。通过转录组学、蛋白质组学以及对体外和体内癌细胞/成纤维细胞共培养体系的成像分析，我们证实Jagged1介导的TNBC细胞与成纤维细胞之间的交互作用增强了肌成纤维细胞的活化、胶原蛋白积累以及ECM纤维的排列取向。在TNBC肿瘤的单细胞RNA测序数据中，高表达的Jagged1诱导产生了一个先前被认为与侵袭性增强相关的肌成纤维细胞亚群。Jagged1提高了成纤维细胞共培养体系中转化生长因子-β（TGFβ）的活性，而抑制TGFβ则可阻止Jagged1诱导的ECM排列重组。因此，Jagged1在TGFβ的上游调控ECM重塑。此外，较高的基质硬度会上调Jagged1表达，这表明Jagged1、ECM硬度和TGFβ之间存在着前馈循环。随着针对特定Notch通路成分的安全疗法的出现，调控Jagged1可能为治疗侵袭性乳腺癌提供一种新策略。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The extracellular matrix (ECM) and tumor microenvironment heterogeneity drive cancer progression and treatment resistance. High Jagged1 expression correlates with poor patient survival and promotes tumor growth and invasion in triple-negative breast cancer (TNBC). Using transcriptomics, proteomics, and imaging of cancer cell/fibroblast cocultures in vitro and in vivo, we demonstrate that Jagged1-mediated cross-talk between TNBC cells and fibroblasts enhances myofibroblast activation, collagen accumulation, and alignment of ECM fibers. In single-cell RNA sequencing data of TNBC tumors, high Jagged1 expression gives rise to a myofibroblast subpopulation previously associated with enhanced invasion. Jagged1 increases transforming growth factor-β (TGFβ) activity in fibroblast cocultures, and TGFβ inhibition prevents the Jagged1-induced ECM alignment. Thus, Jagged1 regulates ECM remodeling upstream of TGFβ. Furthermore, higher substrate stiffness up-regulates Jagged1, suggesting a feed-forward loop between Jagged1, ECM stiffness, and TGFβ. With the emergence of safe therapeutics targeting specific Notch components, Jagged1 modulation may offer an approach for treating invasive breast cancer.
+
+</details>
+<br>
+
+**关键词**: Jagged1, triple-negative breast cancer, extracellular matrix remodeling, TGFβ, tumor microenvironment, myofibroblast activation, Notch signaling, collagen alignment
+
+---
+
+### 15. ❌ Modeling identities among the first-sedentary communities: Emergence of clay personal ornaments in Epipaleolithic Southwest Asia
+
+**作者**: Laurent Davin, Marion Sindel, Reuven Yeshurun, Mina Weinstein-Evron, Daniel Kaufman, Boris Shklyar, Leore Grosman, Anna Belfer-Cohen, Hamoudi Khalaily, François R. Valla
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea2158](https://doi.org/10.1126/sciadv.aea2158)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是考古学领域，具体关注史前社会（纳图夫文化时期）的陶制个人装饰品，涉及社会结构、象征实践和工艺生产，与医学图像分析、人工智能、临床决策支持等医学领域完全无关。所有关键词均属于医学影像和AI医疗领域，而论文主题是考古学和人类学，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了以色列纳图夫文化遗址中最早的陶制个人装饰品传统，揭示了史前社会在定居化初期儿童和成人共同参与工艺生产以及新兴象征实践的社会组织情况。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 装饰实践对于理解史前社会的经济结构和技术象征性动态至关重要。然而，由于保存问题（例如仅通过间接证据或罕见保存环境才能了解的易腐材料），我们对此类实践的认知仍存在局限性和偏差。使用未焙烧黏土进行装饰即为一例，这种实践在新石器时代的欧亚大陆广泛传播，而在欧洲旧石器时代晚期则偶有记载。聚焦于黎凡特地区的“象征革命”，我们报告了欧洲以外已知最早的黏土装饰传统：来自以色列五个纳图夫文化遗址（晚旧石器时代末期，距今15,000至11,650校准年）的142件个人饰品。通过多学科研究方法，我们证明儿童与成年人均参与了这些物品的制作，它们反映了新出现的象征性表达，部分灵感来源于植物形态。这些发现为手工艺生产的社会组织，以及定居生活开端时期象征性实践的兴起提供了全新见解，这些因素最终塑造了西南亚地区向新石器时代的过渡。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Ornamental practices are essential for understanding socioeconomic structures and technosymbolic dynamics of prehistoric societies. However, our perception of these practices remains limited and biased, due to preservation issues, e.g., perishable materials, which are known only through indirect evidence or rare conservation contexts. Such is the use of unbaked clay for ornamentation, a practice that became widespread across Eurasia in the Neolithic, sporadically documented earlier in Upper Paleolithic Europe. Focusing on the Levantine "revolution of symbols," we report the earliest known clay ornamental tradition outside of Europe: 142 personal ornaments from five Natufian (Late Epipaleolithic, 15,000 to 11,650 calibrated years before the present) sites in Israel. Using a multidisciplinary approach, we show that both children and adults participated in crafting these items, which reflect newly emerging symbolic expressions, some inspired by plant forms. These findings offer original insights into the social organization of craft production and the rise of symbolic practices at the dawn of sedentism, which ultimately shaped the Neolithic transition in Southwest Asia.
+
+</details>
+<br>
+
+**关键词**: clay personal ornaments, Natufian, Epipaleolithic, symbolic practices, social organization, craft production, Southwest Asia, prehistoric societies
+
+---
+
+### 16. ❌ Peat fires contribute disproportionately to Siberian fire carbon emissions
+
+**作者**: Amin Khairoun, Philippe Ciais, T. H. Nguyen, Chunjing Qiu, Chengliuhui Fang, Filipe Aires, Sander Veraverbeke, Clement J. F. Delcourt, Bo Zheng, Emilio Chuvieco
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.adl2368](https://doi.org/10.1126/sciadv.adl2368)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是西伯利亚泥炭火灾对碳排放的影响，属于环境科学、气候学和遥感领域，与医学图像分析、人工智能临床决策支持等医疗领域完全无关。所有关键词均涉及医疗影像技术、疾病诊断和手术规划，而论文内容是关于卫星遥感监测火灾、碳排放计算和气候驱动因素分析，两者领域完全不同，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过卫星遥感数据分析发现，西伯利亚泥炭火灾虽然只占火灾总面积的三分之一，却贡献了不成比例的高碳排放（1.24±0.06 Pg C），且极端干热气候是主要驱动因素，对永久冻土碳库构成严重威胁。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 北极和北方林火对陆地碳库构成严重威胁，尤其是泥炭火灾会引发长期不可逆的碳损失和永久冻土融化。然而，泥炭火灾的发生及其相关碳排放仍存在高度不确定性。基于30米分辨率卫星数据绘制的过火面积与泥炭地分布图显示，2001年至2023年间西伯利亚地区的火灾过火面积超过1.07亿公顷，其中泥炭火灾占比高达三分之一。这些泥炭火灾排放了1.24 ± 0.06拍克碳，远超传统数据集的估算值。我们发现，异常干燥和温暖的气候条件是极端泥炭火灾季的主要驱动因素，且2020年晚季泥炭火灾的越冬现象显著助长了2021年的大范围火灾。泥炭火灾，特别是北极地区的泥炭火灾，对极端天气表现出明显的敏感性，对永久冻土泥炭地及其巨大碳储量的稳定性构成了严峻威胁。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Arctic and boreal fires are critical threats to terrestrial carbon reservoirs, particularly peat fires that trigger long-term irrecoverable carbon losses and permafrost thaw. However, the occurrence of peat fires and their associated carbon emissions remain highly uncertain. 30-meter satellite-derived maps of burned area and peatland coverage reveal that Siberian fires burned over 107 million hectares during the 2001 to 2023 period, with peat fires accounting for up to one-third of this area. These peat fires emitted 1.24 ± 0.06 petagram of carbon, largely exceeding conventional datasets' estimates. We found that anomalous dry and warm climatic conditions represent the primary driver of extreme peat fire seasons and that overwintering of 2020's late-season peat fires substantially contributed to extensive fires of 2021. Peat fires, especially those in Arctic regions, exhibit a pronounced sensitivity to extreme weather, posing a critical threat to the stability of permafrost peatlands and their large carbon stocks.
+
+</details>
+<br>
+
+**关键词**: peat fires, Siberian fires, carbon emissions, satellite remote sensing, permafrost thaw, extreme weather, burned area, climate drivers
+
+---
+
+### 17. ❌ Simple mass transfer regulation achieves scaling-free zero liquid discharge of seawater desalination brine without chemical additive
+
+**作者**: Yang Liu, Yekai Lian, Jinjuan Chen, Amal Baqais, Changting Wang, Jiaqi Chen, Canjie Lin, Chao Wang, Zhenle He, Bei Liu, Yi Jiang, Dalal Matar Al Shamsi, Ahmed Al Raeesi, Mohsen Sherif, Jianping Cao, Wenbin Wang, Peng Wang
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aeb2604](https://doi.org/10.1126/sciadv.aeb2604)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究海水淡化浓盐水的零液体排放技术，通过太阳能蒸发器调控传质距离来防止结垢，属于环境工程、化学工程和材料科学领域。所有评分关键词均涉及医学影像分析、人工智能医疗应用、疾病诊断预测和外科手术规划，与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了海水淡化浓盐水零液体排放过程中因次要盐类共结晶导致结垢的问题，通过无化学添加剂的传质调控策略实现了超过408小时无结垢的连续稳定蒸发。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 热驱动界面蒸发结晶为实现高盐度卤水的零液体排放（ZLD）提供了一条前景广阔的路径。然而，特定微量盐类与主体盐类的共结晶会形成结垢，导致运行故障。尽管化学添加剂常被用于缓解结垢，但它们存在潜在的环境风险。本研究提出了一种无化学添加剂的抗结垢策略，通过合理增强导致结垢的物种从蒸发界面的脱离，来抑制有害的共结晶。作为概念验证，本研究设计了一种太阳能蒸发器，通过精确调控其传质距离，以增强海水淡化卤水中主要致垢物种硫酸镁（MgSO<sub>4</sub>）的回流。在太阳辐照下，该蒸发器实现了对海水淡化卤水超过408小时的连续蒸发，并保持了每小时每平方米4.29公斤的稳定蒸发速率，且未出现任何可见结垢，从而实现了不间断的ZLD运行。户外现场测试进一步验证了该策略的实际适用性。这项工作为实现卤水管理中的可持续零液体排放提供了变革性的潜力。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Thermal-driven interfacial evaporation crystallization offers a promising path to zero liquid discharge (ZLD) for high-salinity brine. However, cocrystallization of specific minor salt species with major salts forms scaling that causes operational failure. Although chemical additives are commonly used to mitigate scaling, they pose potential environmental risks. This study presents a chemical-additive-free antiscaling strategy that suppresses unwanted cocrystallization by rationally enhancing the departure of scaling-causing species from the evaporation interface. As a proof of concept, a solar evaporator is designed to enhance the backflow of MgSO<sub>4</sub>, the primary scaling-causing species in seawater desalination brine, by precisely regulating its mass transfer distance. Under solar irradiation, the evaporator achieved a continuous evaporation of seawater desalination brine for over 408 hours with a stable evaporation rate of 4.29 kilograms per square meter per hour without any visible scaling, enabling uninterrupted ZLD operation. Outdoor field tests further validated the strategy's practical applicability. This work offers transformative potential for achieving sustainable ZLD in brine management.
+
+</details>
+<br>
+
+**关键词**: zero liquid discharge, seawater desalination brine, scaling prevention, solar evaporator, mass transfer regulation, chemical-additive-free, interfacial evaporation crystallization, MgSO4 backflow
+
+---
+
+### 18. ❌ DksA inhibitors against intracellular and persistent Salmonella are effective in acute models of infection
+
+**作者**: Ju-Sim Kim, Vijay Kumar, Lin Liu, Yu Jin Choi, Simona Senovaityte, Bruce D. McCollister, Nathan Wlodarchak, David J. Orlicky, Peter J. Rice, Shaodong Dai, Michael F. Wempe, Andrés Vázquez-Torres
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea6832](https://doi.org/10.1126/sciadv.aea6832)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是针对沙门氏菌等革兰氏阴性菌的DksA抑制剂开发，属于微生物学、抗生素药物发现和传染病治疗领域。所有评分关键词均涉及医学影像分析、人工智能在医疗影像中的应用、疾病诊断/预后预测、手术规划等，与论文的微生物学、药物化学和药理学研究内容完全无关。论文未涉及任何医学影像技术、AI模型或影像相关临床应用。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A conserved acidic pocket at the tip of the coiled-coil domain of DksA that is amenable for drug development is identified and identified a previously unknown class of antibiotics against the transcriptional regulator DksA that is endowed with antimicrobial activity against Gram-negative pathogens.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现了针对革兰氏阴性菌转录调节因子DksA的新型抑制剂，通过化学修饰优化了抗菌活性，并在小鼠模型中证明了其对沙门氏菌感染的有效保护作用。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 我们亟需具有全新作用机制的抗生素。DksA蛋白调控革兰氏阴性菌中参与代谢、翻译及毒力相关基因的转录。DksA在革兰氏阴性病原体中进化保守，但在人体中不存在。本研究在DksA卷曲螺旋结构域顶端发现了一个保守的酸性口袋，该位点适合用于药物开发。通过生物信息学与实验方法，我们鉴定出<i>N</i>-(3,4-二甲氧基苯基)-1H-1,2,4-三唑-3-甲酰胺作为一种具有中等抗菌活性的DksA抑制剂。通过对该化合物的二甲氧基苯基官能团及脂肪族连接链进行衍生化，我们获得了多个新化学实体，它们对DksA调控的体外转录表现出优异的半数抑制浓度（IC<sub>50</sub>），并对沙门氏菌及其他多种革兰氏阴性菌具有增强的抗菌活性。药代动力学与药效学评估表明，<i>N</i>-(4-苯丁基)-1H-1,2,4-三唑-3-甲酰胺类似物在大鼠胃肠道可被吸收并分布至内脏器官。系统性给予该类似物能保护小鼠抵抗经口及全身性沙门氏菌感染，同时几乎完全抑制了感染小鼠体内微脓肿与坏死灶的形成。本研究鉴定出一类以前未知的、以转录调节因子DksA为靶点的抗生素，其对革兰氏阴性病原体具有抗菌活性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> We are in dire need of antibiotics endowed with new mechanisms of action. The DksA protein regulates the transcription of genes involved in metabolism, translation, and virulence in Gram-negative bacteria. DksA is evolutionarily conserved among Gram-negative pathogens but is absent in humans. Here, we identified a conserved acidic pocket at the tip of the coiled-coil domain of DksA that is amenable for drug development. Our bioinformatics and experimental approaches identified <i>N</i>-(3,4-dimethoxyphenyl)-1H-1,2,4-triazole-3-carboxamide as a DksA inhibitor with moderate antimicrobial activity. Derivatization of the dimethoxyphenyl functionality and aliphatic linker of <i>N</i>-(3,4-dimethoxyphenyl)-1H-1,2,4-triazole-3-carboxamide generated several new chemical entities with excellent IC<sub>50</sub> values against DksA-regulated in vitro transcription and improved antimicrobial activity against <i>Salmonella</i> and several other Gram-negative bacteria. Our pharmacokinetic and pharmacodynamic evaluations indicate that the <i>N</i>-(4-phenylbutyl)-1H-1,2,4-triazole-3-carboxamide analog is absorbed in the gastrointestinal tract of rats and is distributed into viscera. The systemic administration of the <i>N</i>-(4-phenylbutyl)-1H-1,2,4-triazole-3-carboxamide analog protected mice against oral and systemic <i>Salmonella</i> infections while practically preventing the formation of microabscesses and necrotic foci in <i>Salmonella</i>-infected mice. Our investigations have identified a previously unknown class of antibiotics against the transcriptional regulator DksA that is endowed with antimicrobial activity against Gram-negative pathogens.
+
+</details>
+<br>
+
+**关键词**: DksA inhibitor, antibiotic discovery, Gram-negative bacteria, Salmonella infection, antimicrobial activity, transcriptional regulator, pharmacokinetics, mouse model
+
+---
+
+### 19. ❌ Evidence for chronological diversification of spinal neuron subtypes by a shared sequence of transcription factors
+
+**作者**: Laia Caudet Segarra, Kevin T. Sangster, Julia Sagner, Artur Kania, Andreas Sagner
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.adz3075](https://doi.org/10.1126/sciadv.adz3075)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是发育生物学中脊髓神经元亚型分化的分子机制，具体探讨转录因子Onecut2、Pou2f2和Pou3f1在时序性神经元亚型生成中的作用。所有评分关键词均涉及医学影像分析、人工智能在医疗中的应用、手术规划等临床技术领域，而该论文完全专注于基础神经发育生物学，未涉及任何医学影像、AI技术、疾病诊断或临床应用内容，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Functional evidence is provided that horologic diversification of output neurons of spinal motor and sensory circuits are driven by a conserved sequential order of expression of transcription factors.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了脊髓神经元亚型通过转录因子Onecut2、Pou2f2和Pou3f1的保守表达序列进行时序性分化的分子机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 揭示神经元细胞类型巨大多样性产生的机制，仍是发育生物学的一个基本目标。具有共同分子特征的不同脊髓神经元“基本类别”产生于空间分隔的前体区域。在许多类别中，随时间推移会按固定模式产生功能相关的神经元亚型，这引出了如何控制此过程的机制问题。本文研究表明，小鼠转录因子Onecut2、Pou2f2和Pou3f1的相继表达，与多个基本类别中按顺序产生的亚群的出现相关联。我们证明，Pou2f2的缺失会损害两个早生运动神经元柱的发育，并将前外侧系统投射神经元重编程为晚生亚群。类似地，我们发现Pou3f1的表达是运动神经元和前外侧系统投射神经元晚生亚群正常发育所必需的。综上，我们的观察提供了功能性证据，表明脊髓神经环路的时间性多样化是由一个保守的转录因子序列所驱动的。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Uncovering the mechanisms that generate the immense diversity of neuronal cell types remains a fundamental goal of developmental biology. Different "cardinal classes" of spinal neurons that share a common molecular identity are produced from spatially segregated progenitor domains. Within many classes, a stereotyped sequence of neuronal subtypes of related function is generated over time, raising the question of the mechanisms that control this process. Here, we show that the successive expression of mouse transcription factors Onecut2, Pou2f2, and Pou3f1 correlates with the emergence of sequentially generated subpopulations within several cardinal classes. We demonstrate that loss of Pou2f2 impairs the development of two early-born motor neuron columns and respecifies anterolateral system projection neurons into a later-born subset. Similarly, we show that Pou3f1 expression is required for the normal development of later-born subsets of motor neurons and anterolateral system projection neurons. Together, our observations provide functional evidence that horologic diversification of spinal circuits is driven by a conserved sequence of transcription factors.
+
+</details>
+<br>
+
+**关键词**: spinal neurons, neuronal subtypes, transcription factors, Onecut2, Pou2f2, Pou3f1, developmental biology, motor neurons
+
+---
+
+### 20. ❌ Alignment phase transition in socially driven motion
+
+**作者**: Debasish Sarker, Yi Zhang, Lynn K. Perry, Daniel S. Messinger, Chaoming Song
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**arXiv链接**: [https://arxiv.org/abs/2506.01550](https://arxiv.org/abs/2506.01550)
+**DOI**: [10.1126/sciadv.adz6890](https://doi.org/10.1126/sciadv.adz6890)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是学龄前儿童集体行为中的对齐相变，属于复杂系统、社会物理学和行为科学领域，与医学图像分析、人工智能临床决策支持等医疗领域完全无关。所有关键词均涉及医疗影像、疾病诊断、手术规划等医学应用，而本文不涉及任何医学图像、医疗数据或临床场景，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过分析学龄前教室的高分辨率空间和方向数据，发现了一种基于距离的成对对齐相变，揭示了社交互动中行为相的自发对称破缺，并建立了定量框架来解释社会对齐机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 集体fs运动是复杂系统的标志性特征，在从行人流到生物集群的多种情境中均展现出涌现秩序。在高速、定向的场景中，对齐机制确保了高效导航；而在低速、非定向、社交参与的情境中，对齐源于人际互动而非移动目标。利用来自幼儿园教室的高分辨率空间与朝向数据，我们发现了成对对齐中一种尖锐的距离依赖转变，这反映了行为阶段间的自发对称性破缺：在约0.65米的阈值以下，并排朝向占主导地位，而面对面朝向则在更大距离上占优势。这一转变源于三种对齐机制——平行化、对立与互惠——之间依赖距离的竞争，其相互作用在有效相互作用势中产生了分岔结构。通过对朝向分布的傅里叶分解，这些机制得以揭示，从而构建了一个能捕捉非平衡相变的最小伪势模型。基于推断相互作用项的蒙特卡洛模拟重现了经验模式，建立了一个适用于生物集群与人工蜂群的社交对齐定量框架。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Collective fs movement is a hallmark of complex systems, exhibiting emergent order across contexts from pedestrian flows to biological collectives. In high-speed, directional settings, alignment ensures efficient navigation, whereas in low-speed, undirectional, socially engaged contexts, alignment arises from interpersonal interaction rather than locomotion goals. Using high-resolution spatial and orientation data from preschool classrooms, we uncover a sharp distance-dependent transition in pairwise alignment that reflects a spontaneous symmetry breaking between behavioral phases: Below a threshold of ~0.65 meters, side-by-side orientations dominate, while face-to-face orientations prevail at larger distances. This transition stems from a distance-dependent competition among three alignment mechanisms: parallelization, opposition, and reciprocation, whose interplay generates a bifurcation structure in the effective interaction potential. Fourier decomposition of orientation distributions reveals these mechanisms, enabling a minimal pseudopotential model that captures the transition as a nonequilibrium phase change. Monte Carlo simulations using inferred interaction terms reproduce empirical patterns, establishing a quantitative framework for social alignment with implications for biological collectives and artificial swarms.
+
+</details>
+<br>
+
+**关键词**: collective motion, social alignment, phase transition, preschool classrooms, distance-dependent transition, behavioral phases, nonequilibrium phase change, Monte Carlo simulations
+
+---
+
+### 21. ❌ Applying machine learning to identify unrecognized COVID-19 deaths recorded as other causes of death in the United States
+
+**作者**: Mathew V. Kiang, Zehang Richard Li, Elizabeth Wrigley-Field, Rafeya V. Raquib, Dielle J. Lundberg, Eugenio Paglino, Benjamin Q. Huynh, Kirsten Bibbins-Domingo, M. Maria Glymour, Andrew Stokes
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aef5697](https://doi.org/10.1126/sciadv.aef5697)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是使用机器学习分析美国死亡证明数据来识别未报告的COVID-19死亡病例，属于公共卫生流行病学领域。研究背景要求的是医学影像分析、AI临床决策支持、医学图像分割、深度学习医学影像、AI诊断、预后预测、手术规划、多模态医学影像和基础模型医学影像。论文完全不涉及医学影像数据、图像处理、疾病诊断模型、手术规划或医学影像融合技术，所有关键词均与论文内容无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work uses machine learning trained on US death certificates from March 2020 to December 2021 to predict 155,536 unrecognized COVID-19 deaths, indicating that 19% more COVID-19 deaths occurred in the US than officially reported.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究使用机器学习分析美国死亡证明数据，预测了155,536例未报告的COVID-19死亡病例，表明实际死亡人数比官方报告高19%，且这些未报告死亡在少数族裔、低教育水平和低收入地区分布不均。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 自COVID-19大流行开始以来，由严重急性呼吸综合征冠状病毒2型感染导致的美国实际死亡人数一直备受研究与争议。本研究利用机器学习方法，基于2020年3月至2021年12月期间的美国死亡证明数据进行训练，预测出155,536例（95%不确定区间：150,062至161,112）未被识别的COVID-19死亡病例。这表明美国实际发生的COVID-19死亡人数比官方报告数字高出19%。预测的未识别COVID-19死亡病例在以下群体中呈现不成比例的高发：高中以下学历的死者；被认定为西班牙裔、美洲原住民、阿拉斯加原住民、亚裔和/或黑人的死者；家庭收入较低且既有健康状况较差的县；以及美国南部地区的县。这些发现表明，美国死亡调查系统对COVID-19死亡病例的统计存在不均衡的漏报，掩盖了健康不平等问题的真实程度。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The actual number of US deaths caused by severe acute respiratory syndrome coronavirus 2 infection has been investigated and debated since the start of the COVID-19 pandemic. Here, we use machine learning trained on US death certificates from March 2020 to December 2021 to predict 155,536 (95% uncertainty interval: 150,062 to 161,112) unrecognized COVID-19 deaths. This indicates that 19% more COVID-19 deaths occurred in the US than officially reported. Predicted unrecognized COVID-19 deaths occurred disproportionately among decedents with less than a high school education; decedents identified as Hispanic, American Indian, Alaska Native, Asian, and/or Black; counties with lower household incomes and worse preexisting health; and counties in the South. These findings suggest that the US death investigation system undercounted COVID-19 deaths unevenly, hiding the true extent of inequities.
+
+</details>
+<br>
+
+**关键词**: machine learning, COVID-19 deaths, death certificates, underreporting, health disparities, mortality estimation, public health surveillance, inequities
+
+---
+
+### 22. ❌ Uncovering piezoelectric effect in polycrystalline diamond membranes
+
+**作者**: Jixiang Jing, Bin Wang, Yumeng Luo, Yicheng Wang, Zhongqiang Wang, Yiyao Liu, Dong-Keun Ki, Xinghua Shi, Qi Wang, Kwai Hei Li, Yuan Lin, Zhiqin Chu
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea8318](https://doi.org/10.1126/sciadv.aea8318)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究的是多晶金刚石膜的压电效应，属于材料科学、凝聚态物理和纳米技术领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。论文内容涉及金刚石材料特性、压电效应机制、能量收集和可穿戴电子应用，没有任何医学成像、疾病诊断、手术规划或医疗AI相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现超薄多晶金刚石膜具有显著的压电效应，其压电电压系数可达~82.2 mV·m/N，优于许多传统压电材料，这一效应源于晶界引起的局部不对称性，有望推动金刚石在能量收集和可穿戴电子等领域的应用。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 一个多世纪以来，钻石一直被视为非压电材料。本文揭示了超薄、超柔性多晶金刚石膜中显著的压电效应。实验表明，其压电性取决于薄膜厚度，在约5微米厚的薄膜中观察到峰值响应（压电电压系数约为82.2毫伏·米/牛顿，超越了许多传统压电材料）。第一性原理计算表明，多晶膜中这种意外的压电性源于晶界（grain boundaries）诱导的局部不对称性，这种不对称性使得变形时晶界附近有限区域内的电极化发生改变。这一发现，结合我们薄膜的优异性能，有望推动金刚石在能量收集、智能传感和可穿戴电子等领域应用的探索与发展。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Diamonds have been regarded as nonpiezoelectric materials for more than one century. Here, we uncover a notable piezoelectric effect in ultrathin and ultraflexible polycrystalline diamond membranes. Our experiments show that the piezoelectricity depends on membrane thickness, with peak response (exhibiting a piezoelectric voltage coefficient of ~82.2 millivolt meters per newton that surpasses many conventional piezoelectric materials) seen in ~5-micrometer-thick membranes. First-principles calculations reveal that the unexpected piezoelectricity in polycrystalline membranes originates from local asymmetry induced by grain boundaries, which alter the electric polarization within a finite region near the boundary during deformation. This finding together with the outstanding properties of our membranes is expected to catalyze the exploration and development of diamond-based applications in energy harvesting, intelligent sensing, and wearable electronics.
+
+</details>
+<br>
+
+**关键词**: polycrystalline diamond membranes, piezoelectric effect, grain boundaries, energy harvesting, wearable electronics, first-principles calculations, ultrathin membranes, piezoelectric voltage coefficient
+
+---
+
+### 23. ❌ Experimental observation of energy-band Riemann surface
+
+**作者**: Dali Cheng, Huan Wang, Janet Zhong, Eran Lustig, Charles Roques-Carmes, Shengli Fan
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**arXiv链接**: [https://arxiv.org/abs/2510.08819](https://arxiv.org/abs/2510.08819)
+**DOI**: [10.1126/sciadv.aec8239](https://doi.org/10.1126/sciadv.aec8239)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是非厄米系统中的能量带黎曼表面的实验观测，属于凝聚态物理、拓扑物理和光子学领域，使用了光子合成频率维度技术。所有评分关键词都涉及医学影像分析、人工智能医疗应用、疾病诊断/预后、手术规划等临床医学领域，与论文的物理基础研究内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过光子合成频率维度技术，首次实验观测了非厄米系统中的能量带黎曼表面，并从中揭示了复能量缠绕、开放边界条件谱、广义布里渊区和分支点等拓扑物理特征。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 非厄米性自然地出现在与环境交换能量的物理系统中。非厄米性的存在导致了许多拓扑物理现象与器件应用。在非赫米特能带理论——这些物理现象和应用的基础中，能量与波矢均取复数值。因此能带构成一个黎曼曲面，而此类能带黎曼曲面正是所有非厄米拓扑关键特征的根本基础。尽管具有悠久历史且近期引发理论关注，能带黎曼曲面尚未得到实验研究。本文中，我们通过光子合成频率维度中的可调虚规范变换，实现了对非厄米系统能带黎曼曲面的光子学观测。基于测量获得的黎曼曲面拓扑结构，我们揭示了复能量绕数、开放边界条件谱、广义布里渊区以及分支点。我们的研究结果通过对能带黎曼曲面的实验观测，为理解非厄米拓扑物理中的多种效应提供了一个统一框架。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Non-Hermiticity naturally arises in physical systems that exchange energy with their environment. The presence of non-Hermiticity leads to many topological physics phenomena and device applications. In the non-Hermitian energy band theory, the foundation of these physics and applications, both energies and wave vectors take complex values. The energy bands thus become a Riemann surface, and such an energy-band Riemann surface underlies all important signatures of non-Hermitian topology. Despite a long history and recent theoretical interests, the energy-band Riemann surface has not been experimentally studied. Here, we provide a photonic observation of the energy-band Riemann surface of a non-Hermitian system. This is achieved by a tunable imaginary gauge transformation in photonic synthetic frequency dimensions. From measured topologies of the Riemann surface, we reveal the complex-energy winding, the open-boundary-condition spectrum, the generalized Brillouin zone, and the branch points. Our findings demonstrate a unified framework in the studies of diverse effects in non-Hermitian topological physics through an experimental observation of energy-band Riemann surfaces.
+
+</details>
+<br>
+
+**关键词**: non-Hermitian systems, energy-band Riemann surface, photonic synthetic frequency dimensions, topological physics, complex-energy winding, generalized Brillouin zone, experimental observation, branch points
+
+---
+
+### 24. ❌ China’s petrochemical plants’ CO 2 emissions and high-impact contributors for carbon-neutrality production
+
+**作者**: Xu Chen, Tianyang Lei, Weichen Zhao, Shijun Ma, Chenlu Lai, Dabo Guan
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.adx7784](https://doi.org/10.1126/sciadv.adx7784)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究中国石化工厂的二氧化碳排放，属于环境科学、工业工程和气候变化领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。论文内容涉及排放评估、过程分析、低碳替代方案，没有任何医学影像、深度学习、疾病诊断、手术规划或医疗数据融合的内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究分析了中国3119家石化工厂的二氧化碳排放，识别了特定过程和产品链阶段的排放热点，并指出通过原料和反应的低碳替代可使碳强度降低高达2.9吨CO₂/吨产品，为脱碳提供了针对性策略。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 2021年，石化行业占全球工业直接二氧化碳排放量的15%，而中国贡献了全球化学品产量的43%，因此在气候变化减缓行动中处于核心地位。然而，由于缺乏针对中国、基于具体工艺的评估，针对性战略的制定受到制约。本文对中国3119家石化工厂进行了全面的二氧化碳排放分析，涵盖了123种产品、185种工艺、原料、能源使用以及生产链内产品关联的差异。我们估算2021年年度排放量为8.137亿吨二氧化碳（±25%），提供了比以往全球或国家层面评估更为精细的区域性细节。我们识别了特定工艺和产品链环节的显著排放热点，在这些环节，原料和反应过程的低碳替代可将产品碳强度降低高达每吨产品2.9吨二氧化碳，而一体化园区内的关键环节可占全链排放的50%。这些发现表明，需要协调一致的、覆盖全产业链的干预措施以实现脱碳。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The petrochemical sector accounted for 15% of global industrial direct CO<sub>2</sub> emissions in 2021, with China contributing 43% of global chemical output and therefore being central to climate-change mitigation efforts. However, the lack of China-specific, process-based assessments has constrained targeted strategies. Here, we present a comprehensive CO<sub>2</sub> emissions analysis of 3119 petrochemical plants in China, capturing variations across 123 products, 185 processes, feedstocks, energy use, and product relationships within production chains. We estimate annual emissions at 813.7 million tonnes (Mt) CO<sub>2</sub> (±25%) in 2021, offering refined region-specific details beyond previous global or national assessments. We identify distinct emission hotspots at specific processes and product-chain stages, where low-carbon substitutions in feedstocks and reactions can reduce carbon intensity by up to 2.9 tonnes of CO<sub>2</sub> per tonne of product, while key stages in integrated complexes can account for up to 50% of chain emissions. These findings highlight the need for coordinated, chain-wide interventions to enable decarbonization.
+
+</details>
+<br>
+
+**关键词**: CO2 emissions, petrochemical plants, China, carbon intensity, low-carbon substitutions, production chains, decarbonization, emission hotspots
+
+---
+
+### 25. ❌ Atomic-scale physical unclonable functions in solids
+
+**作者**: Zihua Chai, Zeyu Gao, Mengdi Wang, Jingyang Zhou, Pei Yu, Xuan Zhou, Junyu Guan, Pei Zhang, Ya Wang, Kangwei Xia
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aed3987](https://doi.org/10.1126/sciadv.aed3987)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文《Atomic-scale physical unclonable functions in solids》研究原子尺度物理不可克隆函数（PUFs），属于硬件安全、纳米技术和信息安全领域。论文内容涉及利用固体中的晶格和缺陷工程实现原子级PUF架构，强调其编码能力、唯一性和抗环境干扰的鲁棒性。所有评分关键词均围绕医学影像分析、AI辅助临床决策、疾病诊断/预后、手术规划等医学应用，而本论文完全不涉及任何医学、影像或临床相关内容，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究如何利用固体中的原子尺度晶格和缺陷工程实现物理不可克隆函数，以解决硬件和信息系统的安全问题，并展示了其高编码容量和内在不可克隆性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 物联网与数字信息时代的快速发展，对安全硬件与信息系统的需求日益迫切。物理不可克隆功能（Physical Unclonable Functions, PUFs）提供了一种基于硬件的解决方案，其通过利用制造过程中产生的随机性来生成独特且不可复制的标识。与此同时，确定性纳米制造技术的进步日益挑战着传统微米与纳米尺度PUFs的不可克隆性，这推动了对更基础物理随机性来源的探索。本文展示了一种原子尺度PUF架构，该架构通过晶格与缺陷工程，利用固体中的本征随机性。所实现的PUFs同时具备三维空间可变性与原子尺度的构型复杂性，从而产生了非凡的编码空间与独特性。在特征尺寸为1纳米的情况下，其香农熵估计值为17.49，凸显了其编码能力。此外，其嵌入式结构确保了固有的不可克隆性以及对环境扰动的鲁棒性。这些成果确立了原子尺度PUFs作为一个本质上安全且可扩展的平台，适用于下一代硬件与信息安全领域。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The rapid development of the Internet of Things and the digital information era has intensified the demand for secure hardware and information systems. Physical unclonable functions (PUFs) provide a hardware-based approach by exploiting fabrication-induced randomness to generate unique, unclonable labels. Concurrently, advances in deterministic nanofabrication increasingly challenge the unclonability of conventional micro- and nanoscale PUFs, motivating the exploration of more fundamental sources of physical randomness. Here, we demonstrate an atomic-scale PUF architecture that leverages intrinsic randomness in solids through lattice and defect engineering. The resulting PUFs exhibit both three-dimensional spatial variability and atomic-scale configurational complexity, yielding extraordinary encoding space and uniqueness. For a characteristic feature size of 1 nanometer, the Shannon entropy is estimated at 17.49, underscoring the encoding capacity. Moreover, the embedded structure ensures intrinsic unclonability and robustness against environmental perturbations. These results establish atomic-scale PUFs as a fundamentally secure and scalable platform for next-generation hardware and information security.
+
+</details>
+<br>
+
+**关键词**: physical unclonable functions, atomic-scale, solids, lattice engineering, defect engineering, hardware security, information security, nanofabrication
+
+---
+
+### 26. ❌ All-solution-processed scalable and wearable organic thermoelectrics by structurally mimicking transverse thermoelectric effects
+
+**作者**: Juhyung Park, Sun Hong Kim, Jeong Han Song, Jeehyun Jeong, Jeonghun Kwak
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aea9094](https://doi.org/10.1126/sciadv.aea9094)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是有机薄膜热电发电机（TEGs）的可穿戴能源收集技术，通过模拟横向热电效应实现高效热能从平面热源收集。所有评分关键词均涉及医学影像分析、AI诊断、手术规划等医疗AI领域，而该论文完全不涉及医学影像、医疗诊断或临床决策支持，属于材料科学和能源工程领域，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文解决了有机薄膜热电发电机难以从平面热源建立温度梯度的问题，通过设计伪横向热电发电机结构，实现了高效的热能收集并保持了二维形态因子。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 有机薄膜热电发电机（TEGs）作为柔性和可穿戴能量收集器件具有广阔前景。然而，当使用平面热源时，在薄膜内部建立温度梯度的困难阻碍了其更广泛的应用。本文提出了一种伪横向热电发电机（pT-TEGs）架构，该结构采用具有两种热导率的弹性基底，通过模拟横向热电效应，将纵向热流正交转换为横向热电压。这一设计规避了传统薄膜热电发电机的局限性（例如需要三维变形以形成温度梯度），使其能够在保持二维形态因子的同时，高效地从平面热源收集热能。此外，完全溶液加工且模块化的pT-TEGs展现出优异的机械柔性和高度可扩展性。我们相信，该方法为实现真正的二维热电发电机提供了一个实用平台，并将推动柔性与可穿戴能量收集技术的发展。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Organic thin-film thermoelectric generators (TEGs) hold great promise as flexible and wearable energy harvesters. However, their broader application is hindered by the difficulty of establishing a temperature gradient within the thin film when using planar heat sources. Here, we introduce pseudo-transverse TEGs (pT-TEGs), an architecture employing an elastic substrate with two thermal conductivities, enabling the orthogonal conversion of longitudinal heat flux into lateral thermovoltage by mimicking the transverse thermoelectric effect. This design circumvents the limitations of conventional thin-film TEGs, such as the need for three-dimensional deformation to form a temperature gradient, allowing efficient thermal energy harvesting from planar heat sources while preserving a two-dimensional form factor. Furthermore, the fully solution-processed and modular pT-TEGs exhibit excellent mechanical flexibility and high scalability. We believe that this approach offers a practical platform for the realization of genuine two-dimensional TEGs and will contribute to the advancement of flexible and wearable energy harvesting technologies.
+
+</details>
+<br>
+
+**关键词**: organic thermoelectrics, wearable energy harvesters, transverse thermoelectric effects, solution-processed, flexible TEGs, thermal energy harvesting, two-dimensional form factor, scalable fabrication
+
+---
+
+### 27. ❌ Insights into the structure and evolution of the human SAGA complex by affinity-ligand purification
+
+**作者**: Mylène Damilot, Thomas Schoeps, Làszlò Tora, Patrick Schultz, Luc Lebeau, Gábor Pápai, Adam Ben-Shem
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aec8104](https://doi.org/10.1126/sciadv.aec8104)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是人类SAGA复合物的结构和进化，属于结构生物学和基因转录调控领域，与医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或医学影像基础模型完全无关。论文使用亲和配体纯化和结构生物学方法，不涉及任何医学影像技术或AI医疗应用。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The structure of endogenous human SAGA purified via an affinity ligand from cells that were not disturbed by any genomic engineering tools is reported and the high-resolution structure of SPL and the TAF6L HEAT repeat domain that provides the SPL with a docking surface is revealed.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过亲和配体纯化揭示了人类SAGA转录共激活复合物的高分辨率结构，阐明了其特有的剪接因子模块（SPL）的整合机制以及与U2snRNP的结构差异。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 人类SAGA是一个由20个亚基组成的转录共激活因子。与酵母相比，后生动物SAGA独特地整合了一个150 kDa的剪接因子模块（SPL），该模块也存在于U2小核核糖核蛋白（U2snRNP）中。后生动物的基因复制进一步将TFIID/SAGA共有的亚基特化为SAGA特异性旁系同源物（TAF5L和TAF6L），但这种分化的功能后果尚不清楚。我们报告了通过亲和配体从未受任何基因组工程工具干扰的细胞中纯化的内源性人类SAGA的结构。我们的研究揭示了SPL的高分辨率结构，以及为SPL提供对接表面的TAF6L HEAT重复结构域。我们阐明了SPL和HEAT重复结构域如何被整合到SAGA中。我们识别了TAF6L/TAF5L与其经典旁系同源物之间的主要结构差异，这些差异使得SPL能够被容纳。尽管共享一个深度插入的螺旋基序，但SPL与SAGA的结合界面比在U2snRNP中要小得多。SPL与SAGA看似较弱的相互作用提出了SAGA可能将此模块传递给剪接机制的可能性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Human SAGA is a 20-subunit transcriptional coactivator. Compared with yeast, metazoan SAGA uniquely incorporates a 150-kDa splicing-factor module (SPL), also present in U2 small nuclear ribonucleoprotein (U2snRNP). Metazoan gene duplication further specialized shared TFIID/SAGA subunits into SAGA-specific paralogs (TAF5L and TAF6L), but the functional consequences of this divergence are unknown. We report the structure of endogenous human SAGA purified via an affinity ligand from cells that were not disturbed by any genomic engineering tools. Our work reveals the high-resolution structure of SPL and the TAF6L HEAT repeat domain that provides the SPL with a docking surface. We elucidate how SPL and the HEAT repeats are incorporated into SAGA. We identify major structural differences between TAF6L/TAF5L and their canonical paralogs that enable SPL accommodation. SPL engages SAGA through a substantially smaller interface than in U2snRNP, despite sharing a deeply inserted helical motif. The seemingly weaker interaction of SPL with SAGA raises the possibility that SAGA relays this module to the splicing machinery.
+
+</details>
+<br>
+
+**关键词**: human SAGA complex, transcriptional coactivator, affinity-ligand purification, splicing-factor module, structural biology, TAF6L HEAT repeat, gene duplication, U2snRNP
+
+---
+
+### 28. ❌ A nature-inspired ion trap for parallel manipulation of ions on a massive scale
+
+**作者**: Andrew N. Krutchinsky, Brian T. Chait
+**期刊/来源**: science_advances
+**发布日期**: 2026-03-18
+**DOI**: [10.1126/sciadv.aec7048](https://doi.org/10.1126/sciadv.aec7048)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是质谱分析（mass spectrometry）领域的新型离子阱技术，用于实现大规模并行离子操纵，应用于蛋白质组学和代谢组学分析。所有评分关键词均属于医学影像分析和人工智能临床决策支持领域，而论文完全不涉及医学影像（如CT、MRI、超声）、图像分割、深度学习、疾病诊断/预后、手术规划或多模态医学数据。因此，所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种受核质运输启发的离子阱（MultiQ-IT），实现了大规模并行质谱分析，通过选择性耗尽单电荷离子增强信噪比，并作为并行离子分离器传输离子，为高通量蛋白质组学和代谢组学分析提供了新框架。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 并行化技术已彻底改变了计算与DNA测序领域，但在质谱分析（MS）中却尚未得到充分开发——传统质谱通常依赖离子顺序分析。受核质运输机制（其中扩散作用主导离子向多个门控通道即核孔复合体的传输）的启发，我们设计了一种可实现大规模并行质谱分析的离子阱（MultiQ-IT）。该装置由立方阵列排布的小型四极杆构成，形成多个离子入口与出口通道，可同时冷却、约束并操控超过10<sup>9</sup>个离子。此结构能够选择性耗散单电荷离子，从而提升信噪比并扩展有效动态范围。该离子阱还可作为并行离子分流器，将离子传输至多个按质荷比分离的束流中。我们展示了可扩展的离子通量、实时电荷甄别及并行束流分离功能，为实现真正意义上的并行质谱分析提供了可行路径。本研究为新一代高通量蛋白质组学与代谢组学分析建立了概念框架。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Parallelization has revolutionized computing and DNA sequencing but remains largely unexploited in mass spectrometry (MS), which typically analyzes ions sequentially. Inspired by nuclear cytoplasmic transport, where diffusion governs transport to multiple gated channels (nuclear pore complexes), we introduce an ion trap (MultiQ-IT) that enables massively parallel MS. The device comprises a cubic array of small quadrupoles forming multiple ion entry and exit ports, allowing >10<sup>9</sup> ions to be cooled, confined, and manipulated simultaneously. This architecture enables selective depletion of singly charged ions, thereby enhancing signal-to-noise ratios and expanding the effective dynamic range. The trap also functions as a parallel ion splitter, transmitting ions into multiple mass/charge ratio-specific beams. We demonstrate scalable ion throughput, real-time charge discrimination, and parallel beam separation, suggesting a path toward truly parallel MS. Our results establish a conceptual framework for next-generation, high-throughput proteomic and metabolomic analyses.
+
+</details>
+<br>
+
+**关键词**: ion trap, mass spectrometry, parallel manipulation, proteomic analysis, metabolomic analysis, charge discrimination, high-throughput, quadrupole array
+
+---
+
+## Token 消耗统计
+
+- **总计**: 352,773 tokens（输入 246,011 / 输出 106,762）

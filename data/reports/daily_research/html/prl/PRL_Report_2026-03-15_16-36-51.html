@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physical Review Letters Report 2026-03-15</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg: #f0f2f5;
+    --color-surface: #ffffff;
+    --color-border: #e5e7eb;
+    --color-primary: #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass: #16a34a;
+    --color-pass-bg: #dcfce7;
+    --color-fail: #dc2626;
+    --color-fail-bg: #fee2e2;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-tldr-bg: #eff6ff;
+    --color-tldr-border: #bfdbfe;
+    --color-cn-bg: #fefce8;
+    --color-cn-border: #fde68a;
+    --color-analysis-bg: #f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass {
+    border-left-color: var(--color-pass);
+}
+
+.card.fail {
+    border-left-color: var(--color-fail);
+}
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover {
+    color: var(--color-primary-dk);
+}
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p {
+    margin: 6px 0;
+}
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li {
+    margin: 3px 0;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body {
+        padding: 16px 12px 40px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-bar {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 80px;
+        padding: 12px 14px;
+    }
+
+    .stat .num {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* ── 模型标签 ── */
+.model-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #6366f1;
+    background: #ede9ff;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    letter-spacing: 0.02em;
+}
+
+/* ── TLDR 增强样式 ── */
+.tldr {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 3px solid #38bdf8;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+
+.tldr-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0369a1;
+}
+
+.tldr-body {
+    font-size: 0.88rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* ── 趋势分析区块 ── */
+.trend-section {
+    margin: 32px 0 16px;
+    border-top: 2px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.trend-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trend-section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trend-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.trend-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ede9ff;
+}</style>
+</head><body>
+<h1>Physical Review Letters Research Report</h1>
+<p class="meta">Generated: 2026-03-15 16:36:51 | Passing score: 29.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">11</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/6vg9-98hp" target="_blank">1. Linear magnetoresistance in a strange metal</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了奇异金属中的线性磁阻现象，但具体结果因摘要缺失无法得知。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Linear magnetoresistance in a strange metal&#x27;，摘要未提供，但仅从标题即可判断该论文研究凝聚态物理中的磁阻现象，属于物理学领域，与医学图像分析、人工智能临床决策支持等所有给定关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>linear magnetoresistance, strange metal, condensed matter physics, magnetotransport, quantum materials</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/jzjh-hbyj" target="_blank">2. Parity anomalous semimetal with minimal conductivity induced by an in-plane magnetic field</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了面内磁场诱导的宇称反常半金属中的最小电导率现象，属于凝聚态物理领域。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于凝聚态物理中的拓扑材料（parity anomalous semimetal），探讨面内磁场诱导的输运性质，与医学图像分析、临床决策支持等医学AI领域完全无关。所有关键词均未在论文内容中出现或涉及。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>parity anomalous semimetal, minimal conductivity, in-plane magnetic field, topological materials, transport properties, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/brqm-r3vp" target="_blank">3. Thomson scattering with gain</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究汤姆逊散射过程中的增益效应，但具体研究问题和结果因摘要缺失无法确定。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Thomson scattering with gain&#x27;，摘要内容缺失，但仅从标题判断，该论文研究的是物理学中的汤姆逊散射现象及其增益效应，属于物理学、光学或等离子体物理领域，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有关键词均涉及医学图像处理、AI医疗应用等主题，因此相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Thomson scattering, gain, scattering, physics, optics, plasma physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/nxjq-jwgp" target="_blank">4. Local Interstellar Cloud structure imprinted in Antarctic ice by supernova 60 Fe</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过分析南极冰芯中的60Fe同位素记录，揭示了超新星事件对本地星际云结构的影响，并重建了相关的天体物理过程。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于南极冰芯中60Fe同位素记录与超新星事件对本地星际云结构的影响，属于天体物理学、地球化学和宇宙化学领域。研究内容完全不涉及医学图像分析、深度学习、AI诊断、手术规划或任何医疗应用。所有关键词均与论文主题无关，因此相关度评分均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Local Interstellar Cloud, Antarctic ice, supernova, 60Fe, cosmic dust, isotope analysis, astrophysics, cosmochemistry</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/19gd-jqw2" target="_blank">5. Precise measurement of the Λ -binding-energy difference between Λ 3 H and Λ 4 H via decay-pion spectroscopy at MAMI</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过MAMI的衰变π介子光谱学精确测量了Λ³H和Λ⁴H的结合能差异，为Λ超核物理提供了重要实验数据。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示这是一篇关于Λ超核物理研究的论文，具体测量Λ³H和Λ⁴H的结合能差异，使用MAMI的衰变π介子光谱学方法。研究领域属于核物理、粒子物理和实验物理，与医学图像分析、人工智能、临床决策支持、深度学习医学成像、疾病诊断、预后预测、手术规划、多模态医学成像或医学影像基础模型完全无关。所有关键词均未在论文内容中出现或相关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Λ hypernuclei, binding energy difference, Λ³H, Λ⁴H, decay-pion spectroscopy, MAMI, nuclear physics, experimental physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/m1nb-j1h6" target="_blank">6. Resonant magnetophonon emission by supersonic electrons in ultrahigh-mobility two-dimensional systems</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现了在超高迁移率二维系统中，超高速电子通过共振磁声子发射产生可观测信号的现象。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究超高速电子在超高迁移率二维系统中的共振磁声子发射，属于凝聚态物理和半导体物理领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。所有关键词均未在标题或摘要中出现，也没有任何间接关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>resonant magnetophonon emission, supersonic electrons, ultrahigh-mobility, two-dimensional systems, quantum transport, semiconductor physics, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/wz27-6nhx" target="_blank">7. Dirac node pinning from Dzyaloshinskii-Moriya interactions in a kagome spin liquid</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了kagome自旋液体中Dzyaloshinskii-Moriya相互作用如何导致Dirac节点钉扎，揭示了这种相互作用对拓扑电子结构的影响。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究属于凝聚态物理领域，具体研究kagome晶格中的自旋液体和Dzyaloshinskii-Moriya相互作用对Dirac节点的影响。所有评分关键词均围绕医学影像分析、人工智能临床决策支持等医学领域，与论文的物理研究主题完全无关。因此，所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Dirac node, Dzyaloshinskii-Moriya interactions, kagome spin liquid, topological materials, condensed matter physics, magnetic interactions, electronic structure</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/flnv-3ts2" target="_blank">8. Friedel oscillations in nanoconfined 4 He</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了纳米受限氦-4中的Friedel振荡现象，揭示了量子流体在受限几何结构中的密度波动特性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于纳米受限氦-4中的Friedel振荡，属于凝聚态物理和量子流体领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医学应用领域，与论文的物理研究主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Friedel oscillations, nanoconfined helium-4, quantum fluids, density fluctuations, confinement effects, low-temperature physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/vcry-z8kl" target="_blank">9. Quantum transport spectroscopy of pseudomagnetic field in graphene</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过量子输运光谱学方法探测了石墨烯中赝磁场的物理特性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究是关于石墨烯中赝磁场的量子输运光谱学，属于凝聚态物理和材料科学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医学应用领域，与论文的物理材料研究主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum transport, spectroscopy, pseudomagnetic field, graphene, condensed matter physics, material science</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/62rf-8m43" target="_blank">10. Momentum-resolved spectroscopy of superconductivity with the quantum twisting microscope</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究使用量子扭曲显微镜进行超导体的动量分辨光谱学分析，以探索超导特性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，但根据标题《Momentum-resolved spectroscopy of superconductivity with the quantum twisting microscope》判断，该论文研究超导体的动量分辨光谱学，使用量子扭曲显微镜技术。这与给定的所有关键词（均涉及医学影像分析、AI临床决策支持等）完全无关，因为论文主题属于凝聚态物理/量子材料领域，而非医学影像或医疗AI。因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>momentum-resolved spectroscopy, superconductivity, quantum twisting microscope, spectroscopy, superconductors, quantum materials, microscopy</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/gjfq-k9dv" target="_blank">11. Experimental observation of negative weak values for the time atoms spend in the excited state as a photon is transmitted</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-13</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文通过实验观测了在光子传输过程中，原子在激发态停留时间呈现负弱值的量子现象。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明这是一篇关于量子物理实验的论文，研究光子传输过程中原子在激发态停留时间的负弱值观测。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医学领域，而该论文完全不涉及医学、影像学、临床诊断或任何医疗应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>negative weak values, time atoms, excited state, photon transmission, quantum measurement, experimental observation, quantum mechanics</p></div></details>
+</div>
+<p class="meta" style="margin-top:24px;border-top:1px solid #e5e7eb;padding-top:12px;">Token 消耗: <strong>138,772</strong> tokens（输入 95,859 / 输出 42,913）</p>
+</body></html>

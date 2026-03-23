@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Science Advances Report 2026-03-22</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg: #f0f2f5;
+    --color-surface: #ffffff;
+    --color-border: #e5e7eb;
+    --color-primary: #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass: #16a34a;
+    --color-pass-bg: #dcfce7;
+    --color-fail: #dc2626;
+    --color-fail-bg: #fee2e2;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-tldr-bg: #eff6ff;
+    --color-tldr-border: #bfdbfe;
+    --color-cn-bg: #fefce8;
+    --color-cn-border: #fde68a;
+    --color-analysis-bg: #f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass {
+    border-left-color: var(--color-pass);
+}
+
+.card.fail {
+    border-left-color: var(--color-fail);
+}
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover {
+    color: var(--color-primary-dk);
+}
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p {
+    margin: 6px 0;
+}
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li {
+    margin: 3px 0;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body {
+        padding: 16px 12px 40px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-bar {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 80px;
+        padding: 12px 14px;
+    }
+
+    .stat .num {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* ── 模型标签 ── */
+.model-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #6366f1;
+    background: #ede9ff;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    letter-spacing: 0.02em;
+}
+
+/* ── TLDR 增强样式 ── */
+.tldr {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 3px solid #38bdf8;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+
+.tldr-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0369a1;
+}
+
+.tldr-body {
+    font-size: 0.88rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* ── 趋势分析区块 ── */
+.trend-section {
+    margin: 32px 0 16px;
+    border-top: 2px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.trend-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trend-section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trend-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.trend-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ede9ff;
+}</style>
+</head><body>
+<h1>Science Advances Research Report</h1>
+<p class="meta">Generated: 2026-03-22 16:20:28 | Passing score: 29.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">29</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adx5178" target="_blank">1. Conformational dynamics of SARS-CoV-2 spike on a membrane reveals the allosteric effects of furin cleavage and the D614G mutation</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Sophie R. Shoemaker, Megan Luo, Kim-Marie A. Dam, John E. Pak, Magnus A. G. Hoffmann, Susan Marqusee</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究利用病毒样颗粒和氢-氘交换质谱技术揭示了SARS-CoV-2刺突蛋白在膜环境下的构象动力学，发现D614G突变有利于闭合构象并减少S1脱落，而弗林蛋白酶切割通过变构效应增加S2&#x27;位点灵活性，从而可能增强病毒感染性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>通过将氢氘交换质谱监测技术（HDX-MS）与包膜病毒样颗粒（eVLPs）展示全长天然样严重急性呼吸综合征冠状病毒2刺突蛋白的能力相结合，我们确定了膜环境以及那些被认为不适用于可溶性蛋白构建体的独特序列特征对蛋白构象与能量的影响。研究发现，eVLPs展示的刺突蛋白能够采样到可溶性刺突蛋白构建体中观察到的开放界面三聚体构象，这包括工程化疫苗构建体的序列以及可溶性构建体研究中无法获得的天然病毒序列。此外，在大流行早期出现的D614G突变倾向于促进典型的“闭合界面”融合前构象，这可能减轻了在存在弗林蛋白酶切割位点的情况下S1亚基的过早脱落，从而为病毒提供了进化优势。S1/S2边界处的弗林蛋白酶切割通过变构效应增加了S2′位点的灵活性，这可能促进了TMPRSS2的加工增强，进而提升了病毒感染性。在HDX-MS研究中使用eVLPs为在近天然环境中研究病毒及膜蛋白提供了一个强大的平台。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>By combining hydrogen-deuterium exchange monitored by mass spectrometry (HDX-MS) with the ability of enveloped virus–like particles (eVLPs) to display full-length native-like severe acute respiratory syndrome coronavirus 2 spike protein, we have determined the energetic and conformational effects of both the membrane environment and unique sequence features that are considered incompatible with soluble protein constructs. We find that eVLP-displayed spike can sample the open-interface trimer conformation observed in soluble constructs of spike, including sequences from engineered vaccine constructs and native viral sequences inaccessible to studies on soluble constructs. Moreover, the D614G mutation, which arose early in the pandemic, favors the canonical “closed-interface” prefusion conformation, potentially mitigating premature S1 shedding in the presence of a cleaved furin site and providing an evolutionary advantage to the virus. Furin cleavage at the S1/S2 boundary allosterically increases the flexibility of the S2′ site, which may facilitate increased TMPRSS2 processing, enhancing viral infectivity. The use of eVLPs in HDX-MS studies provides a powerful platform for studying viral and membrane proteins in near-native environments.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究SARS-CoV-2刺突蛋白的构象动力学，使用氢-氘交换质谱和病毒样颗粒技术，聚焦于分子生物学、结构生物学和病毒学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持、分割、诊断、预后、手术规划等，与论文的分子机制研究完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>SARS-CoV-2 spike protein, conformational dynamics, hydrogen-deuterium exchange mass spectrometry, virus-like particles, D614G mutation, furin cleavage, allosteric effects, membrane environment</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adz0786" target="_blank">2. Bacterial enzyme-responsive hydrogels for triggered delivery of antibiotics to infected wounds</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Akram Abbasi, Alec B. McCall, Zhaowei Jiang, Brian W. LeBlanc, Anita Shukla</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了一种细菌酶响应性水凝胶，可在感染部位触发释放抗生素，有效治疗伤口感染并减少细菌耐药性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>由于抗生素耐药性细菌的日益增多，伤口感染的治疗正变得愈发困难。其中，产β-内酰胺酶细菌是此类感染中最常见的病原体之一。本文报道了一种细菌酶响应性水凝胶，其采用头孢菌素衍生的、可被β-内酰胺酶裂解的交联剂制备，能在细菌β-内酰胺酶存在下发生选择性降解。该降解过程可触发包封的载有环丙沙星的脂质体按需释放，从而确保抗生素仅在感染部位递送。这种选择性降解与释放在铜绿假单胞菌伤口感染的离体和体内模型中均得到了验证。在小鼠皮肤擦伤感染模型中，单次施用该水凝胶即可实现细菌的完全清除并促进伤口愈合，其效果优于市售的银基水凝胶伤口敷料。这种响应性水凝胶不会在非产β-内酰胺酶细菌中诱导环丙沙星耐药性。这些研究结果表明，β-内酰胺酶响应性水凝胶提供了一种精确的、感染触发的抗生素递送平台，可改善伤口感染的治疗并减轻抗菌素耐药性。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Wound infections are becoming increasingly difficult to treat due to rising antibiotic-resistant bacteria. β-Lactamase–producing bacteria are among the most common pathogens implicated in these infections. Here, we report a bacterial enzyme-responsive hydrogel formulated with a cephalosporin-derived, β-lactamase–cleavable crosslinker that undergoes selective degradation in the presence of bacterial β-lactamases. This degradation triggers the on-demand release of encapsulated ciprofloxacin-loaded liposomes, ensuring that antibiotic delivery occurs only at the site of infection. This selective degradation and release was demonstrated in both ex vivo and in vivo models of Pseudomonas aeruginosa wound infections. In a murine skin abrasion infection model, a single application of the hydrogel led to complete bacterial eradication and enhanced wound healing, outperforming a commercial silver-based hydrogel wound dressing. These responsive hydrogels did not induce ciprofloxacin resistance in non–β-lactamase–producing bacteria. These findings demonstrate that β-lactamase–responsive hydrogels provide a precise, infection-triggered antibiotic delivery platform that can improve the treatment of wound infections and mitigate antimicrobial resistance.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是细菌酶响应性水凝胶用于感染伤口的抗生素递送系统，属于生物材料、药物递送和伤口治疗领域。论文内容完全不涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态成像或基础模型等主题。所有关键词均与论文研究内容无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>bacterial enzyme-responsive hydrogel, antibiotic delivery, wound infection, β-lactamase, ciprofloxacin, Pseudomonas aeruginosa, antimicrobial resistance, triggered release</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adz4749" target="_blank">3. Atmospheric transport and deposition of PFAS in East Antarctica: Evidence from snow transect measurements and a multidecadal record</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Xiaotong Li, Minmin Hou, Sha Jiang, Ian T. Cousins, Pei Li, Yali Shi, Yaqi Cai, Guibin Jiang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过南极洲雪样横断面测量和多年代沉积记录，揭示了PFAS通过前体降解和海盐气溶胶等机制从源区经半球和跨半球传输到南极并沉积的过程。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>全氟及多氟烷基物质（PFAS）在南极地区的存在已有报道，但其向内陆迁移的机制、沉积历史与半球间传输的相互作用仍不明确。本研究通过分析横贯东南极（从中山站至冰穹A）的雪样剖面及冰穹A的沉积记录，揭示了PFAS的来源与传输过程，并重建了其历史排放记录。结果表明，前体物降解与海盐气溶胶是PFAS的主要来源，对PFAS积累的区域性和季节性变化起关键作用。长达半世纪的沉积记录揭示了南极与遥远污染源之间的关联。我们提出PFAS从源区通过半球内及跨半球传输到达南极并沉积的过程。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The occurrence of per- and polyfluoroalkyl substances (PFAS) in Antarctica has been previously reported; however, the mechanisms of their inland penetration and the interplay between their depositional histories and interhemispheric transport remain unclear. Here, PFAS in snow along a transect across East Antarctica (from Zhongshan Station to Dome A) and depositional records at Dome A were studied to elucidate the sources and transport of PFAS and to reconstruct the historical emission record. Our findings suggest that precursor degradation and sea spray aerosol are the main sources of PFAS and play a pivotal role in the regional and seasonal variability of PFAS accumulation. The half-century depositional records reveal connections between Antarctica and distant sources. We propose the hemispheric and interhemispheric transport of PFAS from source regions to Antarctica, where they are deposited.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是南极洲PFAS（全氟和多氟烷基物质）的大气传输、沉积和历史排放记录重建，属于环境科学、大气化学和极地研究领域。论文内容完全不涉及医学图像分析、深度学习、AI诊断、手术规划或任何医疗健康相关主题。所有评分关键词都与医学影像和临床AI相关，而该论文研究的是环境污染物在极地的传输机制，两者领域完全不同，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>PFAS, Antarctica, atmospheric transport, deposition, snow transect, historical emission record, interhemispheric transport, sea spray aerosol</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeb6733" target="_blank">4. Ultrasensitive soft vibration sensors based on atomically thin metal dichalcogenide ribbon networks</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Chengyi Xu, Xufan Li, Lukas Michalek, Jaeho Park, Eunyoung Kim, Zhiyu Zhang, Raymond R. Unocic, Eric T. Zhao, Wei‐Chun Hsu, Baiyu Shi, Shuang Wu, Yang Yang, Avetik R. Harutyunyan, Zhenan Bao</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文开发了一种基于单层二硫化钼带状网络的超薄、可拉伸振动传感器，用于高灵敏度检测宽频振动和声学信号，旨在应用于医疗保健和机器人领域。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>人工智能与物联网的快速发展，推动了对高性能、皮肤兼容振动传感器的日益增长需求，这类传感器需能捕捉细微的生理与环境信号。低维材料在灵敏度和柔韧性方面具有独特优势，但在实现高应变响应性、机械鲁棒性以及大面积均匀性方面仍存在挑战。本文报道了一种基于大面积单层二硫化钼（MoS₂）带状网络（SLRNs）的超灵敏、低剖面、可拉伸振动传感器，该网络通过气-液-固机制生长。将SLRNs嵌入热塑性弹性体[苯乙烯-乙烯-丁烯-苯乙烯（SEBS）]中，获得了二硫化钼基传感器中创纪录的高灵敏度，在&amp;lt;1.6%应变下其应变因子高达5300。该响应源于二硫化钼与SEBS之间热膨胀失配诱导的纳米裂纹介导电子传输。这种约6微米厚的传感器能够检测宽频率范围（&amp;gt;500赫兹）的振动与声学信号，从而实现对复杂刺激的解卷积分析。此项研究为医疗保健和机器人应用中的超薄、超灵敏可穿戴传感器开辟了道路。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The rapid progress of artificial intelligence (AI) and the internet of things (IoT) has driven growing demand for high-performance, skin-compatible vibration sensors capable of capturing subtle physiological and environmental signals. Low-dimensional materials offer unique advantages in sensitivity and flexibility, yet challenges remain in achieving high strain responsiveness, mechanical robustness, and large-area uniformity. Here, we report an ultrasensitive, low-profile, and stretchable vibration sensor based on large-area single-layer molybdenum disulfide (MoS 2 ) ribbon networks (SLRNs) grown via a vapor-liquid-solid mechanism. Embedding SLRNs within a thermoplastic elastomer [styrene-ethylene-butylene-styrene (SEBS)] yields record-high sensitivity among MoS 2 -based sensors, with gauge factors up to 5300 at &amp;lt;1.6% strain. This response arises from nanocrack-mediated electron transport induced by the thermal expansion mismatch between MoS 2 and SEBS. The ~6-micrometer-thick sensors detect vibrations and acoustic signals over a wide frequency range (&amp;gt;500 hertz), enabling deconvolution of complex stimuli. This work establishes a path toward ultrathin, ultrasensitive wearable sensors for health care and robotic applications.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是基于二维材料（单层二硫化钼）的超灵敏柔性振动传感器，用于检测生理和环境振动信号，应用于医疗保健和机器人领域。虽然提到了人工智能（AI）和医疗保健应用，但论文的核心内容是材料科学、传感器技术和信号检测，而不是医学图像分析、深度学习医学成像、疾病诊断/预后、手术规划或多模态医学成像。论文没有涉及医学图像处理、分割、诊断AI模型或手术指导系统。因此，所有关键词均与论文内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>vibration sensor, molybdenum disulfide, wearable sensor, ultrasensitive, stretchable, health care, acoustic signal, nanocrack-mediated electron transport</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeb3868" target="_blank">5. A unified ab initio theory of spin-phonon relaxation and decoherence uncovers fast dephasing in magnetic molecules</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Alessandro Lunghi</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文通过扩展量子主方程和从头计算方法，揭示了自旋-声子相互作用不仅导致磁弛豫，还会通过双声子纯退相机制引起快速退相干，在具有大磁化阻塞温度的分子中，尽管磁弛豫缓慢（秒级），但量子叠加态的相干时间短于10纳秒。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>自旋-声子相互作用已知是固态体系中磁弛豫的主要驱动力，但其通过退相位效应对自旋退相干的影响通常被忽视。本文拓展了量子主方程以涵盖相干项，并描述了直至双声子过程对自旋动力学的完整影响。我们针对一个具有高磁化阻塞温度的分子体系，以完全从头计算的方式实现了该方法。研究表明，尽管强轴向磁各向异性确保了在77开尔文温度下磁弛豫可缓慢至秒量级，但由于双声子纯退相位机制，克拉默斯双重态的叠加态相干时间却短于10纳秒。该过程原则上适用于任何与声子热浴相互作用的量子系统，从而推进了我们对固态体系中量子退相干机制的理解。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Spin-phonon interactions are known to drive magnetic relaxation in solid-state systems but are generally overlooked as a contribution to spin decoherence through dephasing. Here, we extend quantum master equations to account for coherence terms and describe the full effect of up to two-phonon processes on spin dynamics. We implement this method fully ab initio for a molecule with large magnetization blocking temperature and show that, although strong axial magnetic anisotropy ensures slow magnetic relaxation approaching seconds at 77 kelvins, the superposition of Kramers doublets is coherent for less than 10 nanoseconds due to a two-phonon pure dephasing mechanism. This process, in principle, applies to any quantum system interacting with a thermal bath of phonons, advancing our understanding of quantum decoherence in solid-state systems.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是量子自旋-声子相互作用、退相干和磁弛豫的理论计算，属于凝聚态物理和量子计算领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。论文未涉及任何医学影像、疾病诊断、手术规划或医疗AI模型的内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>spin-phonon interaction, quantum decoherence, magnetic relaxation, ab initio calculation, quantum master equations, two-phonon processes, Kramers doublets, solid-state systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aec1451" target="_blank">6. Superabundant microRNAs are transcribed from human rDNA spacer promoters insulated by CTCF</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Steven Henikoff, Jorja G. Henikoff</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现人类rDNA间隔启动子能转录microRNAs（miR-1275和miR-6724），这些microRNAs被CTCF隔离并快速输出细胞核，可能作为循环癌症生物标志物并具有调控功能。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>microRNAs是一类约22个核苷酸长度的RNA分子，由初级转录本加工产生并从细胞核输出，通过与mRNA碱基配对的方式抑制基因表达。出乎意料的是，我们发现人类microRNA基因中RNA聚合酶II（Pol II）丰度最高的位置位于核糖体基因重复序列阵列（rDNAs）内部。将公共新生转录本数据与人类基因组组装版本hs1进行比对后，揭示了miR-1275和miR-6724均存在一段50个核苷酸的转录本，它们能以异常迅速的速度从细胞核输出。我们证明miR-1275/miR-6724转录单元紧密侧接于CCCTC结合因子（CTCF）之间，且位于rDNA间隔区启动子小于400碱基对的范围内。从5′端外部转录间隔区（5′ETS）表达的miR-1275/miR-6724及其microRNA前体，其输出过程不依赖于已知的RNA加工活性，并可在外泌体及作为循环癌症生物标志物中被检测到。我们认为rDNA间隔区启动子与5′ETS microRNA基因已进化出在受体细胞中执行普遍调控功能的作用。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>microRNAs are ~22-nucleotide RNAs processed from primary transcripts and exported from the nucleus to repress gene expression by base-pairing to mRNAs. Unexpectedly, we find that the highest levels of RNA polymerase II (Pol II) at human microRNA genes are within the ribosomal gene repeat arrays (rDNAs). Alignment of public nascent transcript data to the hs1 human genome assembly reveals a 50-nucleotide transcript for both miR-1275 and miR-6724, which exits from the nucleus with exceptional rapidity. We show that the miR-1275/miR-6724 transcription unit is closely flanked by CCCTC-binding factor (CTCF) within a &amp;lt;400-bp span of the rDNA spacer promoter. miR-1275/miR-6724 and microRNA precursors expressed from the 5′ external transcribed spacer (5′ETS) are exported independently of known RNA processing activities and are detected in exosomes and as circulating cancer biomarkers. We propose that the rDNA spacer promoter and 5′ETS microRNA genes have evolved for general regulatory functions in recipient cells.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 该论文研究的是人类rDNA间隔启动子转录microRNAs的分子生物学机制，涉及RNA聚合酶II、CTCF结合因子、microRNA加工和运输等基础生物学过程。论文完全不涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或医学影像基础模型等主题。所有关键词均与论文内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>microRNAs, rDNA spacer promoter, CTCF, RNA polymerase II, nuclear export, circulating biomarkers, gene regulation, ribosomal gene repeat</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aea7987" target="_blank">7. Dengue infection elicits skin tissue-resident and circulating CD8 + T cells associated with protection from hospitalization</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Noor Zayanah Hamis, J. S. G. Ooi, Ka-Wai Cheung, Valerie Chew, Michaela Gregorová, Eugenia Z. Ong, Kuan Rong Chan, Tun-Linn Thein, Yee-Sin Leo, David Chien Boon Lye, Eng Eong Ooi, Laura Rivino</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现登革热感染期间皮肤和血液中的CD8+T细胞反应与避免住院相关，支持皮肤组织驻留记忆T细胞在保护性免疫中的作用。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>登革热正在全球范围内蔓延，亟需明确针对该疾病的免疫保护相关性因素。登革热感染最初发生在受感染蚊子叮咬后的皮肤部位；然而，关于该部位宿主免疫反应的认识仍十分有限。我们对73名登革热患者和10名健康志愿者的皮肤及血液T细胞进行了表型、功能和转录谱分析。研究发现，与患者血液相比，皮肤T细胞区室经历显著重塑，并高度富集增殖性CD4+和CD8+T细胞。活化的皮肤CD8+T细胞表达了组织驻留记忆T细胞（T&lt;sub&gt;RM&lt;/sub&gt;）的核心转录特征，支持其在感染期间向T&lt;sub&gt;RM&lt;/sub&gt;细胞谱系分化。在该队列中，皮肤与血液CD8+T细胞反应强度与避免住院风险存在关联。这些数据证实了皮肤驻留性与循环性CD8+T细胞在登革热中的保护作用，并提示有必要评估通过诱导皮肤T&lt;sub&gt;RM&lt;/sub&gt;细胞来增强保护性免疫的疫苗接种策略。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Dengue is spreading globally, and there is urgent need to define immune correlates of protection for this disease. Dengue infection first occurs in the skin following the bite of an infected mosquito; however, knowledge of host immune responses within this site remains sparse. We investigated the phenotypic, functional, and transcriptional profiles of skin and blood T cells in 73 patients with dengue and 10 healthy volunteers. We show that the skin T cell compartment undergoes marked reshaping and is strongly enriched with proliferating CD4 + and CD8 + T cells compared with the blood of patients. Activated skin CD8 + T cells expressed a core transcriptional signature of tissue-resident memory T (T RM ) cells, supporting their differentiation to the T RM cell lineage during infection. The magnitude of skin and blood CD8 + T cell responses were associated with protection from hospitalization in this cohort. These data support a protective role of skin-resident and circulating CD8 + T cells in dengue and warrant evaluation of vaccination strategies inducing skin T RM cells to enhance protective immunity.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 该论文研究登革热感染中皮肤和血液T细胞的免疫反应及其与住院保护的关系，属于免疫学和传染病学领域。论文未涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或基础模型等主题。所有关键词均与论文内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>dengue infection, skin T cells, CD8+ T cells, tissue-resident memory T cells, protection from hospitalization, immune correlates, vaccination strategies</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aea3260" target="_blank">8. Extreme precipitation reshapes nutrient flows and balance in North America’s largest river basin</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Zihao Bian, Shufen Pan, J. F. Sun, Steven G. McNulty, Xingchen Tony Wang, Changchun Huang, Hanqin Tian</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过数据模型框架评估了1980-2018年极端降水事件如何改变密西西比河流域的氮磷通量，发现极端降雨通过增强土壤侵蚀导致磷输出相对增加，降低了氮磷比，可能影响有害藻华的形成和群落毒性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>在气候变化加剧的背景下，极端降水事件正日益扰乱全球大型河流系统的营养盐动态。除了改变单一营养盐通量的规模，极端降水可能从根本上重塑营养盐组成与化学计量平衡，对水生生态系统健康产生重要影响。本研究采用数据与模型相结合的集成框架，评估了1980年至2018年间此类事件如何改变密西西比河流域的氮（N）与磷（P）通量。我们发现，极端降雨导致磷的输出增加显著高于氮，这主要源于土壤侵蚀加剧和颗粒结合态营养盐的迁移。极端降水格局在时间和空间上的协同变化，已导致源头溪流及累积营养盐负荷中的氮磷比下降，使输出化学计量比向雷德菲尔德比值趋近。因此，极端降水一方面可能增加助长有害藻华的营养盐通量，另一方面又可能降低氮磷比，从而倾向于形成毒性较低的藻类群落。这种权衡关系要求流域管理策略不能仅局限于控制营养盐总量。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Extreme precipitation events, intensified by climate change, are increasingly disrupting nutrient dynamics in large river systems worldwide. Beyond altering the magnitude of individual nutrient fluxes, extreme precipitation may fundamentally reshape nutrient composition and stoichiometric balances, with critical implications for aquatic ecosystem health. Here, we apply an integrated data-model framework to assess how these events have altered nitrogen (N) and phosphorus (P) fluxes across the Mississippi River Basin from 1980 to 2018. We find that extreme rainfall disproportionately increases P export relative to N, driven primarily by enhanced soil erosion and mobilization of particulate-bound nutrients. Concurrent temporal and spatial changes in extreme precipitation regimes have induced declining N:P ratios in headwater streams and cumulative nutrient loads, shifting export stoichiometry toward the Redfield ratio. Therefore, extreme precipitation can increase nutrient fluxes that fuel harmful algal blooms, yet at the same time reduce N:P ratios that may favor less toxic communities. This trade-off calls for watershed management strategies that go beyond managing nutrient quantity alone.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究极端降水对密西西比河流域氮磷营养物流通和平衡的影响，属于环境科学、水文学和生态学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医学领域，与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>extreme precipitation, nutrient fluxes, Mississippi River Basin, nitrogen phosphorus ratio, soil erosion, harmful algal blooms, watershed management, climate change impacts</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aec3182" target="_blank">9. Magnetic coupling transforms random snapping into ordered sequences in soft metamaterials</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Haoze Sun, Gabriel Alkuino, Yinding Chi, Yevhen Zabila, Haitao Qing, Denys Makarov, X. Zhang, Jie Yin</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究解决了软磁机械超材料中顺序屈曲行为随机不可控的问题，通过磁耦合实现了确定性的多步力学响应，可用于能量耗散和软机器人等领域。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>机械超材料通过由突弹失稳驱动的顺序变形实现多步骤、可编程响应，但这些序列通常受不可避免的缺陷控制，导致随机且不可控的行为。本文利用层内和层间磁相互作用与弹性耦合，在受剪纸启发的软磁超材料中重新编程顺序屈曲失稳的次序。在单层系统中，磁化单元之间的层内耦合产生随机的突弹序列，但生成具有显著滞后的强非线性尖峰力-位移响应，这与未磁化薄片的同时屈曲形成对比。在多层组装体中，层间磁相互作用触发链式反应般的传播，将随机性转变为跨结构的稳健、定向突弹。这一机制建立了一种无需持续施加外场的确定性多步骤机械响应范式，并为能量耗散、波导、可重构软体机器人及生物医学设备中的自适应材料开辟了新途径。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Mechanical metamaterials achieve multistep, programmable responses through sequential deformation driven by snapping instabilities, yet these sequences are typically governed by unavoidable imperfections, resulting in random and uncontrollable behavior. Here, we harness intra- and interlayer magnetic interactions coupled with elasticity to reprogram the ordering of sequential buckling instabilities in kirigami-inspired soft magnetic metamaterials. In single-layer systems, intralayer coupling among magnetized units produces random snapping sequences but generates strongly nonlinear-spiked force-displacement responses with pronounced hysteresis, in contrast to the simultaneous buckling of unmagnetized sheets. In multilayer assemblies, interlayer magnetic interactions trigger chain reaction–like propagation, transforming randomness into robust, directional snapping across structures. This mechanism establishes a paradigm for deterministic, multistep mechanical responses without continuously applied fields and opens avenues for adaptive materials in energy dissipation, waveguiding, reconfigurable soft robotics, and biomedical devices.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是软磁机械超材料中通过磁耦合控制顺序屈曲的力学行为，属于材料科学、力学和软机器人领域。所有评分关键词均涉及医学影像分析、AI诊断、手术规划等医疗AI应用，与论文的力学材料研究内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>soft magnetic metamaterials, sequential buckling, magnetic coupling, deterministic mechanical responses, energy dissipation, reconfigurable soft robotics, kirigami-inspired structures, multilayer assemblies</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adu9610" target="_blank">10. Stable vortices in the anomalous metallic state observed on monoatomic-layer superconductors</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yudai Sato, Masahiro Haze, Ryohei Nemoto, Wenxuan Qian, Shunsuke Yoshizawa, Takashi Uchihashi, Yukio Hasegawa</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过扫描隧道光谱学揭示了在二维Pb单原子层超导体金属态中观察到的稳定孤立涡旋，表明金属态的饱和电阻源于无钉扎涡旋运动，为超薄二维超导体的涨落诱导相提供了新见解。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>二维系统中的超导-绝缘体转变作为量子相变的典型范例已被广泛研究。近期对高导电性二维体系的研究揭示了一个中间金属态的存在，其中电阻率在趋于零温极限时呈现饱和现象。这种金属性的本质与起源仍存争议，部分原因在于缺乏微观层面的理解。本研究利用扫描隧道谱技术，研究了在邻切角半导体衬底上形成的晶态铅单原子层超导体中观察到的金属态及其他相。我们的谱学成像显示，金属态中存在稳定且孤立的涡旋，这与离域化或液态化的涡旋截然不同。这些发现表明，金属态中的电阻饱和现象源于输运测量所施加的有限电流驱动的无钉扎涡旋运动。我们通过受控无序的微观实验，为超薄晶态二维超导体中涨落诱导的相提供了新的见解。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The superconductor-insulator transition in two-dimensional (2D) systems has been extensively studied as a typical example of quantum phase transition. Recent investigations of highly conductive 2D systems have revealed an intervening metallic regime, in which the electrical resistivity saturates at the limit of zero temperature. The nature and origin of this metallicity remain debated, partly because of the lack of microscopic understanding. In this study, using scanning tunneling spectroscopy, we investigate the metallic state and other phases observed in crystalline Pb monoatomic-layer superconductors formed on vicinal semiconducting substrates. Our spectroscopic images reveal stable and isolated vortices in the metallic regime, distinct from delocalized or liquidized vortices. These findings suggest that the saturated resistance in the metallic state arises from the pinning-free vortex motion driven by the finite current applied for the transport measurements. Our disorder-controlled microscopic experiments provide new insights into the fluctuation-induced phases of ultrathin crystalline 2D superconductors.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是二维超导体中的超导-绝缘体转变和金属态，使用扫描隧道光谱学研究Pb单原子层超导体中的涡旋行为，属于凝聚态物理和材料科学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持、疾病诊断预测等医学应用领域，与论文的物理材料研究内容完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>superconductor-insulator transition, two-dimensional superconductors, metallic state, vortices, scanning tunneling spectroscopy, Pb monoatomic-layer, quantum phase transition, crystalline superconductors</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adr9432" target="_blank">11. Sugarcane streak mosaic virus P1 protein targets the BES1 transcription factor to subvert DAMP-triggered immunity in plant</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Zhen He, Xiaobo Deng, Lan Chen, Xi Xu, M.‐X. Tang, Yanhong Hua, Ling Qin, Chenwei Feng, Tianxiao Gu, Xinjian Zhuang, Kai Xu, Charles Roussin-Léveillée, Peter Moffett, Kun Zhang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了甘蔗条纹花叶病毒P1蛋白通过靶向NbBES1转录因子抑制NbXTH1表达，从而破坏植物细胞壁介导的免疫机制，并发现NbXTH1可作为广谱抗病因子。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>甘蔗条纹花叶病毒（Sugarcane streak mosaic virus, SCSMV）是引起甘蔗花叶病的主要病原。其P1蛋白（P1 SCSMV）在致病过程中起关键作用，但其如何破坏植物免疫仍不清楚。本研究发现，P1 SCSMV直接结合油菜素内酯信号通路的核心转录因子NbBES1，干扰其与木葡聚糖内转糖基化酶/水解酶基因1（NbXTH1）启动子中E-box元件的结合，从而抑制NbXTH1的转录。过表达NbXTH1增强了植物对真菌/病毒侵染的抗性，提高了木葡聚糖含量；木葡聚糖可直接诱导一种损伤相关分子模式触发先天免疫（DTI）及多个防御基因的表达，并伴随中层和初生细胞壁增厚。而NbXTH1低表达导致的木葡聚糖减少进一步削弱了DTI反应并使细胞壁变薄。本研究揭示了一种病毒蛋白如何破坏细胞壁介导的免疫，并确定NbXTH1作为一个广谱抗病因子。我们的研究结果为利用木葡聚糖或NbXTH1设计作物广谱抗病性提供了支持。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Sugarcane streak mosaic virus (SCSMV) is the major cause of sugarcane mosaic disease. Its P1 protein (P1 SCSMV ) is crucial for pathogenesis, but how it disrupts plant immunity remains unclear. Here, we found that P1 SCSMV directly binds to the core transcription factor of brassinosteroid signaling, NbBES1, disrupting its binding to the E-box elements of the xyloglucan endotransglucosylase/hydrolase gene 1 ( NbXTH1 ) promoter and suppressing NbXTH1 transcription. NbXTH1 overexpression enhanced the plant resistance to fungal/viral infection, improved the contents of xyloglucan, which directly induced a damage-associated molecular pattern triggering innate immunity (DTI) and expression of several defense genes, and accompanied with a thickened middle lamellae and primary cell wall. Reduced xyloglucan due to NbXTH1 downexpression further weakened DTI responses and a thinner cell wall. This study reveals how a viral protein subverts cell wall–mediated immunity and identifies NbXTH1 as a broad-spectrum disease resistance factor. Our findings support using xyloglucan or NbXTH1 to engineer broad-spectrum disease resistance in crops.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 该论文研究植物病毒（甘蔗条纹花叶病毒）如何通过靶向转录因子NbBES1来破坏植物免疫系统，属于植物病理学和分子生物学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医疗健康技术，与论文的植物病毒免疫机制研究完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Sugarcane streak mosaic virus, P1 protein, NbBES1 transcription factor, NbXTH1, plant immunity, cell wall-mediated immunity, xyloglucan, disease resistance</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aec4037" target="_blank">12. Functional characterization of dynamic nascent RNA folding ensembles in real time</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Kavan Gor, Eva Maria Geissen, Olivier Duss</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过实时单分子荧光显微镜实验，揭示了动态RNA折叠与功能之间的关系，发现核糖体蛋白等因子特异性调控RNA折叠类别。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>RNA结构在转录过程中即开始形成，当新生RNA从RNA聚合酶中产生时，其结构受到细胞因子的动态调控。在RNA分子群体中，单个RNA构象如何与功能相关联，目前尚未得到充分理解。本研究通过开发多色单分子荧光显微实验技术，实时追踪新生RNA结构的形成过程，并对多达八种不同类型的RNA分子进行功能表征。我们发现核糖体蛋白、RNA修饰酶或反义寡核苷酸能够特异性调控部分RNA折叠类别。例如，我们提供了直接证据，表明特定位点局部RNA可及性的增加与核糖体组装过程中核糖体蛋白的分子伴侣活性相关。这些实验为研究动态RNA折叠（及错误折叠）与功能之间的关系提供了一个通用框架。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>RNA structure starts forming cotranscriptionally as the nascent RNA emerges from the RNA polymerase and is dynamically modulated by cellular factors. How individual RNA conformations, out of an ensemble of RNA molecules, relate to function is not well understood. Here, developing multicolor single-molecule fluorescence microscopy experiments, we track in real time nascent RNA structure formation, functionally characterizing up to eight different types of RNA molecules. We find that ribosomal proteins, RNA modification enzymes or antisense oligonucleotides specifically modulate a subset of the RNA folding classes. For example, we provide direct evidence that increased local RNA accessibility at specific sites correlates with the chaperoning activity of ribosomal proteins during ribosome assembly. These experiments provide a general framework to study how dynamic RNA folding, and misfolding, relates to function.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究RNA折叠的实时单分子荧光显微镜实验，属于分子生物学和生物物理学领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。论文未涉及任何医学影像、深度学习、疾病诊断、手术规划或多模态医疗数据相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>RNA folding, single-molecule fluorescence microscopy, nascent RNA, real-time tracking, ribosomal proteins, RNA structure formation, functional characterization, dynamic ensembles</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adz5906" target="_blank">13. Caspase-3/7 deficiency results in enhanced intestinal inflammation and reduced tumorigenesis</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Wei Xie, Laura Wyckaert, Mike Vadi, Bruno Verstraeten, Tatyana Divert, Jef Haerinck, Riet De Rycke, Femke Baeke, Mohamed Lamkanfi, Geert Berx, Adam Wahida, Peter Vandenabeele</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过小鼠模型发现，肠道上皮细胞中caspase-3/7的缺失会加剧结肠炎并阻碍组织再生，但反而减少结直肠肿瘤的形成，揭示了caspase-3/7在炎症控制与肿瘤发生中的双重作用。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>肠道上皮细胞（IEC）的异常死亡在炎症性肠病（IBD）及相关动物模型中十分常见。尽管多种细胞死亡途径参与疾病进程，但在肠道炎症中起主导作用的死亡模式及其调控机制仍不明确。本研究利用DSS结肠炎模型，探究了IEC中凋亡（Casp3/7 Δ IEC）、坏死性凋亡（Mlkl Δ IEC）、焦亡（Gsdme Δ IEC，Gsdmd −/−）以及铁死亡（Gpx4 i Δ IEC）的作用。在IEC中缺失caspase-3/7的小鼠表现出加重的结肠炎、更高的死亡率及再生受损，而其他转基因小鼠中未见此现象。IEC中caspase-3/7的缺失阻碍了干细胞增殖，增加了炎症性细胞死亡，破坏了屏障完整性并延迟了恢复。尽管炎症加剧，Casp3/7 Δ IEC小鼠在AOM/DSS诱导的结直肠癌模型中肿瘤形成减少。这些发现揭示了caspase-3/7在控制炎症和组织再生中的保护作用，同时促进肠道损伤后的肿瘤发生，并提示调控caspase-3/7可能成为IBD和结直肠癌的一种有前景的治疗策略。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Aberrant intestinal epithelial cell (IEC) death is common in inflammatory bowel disease (IBD) and related animal models. While various cell death pathways contribute to disease, the dominant modalities and their regulatory mechanisms in intestinal inflammation remain ill defined. Using the DSS colitis model, we examined the contribution of apoptosis ( Casp3/7 Δ IEC ), necroptosis ( Mlkl Δ IEC ), pyroptosis ( Gsdme Δ IEC , Gsdmd −/− ) , and ferroptosis ( Gpx4 i Δ IEC ) in IECs. Mice lacking caspase-3/7 in IECs showed worsened colitis, higher mortality, and impaired regeneration, not seen in the other transgenic mice. Caspase-3/7 deficiency in IECs hindered stem cell proliferation and increased inflammatory cell death, disrupting barrier integrity and delaying recovery. Despite heightened inflammation, Casp3/7 Δ IEC mice had reduced tumor formation in the AOM/DSS-induced colorectal cancer model. These findings highlight a protective role for caspase-3/7 in controlling inflammation and tissue regeneration, while promoting tumorigenesis following intestinal injury, and suggest modulation of caspase-3/7 as a promising therapeutic strategy in IBD and colorectal cancer.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是肠道炎症和癌症的分子机制，聚焦于细胞死亡途径（凋亡、坏死性凋亡、焦亡、铁死亡）在炎症性肠病和结直肠癌中的作用，特别是caspase-3/7的调控功能。所有评分关键词均涉及医学影像分析、人工智能、深度学习、诊断、预后、手术规划、多模态成像和基础模型，这些主题在论文的标题、摘要和内容中完全没有出现。论文属于分子生物学、细胞生物学和胃肠病学领域，与医学影像或AI临床决策支持无直接关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>caspase-3/7, intestinal inflammation, inflammatory bowel disease, colorectal cancer, cell death pathways, DSS colitis model, tissue regeneration, therapeutic strategy</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aec9841" target="_blank">14. Photothermal catalysis versus thermal catalysis: A palladium-catalyzed intermolecular three-component C─H 1,3- N , O -difunctionalization</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> He-Yuan Bai, Kai Tang, Zihao Li, Xi Chen, Shuyu Zhang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文解决了选择性C-H双官能化的合成挑战，通过钯催化三组分反应实现了3-苯基丙酰胺的1,3-N,O-双官能化，可选择性地通过光热或热途径获得不同产物，具有中等至高产率和优异的位点选择性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>尽管过渡金属催化的C─H活化已显著推动了C─H官能团化的发展，实现高选择性的C─H双官能团化仍是一个重大挑战。当前的C─H双官能团化策略主要局限于双组分环化反应或双碳官能团化，这本质上限制了结构多样性和合成效率。本文报道了一种钯催化的三组分C─H 1,3-氮、氧双官能团化反应，以3-苯基丙酰胺为底物，利用偶氮二甲酸酯与双氧或羧酸结合。该方法通过光热或热反应路径，选择性生成不同的1,3-氮、氧双官能团化产物，获得中等至较高的产率，并具有优异的位点选择性和广泛的官能团耐受性，这些产物可轻松转化为多种有价值的杂环化合物。广泛的实验和计算研究表明，该反应通过一个复杂且连续的催化循环进行，而非串联的独立步骤。通过整合C─H活化、亲电胺化、双官能团化及光热催化的原理，本研究拓展了选择性多重键形成的工具箱，并将吸引更多领域的研究兴趣。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Although transition metal–catalyzed C─H activation has notably advanced C─H functionalization, achieving highly selective C─H difunctionalization remains a substantial challenge. Current C─H difunctionalization strategies remain largely constrained to two-component annulation reactions or dicarbofunctionalization, which inherently limit structural diversity and synthetic efficiency. Here, we report a palladium-catalyzed three-component C─H 1,3- N , O -difunctionalization of 3-phenylpropanamide using azodicarboxylate in conjunction with either dioxygen or carboxylic acid. This approach selectively delivers distinct 1,3- N , O -difunctionalized products through either photothermal or thermal pathway, affording moderate to high yields with excellent site selectivity and broad functional group tolerance, which can be readily transformed into various valuable heterocyclic compounds. Extensive experimental and computational studies reveal that the reaction operates via a complex and continuous catalytic cycle rather than by tandem, independent steps. By integrating principles of C─H activation, electrophilic amination, difunctionalization, and photothermal catalysis, this work expands the toolbox for selective multiple bond formation and will attract more interest in various fields.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是有机化学中的钯催化C-H键三组分1,3-N,O-双官能化反应，属于合成化学领域，与医学图像分析、人工智能、临床决策支持等关键词完全无关。论文内容涉及光热催化与热催化的比较、C-H活化、选择性合成等化学概念，没有任何医学图像、深度学习、疾病诊断、手术规划或医疗AI相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>palladium-catalyzed, C-H activation, three-component reaction, difunctionalization, photothermal catalysis, thermal catalysis, selective synthesis, heterocyclic compounds</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeb7409" target="_blank">15. A reconfigurable dielectric elastomer actuator via phase-transitional ferrofluid enables sustainable operation</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yun Hyeok Lee, Seung Won Moon, Min-Gyu Lee, Won Jun Song, Seong-Yu Choi, Gimin Sung, Yong Eun Cho, Junhyun Choi, Byung Ik Park, Younghoon Lee, Ho-Young Kim, Jeong-Yun Sun</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文提出了一种使用相变铁磁流体电极的可重构介电弹性体驱动器系统，解决了传统驱动器操作模式受限的问题，实现了动态电极重构、稳定形状保持和材料可回收性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>介电弹性体致动器（DEAs）是一种具有快速精准驱动能力的柔性换能器。然而，其传统高效驱动架构将DEAs限制在预设的操作模式中，导致应用范围有限。本文提出了一种使用相变铁磁流体（PTF）电极的可重构DEA系统。PTF可在固态与液态之间切换状态，满足DEA对可重构电极的需求。在溶胶态下，其受铁磁流体启发的稳定高磁响应性以及通过塑化实现的低粘度共同实现了电极的动态重构。在凝胶态下，PTF能保持稳定的形状，并在DEA驱动过程中表现出降低的界面滑移。这种可重构特性显著提升了系统的适应性，即使电极发生断开或介电失效时也能确保连续运行。此外，PTF电极在驱动后可回收并重复使用，展现出优异的可循环性。机械顺应性、磁控可重构性与材料可持续性的结合，使PTF成为适用于下一代可重构电活性系统的多功能电极策略。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Dielectric elastomer actuators (DEAs) are promising soft transducers capable of rapid and precise actuation. However, their conventional architecture for efficient actuation confines DEAs in predesigned operational modes, leading to limited applications. Here, we introduce a reconfigurable DEA system using phase-transitional ferrofluid (PTF) electrodes. PTF switches its states between solid and liquid, satisfying requirements for a reconfigurable electrode for DEAs. In the sol state, the stable and high magnetic responsiveness inspired by ferrofluid and the low viscosity achieved through plasticization collectively enable dynamic reconfiguration of the electrode. In the gel state, PTF ensures stable shape retention and exhibits reduced interfacial slip during DEA actuation. This reconfigurable nature greatly increases adaptability and ensures continuous operation even when electrodes undergo disconnection or dielectric failure. Moreover, the PTF electrodes can be retrieved and reused after actuation, demonstrating their excellent recyclability. The combination of mechanical compliance, magnetic reconfigurability, and material sustainability renders the PTF a versatile electrode strategy for next-generation reconfigurable electroactive systems.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是可重构介电弹性体驱动器（DEA）系统，使用相变铁磁流体（PTF）电极实现机械顺应性、磁性可重构性和材料可持续性。该研究属于软体机器人、智能材料和电活性系统领域，与医学图像分析、人工智能临床决策支持、疾病诊断、手术规划等医疗AI主题完全无关。所有关键词均未在标题或摘要中出现，论文内容与医疗成像或AI医疗应用无任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>dielectric elastomer actuator, phase-transitional ferrofluid, reconfigurable electrode, soft transducer, magnetic reconfigurability, material sustainability, electroactive systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aea8321" target="_blank">16. Brain neuronal CG9593/ANGPTL4 activation mediates paternally acquired motor disorders</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jin Zhang, Tian Wei, Yong-Wei Xiong, Su-Zhen Guan, Huan Zhou, Long-Long Fan, Yuhong Nie, Zhi Yuan, Hongxia Li, Kaiwen Wang, Wei Chang, Hua-Long Zhu, T. Xu, Hao Wang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现父系重金属暴露通过精子m6A甲基化稳定CG9593/ANGPTL4 mRNA，导致多代运动障碍和神经元损伤，并验证了ANGPTL4作为潜在药物靶点。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>近期，父系起源视角逐渐受到关注，但其在运动功能障碍中的作用尚不明确。本研究利用果蝇和小鼠模型发现，经历父代环境重金属应激后，多代子代均表现出进行性运动缺陷，并伴随多巴胺能神经元丢失。跨组织RNA测序揭示了CG9593（功能同源于人血管生成素样蛋白4，ANGPTL4）的表达失调，确认CG9593/ANGPTL4是连接父代重金属应激与跨物种多代运动功能障碍的关键脑内效应因子。具体而言，神经元特异性敲低CG9593可改善这些功能障碍，而过表达CG9593则会重现表型。机制上，精子中N6-甲基腺苷（m6A）的高甲基化通过IGF2BP1依赖的转录后调控，稳定了子代神经元中CG9593信使RNA，导致突触相关蛋白DLG1减少并损害运动神经元功能。人群队列分析证实，血清ANGPTL4水平与儿童运动评分呈负相关，而父代精子m6A水平与重金属暴露负荷呈正相关。我们的研究确立了CG9593/ANGPTL4作为父系获得性多代运动功能障碍在进化上保守的决定因子，并有望成为可药物干预的靶点。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Recently, the perspective of paternal origin has emerged, yet its role in motor disorders remains unclear. Here, using Drosophila and murine models, we demonstrated that following paternal environmental heavy metal stress, offspring from multiple generations exhibited progressive motor deficits accompanied by dopaminergic neuron loss. Cross-tissue RNA sequencing revealed dysregulation of CG9593 (functionally homologous to human angiopoietin-like protein 4, ANGPTL4), identifying CG9593/ANGPTL4 as a pivotal brain effector linking paternal heavy metal stress to multigenerational motor disorders across species. Specifically, neuron-specific CG9593 knockdown ameliorated these disorders, whereas CG9593 overexpression mimicked them. Mechanistically, N6-methyladenosine (m6A) hypermethylation in sperm stabilized CG9593 messenger RNA in offspring neurons via IGF2BP1-dependent posttranscriptional regulation, reducing synapse-associated protein DLG1 and impairing motor neuron. Human cohort analyses confirmed that serum ANGPTL4 negatively correlated with pediatric motor scores, and paternal sperm m6A levels were positively associated with the heavy metal exposure burden. Our findings establish CG9593/ANGPTL4 as an evolutionarily conserved determinant of paternally acquired multigenerational motor disorders and hold promise as a druggable target.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是父系重金属暴露通过表观遗传机制（m6A甲基化）导致多代运动障碍的分子机制，涉及果蝇和小鼠模型、RNA测序、分子生物学和人类队列分析。所有评分关键词均与医学影像分析、AI诊断、手术规划等计算机视觉和AI临床决策支持领域相关，而本论文完全属于基础神经科学和表观遗传学研究领域，两者无任何交叉内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>paternal inheritance, multigenerational motor disorders, ANGPTL4/CG9593, m6A methylation, dopaminergic neuron loss, heavy metal stress, epigenetic mechanism, evolutionarily conserved</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aec2324" target="_blank">17. HfO 2 -based memristive synapses with asymmetrically extended p-n heterointerfaces for highly energy-efficient neuromorphic hardware</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Babak Bakhit, Xuejun Xie, Simon M. Fairclough, Atif Jan, Ingemar Persson, Giuliana Di Martino, Bonan Zhu, Caterina Ducati, Quanxi Jia, Bilge Yildiz, Andrew J. Flewitt, Judith MacManus-Driscoll</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文解决了现有忆阻器能耗高和性能不稳定的问题，通过设计具有不对称扩展p-n异质界面的Hf(Sr,Ti)O₂薄膜，实现了超低开关电流、高均匀性和多级电导调控的高效能神经形态计算器件。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>现有人工智能硬件日益增长的能耗已成为亟待解决的全球性严峻问题。神经形态计算有望大幅降低这一能耗。本文介绍了用于高能效、基于阻变特性的神经形态器件的多组分p型Hf(Sr,Ti)O₂薄膜。我们展示了具有超低开关电流（≤~10⁻⁸ A）、优异的循环间与器件间一致性、以及保持时间＞10⁵秒的界面忆阻器。这些器件展现出数百个超低电导态，调制范围超过50倍（未达饱和），并能稳定满足无监督学习规则。该性能源于在p型Hf(Sr,Ti)O₂与n型TiOₓNᵧ之间构建了自组装p-n异质界面，形成了向Hf(Sr,Ti)O₂侧不对称延伸的全耗尽空间电荷层、较高的内建电势以及反偏压下极低的饱和电流密度。超低电导调制通过电致离子迁移调控p-n异质界面的势垒高度实现。这种材料工程策略解决了现有忆阻器的能耗与性能波动问题，为构建高能效神经形态计算系统开辟了新路径。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The escalating energy consumption of existing artificial intelligence hardware has become a serious global issue that demands immediate action. Neuromorphic computing offers promises to drastically reduce this footprint. Here, we introduce multicomponent p-type Hf(Sr,Ti)O 2 thin films for energy-efficient, resistive switching–based neuromorphic devices. We demonstrate interfacial memristors with ultralow switching currents (≤~10 −8 A), exceptional cycle-to-cycle and device-to-device uniformities, and retention &amp;gt;10 5 s. They reveal hundreds of ultralow conductance levels with a modulation range of &amp;gt;50 (without reaching any saturation) and reproducibly satisfy unsupervised learning rules. This performance originates from incorporating a self-assembled p-n heterointerface between p-type Hf(Sr,Ti)O 2 and n-type TiO x N y , resulting in a fully depleted space-charge layer asymmetrically extended into Hf(Sr,Ti)O 2 , a large built-in potential, and extremely low saturation current density under reverse bias. Ultralow conductance modulation is controlled by tuning p-n heterointerface’s energy-barrier height through electro-ionic charge migration. This materials-engineering strategy addresses energy consumption and variability in existing memristors, opening a pathway toward energy-efficient neuromorphic computing systems.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是基于HfO₂的忆阻器突触器件，用于高效能神经形态计算硬件，属于材料科学、电子工程和神经形态计算领域。研究背景要求的是医学图像分析、AI临床决策支持等医疗AI领域，而本文完全不涉及医学图像、疾病诊断、手术规划或任何医疗应用，所有关键词均与论文内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>neuromorphic computing, memristive synapses, HfO₂ thin films, p-n heterointerface, energy-efficient hardware, resistive switching, ultralow conductance, materials engineering</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aea7041" target="_blank">18. In 2 O 3 -CNT catalysts enable &amp;gt;500-hour stable CO 2 -to-methanol hydrogenation via vacancy stabilization</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Lei Zhang, Yuxiang Yang, Hui Yan, Xinlei Ji, Hua An, Jianyu Rao, Yixuan Zhou, Chang-jun Liu, Xi Chen, Ning Yan</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文解决了In2O3催化剂在CO2加氢制甲醇过程中因表面过度还原而快速失活的问题，通过构建In2O3-碳纳米管复合系统实现了&gt;500小时的催化稳定性，并揭示了CNT网络通过调节电子转移和氧化还原动力学来稳定催化剂表面的机理。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>氧化铟（In₂O₃）是一种具有前景的二氧化碳（CO₂）加氢制甲醇催化剂，但其表面In³⁺物种在氢气（H₂）活化位点附近易发生局部过度还原，生成无活性的金属态In⁰，导致催化剂快速失活。本研究通过构建物理集成的In₂O₃-碳纳米管（In₂O₃-CNT）体系，利用质子-电子双转移机制，实现了催化性能与耐久性的同步提升。最优的In₂O₃-CNT体系在320°C下实现了1250.6克每千克In₂O₃每小时（g kgIn₂O₃⁻¹ h⁻¹）的最高甲醇产率。尤为重要的是，该复合体系在超过500小时的测试中保持了催化稳定性，是目前报道的In₂O₃催化剂中最高的耐久性。机理研究和多种表征技术表明，导电的CNT网络通过促进电子转移与再分配，调控了表面氧化还原动力学。这一过程在促进形成用于CO₂活化的氧空位的同时，防止了局部电子积累和In⁰的偏析。CNT介导的氧化还原调控通过平衡H₂诱导的还原与CO₂驱动的氧化，稳定了动态的InOₓ表面相，从而在长期运行中维持了催化活性。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Indium oxide (In 2 O 3 ) is a promising catalyst for carbon dioxide (CO 2 ) hydrogenation to methanol but suffers from rapid deactivation due to localized over-reduction of surface In 3+ species into inactive metallic In 0 near hydrogen (H 2 ) activation sites. Here, we exploit a proton-electron dual-transfer mechanism through a physically integrated In 2 O 3 -carbon nanotube (In 2 O 3 -CNT) system, achieving simultaneous enhancement of catalytic performance and durability. The optimal In 2 O 3 -CNT system gives the highest methanol production rate of 1250.6 grams kilograms In2O3 −1 hour −1 at 320°C. Particularly, the hybrid system maintains catalytic stability for &amp;gt;500 hours, representing the highest durability among reported In 2 O 3 catalysts. Mechanistic studies and multiple characterization techniques reveal that the conductive CNT network regulates surface redox dynamics by facilitating electron transfer and redistribution. This process promotes the formation of oxygen vacancies for CO 2 activation while preventing localized electron accumulation and In 0 segregation. The CNT-mediated redox modulation stabilizes a dynamic InO x surface phase by balancing H 2 -induced reduction and CO 2 -driven oxidation, thereby sustaining catalytic activity over extended operation.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是化学催化领域（In2O3-CNT催化剂用于CO2加氢制甲醇），与医学图像分析、人工智能临床决策支持等医学领域完全无关。论文内容涉及催化剂设计、稳定性提升、反应机理等化学工程主题，未提及任何医学成像、疾病诊断、手术规划或医疗AI相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>CO2 hydrogenation, methanol production, In2O3-CNT catalyst, catalytic stability, oxygen vacancies, redox modulation, electron transfer, surface phase stabilization</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.ady4551" target="_blank">19. Regulation of sodium/calcium homeostasis by BacNa v gene therapy rescues cardiac dysfunction in chronic heart failure</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Tianyu Wu, Yongwu Li, Robin M. Perelli, Yiu Yan Siu, Anna Tornatore, Josue Nataren, Xixian Jiang, Sophia DeLuca, Donald M. Bers, Craig S. Henriquez, Andrew P. Landstrom, Nenad Bursac</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了一种通过BacNa v基因疗法调节钠/钙稳态来治疗慢性心力衰竭的方法，在多个实验模型中证明其能有效改善心脏收缩功能、预防心律失常并恢复转录组失调。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>尽管持续取得进展，针对心力衰竭患者增强收缩功能和预防心律失常的疗法仍然有限。本文提出一种双管齐下的基因治疗策略，通过同时增强心肌细胞的峰值钠电流和钙瞬变幅度来缓解心力衰竭的发病机制。利用体外构建的新生大鼠心肌组织、离体成年小鼠心肌细胞以及计算机模拟的兔心肌细胞模型，我们证明原核生物钠通道（BacNa v）的表达可通过调节钠/钙交换体活性和增加肌浆网钙储存，剂量依赖性地增强心肌细胞的钙瞬变和收缩力。在小鼠压力超负荷诱导的慢性心力衰竭模型中，腺相关病毒9（AAV9）介导的BacNa v治疗能够挽救收缩功能障碍、预防心律失常并改善转录组失调。我们进一步证实了AAV9-BacNa v在小鼠体内长期全身性递送的安全性。综上所述，这些研究支持BacNa v基因递送作为治疗心力衰竭电生理与收缩功能障碍的有效疗法具有转化前景。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Despite continued progress, therapies to augment contractile function and prevent arrhythmias in patients with heart failure remain limited. Here, we present a two-pronged gene therapy approach that simultaneously augments peak Na + current and Ca 2+ transient amplitude in cardiomyocytes (CMs) to alleviate heart failure pathogenesis. Using in vitro engineered neonatal rat heart tissues, ex vivo adult mouse CMs, and in silico rabbit CMs, we show that expression of prokaryotic Na + channels (BacNa v ) dose-dependently enhances Ca 2+ transients and contractility of CMs by modulating Na + /Ca 2+ exchanger activity and increasing sarcoplasmic reticulum Ca 2+ stores. In mice, adeno-associated virus 9 (AAV9)–mediated BacNa v therapy rescues contractile deficit, prevents arrhythmias, and improves transcriptomic dysregulation in a pressure-overload induced model of chronic heart failure. We further establish the safety of long-term systemic delivery of AAV9-BacNa v in mice. Collectively, these studies support the translational promise of BacNa v gene delivery as an effective therapy for electrical and contractile dysfunction in heart failure.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是心脏衰竭的基因疗法（BacNa v基因治疗），通过调节钠/钙稳态来改善心肌细胞功能，涉及体外工程心脏组织、离体心肌细胞、计算机模拟和动物模型实验。所有评分关键词均与医学影像分析、深度学习、AI诊断、手术规划等医学影像AI领域相关，而本文完全不涉及任何医学影像技术、图像处理或AI影像分析内容，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>gene therapy, heart failure, BacNa v, sodium/calcium homeostasis, cardiac contractility, arrhythmia prevention, AAV9 delivery, cardiomyocyte function</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aea2475" target="_blank">20. Transcriptional readthrough precedes alternative splicing programs triggered in CML cells by imatinib</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Paulina Podszywałow-Bartnicka, Morgan Shine, Jing‐Jer Lin, Karla M. Neugebauer</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现伊马替尼治疗可在慢性粒细胞白血病细胞中迅速诱导转录通读增加，并产生涉及上游和下游基因外显子的“通读嵌合体”mRNA异构体，这些早期转录和剪接变化可能与长期基因表达调整、癌细胞分化和治疗耐药性发展相关。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>细胞应激调控转录通读现象，即RNA聚合酶II越过基因的多聚腺苷酸化切割位点继续延伸而不发生RNA切割。已有研究报道该现象存在于多种癌症类型中。本研究利用新生RNA的长读长测序技术，对慢性髓系白血病（CML）细胞中的转录通读进行量化，并表征其对靶向治疗药物伊马替尼的早期应答。我们发现，在基因表达和选择性剪接变化出现之前，通读现象的数量、长度及基因特异性在1小时内即有所增加。值得注意的是，伊马替尼依赖的信使RNA（mRNA）亚型变化涉及“通读嵌合体”，即上游基因的外显子通过选择性剪接与下游基因的外显子相连。在伊马替尼耐药的K562细胞以及CML患者细胞中，同样检测到mRNA亚型及嵌合体水平的改变。因此，伊马替尼可引发转录与剪接保真度的一系列早期级联变化，可能导致基因表达、癌细胞分化及治疗耐药性发展的长期适应性改变。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Cellular stresses regulate transcriptional readthrough, whereby RNA polymerase II elongates past a gene’s polyadenylation cleavage site without RNA cleavage. Readthrough has been reported in several cancer types. Here, we use long-read sequencing of nascent RNA to quantify transcriptional readthrough in chronic myeloid leukemia (CML) cells and characterize early responses to the targeted therapeutic, imatinib. We show that the amount, length, and gene specificity of readthrough increase within 1 hour, before gene expression and alternative splicing alterations emerge. Notably, imatinib-dependent messenger RNA (mRNA) isoform changes involved “readthrough chimeras,” in which exons from an upstream gene are alternatively spliced to exons in a downstream gene. Altered mRNA isoforms and chimera levels were detected in imatinib-resistant K562 cells as well as cells of patients with CML. Thus, imatinib can provoke a cascade of early changes to transcription and splicing fidelity that may lead to longer-term adjustments in gene expression, cancer cell differentiation, and the development of therapy resistance.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是慢性粒细胞白血病（CML）细胞在伊马替尼治疗下的转录通读和选择性剪接变化，属于分子生物学、癌症研究和转录组学领域。所有评分关键词均涉及医学影像分析、人工智能在医学影像中的应用、疾病诊断/预后预测、手术规划等，而论文完全不涉及医学影像、AI模型、诊断工具或手术相关内容，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>transcriptional readthrough, chronic myeloid leukemia, imatinib, alternative splicing, long-read sequencing, mRNA isoforms, therapy resistance, nascent RNA</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aec6337" target="_blank">21. Transcription activation mechanism of a noncanonical DNA damage response pathway by the WYL-activator, DriD</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Rajiv R. Singh, Amani Chinni, Emily Cannistraci, Raul Salinas, S. Yadav, Kevin Gozzi, Maria A. Schumacher</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了细菌Caulobacter crescentus中非经典DNA损伤途径的转录激活机制，通过冷冻电镜结构解析了DriD-ssDNA与RNAP全酶的结合方式，阐明了WYL激活剂家族保守的转录激活机制。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>DNA损伤修复机制对细胞存活至关重要。在新月柄杆菌中，DriD是一种独特的非经典DNA损伤通路的主调控因子。DriD与DNA损伤后产生的单链DNA结合，可增强其激活多个参与DNA损伤应答的启动子转录的能力。然而，DriD与RNAP全酶相互作用从而激活其多个启动子转录的机制尚不明确。本文通过冷冻电镜解析了DriD-ssDNA复合物与RNAP全酶及三个DriD调控启动子的结构。同源二聚体DriD的每个亚基均包含一个DNA结合N端翼状螺旋-转角-螺旋结构域，该结构域通过连接子3螺旋束模块与WYL结构域相连。结构揭示了其在启动子上的组装机制：DriD的3螺旋束结合RNAP的α-CTD和β结构域，从而将RNAP全酶锚定到受调控的启动子。在游离态DriD中，3螺旋束与DNA结合结构域形成自抑制接触，因此其作为ssDNA驱动的触发结构域，在ssDNA介导激活后，于结合DNA结合结构域的游离态与结合RNAP的激活态之间切换。这些结构揭示了一种独特的转录激活机制，该机制很可能在同源二聚体WYL激活因子大家族中保守存在。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>DNA damage repair mechanisms are vital for cell survival. In the bacterium, Caulobacter crescentus , DriD is the master regulator of a unique, noncanonical DNA damage pathway. DriD binding to ssDNA, produced upon DNA damage, stimulates its ability to activate transcription from several promoters involved in DNA damage responses. However, the mechanism by which DriD interfaces with the RNAP holoenzyme to activate transcription from its multiple promoters has been unclear. Here, we describe cryo-EM structures of DriD-ssDNA bound to RNAP-holoenzyme and three DriD-regulated promoters. Each subunit of homodimeric DriD contains an DNA binding N -terminal winged helix-turn-helix (wHTH) connected to WYL domains by a linker 3-helix bundle (3HB) module. The structures reveal a mechanism of assembly on promoters whereby DriD’s 3HBs bind the RNAP α-CTD and β domains, anchoring the RNAP-holoenzyme to regulated promoters. The 3HBs form autoinhibitory contacts with DNABDs in apo DriD and therefore acts as an ssDNA-driven trigger domain, switching between DNABD-bound apo and RNAP-bound forms upon ssDNA-mediated activation. Thus, the structures reveal a unique transcription activation mechanism, likely conserved among the large family of homodimeric WYL activators.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是细菌DNA损伤修复的转录激活机制，属于分子生物学和结构生物学领域。所有评分关键词均涉及医学影像分析和人工智能在临床决策支持中的应用，而论文完全不涉及医学影像、深度学习、AI诊断、预后预测、手术规划或多模态医学数据。论文内容与所有关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>DNA damage repair, transcription activation, cryo-EM structures, WYL activator, RNAP holoenzyme, DriD, Caulobacter crescentus, ssDNA binding</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeg5995" target="_blank">22. Erratum for the Research Article, “Cooperative role of distinctive TP53 and PTEN combined loss in the peripheral T cell lymphoma–GATA3 molecular subgroup” by W.G. Lone et al .</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> </div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了外周T细胞淋巴瘤GATA3分子亚型中TP53和PTEN基因联合缺失的协同作用及其临床意义。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示这是一篇关于外周T细胞淋巴瘤分子亚型中TP53和PTEN基因联合缺失作用的遗传学研究，属于分子病理学和肿瘤遗传学领域，与医学影像分析、深度学习、AI诊断、手术规划、多模态影像等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>peripheral T cell lymphoma, GATA3 molecular subgroup, TP53, PTEN, gene loss, molecular pathology, tumor genetics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adx8715" target="_blank">23. Lysosomal down-regulation of the mu opioid receptor is opposed by the Retromer complex</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Aleksandra Dagunts, Hayden Adoff, Brandon Novy, Lamya Ben Ameur, Monica De Maria, Arpiar Saunders, Braden T. Lobingier</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现Retromer复合物通过非经典双亮氨酸回收基序促进μ阿片受体从内体回收至细胞膜，从而拮抗阿片药物诱导的受体溶酶体降解。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>调节G蛋白偶联受体（GPCR）活性的一个关键稳态机制是激动剂诱导的GPCR内吞作用及其向溶酶体的运输，以实现蛋白水解性下调。μ阿片受体（MOR）是此类细胞调控的一个显著例证，长时间暴露于高效阿片药物会导致MOR被运输至溶酶体。本研究利用功能基因组学方法，旨在鉴定控制MOR溶酶体下调的细胞蛋白。我们发现，MOR内吞后运输的核心调控因子是Retromer复合物，它通过促进MOR从内体循环至质膜，从而将MOR从阿片诱导的下调中拯救出来。关键的是，MOR通过其非经典的“双亮氨酸”循环基序进入Retromer循环通路，这一机制控制了MOR在长期暴露于阿片药物后如何被调控。此外，我们还证明这种基于Retromer的“双亮氨酸”循环通路也存在于其他类别的膜蛋白中，包括葡萄糖转运蛋白GLUT4。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>A critical homeostatic mechanism for regulating G protein–coupled receptor (GPCR) activity is agonist-induced GPCR endocytosis and trafficking to the lysosome for proteolytic down-regulation. The mu opioid receptor (MOR) is a notable example of this type of cellular regulation, where prolonged exposure to high-efficacy opioid drugs causes MOR to traffic to the lysosome. Here, we used functional genomics to identify cellular proteins that control MOR lysosomal down-regulation. We found that the central regulator of MOR postendocytic trafficking is the Retromer complex, which rescues MOR from opioid-induced down-regulation by promoting MOR recycling from endosomes to the plasma membrane. Critically, MOR accesses the Retromer recycling pathway through its noncanonical bileucine recycling motif, and this mechanism controls how MOR is regulated following chronic exposure to opioid drugs. Additionally, we show that this bileucine pathway for Retromer-based recycling is present in other classes of membrane proteins including the glucose transporter GLUT4.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 该论文研究μ阿片受体（MOR）的细胞内运输机制，特别是Retromer复合物如何通过回收途径防止MOR在溶酶体中被降解。论文内容完全属于细胞生物学、分子生物学和神经药理学领域，涉及GPCR内吞、溶酶体降解、Retromer复合物功能等机制。所有评分关键词均与医学影像分析、人工智能、深度学习、疾病诊断/预后、手术规划、多模态影像或基础模型无关。论文未涉及任何医学影像技术、图像处理、AI算法或临床决策支持相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>mu opioid receptor, Retromer complex, lysosomal down-regulation, GPCR trafficking, endocytic recycling, bileucine motif, opioid drugs, GLUT4</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeb2465" target="_blank">24. TLR9-activating cholesterol azetidine derivative–assisted therapeutic vaccines for cancer immunotherapy</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jie Chen, Miao Su, Boya Yu, Mingda Yang, Huiye Wang, X L Yang, Jia‐Yi Wang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究解决了癌症疫苗中先天免疫激活与抗原递送协调不足的问题，开发了一种TLR9激活的胆固醇氮杂环丁烷衍生物纳米载体（Aze-Chol NP），显著抑制肿瘤生长并延长生存期，与抗PD-L1抗体联用可产生协同效应和长期免疫记忆。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>治疗性癌症疫苗在从头诱导针对肿瘤的抗原特异性T细胞反应方面展现出巨大潜力。然而，先天免疫激活与抗原递送之间的协调不足仍是疫苗效力的主要障碍。本文提出了一种氮杂环丁烷胆固醇衍生物辅助的聚合物载体——Aze-Chol NP，它能刺激先天免疫并启动肿瘤特异性CD8⁺ T细胞反应。机制上，Aze-Chol NP通过Toll样受体9（TLR9）通路诱导树突状细胞（DCs）成熟与活化，同时将蛋白质或多肽抗原递送至淋巴结中的DCs。基于Aze-Chol NP的纳米疫苗在黑素瘤和人乳头瘤病毒肿瘤模型中显著抑制了肿瘤生长并延长了生存期。此外，将该纳米疫苗与抗PD-L1抗体联用产生了强烈的协同效应和长期免疫记忆，实现了100天后80%的存活率以及对肿瘤细胞再次攻击的完全排斥。总体而言，我们的研究表明这种TLR9激活载体为开发高效癌症疫苗提供了一种有效且直接的策略。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Therapeutic cancer vaccines show great promise for de novo induction of antigen-specific T cell responses against tumors. However, weak coordination between innate immune activation and antigen delivery remains a major obstacle to vaccine efficacy. Here, we present a cholesterol azetidine derivative–assisted polymeric carrier, Aze-Chol NP, which stimulates innate immunity and primes tumor-specific CD8 + T cell responses. Mechanistically, Aze-Chol NP induces maturation and activation of dendritic cells (DCs) through the Toll-like receptor 9 (TLR9) pathway while simultaneously delivering protein or peptide antigens to DCs in lymph nodes. The Aze-Chol NP–based nanovaccines markedly inhibited tumor growth and prolonged survival in melanoma and human papillomavirus tumor models. Moreover, combining the nanovaccine with an anti–PD-L1 antibody produced a strong synergistic effect and long-term immune memory, achieving 80% survival beyond 100 days and complete rejection of tumor cell rechallenge. Overall, our study demonstrates that this TLR9-activating carrier provides an effective and straightforward strategy for developing potent cancer vaccines.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究癌症免疫治疗的纳米疫苗载体（Aze-Chol NP），通过TLR9通路激活树突状细胞并递送抗原，属于免疫学、纳米技术和癌症治疗领域。所有评分关键词均涉及医学影像分析、AI诊断、手术规划等，与论文内容完全无关，因此所有关键词评分为0。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>cancer immunotherapy, therapeutic vaccine, TLR9 activation, nanovaccine, Aze-Chol NP, dendritic cell activation, anti-PD-L1 combination, tumor growth inhibition</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.adz9623" target="_blank">25. Protein overabundance is driven by growth robustness</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> H. James Choi, Teresa W. Lo, Kevin J. Cutler, Dean Huang, William Ryan Will, Paul Wiggins</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过单细胞成像和基因组规模分析，揭示了细菌必需蛋白普遍过量表达的现象，并证明这种过量表达是确保细胞稳健生长的关键机制。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>蛋白质表达水平优化细胞适应性：必需蛋白表达水平过低会损害关键生理过程从而延缓生长，而过度表达则会通过增加代谢负荷抑制生长。这种权衡关系直观预测细胞通过&quot;恰好足够&quot;原则实现适应度最大化——即每个必需蛋白仅表达维持功能所需的最低量。本研究以天然感受态细菌鲍氏不动杆菌为模型，通过单细胞尺度（显微成像）与全基因组尺度表征必需基因敲除株的增殖动力学，检验上述预测。实验设计中，靶蛋白从内源水平逐渐稀释的同时，细胞持续增殖多代。该方法实现了针对蛋白质丰度的适应度景观全蛋白质组尺度分析。我们发现大多数必需蛋白遵循阈值型适应度景观：当蛋白丰度高于临界阈值时生长不受影响，低于该阈值则生长停滞。我们近期分析了这种景观对生长稳健性的影响。通过验证该模型的标志性预测，我们发现：（i）约70%的必需蛋白存在过量表达现象；（ii）表达水平越低的蛋白其过量程度越高；（iii）丰度最低的蛋白在典型细胞中的含量远超生长所需（＞10倍）。这些结果表明，稳健性在决定必需基因表达水平中起着根本性作用，而过量表达是确保稳健生长的关键机制。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Protein expression levels optimize cell fitness: Too low an expression level of essential proteins will slow growth by compromising essential processes, whereas overexpression slows growth by increasing the metabolic load. This trade-off naïvely predicts that cells maximize their fitness by sufficiency, expressing just enough of each essential protein for function. We test this prediction in the naturally competent bacterium Acinetobacter baylyi by characterizing the proliferation dynamics of essential-gene knockouts at a single-cell scale (by imaging) as well as at a genome-wide scale. In these experiments, cells proliferate for multiple generations as target protein levels are diluted from their endogenous levels. This approach facilitates a proteome-scale analysis of the fitness landscape with respect to protein abundance. We find that most essential proteins are subject to a threshold-like fitness landscape: Growth is independent of protein abundance above a critical threshold and arrests below that threshold. We have recently analyzed the implications of this landscape for growth robustness. Confirming signature predictions of this model, we find that (i) roughly 70% of essential proteins are overabundant, (ii) overabundance increases as the expression level decreases, and (iii) the lowest abundance proteins are in vast excess (&amp;gt;10×) of what is required for growth in the typical cell. These results reveal that robustness plays a fundamental role in determining the expression levels of essential genes and that overabundance is a key mechanism for ensuring robust growth.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是细菌（Acinetobacter baylyi）中必需蛋白表达水平与细胞生长稳健性的关系，使用单细胞成像和基因组规模分析来表征蛋白质丰度对细胞增殖的影响。研究领域属于分子生物学、细胞生物学和系统生物学，完全不涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或医学影像基础模型。所有关键词与论文内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>protein overabundance, growth robustness, essential proteins, fitness landscape, single-cell imaging, Acinetobacter baylyi, proliferation dynamics, expression levels</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeb4543" target="_blank">26. Mechanisms of CARMIL dimerization, autoinhibition, and capping protein binding</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Kyle R. Barrie, Sarah Körber, Ingrid Billault-Chaumartin, Malgorzata Boczkowska, Peter J. Carman, Omar El Hamoui, Johan Peränen, Guillaume Romet-Lemonne, Antoine Jégou, Pekka Lappalainen, Roberto Domínguez</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了CARMIL蛋白通过二聚化结构实现自抑制，并阐明了其与capping protein结合调控细胞肌动蛋白动力学的分子机制。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>封端蛋白（CP）通过阻断肌动蛋白丝倒刺末端的单体交换来调控基于肌动蛋白的运动。包括CARMIL在内的多种蛋白可与CP结合，并通过变构效应降低其与倒刺末端的亲和力。CARMIL包含pleckstrin同源（PH）结构域、富含亮氨酸重复序列（LRR）结构域、螺旋二聚化（HD）结构域、CP结合区（CBR）以及富含脯氨酸（PR）结构域，但这些结构域在CP调控中的作用尚不明确。本研究表明，CARMIL1存在部分自抑制现象，其CBR片段（CARMIL1 961–1046）展现出比全长片段（CARMIL1 1–1046）更强的解封端活性。CP结合的CARMIL1 1–1046结构解析揭示其形成二聚体组装：PH-LRR结构域位于平面中心，两侧由HD结构域和结合CP的CBR结构域环绕。连接HD与CBR-CP的基序——“触角”，结合于二聚体的LRR-LRR界面。破坏该相互作用的触角突变体在体外实验中部分解除了自抑制。在CARMIL1基因敲除细胞中，表达触角突变体会增加细胞面积，而删除结合肌球蛋白-I的PR结构域则会诱导细胞膜突起形成。这些结果揭示了CARMIL二聚化、自抑制以及细胞内协调CP与肌球蛋白-I活性的分子机制。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Capping protein (CP) regulates actin-based motility by blocking monomer exchange at the filament barbed end. Several proteins, including CARMIL, bind CP and allosterically weaken its affinity for the barbed end. CARMIL comprises pleckstrin homology (PH), leucine-rich repeat (LRR), helical dimerization (HD), CP-binding region (CBR), and proline-rich (PR) domains, but their roles in CP regulation remain unclear. We show that CARMIL1 is partially autoinhibited, with CBR (CARMIL1 961–1046 ) displaying greater uncapping activity than CARMIL1 1–1046 . A structure of CP-bound CARMIL1 1–1046 reveals a dimeric assembly, with PH-LRR on a plane flanked by HD and CBR-bound CP. A motif connecting HD to CBR-CP, the “antenna,” binds at the dimer LRR-LRR interface. An antenna mutant disrupting this interaction partially relieves autoinhibition in vitro. In CARMIL1 knockout cells, expression of the antenna mutant increases cell area, while deleting the myosin-I–binding PR domain induces membrane spikes. The results inform mechanisms of CARMIL dimerization, autoinhibition, and coordination of CP and myosin-I activities in cells.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是细胞生物学中CARMIL蛋白的二聚化、自抑制以及与capping protein（CP）结合的分子机制，涉及结构生物学、生物化学和细胞功能实验。所有评分关键词均与医学影像分析、人工智能、临床决策支持相关，而本文完全不涉及医学影像、AI技术、疾病诊断、手术规划或医疗数据融合等内容，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>CARMIL, capping protein, actin regulation, dimerization, autoinhibition, structural biology, cell motility, protein domains</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aea1226" target="_blank">27. Membrane-associated Rhes-Slc4a7 complex orchestrates tunneling nanotube formation and mutant Huntingtin spread</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Sunayana Dagar, Alexandra Fernandez, Uri Nimrod Ramírez-Jarquín, Violeta G. López-Huerta, Emaad Mirza, Chinmayee Mohapatra, Isabella Hernández Zúñiga, Nicolai T. Urban, Gogce Crynen, George Tsaprailis, Srinivasa Subramaniam</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了Rhes-Slc4a7信号轴在调控隧道纳米管形成和突变亨廷顿蛋白细胞间传播中的关键作用，并指出Slc4a7可作为限制亨廷顿病传播的潜在治疗靶点。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>隧道纳米管（Tunneling nanotubes, TNTs）是一种膜结构，能够介导蛋白质的细胞间传递，包括亨廷顿病（Huntington disease, HD）中致病的突变亨廷顿蛋白（mutant Huntingtin, mHTT）。我们先前发现纹状体富集ras同源蛋白（ras homolog enriched in the striatum, Rhes）是TNT形成和mHTT传递的关键调控因子；然而，这一过程背后的分子组成仍不明确。本研究通过膜相关Rhes复合物的无偏性液相色谱-串联质谱分析，鉴定出细胞内pH传感器Slc4a7（溶质载体家族4成员7）是Rhes最主要的膜结合伴侣。功能研究表明，小干扰RNA介导的Slc4a7敲低或药物抑制显著减少了Rhes诱导的TNT形成，并抑制了mHTT的细胞间传递。机制上，Rhes通过其氨基端和羧基端结构域直接与Slc4a7相互作用，并通过调节细胞内pH促进TNT形成。该相互作用不依赖于Slc4a7的转运活性。然而，抑制Rhes的法尼基化（一种将Rhes锚定在膜上的脂质修饰）会破坏其与Slc4a7的结合并消除TNT形成。Slc4a7敲除小鼠在体内纹状体中表现出mHTT细胞间传递的显著减少。综上，这些发现揭示了一个先前未被认识的Rhes-Slc4a7信号轴，该轴对TNT介导的mHTT传递至关重要，并提示Slc4a7可作为限制HD疾病扩散的潜在治疗靶点。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Tunneling nanotubes (TNTs) are membranous structures that mediate intercellular transfer of proteins, including the pathogenic mutant Huntingtin (mHTT) protein in Huntington disease (HD). We previously identified the ras homolog enriched in the striatum (Rhes) as a key regulator of TNT formation and mHTT transmission; however, the molecular components underlying this process remained unknown. Here, using unbiased liquid chromatography–tandem mass spectrometry analysis of membrane-associated Rhes complexes, we identify Slc4a7 (solute carrier family 4 member 7), an intracellular pH sensor, as a top membrane-binding partner of Rhes. Functional studies revealed that small interfering RNA–mediated depletion or pharmacological inhibition of Slc4a7 substantially reduced Rhes-induced TNT formation and suppressed mHTT intercellular transfer. Mechanistically, Rhes directly interacts with Slc4a7 through both its amino- and carboxyl-terminal domains and modulates intracellular pH to facilitate TNT formation. This interaction does not depend on the transporter activity of Slc4a7. However, inhibition of Rhes farnesylation—a lipid modification that anchors Rhes to the membrane—disrupts its binding to Slc4a7 and abolishes TNT formation. Slc4a7 knock-out mice showed markedly reduced cell-to-cell transmission of mHTT in the striatum in vivo. Together, these findings uncover a previously unrecognized Rhes-Slc4a7 signaling axis critical for TNT-mediated mHTT transmission and highlight Slc4a7 as a potential therapeutic target to limit disease spread in HD.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究亨廷顿病中Rhes-Slc4a7复合物调控隧道纳米管形成和突变亨廷顿蛋白传播的分子机制，属于神经科学和细胞生物学领域。所有评分关键词均涉及医学影像分析、深度学习、AI诊断、手术规划等，与论文的分子生物学和疾病机制研究完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>tunneling nanotubes, Rhes, Slc4a7, mutant Huntingtin, Huntington disease, intercellular transfer, membrane-associated complex, therapeutic target</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aeg8118" target="_blank">28. Erratum for the Research Article “AND-1 is a critical regulator of R-loop dynamics and a target to overcome endocrine resistance” by Z. Li et al .</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> </div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了AND-1蛋白在调控R-loop动态中的关键作用，并证明靶向AND-1可以克服乳腺癌内分泌治疗耐药性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于分子生物学和癌症治疗领域，具体研究AND-1蛋白在R-loop动态调控中的作用及其与内分泌治疗耐药性的关系，这与医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态影像和基础模型等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>AND-1, R-loop dynamics, endocrine resistance, breast cancer, molecular biology, therapeutic target</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/sciadv.aed5284" target="_blank">29. Visible-light–enabled excited-state dearomatization reactions</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Muzi Li, Yuan-Zheng Cheng, Siqi You</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-20</div>
+<div class="tldr"><strong>TL;DR:</strong> 这篇综述总结了可见光激发脱芳构化反应的最新进展，通过三种光化学机制在温和条件下实现多种芳烃的转化，为药物相关饱和环的合成提供了新方法。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>脱芳构化反应是构建药理学关键饱和环系的基石策略。光激发重塑了芳香族化合物前沿分子轨道内的电子分布，从而开启了基态条件下无法实现的脱芳构化路径，并提供了结构独特的分子骨架。当代合成方法学通过三种独立的机制范式实现这种电子活化：直接激发、能量转移光催化和激基复合物形成。这些精确定制的能量传递模式使得多种（杂）芳烃（包括萘和苯等高稳定性底物）能够在温和反应条件下实现脱芳构化。本综述聚焦这些激发态转化领域近期具有代表性的进展。我们展望这一概述将推动光化学脱芳构化这一新兴领域的持续创新。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Dearomatization reactions stand as a cornerstone strategy for constructing pharmacologically pivotal saturated rings. Photoexcitation reshapes the electron distribution within the frontier molecular orbitals of aromatics, thereby unlocking dearomatization pathways inaccessible in the ground state and furnishing structurally distinct molecular motifs. Contemporary synthetic methodologies leverage three discrete mechanistic paradigms to achieve this electronic activation: direct excitation, energy-transfer photocatalysis, and exciplex formation. These precisely tuned energy-delivery modes enable the dearomatization of a diverse array of (hetero)arenes, including highly robust substrates such as naphthalenes and benzenes, under mild reaction conditions. This review spotlights recent representative advances in these excited-state transformations. We envision that this synopsis will fuel ongoing innovation in the burgeoning field of photochemical dearomatization.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是有机化学中的可见光激发脱芳构化反应，属于合成化学和光化学领域，与医学影像分析、人工智能、临床决策支持等医疗AI主题完全无关。论文内容涉及光化学机理、分子轨道、合成方法学等化学概念，未提及任何医学影像、深度学习、疾病诊断或医疗应用。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>dearomatization reactions, photoexcitation, visible-light, excited-state, synthetic methodologies, photochemical dearomatization, energy-transfer photocatalysis, exciplex formation</p></div></details>
+</div>
+<p class="meta" style="margin-top:24px;border-top:1px solid #e5e7eb;padding-top:12px;">Token 消耗: <strong>118,268</strong> tokens（输入 82,160 / 输出 36,108）</p>
+</body></html>

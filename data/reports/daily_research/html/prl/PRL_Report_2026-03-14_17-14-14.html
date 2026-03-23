@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physical Review Letters Report 2026-03-14</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg: #f0f2f5;
+    --color-surface: #ffffff;
+    --color-border: #e5e7eb;
+    --color-primary: #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass: #16a34a;
+    --color-pass-bg: #dcfce7;
+    --color-fail: #dc2626;
+    --color-fail-bg: #fee2e2;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-tldr-bg: #eff6ff;
+    --color-tldr-border: #bfdbfe;
+    --color-cn-bg: #fefce8;
+    --color-cn-border: #fde68a;
+    --color-analysis-bg: #f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass {
+    border-left-color: var(--color-pass);
+}
+
+.card.fail {
+    border-left-color: var(--color-fail);
+}
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover {
+    color: var(--color-primary-dk);
+}
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p {
+    margin: 6px 0;
+}
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li {
+    margin: 3px 0;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body {
+        padding: 16px 12px 40px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-bar {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 80px;
+        padding: 12px 14px;
+    }
+
+    .stat .num {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* ── 模型标签 ── */
+.model-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #6366f1;
+    background: #ede9ff;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    letter-spacing: 0.02em;
+}
+
+/* ── TLDR 增强样式 ── */
+.tldr {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 3px solid #38bdf8;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+
+.tldr-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0369a1;
+}
+
+.tldr-body {
+    font-size: 0.88rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* ── 趋势分析区块 ── */
+.trend-section {
+    margin: 32px 0 16px;
+    border-top: 2px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.trend-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trend-section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trend-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.trend-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ede9ff;
+}</style>
+</head><body>
+<h1>Physical Review Letters Research Report</h1>
+<p class="meta">Generated: 2026-03-14 17:14:14 | Passing score: 29.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">34</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/kd8v-fykm" target="_blank">1. Non-line-of-sight single-pixel imaging using polarization speckle modulation</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了利用偏振散斑调制实现非视距单像素成像的方法，并展示了其在隐藏物体成像方面的有效性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究非视距单像素成像技术，利用偏振散斑调制进行成像，属于光学成像和计算成像领域，与医学图像分析、深度学习医学影像、AI诊断、预后预测、手术规划、多模态医学成像及医学影像基础模型等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>non-line-of-sight imaging, single-pixel imaging, polarization speckle modulation, computational imaging, hidden object detection, optical imaging, speckle patterns, imaging through scattering media</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/jmwb-75m7" target="_blank">2. Evidence for J / ψ suppression in incoherent photonuclear production</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过光子核反应实验发现了J/ψ介子产生受到抑制的证据，支持了核物质中色荷屏蔽的理论预测。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于高能物理中J/ψ介子在光子核反应中的抑制现象，属于粒子物理领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。所有关键词均未在论文内容中出现或涉及。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>J/ψ suppression, photonuclear production, incoherent production, nuclear matter, color screening, heavy-ion collisions, particle physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/bntg-pzqw" target="_blank">3. Acoustic-edge and thermal scaling in disordered hyperuniform networks: A first principles theory</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文提出了无序超均匀网络中声学边缘和热标度的第一性原理理论，解释了这些网络中的尺度行为。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于无序超均匀网络中的声学边缘和热标度理论，属于凝聚态物理、材料科学或理论物理领域，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有关键词均未在论文内容中体现，因此相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>disordered hyperuniform networks, acoustic-edge scaling, thermal scaling, first principles theory, scale behavior, theoretical framework</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/t4xb-6x3z" target="_blank">4. Fate of the Fermi surface coupled to a single-wave-vector cavity mode</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究费米面与单波矢腔模耦合的物理效应及其演化规律，但具体结果未在摘要中提供。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，无法评估具体内容。但根据标题《Fate of the Fermi surface coupled to a single-wave-vector cavity mode》，该论文明显属于凝聚态物理、量子光学或腔量子电动力学领域，研究费米面与腔模的耦合效应。这与所有给定的医学影像分析、人工智能临床决策支持关键词完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Fermi surface, cavity mode, single-wave-vector, quantum coupling, condensed matter physics, quantum electrodynamics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/jnsy-5nhj" target="_blank">5. Electromagnetic form factors and structure of the T b b tetraquark from lattice QCD</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究使用格点QCD计算了Tbb四夸克态的电磁形状因子和结构，揭示了其内部组成和性质。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明这是一篇关于四夸克态Tbb的电磁形状因子和结构的理论物理研究，使用格点QCD方法。研究领域是高能物理/粒子物理，与医学图像分析、人工智能临床决策支持、医学影像分割、深度学习医学成像、AI诊断、预后预测、手术规划、多模态医学成像或医学影像基础模型完全无关。所有关键词均与论文内容无任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>lattice QCD, tetraquark, Tbb, electromagnetic form factors, structure, heavy quark, exotic hadron</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/j7cj-4tl9" target="_blank">6. Near-Field radiative heat transfer in the dual nanoscale regime between polaritonic membranes</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了极化子膜之间在双纳米尺度下的近场辐射热传递机制，发现这种结构可以显著增强热传递效率。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是近场辐射热传递在极化子膜之间的双纳米尺度机制，属于纳米光子学、热传递和凝聚态物理领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医学应用，而该论文完全不涉及医学、影像、诊断、手术或任何医疗相关内容，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>near-field radiative heat transfer, dual nanoscale regime, polaritonic membranes, thermal transport, nanophotonics, heat transfer enhancement</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/9pb2-v6zs" target="_blank">7. Tunable anomalous diffusion in subrecoil-laser-cooled atoms</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了亚反冲激光冷却原子中反常扩散的可调性，并展示了通过控制激光参数可以实现从正常扩散到反常扩散的转变。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于激光冷却原子的反常扩散现象，属于原子物理、量子光学和统计物理领域，与医学图像分析、人工智能临床决策支持、医疗影像处理、疾病诊断预测、手术规划等医学应用完全无关。所有关键词均未在论文内容中涉及，因此相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>anomalous diffusion, subrecoil laser cooling, tunable diffusion, cold atoms, laser cooling, statistical physics, quantum optics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/shz6-7fj9" target="_blank">8. Spatiotemporal organization of chemical oscillators via phase separation</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了化学振荡器如何通过相分离实现时空组织，并揭示了其潜在机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于化学振荡器的时空组织与相分离现象，属于物理化学或非线性动力学领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。所有关键词均未在论文内容中体现，因此相关度评分均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>chemical oscillators, spatiotemporal organization, phase separation, nonlinear dynamics, pattern formation, reaction-diffusion systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/2c2j-qhkd" target="_blank">9. Wavefront mapping for absolute atom interferometry</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究解决了原子干涉测量中波前映射的问题，以实现绝对原子干涉测量。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Wavefront mapping for absolute atom interferometry&#x27;，摘要内容未提供，但仅从标题即可判断该论文研究的是原子干涉测量中的波前映射技术，属于物理学、量子传感或精密测量领域。所有评分关键词均围绕医学影像分析、人工智能临床决策支持、医学图像分割、深度学习医学成像、AI诊断与预后、手术规划、多模态医学成像及医学影像基础模型。论文主题与这些医学人工智能关键词完全无关，没有任何重叠的研究内容、方法或应用场景。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>wavefront mapping, absolute atom interferometry, atom interferometry, interferometry, quantum sensing, precision measurement, physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/d7g3-qv99" target="_blank">10. Selective ultrafast optical excitation of high-k spin dynamics in a magnetophotonic nanostructure</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了如何通过选择性超快光学激发来操控磁光纳米结构中的高k自旋动力学，实现了对特定自旋模式的有效激发和控制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是磁光纳米结构中高k自旋动力学的选择性超快光学激发，属于凝聚态物理、纳米光子学和自旋电子学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医学应用领域，而该论文完全不涉及医学、生物医学成像、临床数据或医疗应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ultrafast optical excitation, spin dynamics, magnetophotonic nanostructure, high-k spin modes, nanophotonics, spintronics, selective excitation</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/q98p-j4vh" target="_blank">11. Bloch diode</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 论文研究内容未知，仅标题&#x27;Bloch diode&#x27;暗示可能涉及量子器件或凝聚态物理，但无摘要信息无法确定具体问题和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Bloch diode&#x27;，摘要为空，无法获取任何研究内容信息。根据标题推测，&#x27;Bloch diode&#x27;可能指基于布洛赫波的二极管或量子器件，属于凝聚态物理、量子电子学或纳米技术领域，与医学影像分析、人工智能临床决策支持等指定研究背景完全无关。所有关键词均无相关性证据，故全部评分为0。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Bloch diode, quantum device, solid-state physics, nanotechnology, electronic component</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/f1ry-2hv9" target="_blank">12. Unconventional quantization of 2D plasmons in cavities formed by gate slots</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了二维等离子体在栅极槽形成的腔中的非常规量子化行为，并报告了相关的理论或实验结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于二维等离子体在栅极槽形成的腔中的非常规量子化，属于凝聚态物理和量子电子学领域。所有评分关键词均与医学图像分析、人工智能临床决策支持相关，而论文内容完全不涉及医学、医学成像、疾病诊断、手术规划或任何医疗应用。因此，所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>2D plasmons, cavities, gate slots, quantization, unconventional quantization, plasmonic modes, quantum electronics, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/39px-kg8b" target="_blank">13. Synthetic crystal rotation with spacetime metamaterials</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究超材料中合成晶体的旋转问题，但摘要缺失无法提供具体结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Synthetic crystal rotation with spacetime metamaterials&#x27;，摘要内容缺失。从标题判断，该论文研究的是超材料（metamaterials）中的合成晶体旋转，属于物理学、材料科学或光学工程领域，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有关键词均涉及医学影像、AI诊断、手术规划等医疗应用，而该论文主题明显属于物理/材料科学，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>synthetic crystal, crystal rotation, spacetime metamaterials, metamaterials, crystals</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/j24j-ydvy" target="_blank">14. Gluon polarimetry with energy-energy correlators</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究高能物理中胶子极化测量问题，提出使用能量-能量关联器作为测量工具。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Gluon polarimetry with energy-energy correlators&#x27;，摘要未提供但标题明确指向高能物理领域，研究胶子极化测量和能量-能量关联器。所有评分关键词均属于医学影像分析和临床AI领域，与论文的高能物理主题完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>gluon polarimetry, energy-energy correlators, high-energy physics, quantum chromodynamics, particle physics, gluon spin, jet substructure</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/ncq1-yzpd" target="_blank">15. Imaging Kekulé spiral order in graphene</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究使用扫描隧道显微镜成像技术，在石墨烯中观测到了Kekulé螺旋序的电子结构，揭示了这种拓扑量子态的空间分布特征。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于石墨烯中Kekulé螺旋序的成像，属于凝聚态物理和材料科学领域，使用扫描隧道显微镜（STM）等物理成像技术。所有评分关键词均涉及医学影像分析、人工智能临床决策支持、疾病诊断/预后、手术规划等医疗应用领域，与论文的物理材料研究主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>graphene, Kekulé spiral order, scanning tunneling microscopy, electronic structure, topological quantum state, imaging, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/nbvt-fgjy" target="_blank">16. Navigating complex phase diagrams in soft matter systems</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究软物质系统中复杂相图的导航问题，但具体研究问题和结果因摘要缺失无法确定。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，但根据标题&#x27;Navigating complex phase diagrams in soft matter systems&#x27;判断，该论文研究软物质系统中的复杂相图导航，属于材料科学、物理化学或软凝聚态物理领域，与医学图像分析、人工智能临床决策支持等所有评分关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>complex phase diagrams, soft matter systems, phase navigation, soft materials, phase behavior</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/s4fz-41lg" target="_blank">17. Observation of higher-dimensional point-gap bulk-boundary correspondence</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了高维点隙拓扑绝缘体中的体边对应关系，发现并验证了高维系统中的新型拓扑相变现象。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究属于凝聚态物理领域，探讨高维点隙拓扑绝缘体中的体边对应关系，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有关键词均未在论文内容中出现或相关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>higher-dimensional, point-gap, bulk-boundary correspondence, topological insulators, non-Hermitian systems, topological phase transitions, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/vfr3-5lsb" target="_blank">18. Emergence of the π ( 1300 ) resonance from lattice QCD</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究使用格点QCD方法从第一性原理计算了π(1300)共振态的性质，并确认了其作为激发态的存在。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究属于高能物理领域，具体涉及粒子物理和量子色动力学（QCD），使用格点QCD方法研究π介子共振态。所有评分关键词均与医学影像分析、人工智能临床决策支持相关，而该论文完全不涉及医学、影像学、人工智能或临床应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>lattice QCD, π resonance, particle physics, quantum chromodynamics, excited states, hadron spectroscopy, resonance properties</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/lk32-njx7" target="_blank">19. Understanding mechanisms of molecular rare events from start to finish</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 论文信息缺失，无法总结研究问题和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，无法评估论文内容。根据给定的研究背景（医学影像分析与人工智能临床决策支持），所有评分关键词均属于该领域。由于缺乏论文信息，无法判断论文与这些关键词的任何相关性，因此所有关键词相关度评分为0分。</p>
+</div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/3s9t-xmtx" target="_blank">20. Minkowski-space modeling of hyperbolic lenses</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究闵可夫斯基空间中双曲透镜的建模问题，但摘要缺失无法提供具体结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Minkowski-space modeling of hyperbolic lenses&#x27;，摘要内容缺失。仅从标题判断，该论文研究的是闵可夫斯基空间中的双曲透镜建模，属于理论物理学或光学工程领域，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有关键词均涉及医学影像、AI诊断、手术规划等医疗应用，而该论文明显属于基础物理或光学理论，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Minkowski-space, hyperbolic lenses, modeling, optical modeling, theoretical physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/jprg-jll6" target="_blank">21. Impostor among neutrinos: Dark radiation masquerading as self-interacting neutrinos</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了暗辐射如何伪装成自相互作用中微子来解释宇宙学观测数据，揭示了中微子与暗辐射之间的可能混淆机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究属于粒子物理学和宇宙学领域，探讨中微子与暗辐射的相互作用，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有评分关键词均涉及医学影像、深度学习医疗应用、诊断预测、手术规划等医疗技术主题，而论文内容是关于基础物理现象的理论研究，两者领域完全不同，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>neutrinos, dark radiation, self-interacting neutrinos, cosmology, particle physics, astrophysics, theoretical model, cosmological observations</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/4k13-sdjh" target="_blank">22. Quantum mechanics based on real numbers: A consistent description</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了量子力学是否能够仅基于实数（而非复数）进行一致描述，并证明了实数基础在量子力学中的可行性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于量子力学的数学基础，探讨实数能否一致地描述量子力学，属于理论物理领域。所有评分关键词均涉及医学影像分析、人工智能医疗应用、临床决策支持等方向，与论文的物理理论主题完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum mechanics, real numbers, consistent description, mathematical foundation, theoretical physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/cty8-hg73" target="_blank">23. Smooth string vacua in a gravitationally nonperturbative regime</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 无法总结，因为论文摘要缺失，仅从标题推测可能研究弦理论在引力非微扰区域的性质。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要完全缺失，无法评估内容。根据标题&#x27;平滑弦真空在引力非微扰区域&#x27;判断，该论文属于理论物理（弦理论/量子引力）领域，与医学图像分析、人工智能临床决策支持等所有评分关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>smooth string vacua, gravitationally nonperturbative regime, string theory, quantum gravity, theoretical physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/dkvp-41zt" target="_blank">24. Gauge-tunable uniform delocalization of higher-order topological photonic modes</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究解决了高阶拓扑光子模式离域化的可控性问题，通过规范可调机制实现了均匀离域化。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究属于拓扑光子学领域，涉及高阶拓扑光子模式的规范可调均匀离域化，与医学图像分析、人工智能临床决策支持等医疗领域完全无关。所有关键词均未在论文内容中体现，因此相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>topological photonics, higher-order topological modes, gauge-tunable, uniform delocalization, photonic modes, topological states, waveguide arrays</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/bk2n-lgps" target="_blank">25. First measurement of the D s + → K 0 μ + ν μ Decay</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文首次测量了D_s+介子衰变为K^0、μ+和ν_μ的分支比，为粒子物理标准模型提供了新的实验数据。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于粒子物理中D_s+介子衰变到K^0、μ+和ν_μ的首次测量，属于高能物理实验领域，与医学图像分析、人工智能临床决策支持、深度学习医学成像、疾病诊断/预后预测、手术规划、多模态医学成像或医学基础模型等主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>D_s+ decay, K^0, muon neutrino, branching fraction, particle physics, standard model, BESIII experiment</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/tj3h-sh7q" target="_blank">26. Interlayer charge-density-wave vector phase induced structural chirality</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了层间电荷密度波矢量相位如何诱导结构手性，为理解量子材料中的对称性破缺提供了新机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于凝聚态物理中的电荷密度波（CDW）和结构手性，属于材料科学/物理学领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。所有关键词均得0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>charge-density-wave, structural chirality, interlayer coupling, phase transition, quantum materials, symmetry breaking, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/6948-kw9h" target="_blank">27. Giant splitting and universal behavior of Fabry-Pérot bound states in the continuum in waveguides</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了波导中Fabry-Pérot连续谱束缚态的巨大分裂现象和普适行为，并揭示了其物理机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是波导中Fabry-Pérot连续谱束缚态的物理现象，属于光学/光子学领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。所有关键词均未在标题或摘要中提及，也没有任何间接关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Fabry-Pérot bound states, continuum, waveguides, giant splitting, universal behavior, optical resonances, guided modes</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/xr3h-j9pv" target="_blank">28. Acoustic bound pairs under nonreciprocal two-body interactions</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究非互易两体相互作用下的声学束缚对，但具体问题和结果因摘要缺失无法总结。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，无法评估具体内容。根据标题《Acoustic bound pairs under nonreciprocal two-body interactions》判断，该论文研究声学系统中的非互易相互作用和束缚态对，属于物理学、声学或凝聚态物理领域，与医学图像分析、人工智能临床决策支持等医学领域完全无关。所有关键词均得0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>acoustic bound pairs, nonreciprocal interactions, two-body interactions, acoustic systems, physics, acoustics, condensed matter</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/9tb2-bx6r" target="_blank">29. Transient phase sensing in a three-photon Rydberg ladder scheme</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了在三光子里德伯阶梯方案中实现瞬态相位传感的方法，并展示了其在量子信息处理中的潜在应用。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究属于量子光学和原子物理领域，涉及三光子里德伯阶梯方案中的瞬态相位传感，与医学图像分析、临床决策支持、医疗AI等主题完全无关。所有关键词均未在论文内容中体现，因此相关度评分均为0。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>transient phase sensing, three-photon Rydberg ladder, quantum optics, atomic physics, Rydberg states, phase measurement, quantum information processing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/vynp-871l" target="_blank">30. Antiferromagnetic quantum critical point and superconductivity in self-intercalated TMD V 1 / 4 VS 2 under high pressure</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了自插层过渡金属硫化物V1/4VS2在高压下的反铁磁量子临界点和超导现象，发现高压诱导了量子临界行为并增强了超导转变温度。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是凝聚态物理中的反铁磁量子临界点和超导现象，涉及高压下的过渡金属硫化物材料，与医学图像分析、人工智能临床决策支持等医疗领域完全无关。所有关键词均未在标题或摘要中出现，相关度为0。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>antiferromagnetic quantum critical point, superconductivity, self-intercalated TMD, V1/4VS2, high pressure, transition metal dichalcogenide, quantum critical behavior, Tc enhancement</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/2ppn-kvjv" target="_blank">31. Quantum impurity sensing of altermagnetic order</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究利用量子杂质传感探测altermagnetic order，发现杂质自旋动力学可作为altermagnetic相变的灵敏探针。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究属于凝聚态物理领域，聚焦于量子杂质传感和altermagnetic order，与医学图像分析、人工智能临床决策支持等关键词完全无关。所有关键词均得0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum impurity sensing, altermagnetic order, spin dynamics, phase transition, magnetic materials, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/nkls-pgkf" target="_blank">32. High-order perfect absorption in the absence of exceptional point</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 无法提供，因为论文摘要缺失，无法确定研究问题和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，无法评估具体内容。但根据给定的研究背景（医学影像分析与人工智能临床决策支持）和评分关键词（全部与医学影像AI相关），如果论文标题&#x27;High-order perfect absorption in the absence of exceptional point&#x27;涉及的是光学、物理或材料科学中的完美吸收现象（与医学影像无关），则与所有关键词完全无关。因此，所有关键词评分为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>high-order perfect absorption, exceptional point, absorption, optical physics, resonance, non-Hermitian systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/3v3f-3t97" target="_blank">33. Anisotropic Josephson coupling of d -vectors in triplet superconductors arising from frustrated spin textures</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了由受挫自旋纹理引起的三重态超导体中d-向量的各向异性约瑟夫森耦合问题，并揭示了其独特的物理特性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是凝聚态物理中的三重态超导体的约瑟夫森耦合和自旋纹理，属于理论物理和材料科学领域。所有评分关键词均涉及医学影像分析、人工智能医疗应用、临床决策支持等医学信息学方向，与论文的物理理论研究内容完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>triplet superconductors, Josephson coupling, d-vectors, anisotropic coupling, frustrated spin textures, superconducting junctions, spin-triplet pairing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/f63q-vqz3" target="_blank">34. Hall-on-Toric: Descendant Laughlin state in the chiral ℤ p toric code</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-11</div>
+<div class="tldr"><strong>TL;DR:</strong> 该理论研究在拓扑量子计算中探索了手性ℤp环面码中的后代Laughlin态，属于凝聚态物理领域。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究属于凝聚态物理中的拓扑量子计算领域，涉及手性ℤp环面码和Laughlin态等理论物理概念。所有评分关键词均与医学影像分析、人工智能临床决策支持相关，而该论文完全不涉及医学、影像、诊断、手术或任何医疗应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>toric code, Laughlin state, topological quantum computation, chiral ℤp, condensed matter physics, quantum Hall effect, anyon theory</p></div></details>
+</div>
+<p class="meta" style="margin-top:24px;border-top:1px solid #e5e7eb;padding-top:12px;">Token 消耗: <strong>301,442</strong> tokens（输入 207,844 / 输出 93,598）</p>
+</body></html>

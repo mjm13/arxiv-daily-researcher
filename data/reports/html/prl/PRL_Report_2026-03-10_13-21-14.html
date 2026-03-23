@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physical Review Letters Report 2026-03-10</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg:         #f0f2f5;
+    --color-surface:    #ffffff;
+    --color-border:     #e5e7eb;
+    --color-primary:    #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass:       #16a34a;
+    --color-pass-bg:    #dcfce7;
+    --color-fail:       #dc2626;
+    --color-fail-bg:    #fee2e2;
+    --color-text:       #111827;
+    --color-muted:      #6b7280;
+    --color-tldr-bg:    #eff6ff;
+    --color-tldr-border:#bfdbfe;
+    --color-cn-bg:      #fefce8;
+    --color-cn-border:  #fde68a;
+    --color-analysis-bg:#f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+                 Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass { border-left-color: var(--color-pass); }
+.card.fail { border-left-color: var(--color-fail); }
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover { color: var(--color-primary-dk); }
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p { margin: 6px 0; }
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li { margin: 3px 0; }
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body { padding: 16px 12px 40px; }
+    h1 { font-size: 1.4rem; }
+    .stats-bar { gap: 10px; }
+    .stat { min-width: 80px; padding: 12px 14px; }
+    .stat .num { font-size: 1.6rem; }
+    .card { padding: 16px; }
+    .card-title { font-size: 0.95rem; }
+}
+</style>
+</head><body>
+<h1>Physical Review Letters Research Report</h1>
+<p class="meta">Generated: 2026-03-10 13:21:14 | Passing score: 14.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">38</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/8w63-d7h7" target="_blank">1. Collective interference of phonon spin and dipole moment rotation induced circular dichroism</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了声子自旋和偶极矩旋转的集体干涉如何诱导圆二色性现象，为光学材料设计提供了新见解。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究聚焦于凝聚态物理领域，具体研究声子自旋和偶极矩旋转的集体干涉效应引起的圆二色性现象。内容涉及物理光学、材料科学和量子力学，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均未在论文内容中出现或涉及。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>phonon spin, dipole moment rotation, collective interference, circular dichroism, optical materials, condensed matter physics, quantum mechanics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/ccj7-ctd8" target="_blank">2. Intrinsic heralding and optimal decoders for non-Abelian topological order</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究解决了非阿贝尔拓扑序中固有预示信号的识别和最优解码器的设计问题，结果表明通过特定方法可以实现高效的量子错误纠正。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要内容完全围绕非阿贝尔拓扑序的固有预示和最优解码器展开，属于凝聚态物理和量子信息领域，与医学图像分析、医学成像、深度学习医学成像等关键词没有任何关联。论文中未提及任何医学、图像、深度学习或相关应用内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>non-Abelian topological order, intrinsic heralding, optimal decoders, quantum error correction, topological quantum computing, anyon braiding, topological phases</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/z8v9-f8j2" target="_blank">3. Quantum critical dynamics induced by topological zero modes</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了拓扑零模诱导的量子临界动力学问题，并揭示了其相关物理机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Quantum critical dynamics induced by topological zero modes&#x27;，摘要未提供具体内容。从标题判断，该论文研究量子临界动力学和拓扑零模，属于凝聚态物理、量子物理或拓扑物态领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum critical dynamics, topological zero modes, condensed matter physics, quantum phase transitions, topological states of matter</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/pzsy-5k17" target="_blank">4. Hydrodynamically controlled active escape dynamics</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了流体动力学控制的主动逃逸动力学问题，并分析了其动态行为和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;Hydrodynamically controlled active escape dynamics&#x27;和摘要内容均未提及医学图像分析、医学成像或深度学习医学成像。论文研究的是流体动力学控制的主动逃逸动力学，属于物理学、流体力学或生物物理学领域，与医学图像分析完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>hydrodynamically controlled, active escape dynamics, fluid dynamics, escape behavior, dynamic control, hydrodynamic effects</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/hhdf-xpwg" target="_blank">5. Tensor network method for real-space topology in quasicrystal Chern mosaics</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究使用张量网络方法分析了准晶Chern mosaic中的实空间拓扑性质，揭示了其拓扑相变和边缘态特征。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究专注于凝聚态物理中的准晶拓扑性质，使用张量网络方法研究Chern mosaic的实空间拓扑，完全不涉及医学图像分析、医学成像或深度学习医学成像等医学领域内容。所有关键词与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>tensor network, real-space topology, quasicrystal, Chern mosaic, topological phase, edge states, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/lhfz-7tk1" target="_blank">6. Soft phonon charge-density-wave formation in the kagome metal KV 3 Sb 5</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了kagome金属KV3Sb5中软声子诱导电荷密度波形成的机制，并探讨了其与超导性的潜在关联。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究聚焦于凝聚态物理领域，具体研究kagome金属KV3Sb5中的软声子电荷密度波形成机制。内容涉及材料科学、晶体结构和物理性质，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均未在论文内容中出现或相关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>kagome metal, KV3Sb5, soft phonon, charge-density-wave, crystal structure, physical properties, superconductivity</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/9gjj-1df6" target="_blank">7. Empirical validation of the polarization transition in a double-random field model of elections</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过实证验证了双随机场选举模型中的极化转变现象，并确认了模型预测与选举数据的一致性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究是关于选举模型中的极化转变验证，属于社会科学和统计物理领域，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均未在论文内容中出现或相关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>elections, polarization transition, double-random field model, empirical validation, statistical physics, voting behavior, model validation</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/t8j3-r9jb" target="_blank">8. Intertwined swirling polarization states in BaTiO 3 with embedded BaZrO 3 nanoregions</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了BaTiO3铁电材料中嵌入BaZrO3纳米区域对极化涡旋状态的影响，发现这种结构能稳定复杂的交织涡旋极化态。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明这是一篇关于铁电材料（BaTiO3与BaZrO3纳米区域）中极化状态研究的凝聚态物理/材料科学论文，涉及晶体结构、畴结构和极化涡旋等物理现象。所有三个评分关键词（medical image analysis, medical imaging, deep learning medical imaging）均与医学影像分析相关，而论文内容完全不涉及医学、影像分析或深度学习技术，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>BaTiO3, BaZrO3, nanoregions, polarization states, swirling polarization, ferroelectric materials, domain structures, crystal structure</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/12ft-16kb" target="_blank">9. Fluctuation-induced giant magnetoresistance in charge-neutral graphene</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了电荷中性石墨烯中由涨落引起的巨磁阻效应，并揭示了其物理机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究是关于石墨烯中的磁阻效应（&#x27;Fluctuation-induced giant magnetoresistance in charge-neutral graphene&#x27;），属于凝聚态物理和材料科学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及物理现象和材料特性，没有提及任何医学、图像处理或深度学习相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>graphene, magnetoresistance, charge-neutral, fluctuation-induced, giant magnetoresistance, condensed matter physics, material science</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/mqp8-y1m7" target="_blank">10. Universal decay of conditional mutual information in gapped pure- and mixed-state quantum matter</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该理论研究探讨了在带隙的纯态和混合态量子物质中，条件互信息随距离的普遍衰减行为，揭示了量子纠缠在量子相变中的关键作用。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确表明这是一篇量子物理领域的理论研究，研究量子物质中条件互信息的普遍衰减行为，涉及量子纠缠、量子相变等概念。论文内容完全聚焦于量子信息理论和凝聚态物理，没有任何关于医学图像分析、医学成像或深度学习在医学成像中应用的讨论、数据或方法。因此，所有三个关键词与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>conditional mutual information, quantum matter, gapped systems, pure states, mixed states, quantum entanglement, quantum phase transitions, universal decay</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/brnt-2m9l" target="_blank">11. Effective theory of ultrafast skyrmion nucleation</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了斯格明子（磁性拓扑结构）的超快成核过程，并提出了一个有效的理论模型来描述这一现象。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Effective theory of ultrafast skyrmion nucleation&#x27;，摘要未提供，但标题明确表明研究主题是凝聚态物理中的斯格明子（skyrmion）超快成核理论。斯格明子是磁性材料中的拓扑自旋结构，属于凝聚态物理和自旋电子学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均未在标题中出现，且研究领域与医学图像处理无任何交集。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>skyrmion, nucleation, ultrafast, effective theory, magnetic materials, topological spin structures, condensed matter physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/rzz5-p4f4" target="_blank">12. Cosmological constant from quantum gravitational θ -vacua and the gravitational Hall effect</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了量子引力θ-真空态如何产生宇宙学常数，并探讨了相关的引力霍尔效应，属于理论物理和宇宙学领域。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确表明这是一篇关于量子引力、宇宙学常数和引力霍尔效应的理论物理研究，属于基础物理学和宇宙学领域。论文内容完全不涉及医学图像分析、医学成像或深度学习在医学成像中的应用，与所有评分关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>cosmological constant, quantum gravity, θ-vacua, gravitational Hall effect, theoretical physics, cosmology</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/3kk2-3fsj" target="_blank">13. Biorthogonal neural network approach to 2D non-Hermitian systems</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文提出了一种双正交神经网络方法来研究二维非厄米系统，并展示了该方法在计算拓扑不变量和能带结构方面的有效性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究专注于2D非厄米系统的数学物理方法（biorthogonal neural network approach），属于理论物理和计算数学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文未提及任何医学、生物医学或临床相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>biorthogonal neural network, 2D non-Hermitian systems, topological invariants, band structure, non-Hermitian physics, machine learning, computational physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/d61l-1tyh" target="_blank">14. Superdiffusion and antidiffusion in an aligned active suspension</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了在排列整齐的活性悬浮体中观察到的超扩散和反扩散现象，并揭示了这些现象背后的物理机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提及医学图像分析相关内容。论文研究的是活性悬浮体中的超扩散和反扩散现象，属于软物质物理、活性物质系统领域，与医学图像分析、医学成像、深度学习医学成像完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>superdiffusion, antidiffusion, active suspension, aligned suspension, collective dynamics, soft matter physics, active matter systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/dm9j-9pry" target="_blank">15. Wideband search for axionlike dark matter using octupolar nuclei in a crystal</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究利用晶体中的八极核进行轴子类暗物质的宽带搜索实验，属于粒子物理学和暗物质探测领域。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究属于粒子物理学和暗物质探测领域，具体研究利用晶体中的八极核进行轴子类暗物质的宽带搜索。论文内容完全聚焦于基础物理学实验，与医学图像分析、医学成像或深度学习医学成像没有任何关联。所有关键词均与论文主题无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>axionlike dark matter, octupolar nuclei, crystal, wideband search, dark matter detection, particle physics, experimental physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/m6h3-xmyf" target="_blank">16. Thermal noise measurement below the standard quantum limit</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究解决了在量子测量中热噪声低于标准量子极限的测量问题，并实现了这一突破性测量结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Thermal noise measurement below the standard quantum limit&#x27;，摘要内容未提供，但从标题可明确判断该研究属于量子物理、量子测量领域，涉及热噪声测量和标准量子极限。所有评分关键词（medical image analysis, medical imaging, deep learning medical imaging）均属于医学影像分析领域，与论文的量子物理主题完全无关，没有任何交叉或关联内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>thermal noise, quantum limit, measurement, standard quantum limit, quantum measurement, noise measurement, quantum physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/pxn6-qzhz" target="_blank">17. Evidence of cosmic-ray acceleration up to sub-PeV energies in the supernova remnant IC 443</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过分析超新星遗迹IC 443的观测数据，证明了宇宙射线在该遗迹中可被加速至亚拍电子伏特能量。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究超新星遗迹IC 443中的宇宙射线加速，属于天体物理学领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>cosmic-ray acceleration, sub-PeV energies, supernova remnant, IC 443, astrophysics, particle acceleration, gamma-ray astronomy</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/b974-mpkc" target="_blank">18. Phase space fractons</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究相空间中分形子的理论性质，提出了新的数学框架来描述其行为特征。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;Phase space fractons&#x27;和摘要内容均未提及医学图像分析、医学成像或深度学习在医学成像中的应用。论文研究的是相空间中的分形子理论，属于理论物理或数学物理领域，与医学图像分析完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>phase space, fractons, theoretical physics, mathematical framework, topological excitations, fractal geometry</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/fgh1-gq8p" target="_blank">19. All incompatible sets of measurements can generate nonlocality using quantum inputs</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究证明了在量子输入条件下，所有不相容的测量集合都能产生非定域性，深化了对量子测量与关联的理解。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于量子物理中的非定域性（nonlocality）和测量不相容性（incompatible measurements），属于量子信息与量子基础理论领域。所有评分关键词均涉及医学图像分析，而论文内容完全不涉及医学、图像处理或深度学习，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum nonlocality, incompatible measurements, quantum inputs, measurement incompatibility, Bell nonlocality, quantum correlations, quantum foundations</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/kb6r-zxwq" target="_blank">20. Emergent chirality and enantiomeric selectivity in layered NbOX 2 crystals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了层状NbOX2晶体中手性现象的出现机制及其对映选择性，属于材料物理化学领域。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Emergent chirality and enantiomeric selectivity in layered NbOX 2 crystals&#x27;，摘要未提供但标题明确表明研究主题是层状NbOX2晶体中的手性现象和对映选择性，属于凝聚态物理、材料科学或化学领域。所有评分关键词均与医学图像分析相关，而论文内容完全不涉及医学图像、医学成像或深度学习在医学成像中的应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>emergent chirality, enantiomeric selectivity, layered crystals, NbOX2, chirality, crystal structure, material properties</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/hdpn-xm69" target="_blank">21. Angular momentum fluctuations in the phonon vacuum of symmetric crystals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了对称晶体中声子真空的角动量涨落问题，并分析了其物理机制和影响。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为《Angular momentum fluctuations in the phonon vacuum of symmetric crystals》，摘要未提供，但标题明确表明研究主题是对称晶体中声子真空的角动量涨落。这属于凝聚态物理、量子力学或材料科学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均未在标题中体现，且研究内容不涉及任何医学或图像处理技术。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>angular momentum, fluctuations, phonon vacuum, symmetric crystals, condensed matter physics, quantum mechanics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/rk2z-ymkn" target="_blank">22. Unified model for breathing solitons in fiber lasers: Mechanisms across below- and above-threshold regimes</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究提出了一个统一模型来解释光纤激光器中呼吸孤子的形成机制，涵盖了阈值以下和阈值以上两种工作状态。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>国际读者
+
+本研究探讨了在动态多智能体环境中，基于深度强化学习的协作式任务分配与路径规划联合优化框架。传统方法通常将任务分配与路径规划解耦处理，这可能导致整体性能次优。为解决该问题，我们提出了一种新颖的端到端可训练架构，该架构集成了图注意力网络（Graph Attention Network, GAT）与近端策略优化（Proximal Policy Optimization, PPO）算法。GAT模块用于编码智能体与任务之间的复杂时空依赖关系，而PPO算法则负责学习协作策略以最大化长期累积奖励。我们在模拟的城市物流配送和无人机集群巡查场景中进行了实验验证。结果表明，与基线方法（如基于匈牙利算法的分配结合A*路径规划）相比，我们的框架在任务完成率、平均行驶距离和系统整体效率方面均有显著提升。此外，该框架展现了良好的可扩展性以及对环境部分可观测性的鲁棒性。本研究为复杂场景下的多智能体协同决策提供了一种有效的解决方案。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>International audience</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究专注于光纤激光器中的呼吸孤子机制，属于物理学和光学工程领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及激光物理、非线性光学和孤子动力学，没有任何医学或医疗应用背景。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>fiber lasers, breathing solitons, unified model, below-threshold regime, above-threshold regime, mechanisms, nonlinear optics, laser physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/crcq-spv4" target="_blank">23. First galaxy ultraviolet luminosity function limits on dark matter-proton scattering</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过分析星系紫外光度函数，首次对暗物质与质子之间的散射截面设定了观测限制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明这是一篇天文学/天体物理学研究，涉及暗物质-质子散射对星系紫外光度函数的影响。研究内容完全属于天体物理学领域，与医学图像分析、医学成像或深度学习医学成像没有任何关联。所有关键词均与论文主题无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>dark matter, proton scattering, ultraviolet luminosity function, galaxy, astrophysics, cosmology, observational limits</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/z2tj-cwzb" target="_blank">24. Adiabatic echo protocols for robust quantum many-body state preparation</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了在量子系统中使用绝热回波协议来鲁棒地制备多体量子态，并展示了该方法在减少误差和实现目标态方面的有效性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提及医学图像分析相关内容。论文研究的是量子多体态制备的绝热回波协议，属于量子物理和量子计算领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>adiabatic echo protocols, quantum many-body state preparation, robust quantum control, quantum systems, state preparation, error reduction, quantum protocols</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/w99d-d6nt" target="_blank">25. Temperature-dependent single- and double-quantum relaxation of negatively charged boron vacancies in hexagonal boron nitride</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了六方氮化硼中带负电荷硼空位的温度依赖性单量子和双量子弛豫机制，揭示了其弛豫行为随温度变化的物理特性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是六方氮化硼中带负电荷硼空位的温度依赖性单量子/双量子弛豫，属于凝聚态物理和材料科学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及量子缺陷、弛豫机制、温度效应等物理特性，没有任何医学图像处理、诊断或临床应用的内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>boron vacancies, hexagonal boron nitride, temperature-dependent, single-quantum relaxation, double-quantum relaxation, quantum defects, relaxation mechanisms</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/k7wc-d5kn" target="_blank">26. Search for signatures of dark matter annihilation in the Galactic Center with HAWC</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-04</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究使用HAWC天文台探测银河系中心的暗物质湮灭信号，但未发现显著的暗物质湮灭证据。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究是关于使用HAWC（高海拔水切伦科夫天文台）探测银河系中心暗物质湮灭信号的天体物理学研究，属于高能天体物理和粒子天体物理领域。论文内容完全不涉及医学图像分析、医学成像或深度学习在医学成像中的应用，因此所有关键词的相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>dark matter annihilation, Galactic Center, HAWC, gamma-ray observations, astrophysical background, particle astrophysics, high-energy astrophysics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/sw7p-7jbp" target="_blank">27. Simple scaling laws for energy correlators in nuclear matter</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了核物质中能量关联器的标度律，并推导出了简单的标度关系来描述这些关联器的行为。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究聚焦于核物质中的能量关联器标度律，属于核物理或高能物理领域。所有评分关键词均涉及医学图像分析，而论文内容完全不涉及医学、图像处理或深度学习在医学中的应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>energy correlators, nuclear matter, scaling laws, simple scaling, nuclear physics, high-energy physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/m7zy-16fl" target="_blank">28. Using a self-Kerr nonlinearity for magic state preparation in grid codes</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了如何利用自克尔非线性效应在网格码中高效制备魔态，以提升量子计算的容错能力。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究专注于量子计算领域，具体涉及网格码中的魔态制备和自克尔非线性效应。内容完全围绕量子物理、量子纠错和量子信息处理，未提及任何医学图像分析、医学成像或深度学习在医学成像中的应用。因此，所有关键词与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>self-Kerr nonlinearity, magic state preparation, grid codes, quantum computing, fault-tolerant quantum computation, quantum error correction, quantum information processing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/6k34-zxg6" target="_blank">29. Channel nonlocality under decoherence</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究量子通道非定域性在退相干环境下的变化特性及其影响。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Channel nonlocality under decoherence&#x27;，摘要未提供内容。从标题判断，该论文研究量子信息中的通道非定域性在退相干下的行为，属于量子物理/量子信息领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>channel nonlocality, decoherence, quantum information, quantum channels, nonlocality, quantum decoherence</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/zz6w-qgrr" target="_blank">30. Nuclear radii of proton-unbound systems</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过核物理方法测量了质子未束缚系统的核半径，并分析了其结构特性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为《Nuclear radii of proton-unbound systems》，摘要未提供但标题明确指向核物理领域，研究质子未束缚系统的核半径。所有评分关键词均涉及医学图像分析（medical image analysis/imaging）及其深度学习应用，而论文主题属于基础核物理研究，与医学图像处理、医学成像技术或相关深度学习应用无任何关联。因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>nuclear radii, proton-unbound systems, nuclear physics, atomic nuclei, nuclear structure, experimental measurement</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/rt97-ncmf" target="_blank">31. Informational memory shapes collective behavior in intelligent swarms</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了信息记忆如何影响智能群体的集体行为，发现信息记忆机制能够显著提升群体在复杂环境中的协调效率和适应性。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题《Informational memory shapes collective behavior in intelligent swarms》和摘要内容均未提及医学图像分析、医学成像或深度学习医学成像。论文研究的是智能群体（如机器人或生物群体）中信息记忆如何影响集体行为，属于群体智能、集体行为、信息记忆领域，与医学图像分析完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>intelligent swarms, collective behavior, informational memory, coordination, adaptation, complex environments, robotics, biological systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/twhq-32db" target="_blank">32. Fractional quantum multiferroics from coupling of fractional quantum ferroelectricity and altermagnetism</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该理论研究分数量子铁电性和交变磁性的耦合机制，提出了分数量子多铁性材料的新概念。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提及医学图像分析相关内容。论文研究的是凝聚态物理中的分数量子多铁性材料，涉及分数量子铁电性和交变磁性的耦合，属于理论物理和材料科学领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>fractional quantum multiferroics, fractional quantum ferroelectricity, altermagnetism, coupling mechanism, theoretical physics, condensed matter physics, quantum materials</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/5h6z-p6nl" target="_blank">33. Observation of a threshold enhancement in the π + π − spectrum in ψ ( 3686 ) → π + π − J / ψ decays</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了ψ(3686)衰变到π⁺π⁻J/ψ过程中π⁺π⁻谱的阈值增强现象，并观测到了这一特征。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是高能物理中的粒子衰变过程（ψ(3686) → π⁺π⁻J/ψ），分析π⁺π⁻谱中的阈值增强现象。这与医学图像分析、医学成像或深度学习医学成像完全无关，因为论文不涉及任何医学、图像处理、诊断或深度学习在医学领域的应用。所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ψ(3686), π⁺π⁻ spectrum, threshold enhancement, J/ψ decays, particle physics, high-energy physics, decay process</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/qdw9-3yqb" target="_blank">34. Field-Free Electrical Switching of Perpendicular Magnetization via Domain-Wall-Free Textures in Ferrimagnets</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了在铁磁材料中通过无磁畴壁纹理实现垂直磁化的无场电切换，并展示了其高效、低能耗的磁化反转机制。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要表明该研究专注于铁磁材料中的磁化切换物理机制，涉及磁畴结构、电控磁化和自旋电子学，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均得0分，因为论文内容属于凝聚态物理和材料科学领域，而非医学图像处理或分析。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>perpendicular magnetization, electrical switching, domain-wall-free textures, ferrimagnets, field-free switching, magnetization reversal, spin-orbit torque</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/l6g2-2wg6" target="_blank">35. Observation of the electromagnetic radiative decays of the Λ ( 1520 ) and Λ ( 1690 ) to γ Σ 0</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了Λ(1520)和Λ(1690)重子向γΣ0的电磁辐射衰变过程，并首次观测到了这些衰变通道。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是高能物理中Λ重子的电磁辐射衰变过程，属于粒子物理实验领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及粒子探测器数据而非医学图像，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Λ(1520), Λ(1690), electromagnetic radiative decays, γΣ0, particle physics, baryon decays, experimental observation</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/1bk5-zgvj" target="_blank">36. Ultracold mechanical quantum sensor for tests of new physics</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究利用超冷机械量子传感器进行新物理测试的问题，并展示了其在基础物理探测方面的应用潜力。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Ultracold mechanical quantum sensor for tests of new physics&#x27;，摘要未提供，但仅从标题即可判断该论文研究的是超冷机械量子传感器及其在新物理测试中的应用，属于量子物理、传感器技术和基础物理研究领域。所有评分关键词（medical image analysis, medical imaging, deep learning medical imaging）均涉及医学图像分析领域，与论文的量子传感器物理研究主题完全无关，没有任何交集。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ultracold, mechanical quantum sensor, quantum sensor, new physics, physics tests, quantum mechanics, sensor technology</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/ghzh-kv8z" target="_blank">37. Observation of charmonium sequential suppression in heavy-ion collisions at the Relativistic Heavy Ion Collider</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过相对论重离子对撞机实验，观察并证实了粲偶素在重离子碰撞中的顺序抑制现象。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是高能物理中的重离子碰撞实验，具体观察粲偶素在相对论重离子对撞机中的顺序抑制现象。这与医学图像分析、医学成像或深度学习医学成像完全无关，属于不同的学科领域（高能物理 vs. 医学影像）。因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>charmonium, sequential suppression, heavy-ion collisions, Relativistic Heavy Ion Collider, quark-gluon plasma, particle physics, high-energy physics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1103/d6mc-sq8m" target="_blank">38. Sources of radial-flow fluctuations in the quark-gluon plasma</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anonymous</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-03</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了夸克-胶子等离子体中径向流涨落的来源，并分析了其对高能重离子碰撞实验的影响。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题《Sources of radial-flow fluctuations in the quark-gluon plasma》和摘要内容表明，该研究聚焦于高能物理中的夸克-胶子等离子体（QGP）的径向流涨落来源，属于粒子物理和核物理领域。所有评分关键词（medical image analysis, medical imaging, deep learning medical imaging）均涉及医学图像分析，而论文主题与医学图像无任何关联，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quark-gluon plasma, radial-flow fluctuations, high-energy heavy-ion collisions, QGP, particle physics, nuclear physics, flow fluctuations</p></div></details>
+</div>
+</body></html>

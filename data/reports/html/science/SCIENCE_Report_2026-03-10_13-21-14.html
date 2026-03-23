@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Science Report 2026-03-10</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg:         #f0f2f5;
+    --color-surface:    #ffffff;
+    --color-border:     #e5e7eb;
+    --color-primary:    #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass:       #16a34a;
+    --color-pass-bg:    #dcfce7;
+    --color-fail:       #dc2626;
+    --color-fail-bg:    #fee2e2;
+    --color-text:       #111827;
+    --color-muted:      #6b7280;
+    --color-tldr-bg:    #eff6ff;
+    --color-tldr-border:#bfdbfe;
+    --color-cn-bg:      #fefce8;
+    --color-cn-border:  #fde68a;
+    --color-analysis-bg:#f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+                 Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass { border-left-color: var(--color-pass); }
+.card.fail { border-left-color: var(--color-fail); }
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover { color: var(--color-primary-dk); }
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p { margin: 6px 0; }
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li { margin: 3px 0; }
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body { padding: 16px 12px 40px; }
+    h1 { font-size: 1.4rem; }
+    .stats-bar { gap: 10px; }
+    .stat { min-width: 80px; padding: 12px 14px; }
+    .stat .num { font-size: 1.6rem; }
+    .card { padding: 16px; }
+    .card-title { font-size: 0.95rem; }
+}
+</style>
+</head><body>
+<h1>Science Research Report</h1>
+<p class="meta">Generated: 2026-03-10 13:21:14 | Passing score: 14.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">38</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeb1178" target="_blank">1. Governing real-world health data as a public utility</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">4.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Melissa A. Haendel, Ryan Ahern, Kasie B. Bailey, Spyridon Bakas, Daniel C Barth-Jones, Alex Bohl, Jiang Bian, Philip E. Bourne, Rebecca Boyles, Christopher G. Chute, James J. Cimino, Shaun Grannis, Terry S. Hartman, Michelle Holko, Nathan A. Hotaling, Dan Housman, Lawrence Hunter, Eric Hurwitz, Jasmin Phua, Michael G. Kahn</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究如何通过效用模型框架来治理真实世界健康数据，以实现伦理管理、患者赋权和分布式创新的主要结果。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>该实用新型为伦理管理、患者赋权与分布式创新提供了一个框架。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The utility model offers a framework for ethical stewardship, patient empowerment, and distributed innovation.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">2.0/10</td><td style="text-align:center;padding:4px 8px;">2.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">2.0/10</td><td style="text-align:center;padding:4px 8px;">2.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要主要讨论健康数据治理的伦理框架（utility model），涉及患者赋权和分布式创新，但未提及医学图像分析、医学成像或深度学习医学成像的具体技术、方法或应用。因此，与&#x27;medical image analysis&#x27;和&#x27;medical imaging&#x27;有微弱关联（因健康数据可能广义包含图像数据，但论文未明确），评分为2分；与&#x27;deep learning medical imaging&#x27;完全无关，评分为0分。作者列表中未包含指定专家。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>health data, public utility, ethical stewardship, patient empowerment, distributed innovation, real-world data, governance, utility model</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adx6329" target="_blank">2. Climate change will increase forest disturbances in Europe throughout the 21st century</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">2.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Marc Grünig, Werner Rammer, Cornelius Senf, Katharina Albrich, Frédéric André, Andrey L. D. Augustynczik, M. Baumann, Friedrich J. Bohn, M. Bouwman, Harald Bugmann, Alessio Collalti, Irina Cristal, Daniela Dalmonech, Francois De Coligny, Laura Dobor, Christina Dollinger, Josep Maria Espelta, David I. Forrester, Jordi Garcia-Gonzalo, José Ramón González-Olabarria</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究使用深度学习模拟框架预测欧洲森林扰动（如野火）将在21世纪持续增加，导致森林年轻化并影响碳储存和生态系统。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>野火、虫害爆发和风暴会导致树木死亡率急剧上升。气候变化加剧了这些森林干扰事件，但其未来的规模和范围仍不确定。本研究采用基于深度学习的模拟框架，以100米分辨率模拟了整个欧洲未来的森林干扰机制。结果表明，在整个21世纪，森林干扰将持续增加；若气候变化趋势未受遏制，受干扰区域将较近期水平扩大一倍以上。野火是驱动未来干扰变化的主要因素。不断变化的干扰机制将导致幼龄林面积增加，从而显著改变欧洲的森林年龄结构。鉴于这些干扰对森林碳储存和森林生态系统栖息地价值的深远影响，应将其列为森林政策与管理工作的优先事项。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Wildfires, insect outbreaks, and storms cause large pulses of tree mortality. Climate change amplifies these forest disturbances, yet their future magnitude and extent remain uncertain. Here, we simulated future forest disturbance regimes at 100-meter resolution across Europe using a deep learning-based simulation framework. Our results show that forest disturbances will continue to increase throughout the 21st century, with disturbed areas more than doubling relative to the recent past under an unabated continuation of climate change. Wildfires are the main agent driving future disturbance change. Changing disturbances result in an increase in young forests, substantially altering Europe&#x27;s forest demography. Because of their profound implications for forest carbon storage and the habitat value of forest ecosystems, disturbances should be a priority of forest policy and management.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">2.0/10</td><td style="text-align:center;padding:4px 8px;">2.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究欧洲森林扰动（野火、虫害、风暴）与气候变化的关系，使用深度学习模拟框架预测未来趋势，与医学图像分析（medical image analysis/medical imaging）完全无关。虽然使用了深度学习（deep learning），但应用于森林模拟而非医学成像，因此仅给予2分（微弱关联）。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>forest disturbances, climate change, deep learning simulation, wildfires, Europe, forest demography, carbon storage</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9257" target="_blank">3. Community health project slashes new HIV infections</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jon Cohen</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过简化预防药物交付和改善诊所连接，显著减少了新发HIV感染。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>大型研究表明，简化预防性药物的发放流程并加强其与临床诊疗的衔接至关重要。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Large study shows simplifying delivery of prevention medication and improving connections to clinics is key.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确表明该研究是关于社区健康项目如何通过简化预防药物交付和改善诊所连接来减少新发HIV感染，属于公共卫生和传染病预防领域。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像的任何方面，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>community health, HIV infections, prevention medication, clinic connections, public health, simplified delivery, large study</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adx9237" target="_blank">4. Irregular hierarchical-porous polymer for high-performance soft thermoelectrics</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Xiao Zhang, Dongyang Wang, Liyao Liu, Zhiyi Li, Zhen Ji, Xuefeng Zhang, Chunlin Xu, Chaoyi Yan, Mengdi Wang, Yuqiu Di, Lun Li, Zepang Zhan, Yue Zhao, Xiaojuan Dai, X. Zhou, Bo Guan, Cheng Li, Ye Zou, Dong Wang, Fengjiao Zhang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了不规则多孔聚合物热电材料，通过优化多孔结构实现了热导率降低72%和热电优值zT达到1.64的突破性性能。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>聚合物热电材料为将无处不在的热源转化为可持续电能提供了一种本质柔软、成本低廉且重量轻便的解决方案。然而，其实际应用受限于性能不足与规模化复杂性。本文介绍了一种不规则分级多孔热电聚合物，其特征是具有形状不规则且分布不均的孔隙，孔径范围从小于10纳米至微米级。这种多孔结构不仅增强了多重类声子散射，使晶格热导率降低了72%，而且通过纳米限域增强结晶，意外地改善了电荷传输。优化后的薄膜在343开尔文温度下获得了1.64的优异品质因数（figure-of-merit, &lt;i&gt;zT&lt;/i&gt;）。此外，该方法与易于加工的喷涂技术兼容。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Polymer thermoelectrics offer an inherently soft, cost-effective, and lightweight solution to convert ubiquitous heat sources into sustainable electricity. However, their realistic applications are hindered by insufficient performance and the scaling complexity. We introduce irregular hierarchical-porous thermoelectric polymers, featuring irregularly shaped and distributed pores with diameters that range from less than 10 nanometers to micrometers. This porous structure not only enhances multiple phonon-like scattering, achieving a 72% reduction in lattice thermal conductivity, but also unexpectedly improves charge transport through nanoconfinement-enhanced crystallization. The optimized film yields a benchmark figure-of-merit &lt;i&gt;zT&lt;/i&gt; of 1.64 at 343 kelvin. Moreover, this method is compatible with easy-to-process spray-coating techniques.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是不规则多孔聚合物热电材料，属于材料科学和能源转换领域，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。论文内容涉及热电性能优化、多孔结构设计、热导率降低等，没有任何医学图像相关的内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>polymer thermoelectrics, hierarchical-porous structure, thermal conductivity reduction, figure-of-merit zT, spray-coating techniques, soft thermoelectrics, nanoconfinement-enhanced crystallization</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef4024" target="_blank">5. Support communities to conserve the Third Pole</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yao Fu, Xuefei Yang, Yi Liu, Neema Pathak Broome, Angkana Inta, Neizo Puro, Sailesh Ranjitkar, Maroof Ali, Haiou Liu, Yan Shi, Lixin Yang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了如何通过支持当地社区参与保护青藏高原（第三极）生态系统，以应对气候变化和生物多样性丧失的挑战，并提出了促进可持续发展的策略。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题《Support communities to conserve the Third Pole》和摘要内容均聚焦于青藏高原（第三极）的社区参与式保护、生态系统管理和可持续发展，涉及生物多样性、气候变化、社区生计等环境科学和社会科学领域。全文未提及医学影像分析、医学成像或深度学习在医学影像中的应用，与所有评分关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Third Pole, community conservation, ecosystem management, climate change, biodiversity, sustainable development, Qinghai-Tibet Plateau</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg7883" target="_blank">6. Sabotaging the NSF fellowship is a blunder</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> H. Holden Thorp</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 论文分析了特朗普政府削减国家科学基金会研究生研究奖学金计划（GRFP）等政策对美国科学事业和年轻科研人员职业发展的负面影响。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>过去一年中，特朗普政府向有志于在美国从事科学事业的年轻人传递了一系列令人沮丧的信号。嘲讽专业科学知识的腐蚀性言论，以及对科研经费已实施或拟议中的削减措施，正使学生们逐渐远离那些可能在他们毕业时已不复存在的科研岗位。更糟糕的是，对外国学生签证名额的削减正在侵蚀美国年轻科学家与全球顶尖人才合作的机会。最能体现该政府意图降低美国科研人才队伍质量的证据，莫过于其对美国国家科学基金会旗舰项目——研究生科研奖学金计划（Graduate Research Fellowship Program, GRFP）的处置方式。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Over the last year, the Trump administration has sent one discouraging message after another to young people aspiring to a scientific career in the United States. The corrosive rhetoric that mocks scientific expertise and the proposed-and realized-cuts to funding are driving students away from scientific careers that may no longer exist by the time they graduate. Making matters even worse, cutbacks in visas awarded to foreign students are eroding the opportunities for young American scientists to work with the most talented people in the world. There is perhaps no stronger evidence of the administration&#x27;s objectives to reduce the quality of the US scientific workforce than its treatment of the National Science Foundation&#x27;s flagship Graduate Research Fellowship Program (GRFP).</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文讨论的是特朗普政府对美国科学事业的政策影响，特别是国家科学基金会研究生研究奖学金计划（GRFP）的削减，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及科学政策、科研经费和学生签证问题，而非任何医学图像技术或应用。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Trump administration, scientific career, funding cuts, National Science Foundation, Graduate Research Fellowship Program, foreign students, scientific workforce, visas</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef8451" target="_blank">7. Astrocytes engineered to fight Alzheimer’s plaques</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jake Boles, David Gate</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过基因工程改造星形胶质细胞来减少阿尔茨海默病的淀粉样斑块这一核心病理特征。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>基因修饰的星形胶质细胞可减轻阿尔茨海默病的一项核心病理特征。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Genetically altered astrocytes reduce a cardinal pathological feature of Alzheimer&#x27;s disease.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确表明这是一篇关于阿尔茨海默病治疗方法的生物医学研究，涉及基因工程改造的星形胶质细胞来减少淀粉样斑块。全文未提及任何医学影像分析、医学成像或深度学习在医学影像中的应用。研究内容属于神经科学和基因治疗领域，与医学影像分析完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Astrocytes, Alzheimer&#x27;s disease, genetically altered, plaques, pathological feature, engineered, reduce</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aed6880" target="_blank">8. A unified platform for nucleoside analog synthesis</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Matthew J. Anketell, Ethan Fung, Wenbin Liu, Mahesh H. Shinde, Ga Young Lee, Kurtis W. C. Ng, Steven M. Silverman, Louis‐Charles Campeau, Ralph Pantophlet, Robert Britton</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了一种基于光氧化还原偶联策略的灵活高效核苷类似物合成平台，成功构建了多样化化合物库并筛选出具有抗HIV-1活性的先导化合物。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>核苷类似物是抗病毒与抗癌治疗的关键药物。尽管经过数十年聚焦于药物化学的研究，其相关化学空间仍未被充分探索，这主要归因于其冗长、以单一分子为导向的合成路径缺乏构建核苷类似物库所需的灵活性。本文报道了一种灵活、稳健且高效的平台，利用光氧化还原偶联策略实现核苷类似物的高通量合成。该方法可同时制备C-连接和N-连接的核苷类似物，并统一了多种不同类别核苷类似物（包括4&#x27;-硫代、4&#x27;-亚氨基及ProTides前药）的合成路径，所有合成均从一个简单、可规模化的中间体出发。借助此平台，我们成功构建了一个多样化的核苷类似物库，并鉴定出多个具有抗HIV-1活性的先导化合物。我们预期这一合成核苷类似物的新方法将激励并支持该领域的药物研发工作。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Nucleoside analogs (NAs) are essential as antiviral and anticancer therapies. Despite decades of focused medicinal chemistry efforts, their related chemical space remains underexplored, mainly due to their lengthy, single-molecule-oriented syntheses that lack the flexibility required to generate NA libraries. Here we report a flexible, robust, and efficient platform for the high-throughput synthesis of NAs using a photoredox coupling strategy. This approach produces both C- and N-linked NAs, and unifies the synthesis of several disparate NA classes, including 4&#x27;-thio, 4&#x27;-imino, and ProTides, all from a simple, scalable intermediate. Using this platform, we demonstrate the production of a diverse NA library and identify several hit compounds with anti-HIV-1 activity. We expect this new approach to NAs will inspire and support drug discovery efforts in this area.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为《A unified platform for nucleoside analog synthesis》，摘要内容完全围绕核苷类似物的化学合成平台开发，包括光氧化还原偶联策略、高通量合成、抗HIV-1活性化合物筛选等。全文未提及任何医学影像分析、医学成像或深度学习在医学成像中的应用，与所有评分关键词无任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>nucleoside analogs, photoredox coupling, high-throughput synthesis, antiviral therapies, anti-HIV-1 activity, drug discovery, chemical synthesis platform, compound library</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef6678" target="_blank">9. Global majority countries must embed critical minerals into AI governance</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Chinasa T. Okolo</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了全球多数国家在AI治理中如何整合关键矿物资源的问题，并提出了相应的治理框架建议。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提及医学图像分析相关内容。论文主题聚焦于AI治理中的关键矿物问题，特别是全球多数国家如何将关键矿物纳入AI治理框架，这与医学图像分析、医学成像或深度学习医学成像完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>AI governance, critical minerals, global majority countries, artificial intelligence, resource governance, policy framework, sustainable development</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef4930" target="_blank">10. Soaking up destructive signals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Iana Fedorova, Joseph Bondy-Denomy</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过结构生物学方法识别了能够阻断细菌免疫系统的噬菌体蛋白。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>一种基于结构的方法识别出能够阻断细菌免疫系统的噬菌体蛋白。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>A structure-based approach identifies bacteriophage proteins that block bacterial immunity.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Soaking up destructive signals&#x27;，摘要描述了一种基于结构的方法来识别阻断细菌免疫的噬菌体蛋白。研究内容属于微生物学、分子生物学和结构生物学领域，涉及噬菌体与细菌的相互作用机制。所有评分关键词（medical image analysis, medical imaging, deep learning medical imaging）均与医学影像分析相关，而论文完全不涉及医学影像、图像分析或深度学习在医学影像中的应用，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>bacteriophage, bacterial immunity, structure-based approach, protein identification, phage proteins, immune blockade, destructive signals</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adx8542" target="_blank">11. Nanodomain-localized formin gates symbiotic microbial entry in legume and solanaceous plants</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Lijin Qiao, Heng Sun, Jiping Tang, Casandra Hernández-Reyes, Beatrice Lace, Julian Knerr, Eija Schulze, Tak Lee, J. Keller, Cyril Libourel, Jilin Yao, Feiyang Zhao, Ying Ni, Yutian Jia, Xia Xu, Guanghui Yang, L. Zhang, Yanli Zhang, Robert Grosse, Changfu Tian</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了formin蛋白SYFO2在豆科和茄科植物根部共生微生物感染中的作用，并通过在番茄中引入NIN基因成功激活了共生途径。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>植物根系被共生体定植需要显著的形态动态重组。例如，在豆科植物根瘤共生过程中形成的、由肌动蛋白支架构成的微区结构——侵染袋。我们证明，肌动蛋白结合蛋白形成素SYFO2在蒺藜苜蓿的根瘤菌侵染过程中不可或缺，它驱动相分离且共生特异性的纳米结构域中的肌动蛋白聚合。SYFO2还调控非结瘤分支植物在菌根共生中形成的具共生活性的丛枝结构，表明该基因在豆科植物中被额外招募以促进根瘤菌侵染。作为实现非豆科植物固氮目标的一部分，我们通过将根瘤共生的主调控因子NODULE INCEPTION（NIN）稳定导入天然非宿主植物番茄中，激活了内源SYFO2基因。这证明了将丛枝菌根相关基因招募至工程化的结瘤特异性通路中的可能性。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Colonization of plant roots by symbionts requires substantial morphodynamic reorganization. Examples are actin-scaffolded microcompartments called infection pockets formed during root nodule symbiosis (RNS) by legumes. We demonstrate that the actin-binding formin SYFO2 is indispensable for rhizobial infection in &lt;i&gt;Medicago truncatula&lt;/i&gt;, where it drives actin polymerization in phase-separated and symbiosis-specific nanodomains. SYFO2 also regulates symbiotically active arbuscules formed during mycorrhizal symbiosis in plants outside the nodulating clade, indicating that it was additionally recruited to promote rhizobial infections in legumes. As part of our aim to enable nitrogen fixation in nonlegumes, we activated endogenous &lt;i&gt;SYFO2&lt;/i&gt; by stably introducing the RNS master regulator NODULE INCEPTION (NIN) into the natural nonhost tomato. This demonstrates the possibility of recruiting arbuscular mycorrhizae-related genes into an engineered nodulation-specific pathway.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究植物根部的共生微生物感染机制，特别是豆科和茄科植物中formin蛋白在纳米域中的作用，以及通过基因工程在非豆科植物中激活共生途径的可能性。所有关键词均涉及医学影像分析，而论文主题是植物分子生物学和共生机制，两者领域完全不同，因此相关度为0。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>formin SYFO2, root nodule symbiosis, actin polymerization, nanodomains, arbuscular mycorrhizae, nitrogen fixation, gene engineering, Medicago truncatula</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg8839" target="_blank">12. Investing in hope</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jennie Erin Smith</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 论文研究了富裕家庭资助的progranulin蛋白研究，探讨了其作为痴呆症新疗法的潜力。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>一个富裕家族与自身疾病抗争的故事，推动了对一种研究甚少的大脑蛋白质——颗粒蛋白前体（progranulin）的研究。这项研究能否催生新的痴呆症疗法？</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>A wealthy family fighting its own disease boosted research on a little-studied brain protein, progranulin. Can it spur new dementia treatments?</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Investing in hope&#x27;，摘要描述了一个富裕家庭资助研究一种鲜为人知的脑蛋白progranulin，以探索其作为痴呆症新疗法的潜力。论文内容聚焦于神经科学、遗传学、疾病研究和治疗开发，未涉及医学图像分析、医学成像或深度学习在医学成像中的应用。所有关键词与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>progranulin, dementia treatments, brain protein, research funding, family disease, neurodegenerative disease, therapeutic development</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aec9417" target="_blank">13. Ferroelectricity in atomic-scale titanium dioxide dielectric films</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Koushik Das, Kate Reidy, Sajid Husain, Jong Ho Park, Harishankar Jayakumar, Vivek Thampy, Christoph Klewe, Ramamoorthy Ramesh, Andrew M. Minor, Archana Raja, Sayeef Salahuddin</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现通过将二氧化钛薄膜厚度减至3纳米以下可稳定铁电相，并在低至1纳米厚度时仍保持铁电性，实现了介电到铁电的相变，展示了在硅和非晶表面集成的可行性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>铁电性在原子尺度厚度的实现将对下一代电子器件产生重要应用。本文报道，通过将二氧化钛（TiO&lt;sub&gt;2&lt;/sub&gt;）薄膜厚度减至3纳米以下，可在这种广泛应用于半导体技术的常见介电材料中稳定存在铁电相。重要的是，该铁电性可保持至约1纳米厚度，相当于其晶胞尺寸的两倍。这种依赖于厚度的介电-铁电相变表明，原本具有中心对称性、非铁性的萤石结构氧化物能够发生结构反演对称性破缺，并表现出电压可切换的极化特性。基于原子层沉积（Atomic-layer deposition, ALD）的低温（低于400摄氏度）合成方法，以及该铁电性在硅与非晶表面（如非晶二氧化硅、非晶碳膜）上的稳定性，证明了其与多种材料集成的可行性。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Ferroelectricity at atomic-scale thickness would have important applications in next-generation electronics. Here, we report that a ferroelectric phase can be stabilized in titanium dioxide (TiO&lt;sub&gt;2&lt;/sub&gt;) films, a commonly known dielectric widely used in semiconductor technologies, by reducing thickness below 3-nm. Importantly, this ferroelectricity persists down to one nanometer thickness, approximately twice the unit-cell dimension. This thickness-dependent dielectric-to-ferroelectric phase transition demonstrates that an otherwise centrosymmetric, non-ferroic fluorite-structure oxide can undergo structural inversion-symmetry breaking and exhibit voltage-switchable polarization. Atomic-layer deposition (ALD) based low-temperature (below 400 Celsius) synthesis and the stability of this ferroelectricity on both Si and amorphous surfaces (such as amorphous SiO&lt;sub&gt;2&lt;/sub&gt;, amorphous carbon films) demonstrate the feasibility of integration with a large variety of materials.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究原子尺度二氧化钛薄膜的铁电性，属于材料科学、凝聚态物理和半导体技术领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及铁电相变、原子层沉积、薄膜厚度效应等，未提及任何医学或图像分析相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ferroelectricity, titanium dioxide, atomic-scale thickness, dielectric-to-ferroelectric phase transition, atomic-layer deposition, thin films, structural symmetry breaking, semiconductor integration</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aea3321" target="_blank">14. A molecule with half-Möbius topology</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Igor Rončević, Fabian Paschke, Yueze Gao, Leonard-Alexander Lieske, Lene A. Gödde, Stefano Barison, Samuele Piccinelli, Alberto Baiardi, Ivano Tavernelli, Jascha Repp, Florian Albrecht, Harry L. Anderson, Leo Gross</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文通过原子操纵合成了具有半莫比乌斯拓扑结构的C13Cl2分子立体异构体，利用显微镜技术解析了其几何结构和轨道密度，并实现了该拓扑结构与平面三重态之间的可逆切换。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>在氯化钠表面通过原子操纵技术，合成了围绕碳原子环呈现螺旋轨道特征的C&lt;sub&gt;13&lt;/sub&gt;Cl&lt;sub&gt;2&lt;/sub&gt;立体异构体。我们通过原子力显微镜（AFM）解析了单重态的对映体几何构型，并利用扫描隧道显微镜（STM）绘制了其螺旋轨道密度分布。这些非平面单重态的π轨道基组在单次环周中扭转90°，符合半莫比乌斯（half-Möbius）拓扑结构。在此拓扑中，π轨道基组在两次环周后改变符号，并在四次环周后呈现周期性。满足此边界条件的环状准粒子可被诠释为携带π/2的贝里相位（Berry phase）。我们实现了拓扑结构的可逆切换：在具有相反螺旋方向的两种半莫比乌斯拓扑单重态之间，以及与平面状、拓扑平凡的三重态之间进行转换。多参考态计算（包括在量子硬件上执行的大规模基于样本的从头算）表明，这种转换与螺旋赝扬-泰勒效应（pseudo Jahn-Teller effect）相关。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Stereoisomers of C&lt;sub&gt;13&lt;/sub&gt;Cl&lt;sub&gt;2&lt;/sub&gt; exhibiting helical orbitals around a ring of carbon atoms were synthesized by atom manipulation on NaCl surfaces. We resolved the enantiomeric geometries of the singlet states by atomic force microscopy and mapped their helical orbital densities by scanning tunnelling microscopy. A π-orbital basis of the helical, non-planar singlets that twists by 90° in one circulation is consistent with a half-Möbius topology. In such a topology, the π-orbital basis changes sign with respect to two circumnavigations and is periodic with respect to four circumnavigations. A quasiparticle on a ring with this boundary condition could be interpreted as carrying a Berry phase of π/2. We demonstrate reversible switching of the topology, between the two singlets of oppositely threaded half-Möbius topology, and the planar, topologically trivial, triplet state. Multireference calculations, including large-scale sample-based ab initio calculations executed on quantum hardware, reveal that the switching is associated with a helical pseudo Jahn-Teller effect.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是化学合成和分子拓扑结构，通过原子力显微镜和扫描隧道显微镜观察C13Cl2分子的立体异构体，探讨其半莫比乌斯拓扑结构和可逆切换机制。所有关键词均涉及医学图像分析，但论文内容完全属于化学物理和分子科学领域，与医学图像分析、医学成像或深度学习医学成像没有任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>half-Möbius topology, stereoisomers, atomic force microscopy, scanning tunnelling microscopy, helical orbitals, C13Cl2, topology switching, Berry phase</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg8838" target="_blank">15. In Other Journals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Sarah H. Ross, Cheri Sirois, Bianca Lopez, Jelena Stajic, Di Maria Jiang, Michael A. Funk, Sumin Jin</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 这是一篇期刊编辑对当前科学文献的选编文章，没有具体的研究问题和结果。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>编者精选自当前科学文献。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Editors&#x27; selections from the current scientific literature.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;In Other Journals&#x27;和摘要&#x27;Editors&#x27; selections from the current scientific literature&#x27;表明这是一篇期刊编辑的文献选编或评论文章，而非原创研究论文。内容涉及对当前科学文献的编辑选择，没有具体研究内容、方法或结果。因此与所有给定的医学图像分析关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>journal, editors, selections, scientific literature, current literature</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adw7707" target="_blank">16. Task learning increases information redundancy of neural responses in macaque visual cortex</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> S. Liu, Anton Pletenev, Ralf M. Haefner, A. C. Snyder</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了猴子学习视觉辨别任务时大脑如何优化感觉信息，发现任务学习增加了V4区神经响应的冗余性，支持了基于贝叶斯推断的生成性推理过程假说。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>大脑如何优化感觉信息以应对新任务中的决策？一种假说认为，学习会减少神经表征中的冗余以提高效率；而另一种基于贝叶斯推断（Bayesian inference）的假说则预测，学习会通过将信息分布到多个神经元中来增加冗余。我们通过追踪猕猴皮层V4区（cortical area V4）的群体反应来检验这些假说，实验过程中猕猴学习视觉辨别任务。结果有力地支持了贝叶斯预测：任务学习在数周的训练期间以及单个试次内均增加了神经反应的冗余。这种冗余并未减少信息量，反而提高了个体神经元所携带的信息。这些发现表明，大脑的感觉处理反映的是一个生成式而非判别式的推断过程。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>How does the brain optimize sensory information for decision-making in new tasks? One hypothesis suggests that learning reduces redundancy in neural representations to improve efficiency, whereas another, based on Bayesian inference, predicts that learning increases redundancy by distributing information across neurons. We tested these hypotheses by tracking population responses in macaque cortical area V4 as monkeys learned visual discrimination tasks. We found strong support for the Bayesian predictions: Task learning increased redundancy in neural responses over weeks of training and within single trials. This redundancy did not reduce information but instead increased the information carried by individual neurons. These insights suggest that sensory processing in the brain reflects a generative rather than discriminative inference process.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是猴子视觉皮层（V4区）在视觉辨别任务学习过程中神经响应的冗余性变化，属于神经科学和认知科学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文未涉及任何医学图像处理、医学影像技术或深度学习在医学影像中的应用。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>neural responses, visual cortex, task learning, information redundancy, Bayesian inference, macaque, V4, sensory processing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adu9394" target="_blank">17. Single intramuscular injection of self-amplifying RNA of Nppa to treat myocardial infarction</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Kaiyue Zhang, Hongyan Tao, Jie Wu, Zhang Yue, Shiqi Hu, Yiping Wu, Na Yan, Yilan Hu, Shuo Liu, Na Yan, Torsten Vahl, Lauren S. Ranard, Xiao Cheng, А. Романов, Jiaming Liu, Shuai Zhang, Yuan Li, Chao Lu, Ming Shen, Andrew Lewis</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了一种基于自扩增RNA的基因疗法，通过单次肌肉注射编码Nppa的saRNA脂质纳米颗粒，在小鼠和猪心肌梗死模型中实现了持续的心脏保护作用，促进心肌细胞再生并抑制纤维化。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>自扩增RNA（saRNA）可实现单次给药后的持续蛋白表达。本研究开发了一种编码A型利钠肽（&lt;i&gt;Nppa&lt;/i&gt;）的肌肉注射型saRNA-脂质纳米颗粒（saNppa-LNP）疗法，用于心脏保护。单次注射可诱导前心房利钠肽（pro-ANP）持续分泌4周；pro-ANP随后被心脏蛋白酶corin切割为活性ANP，在小鼠和猪的心肌梗死模型中产生显著的心脏保护作用。在同等剂量下，saNppa比传统mRNA具有更强的疗效。单核转录组学分析确定利钠肽受体1阳性（&lt;i&gt;Npr1&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;）内皮细胞和心外膜细胞为主要效应细胞，saNppa-LNPs重塑了这些细胞的旁分泌谱，从而促进心肌细胞再生并抑制纤维化。长期生物安全性评估显示无全身毒性。综上，这些结果表明单次给药的saNppa-LNP疗法能提供持久的心脏保护，为基于saRNA-LNP的心脏治疗策略展示了更广阔的应用潜力。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Self-amplifying RNA (saRNA) enables sustained protein expression from a single administration. In this study, we developed an intramuscular saRNA-lipid nanoparticle (saNppa-LNP) therapy encoding natriuretic peptide type A (&lt;i&gt;Nppa&lt;/i&gt;) for cardioprotection. A single injection induced sustained pro-atrial natriuretic peptide (pro-ANP) secretion for 4 weeks; pro-ANP was subsequently cleaved by the cardiac protease corin into active ANP, producing robust cardioprotection in mouse and swine myocardial infarction models. At equivalent doses, saNppa achieved greater efficacy than conventional mRNA. Single-nucleus transcriptomics identified natriuretic peptide receptor 1-positive (&lt;i&gt;Npr1&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;) endothelial and epicardial cells as primary effectors, with saNppa-LNPs reshaping their paracrine profile to promote cardiomyocyte regeneration and suppress fibrosis. Longitudinal biosafety assessments revealed no systemic toxicity. Together, these results demonstrate that one-shot saNppa-LNP therapy offers durable cardioprotection, supporting the broader potential of saRNA-LNP-based approaches for cardiac therapy.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是使用自扩增RNA（saRNA）治疗心肌梗死的基因疗法，涉及分子生物学、心脏病学和药物递送系统。论文内容完全不涉及医学图像分析、医学成像或深度学习医学成像，没有提到任何图像数据、成像技术或图像分析方法。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>self-amplifying RNA, myocardial infarction, cardioprotection, lipid nanoparticle, natriuretic peptide, gene therapy, single injection, cardiac regeneration</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aed5212" target="_blank">18. Thirty-six solutions to stabilize Earth’s climate</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Haewon McJeon, Yang Ou</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究提出了36种稳定地球气候的解决方案，并开发了一种更新的可视化评估工具来弥合气候研究与政治行动之间的差距。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>更新后的可视化评估工具能够弥合气候研究与政治行动之间的鸿沟。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>An updated visual assessment tool can bridge the gap between climate research and political action.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确讨论气候稳定解决方案和可视化评估工具，属于环境科学/气候研究领域，与医学图像分析、医学成像、深度学习医学成像等医学领域关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>climate stabilization, Earth&#x27;s climate, visual assessment tool, climate research, political action, solutions, updated tool, bridge gap</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adz1430" target="_blank">19. Escaping bottlenecks: The demographic path to genetic recovery in koalas ( Phascolarctos cinereus )</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Collin W. Ahrens, Adam D. Miller, Luke W. Silver, Elspeth A. McLennan, Carolyn J. Hogg, Andrew R. Weeks</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过分析418只考拉的全基因组数据，发现快速人口扩张可以帮助瓶颈种群恢复遗传多样性并重建进化潜力。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>种群瓶颈会削弱遗传多样性并加剧近亲繁殖，从而导致进化死胡同。尽管理论预测了可能的逃脱途径，但对该过程的直接观测仍十分罕见。通过对418只考拉的全基因组数据进行分析，我们发现遗传多样性较高的种群携带的突变负荷最大，且有效种群大小（&lt;i&gt;N&lt;/i&gt;&lt;sub&gt;e&lt;/sub&gt;）持续下降；而历史上经历过瓶颈但正在恢复的种群则表现出更低的突变负荷，&lt;i&gt;N&lt;/i&gt;&lt;sub&gt;e&lt;/sub&gt;不断增长，并再生出新的稀有变异。我们得出结论：这种模式源于快速的人口扩张，该过程通过基因重组重塑了遗传变异，并且相较于传统多样性指标，其对&lt;i&gt;N&lt;/i&gt;&lt;sub&gt;e&lt;/sub&gt;的影响更为迅速。我们的研究结果表明，经历瓶颈的种群可通过快速的人口增长实现恢复，这能为受威胁种群重建进化潜力。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Population bottlenecks can lead to evolutionary dead ends by eroding genetic diversity and intensifying inbreeding. Although theory predicts possible escape routes, direct observations of this process are rare. Using whole-genome data from 418 koalas, we found that populations with higher genetic diversity harbored the greatest mutational loads and had declining effective population sizes (&lt;i&gt;N&lt;/i&gt;&lt;sub&gt;e&lt;/sub&gt;), whereas historically bottlenecked but recovering populations displayed reduced mutational load, exhibited increasing &lt;i&gt;N&lt;/i&gt;&lt;sub&gt;e&lt;/sub&gt;, and regenerated new, rare variants. We concluded that this pattern was due to rapid demographic expansion, which reshuffled genetic variation through recombination and affected &lt;i&gt;N&lt;/i&gt;&lt;sub&gt;e&lt;/sub&gt; more quickly than it did conventional diversity metrics. Our findings suggest that recovery of bottlenecked populations can occur through rapid demographic growth and that this can reestablish evolutionary potential in threatened populations.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是考拉种群遗传学，使用全基因组数据分析种群瓶颈、遗传多样性和突变负荷，与医学影像分析、医学成像或深度学习医学影像完全无关。论文内容属于保护生物学和进化遗传学领域，不涉及任何医学图像处理或分析技术。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>population bottlenecks, genetic diversity, mutational load, effective population size, koalas, demographic expansion, evolutionary potential, whole-genome data</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adr2118" target="_blank">20. Democratizing climate change mitigation pathways using modernized stabilization wedges</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Nathan Johnson, Iain Staffell</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过现代化稳定楔形框架，识别了36种减排策略，使公众能够构建个性化脱碳路径，以应对气候变化，并发现综合评估模型更偏向技术解决方案而非行为或基于自然的方案。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>缓解气候变化需要广泛的社会认同。综合评估模型（IAMs）能生成成本最优路径，但这些模型复杂且难以根据个人偏好进行定制。二十年前，稳定楔形框架提出了一种更简化的脱碳讨论方式。本文对该框架进行了现代化更新，识别出36种策略，每种策略均具备在205年前削减全球4%排放量的潜力，并量化了其所需的实施规模。公众可通过选择这些策略的组合构建个性化脱碳路径——超过6万亿种组合能够将全球变暖控制在1.5°C以内。我们评估了综合评估模型偏好的策略类型，发现其优先考虑技术方案而非行为改变与基于自然的解决方案，且模型间共识有限。该框架通过提供反映成本优化之外多元目标的知情选择，赋能公众构建并辩论脱碳路径。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Mitigating climate change requires broad societal buy-in. Integrated assessment models (IAMs) produce cost-optimal pathways, but these are complex and not easily customized to reflect individuals&#x27; preferences. Twenty years ago, the stabilization wedge framework introduced a simpler way to discuss decarbonization. Here, we modernized this framework, identifying 36 strategies, each with the potential to mitigate 4% of global emissions by 2050, and quantified their required scale of deployment. People can build personalized decarbonization pathways by choosing a portfolio of these strategies, with more than 6 trillion combinations that are able to limit global warming to 1.5°C. We assessed which strategies IAMs favor and found that they prioritize technological over behavioral and nature-based solutions, with limited agreement. This framework empowers a general audience to construct and debate pathways, by making informed choices that reflect objectives beyond cost-optimization.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文主题为气候变化减缓路径的民主化，使用现代化的稳定楔形框架，涉及综合评估模型、减排策略组合和公众参与，完全不涉及医学图像分析、医学成像或深度学习医学成像等医疗领域内容，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>climate change mitigation, stabilization wedge framework, decarbonization pathways, integrated assessment models, emissions reduction strategies, personalized portfolios, 1.5°C warming limit, societal buy-in</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9254" target="_blank">21. U.S. research agency moves to restrict foreign scientists</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Robert F. Service</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 美国国家技术标准研究所（NIST）提出限制外国科学家实验室访问的政策，可能影响国际科研合作。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>美国国家标准与技术研究院拟议新规将限制实验室访问权限至数年。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Proposed rule at National Institute of Standards and Technology would limit lab access to a few years.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要讨论的是美国国家技术标准研究所（NIST）限制外国科学家实验室访问的政策提案，属于科研政策与管理领域，与医学图像分析、医学成像或深度学习医学成像等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>U.S. research agency, National Institute of Standards and Technology, foreign scientists, lab access, restrict, proposed rule, research policy</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef5270" target="_blank">22. Protein therapy with self-amplifying RNA</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Lien Ervijn, Niek N. Sanders</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了使用自扩增RNA进行蛋白质疗法能否改善心肌梗死后的心脏功能，结果显示自扩增RNA能有效改善小鼠和猪的心肌梗死后心脏功能。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>自扩增RNA可改善小鼠和猪心肌梗死后的心脏功能。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Self-amplifying RNA improves heart function after myocardial infarction in mice and pigs.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是使用自扩增RNA进行蛋白质疗法治疗心肌梗死，属于基因治疗和心血管疾病领域。标题和摘要中完全没有提及医学图像分析、医学成像或深度学习医学成像相关内容。论文的核心是RNA疗法和心脏功能恢复，与医学图像分析领域完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>protein therapy, self-amplifying RNA, myocardial infarction, heart function, mice, pigs, RNA therapy, cardiac repair</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9256" target="_blank">23. Chinese institution rejects pricey open-access fees</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jeffrey Brainard</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 中国机构拒绝支付高昂的开放获取费用，以推动本国期刊的发展。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>此举旨在推动本国期刊发展。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Move comes amid effort to grow the country&#x27;s own journals.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要讨论的是中国机构拒绝支付高昂的开放获取费用，旨在发展本国期刊，这与医学图像分析、医学成像或深度学习医学成像等主题完全无关。论文内容聚焦于学术出版政策、费用结构和国家期刊发展战略，而非任何医学图像技术或应用。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Chinese institution, open-access fees, journals, academic publishing, country&#x27;s own journals, pricey fees, rejects</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg8184" target="_blank">24. Planting a seed</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Gilberto López</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 由于论文摘要缺失，无法确定研究问题和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;Planting a seed&#x27;和摘要内容完全缺失，无法获取任何关于医学图像分析、医学成像或深度学习医学成像的信息。没有证据表明论文涉及这些领域，因此所有关键词相关度均为0分。</p>
+</div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9253" target="_blank">25. AI and quantum now drive NSF grantmaking, officials say</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jeffrey Mervis</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文报道了美国国家科学基金会（NSF）的资助政策正转向人工智能和量子计算领域，并承认白宫在近期争议性决策中的影响。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>领导人承认白宫在近期争议性举措中的作用。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Leaders acknowledge White House role in recent controversial moves.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要讨论的是美国国家科学基金会（NSF）的资助政策变化，特别是人工智能和量子计算领域，以及白宫在其中的作用。内容完全不涉及医学图像分析、医学成像或深度学习医学成像等主题，因此所有关键词的相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>NSF, grantmaking, AI, quantum, White House, controversial moves, officials</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9255" target="_blank">26. Why three scientists said no to Epstein</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jeffrey Mervis</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 这篇论文探讨了三位科学家基于网络搜索、母亲疑虑和性别歧视迹象等警告信号，拒绝与Epstein合作的原因和决策过程。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>预警信号包括网络搜索记录、母亲的疑虑以及隐约显露的“性别歧视态度”。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The warning signs included a web search, a mother&#x27;s doubts, and inklings of a &quot;sexist attitude&quot;.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要讨论的是三位科学家拒绝与Epstein合作的故事，涉及道德判断、警告信号和个人决策，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容属于科学伦理和社会行为领域，而非医学图像技术研究。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>scientists, Epstein, warning signs, web search, mother&#x27;s doubts, sexist attitude, refusal, ethical decision</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.ady6774" target="_blank">27. Multiple chromosomal inversions modulate continuous local adaptation along a steep thermal cline</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Maria Akopyan, Arne Jacobs, Jessica A. Rick, Aryn P. Wilder, Zofia Baumann, David O. Conover, Hannes Baumann, Nina Overgaard Therkildsen</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过多学科方法揭示了染色体倒位如何使海洋鱼类在基因流动下沿陡峭环境梯度实现连续适应性分化，并发现三个倒位与多个适应性性状相关且表现出最强的基因组选择信号。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>染色体倒位常被认为与不同生态型之间的分化有关，但其在维持复杂性状连续适应性分化中的作用仍不甚明确。通过数量与群体遗传学、转录组学及人工选择实验，我们证明了在一种广泛分布的海鱼中，尽管存在广泛的基因流，倒位如何使其能够沿陡峭环境梯度实现渐变性适应分化。我们发现三个倒位与多种适应性性状相关，并在基因组中呈现出最强的分化选择信号，表明其具有关键的适应作用。这些倒位在不同纬度上表现出对比鲜明的选择特征，意味着它们调控同一复杂性状的不同方面，并以模块化方式促进种群在基因流存在下适应不同的环境压力。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Chromosomal inversions are often implicated in divergence between distinct ecotypes, but their role in maintaining continuous adaptive divergence in complex traits remains poorly understood. Using quantitative and population genetics, transcriptomics, and artificial selection experiments, we demonstrate how inversions enable clinal adaptive divergence along a steep environmental gradient despite extensive gene flow in a widely distributed marine fish. We show that three inversions are associated with multiple adaptive traits and harbor the strongest signatures of divergent selection in the genome, implying a crucial adaptive role. These inversions exhibit contrasting selection signatures across latitudes, suggesting that they control distinct aspects of the same complex traits and facilitate adaptation in a modular way to different environmental pressures despite gene flow.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究染色体倒位在海洋鱼类连续适应性分化中的作用，涉及定量遗传学、转录组学和人工选择实验，与医学影像分析、医学成像或深度学习医学影像完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>chromosomal inversions, adaptive divergence, thermal cline, gene flow, marine fish, divergent selection, complex traits, environmental gradient</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9251" target="_blank">28. ‘Truly spectacular’ drug for sleeping sickness simplifies treatment, raising hopes for eradication</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Gretchen Vogel</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究报道了一种针对非洲昏睡病的新型单剂量药物获得欧洲监管机构批准，有望简化治疗并推动该疾病的根除。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>欧洲监管机构批准新型单剂量化合物，有望助力非洲消除一项历史性负担。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>European regulators greenlight new one-dose compound that could help Africa get rid of an ancient burden.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确讨论的是非洲昏睡病的药物治疗新进展（一种单剂量化合物获得欧洲监管机构批准），内容涉及传染病治疗、药物监管和疾病根除，完全不涉及医学影像分析、医学成像或深度学习医学成像等医学影像技术领域。所有关键词与论文主题无任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>sleeping sickness, drug treatment, one-dose compound, European regulators, Africa, eradication, simplifies treatment</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef4462" target="_blank">29. Ease the struggle of young researchers</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Vitaliy Atamaniuk</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 论文内容不可用，无法总结研究问题和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要内容完全缺失，无法判断论文是否与医学图像分析、医学成像或深度学习医学成像相关。评分基于可用信息：标题&#x27;Ease the struggle of young researchers&#x27;暗示主题可能涉及青年研究者的挑战，而非医学图像分析；摘要为空，无内容支持相关性。因此，所有关键词相关度评分为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>young researchers, struggle, academic challenges, research support, early-career scientists</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg9252" target="_blank">30. Stem cell therapies ‘come of age’ with two conditional approvals in Japan</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Dennis Normile</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文报道了日本有条件批准两种诱导多能干细胞疗法，用于治疗心脏和脑部疾病，标志着干细胞疗法进入新阶段。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>诱导多能干细胞有望助力治疗心脏与脑部疾病。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Induced pluripotent stem cells could help treat diseased hearts and brains.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提及医学图像分析、医学成像或深度学习医学成像相关内容。论文讨论的是日本批准诱导多能干细胞疗法治疗心脏和脑部疾病，属于干细胞治疗和再生医学领域，与医学图像分析无直接关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>stem cell therapies, induced pluripotent stem cells, conditional approvals, Japan, diseased hearts, brains, regenerative medicine</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.ads3972" target="_blank">31. Targeting amyloid-β pathology by chimeric antigen receptor astrocyte (CAR-A) therapy</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yun Chen, Yizhou Liu, Khai M. Nguyen, Junjie Wu, Sihui Song, Kent Lin, Patrick Fernandes Rodrigues, Siling Du, Charles Zhou, Kyle Xiong, Megan E. Bosch, Peter Bor‐Chian Lin, Darya Khantakova, Shitong Wu, May Wu, Carla M. Yuede, David M. Holtzman, Marco Colonna</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了针对阿尔茨海默病淀粉样蛋白病理的CAR-A星形胶质细胞疗法，并在体外和体内验证了其减少淀粉样蛋白沉积和相关病理的效果。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>阿尔茨海默病（Alzheimer&#x27;s disease, AD）是痴呆症的主要病因，其特征为淀粉样蛋白渐进性积累，随后出现tau蛋白介导的神经退行性病变。尽管抗淀粉样蛋白免疫疗法已取得进展，但仍存在重要局限，这凸显了对新治疗策略的需求。本文介绍了在星形胶质细胞中表达的抗淀粉样蛋白嵌合抗原受体（CAR-A），并在体外验证了其功能。我们证明，两种CAR-A设计在斑块形成后能够减少淀粉样蛋白及其相关病理，并在体内阻止早期斑块沉积。单核RNA测序显示，CAR-A治疗诱导了胶质细胞对淀粉样蛋白病理的独特反应，涉及星形胶质细胞和小胶质细胞的协同活动。每种构建体还分别在星形胶质细胞或小胶质细胞中引发了独特的、受体特异性效应。综上，这些发现支持了CAR-A作为AD疾病修饰策略的治疗潜力。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Alzheimer&#x27;s disease (AD) is the leading cause of dementia and is characterized by progressive amyloid accumulation followed by tau-mediated neurodegeneration. Despite advances in anti-amyloid immunotherapies, important limitations remain, highlighting the need for new therapeutic strategies. Here, we introduce anti-amyloid chimeric antigen receptors expressed in astrocytes (CAR-A) and validate their function in vitro. We show that two CAR-A designs reduce amyloid and associated pathology after plaque formation and prevent early plaque deposition in vivo. Single-nucleus RNA sequencing shows that CAR-A treatment induces a distinct glial response to amyloid pathology involving coordinated activity of astrocytes and microglia. Each construct additionally elicits distinctive, receptor-specific effects in astrocytes or microglia. Together, these findings support the therapeutic potential of CAR-A as a disease-modifying strategy for AD.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究阿尔茨海默病的CAR-A细胞疗法，涉及神经科学、免疫治疗和分子生物学，完全不涉及医学图像分析、医学成像或深度学习医学成像。论文未使用任何医学图像数据或图像分析方法，所有关键词均与论文内容无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Alzheimer&#x27;s disease, amyloid-β, chimeric antigen receptor, astrocytes, CAR-A therapy, glial response, disease-modifying strategy, single-nucleus RNA sequencing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef9208" target="_blank">32. Science stories for young readers Alberto Salas Plays Paka Paka con la Papa , Sara Andrea Fajardo and Juana Martinez-Neal (illustrator) , Roaring Brook Press, 2025, 40 pp.; for ages 4 to 8. Marjory’s River of Grass: Marjory Stoneman Douglas, Fierce Protector of the Everglades , Josie James , Christy Ottaviano Books, 2025, 40 pp.; for ages 4 to 8. The Little Lobster: A Lobster Tale , W. Thomas Hotz and Estelle Corke (illustrator) , Star Bright Books, 2025, 32 pp.; for ages 4 to 8. Firefly Song: Lynn Frierson Faust and the Great Smoky Mountain Discovery , Colleen Paeff and Ji-Hyuk Kim (illustrator) , Margaret K. McElderry Books, 2025, 40 pp.; for ages 4 to 8. Measuring Up: How Oliver Smoot Became a Standard Unit of Measurement , Jenny Lacika and Anna Bron (illustrator) , MIT Kids Press, 2025, 32 pp.; for ages 5 to 8. Spark: Jim West’s Electrifying Adventures in Creating the Microphone , Ainissa Ramirez and Setor Fiadzigbey (illustrator) , MIT Kids Press, 2025, 40 pp.; for ages 5 to 9. The Green Maowusu , Xuefei Duan , Clavis Publishing, 2025, 40 pp.; for ages 5+. The Five Sides of Marjorie Rice: How to Discover a Shape , Amy Alznauer and Anna Bron (illustrator), Candlewick , 2025, 48 pp.; for ages 7 to 9. Jellyfish Scientist: Maude Delap and Her Mesmerizing Medusas , Michelle Cusolito and Ellen Rooney (illustrator) , Charlesbridge, 2025, 32 pp.; for ages 7 to 10. The Spider Lady: Nan Songer and Her Arachnid World War II Army , Penny Parker Klostermann and Anne Lambelet (illustrator) , Calkins Creek, 2025, 48 pp.; for ages 7 to 10. Smash, Crash, Topple, Roll! The Inventive Rube Goldberg—A Life in Comics, Contraptions, and Six Simple Machines , Catherine Thimmesh and Shanda McCloskey (illustrator) , Chronicle Books, 2025, 56 pp.; for ages 8 to 12. Our Plastic Problem: A Call for Global Solutions , Megan Durnford, Orca Book Publishers , 2025, 48 pp.; for ages 9 to 12. Oppenheimer and the Atomic Bomb (Young Readers Edition of American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer) , Kai Bird and Martin J. Sherwin, adapted by Eric S. Singer , G. P. Putnam’s Sons Books for Young Readers, 2025, 336 pp.; for ages 10+. Who Owns the Moon? And Other Conundrums of Exploring and Using Space , Cynthia Levinson and Jennifer Swanson , Margaret Quinlin Books, 2025, 208 pp.; for ages 12+.</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Lauren Kmec, Jennie Erin Smith, Valerie Thompson, Michael Funk, Keith T. Smith, Jennifer Sills, Madeleine Seale, Chloe Seale, Alice Seale, Matthew Warren, Kiaan Suri-Warren, Bianca Buehler, Christie Wilcox, Yevgeniya Nusinovich, Isaac Nusinovich Ucko, Marc S. Lavine, Jake Yeston, Audrey Yeston, Adrian Cho, Daniel Clery</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 这篇论文是一篇儿童科普书籍的综述文章，介绍了2025年出版的多种面向年轻读者的科学、历史和发明主题的书籍，旨在促进儿童科学教育。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示这是一篇关于儿童科普书籍的综述文章，涉及多个主题如科学故事、环境保护、发明创造等，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。所有关键词评分为0分，因为论文内容完全不涉及医学图像或相关技术。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>children&#x27;s science books, young readers, science education, book reviews, non-fiction literature, educational publishing, 2025 publications, STEM topics</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef9874" target="_blank">33. Bound by a handshake</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yan Lü, Howard Griffiths</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现，在早期陆地植物的Rubisco酶中构建一个连接分子结构可以显著提高碳同化效率。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>早期陆生植物中嵌入Rubisco酶的一种连接结构域促进了碳同化作用。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>A linker moiety built into the enzyme Rubisco in an early land plant boosts carbon assimilation.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Bound by a handshake&#x27;，摘要描述了一种在早期陆地植物Rubisco酶中构建的连接分子结构如何促进碳同化。该研究属于植物生物学、酶工程和光合作用领域，与医学图像分析、医学成像或深度学习医学成像完全无关。所有关键词均未在标题或摘要中出现，且研究主题与医学图像处理无任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Rubisco, carbon assimilation, linker moiety, early land plant, enzyme engineering, photosynthesis</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aea1761" target="_blank">34. Structural modeling reveals phage proteins that manipulate bacterial immune signaling</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Nitzan Tal, Romi Hadary, Renee B. Chang, Ilya А. Osterman, R.L. Jacobson, Erez Yirmiya, Nathalie Béchon, Dina Hochhauser, Mercedes Rivera, Barak Madhala, Jeremy Garb, Moshe Goldsmith, Tanita Wein, Philip J. Kranzusch, Gil Amitai, Rotem Sorek</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过结构建模和计算预测发现了三种新的噬菌体蛋白质家族（Sequestin、Lockin和Acb5），它们通过结合或降解核苷酸信号分子来抑制细菌的Thoeris和CBASS免疫系统。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>动物、植物和细菌的免疫系统通常依赖于细胞内核苷酸信号传导，而病毒可通过隔离或降解这些信号来阻断该过程。我们识别了多种病毒抗防御蛋白共有的结构和生物物理特征，并利用这些特征开发了一种计算流程，用于预测噬菌体中负责操纵细菌免疫信号传导的蛋白质。实验验证揭示了三个先前未被表征的蛋白质家族——Sequestin、Lockin和Acb5——它们能够抑制Thoeris系统以及基于环状寡核苷酸的抗噬菌体信号系统（CBASS）。Sequestin和Lockin作为核苷酸“海绵”，可结合1″-3&#x27;糖环腺苷二磷酸核糖（3&#x27;cADPR）以及与ADPR结合的组氨酸（His-ADPR）；而Acb5则能切割环鸟苷酸-腺苷单磷酸（3&#x27;3&#x27;-cGAMP）及相关分子。结构和突变分析阐明了它们的结合与催化机制。这些蛋白在噬菌体基因组中存在数千种同源物，凸显了病毒颠覆核苷酸免疫策略的广泛性与多样性。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Immune systems in animals, plants, and bacteria often rely on intracellular nucleotide signaling, which viruses can block by sequestering or degrading these signals. We identified structural and biophysical traits shared by diverse viral antidefense proteins and used these traits to develop a computational pipeline that predicts phage proteins whose role is to manipulate bacterial immune signaling. Experimental validation revealed three previously uncharacterized protein families-Sequestin, Lockin, and Acb5-that inhibit the Thoeris system and the cyclic oligonucleotide-based antiphage signaling system (CBASS). Sequestin and Lockin act as nucleotide &quot;sponges,&quot; binding 1″-3&#x27; glycocyclic adenosine diphosphate-ribose (3&#x27;cADPR) and histidine conjugated to ADPR (His- ADPR), whereas Acb5 cleaves cyclic guanosine monophosphate-adenosine monosphosphate (3&#x27;3&#x27;-cGAMP) and related molecules. Structural and mutational analyses explain their binding and catalytic mechanisms. Thousands of homologs occur in phage genomes, highlighting the abundance and diversity of viral strategies to subvert nucleotide-based immunity.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是噬菌体蛋白质如何操纵细菌免疫信号系统，属于结构生物学、微生物学和病毒学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。论文内容涉及蛋白质结构建模、生物物理特性、计算预测管道和实验验证，没有任何医学图像或成像相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>phage proteins, bacterial immune signaling, structural modeling, computational pipeline, nucleotide signaling, Thoeris system, CBASS, antiphage defense</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aea0150" target="_blank">35. An unconventional Rubisco small subunit underpins the CO 2 -concentrating organelle in land plants</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Tanner A. Robison, Yuwei Mao, Zhen Guo Oh, Warren S. L. Ang, Dan Hong Loh, Yu-Heng Hsieh, Maddie Ceminsky, Nicky Atkinson, Declan Lafferty, Xia Xu, Laura H. Gunn, Alistair J. McCormick, Fay-Wei Li</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现角苔植物中一种特殊的Rubisco小亚基（RbcS-STAR）通过其C端卷曲螺旋结构域介导Rubisco凝聚，揭示了Rubisco在类核体中浓缩的机制，并为将类核体引入作物以提高产量提供了潜在途径。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>在许多藻类中，生物物理性CO&lt;sub&gt;2&lt;/sub&gt;浓缩机制通过将固碳酶Rubisco聚集在称为蛋白核（pyrenoid）的类液体细胞器中，从而增强光合作用。将藻类蛋白核工程化引入C&lt;sub&gt;3&lt;/sub&gt;作物有望提高产量，但作物与藻类之间巨大的进化鸿沟阻碍了相关进展。本研究揭示，角苔（hornwort）——唯一拥有蛋白核的陆生植物——具有一种特殊的Rubisco小亚基RbcS-STAR，其C端卷曲螺旋结构域通过寡聚化介导Rubisco凝聚。RbcS-STAR被整合至Rubisco全酶中，因此可作为“内源”Rubisco连接蛋白。在缺乏蛋白核的物种（包括拟南芥&lt;i&gt;Arabidopsis&lt;/i&gt;）中表达RbcS-STAR，足以诱导形成类蛋白核凝聚体。我们的研究揭示了Rubisco凝聚的分子机制，并为将蛋白核引入作物提供了潜在路径。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>In many algae, photosynthesis is boosted by biophysical CO&lt;sub&gt;2&lt;/sub&gt;-concentrating mechanisms, which pack the CO&lt;sub&gt;2&lt;/sub&gt;-fixing enzyme Rubisco into liquid-like organelles called pyrenoids. Engineering C&lt;sub&gt;3&lt;/sub&gt; crops with algal pyrenoids could increase yields, but progress is hampered by the deep evolutionary divide between crops and algae. Here, we show that hornworts, the only land plants with pyrenoids, have an unusual Rubisco small subunit, RbcS-STAR, the C-terminal coiled-coil domain of which oligomerizes to mediate Rubisco condensation. RbcS-STAR is incorporated into the Rubisco holoenzyme and thus acts as an &quot;innate&quot; Rubisco linker. Expression of RbcS-STAR in pyrenoid-lacking species, including &lt;i&gt;Arabidopsis&lt;/i&gt;, is sufficient to induce pyrenoid-like condensates. Our findings reveal a mechanism for Rubisco condensation and a potential route to introduce pyrenoids into crop plants.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究植物光合作用中Rubisco酶在类核体（pyrenoids）中的凝聚机制，属于植物生物学、分子生物学和光合作用研究领域。所有评分关键词均涉及医学影像分析，与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Rubisco, pyrenoid, photosynthesis, hornworts, CO2-concentrating mechanism, RbcS-STAR, crop engineering, Arabidopsis</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg8837" target="_blank">36. In Science Journals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Corinne Simonti, Phil Szuromi, Di Maria Jiang, Peter Stern, Madeleine Seale, Jesse Smith, Leslie K. Ferrarelli, Colleen M. McBride, L. Bryan Ray, Mattia Maroso, Yevgeniya Nusinovich, Bianca Lopez, Sacha Vignieri, Brandon Berry, Leoma Bere, Feifei Zhang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 这篇论文总结了《科学》期刊系列的研究亮点，没有针对特定研究问题或结果。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>《科学》系列期刊亮点综述。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Highlights from the &lt;i&gt;Science&lt;/i&gt; family of journals.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;In Science Journals&#x27;和摘要&#x27;Highlights from the Science family of journals&#x27;表明这是一篇关于《科学》期刊系列亮点的综述或新闻文章，而非专注于医学图像分析的研究论文。摘要没有提及任何医学图像、医学成像或深度学习在医学成像中的应用，因此与所有关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Science journals, highlights, research, publications, scientific literature</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adx0452" target="_blank">37. Repeated convergent evolution of bradykinin mimics as defensive toxins</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Naiqi Shi, Axel Touchard, Vanessa Schendel, Thomas Lund Koch, Hana Starobova, Pancong Niu, Hue N. T. Tran, Lotten Ragnarsson, Helena Safavi-Hemami, Irina Vetter, Samuel D. Robinson</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了黄蜂和青蛙的毒液及皮肤分泌物中类似缓激肽的短肽并非源自脊椎动物激素的共同祖先，而是从肽毒素基因独立进化多次，其相似性是由捕食者受体上的功效选择驱动的，体现了远缘谱系间分子趋同进化的重复性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>自然选择可通过趋同演化驱动相似性状的进化。此前研究报道，某些黄蜂（膜翅目）毒液与青蛙（无尾目）皮肤分泌物中分别存在与脊椎动物激素缓激肽（bradykinin, BK）完全相同的短肽。本研究表明，编码膜翅目毒液与无尾目皮肤分泌物中BK样肽的基因，与脊椎动物激素基因并无共同祖先，而是多次独立地从肽类毒素基因演化而来。这些肽类对脊椎动物捕食者具有防御功能，其与BK的相似性源于对捕食者受体效力的选择压力。我们的发现揭示了自然选择如何驱动远缘谱系间相似分子的重复趋同进化。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Natural selection can drive the evolution of similar traits through convergent evolution. Short peptides identical to the vertebrate hormone bradykinin (BK) have been reported from the venoms and skin secretions of certain species of wasps (order Hymenoptera) and frogs (order Anura), respectively. In this study, we demonstrate that the genes encoding the BK-like peptides of hymenopteran venoms and anuran skin secretions do not share common ancestry with that of the vertebrate hormone but instead independently evolved multiple times from peptide toxin genes. These peptides serve a defensive function against vertebrate predators and their resemblance to BK was driven by selection for efficacy at the predators&#x27; receptors. Our findings highlight how natural selection can drive repeated convergent evolution of similar molecules across distantly related lineages.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是动物毒液和皮肤分泌物中类似缓激肽（bradykinin）的短肽的进化起源和功能，属于进化生物学、分子生物学和毒理学领域，与医学图像分析、医学成像或深度学习医学成像完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>convergent evolution, bradykinin mimics, defensive toxins, peptide toxins, natural selection, venom evolution, molecular evolution, vertebrate predators</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef3833" target="_blank">38. Poland: No country for PhD researchers</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 14.0</div>
+<div class="field"><span class="field-label">Authors:</span> Alan Żukowski, Martyna Stępień</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-05</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了波兰博士研究人员的学术环境问题，但具体结果因摘要缺失无法确定。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Poland: No country for PhD researchers&#x27;，摘要内容缺失，但仅从标题判断，该论文讨论的是波兰博士研究人员的学术环境或职业发展问题，与医学图像分析、医学成像、深度学习医学成像等关键词完全无关。这些关键词涉及医学影像技术和人工智能应用，而论文主题明显属于社会科学、教育政策或学术职业研究领域。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Poland, PhD researchers, academic environment, career development, higher education policy</p></div></details>
+</div>
+</body></html>

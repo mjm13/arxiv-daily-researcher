@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>关键词趋势分析报告 2026-03-20</title>
+<style>
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --border: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+}
+* { box-sizing: border-box; }
+body {
+    max-width: 1100px; margin: 0 auto; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px; color: var(--text); background: var(--bg);
+}
+h1 { font-size: 1.8rem; color: var(--accent); margin-bottom: 4px; }
+h2 {
+    font-size: 1.3rem; color: var(--accent); margin: 28px 0 12px;
+    border-bottom: 1px solid var(--border); padding-bottom: 6px;
+}
+h3 { font-size: 1.05rem; color: var(--muted); margin: 20px 0 8px; }
+.meta { color: var(--muted); font-size: 0.85rem; margin: 4px 0 20px; }
+
+/* 统计栏 */
+.stats-bar { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0 24px; }
+.stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 20px; text-align: center; min-width: 100px;
+}
+.stat .num { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+.stat .label { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+/* 水平柱状图 */
+.bar-chart { margin: 12px 0 20px; }
+.bar-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.bar-label { display: flex; align-items: center; gap: 6px; min-width: 46px; }
+.bar-num { font-weight: 600; font-size: 0.9rem; color: var(--muted); }
+.color-dot {
+    display: inline-block; width: 12px; height: 12px;
+    border-radius: 50%; flex-shrink: 0;
+}
+.bar-track {
+    flex: 1; background: var(--border); border-radius: 4px;
+    height: 22px; overflow: hidden;
+}
+.bar-fill { height: 100%; border-radius: 4px; min-width: 2px; }
+.bar-count { min-width: 40px; text-align: right; font-size: 0.9rem; color: var(--muted); }
+
+/* 图例表格 */
+.legend-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 8px 0 20px; }
+.legend-table th {
+    background: var(--surface); padding: 8px 12px;
+    text-align: left; border-bottom: 2px solid var(--border);
+}
+.legend-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); }
+.legend-table tr:hover td { background: var(--surface); }
+.color-badge {
+    display: inline-block; width: 20px; height: 14px;
+    border-radius: 3px; vertical-align: middle;
+}
+
+/* 趋势热图表格 */
+.trend-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 8px 0; }
+.trend-table th {
+    background: var(--surface); padding: 7px 10px;
+    text-align: center; border-bottom: 2px solid var(--border);
+    font-size: 0.8rem; white-space: nowrap;
+}
+.trend-table th:first-child { text-align: left; }
+.trend-table td {
+    padding: 6px 10px; border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+.trend-table td:first-child { text-align: left; min-width: 150px; white-space: nowrap; }
+</style>
+</head><body>
+<h1>关键词趋势分析报告</h1>
+<p class="meta">生成日期: 2026-03-20 | 统计周期: 最近 30 天 | 关键词数量: 15 个</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">15</div><div class="label">关键词</div></div>
+<div class="stat"><div class="num">93</div><div class="label">Top 1 论文数</div></div>
+<div class="stat"><div class="num">341</div><div class="label">总论文数</div></div>
+</div>
+<h2>热门关键词排名</h2>
+<div class="bar-chart">
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#3b82f6;"></span><span class="bar-num">1</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:100.0%;background:#3b82f6;"></div></div>
+<div class="bar-count">93</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#22c55e;"></span><span class="bar-num">2</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:41.9%;background:#22c55e;"></div></div>
+<div class="bar-count">39</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#f59e0b;"></span><span class="bar-num">3</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:34.4%;background:#f59e0b;"></div></div>
+<div class="bar-count">32</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#ef4444;"></span><span class="bar-num">4</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:31.2%;background:#ef4444;"></div></div>
+<div class="bar-count">29</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#8b5cf6;"></span><span class="bar-num">5</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:21.5%;background:#8b5cf6;"></div></div>
+<div class="bar-count">20</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#ec4899;"></span><span class="bar-num">6</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:19.4%;background:#ec4899;"></div></div>
+<div class="bar-count">18</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#06b6d4;"></span><span class="bar-num">7</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:18.3%;background:#06b6d4;"></div></div>
+<div class="bar-count">17</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#f97316;"></span><span class="bar-num">8</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:18.3%;background:#f97316;"></div></div>
+<div class="bar-count">17</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#14b8a6;"></span><span class="bar-num">9</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:16.1%;background:#14b8a6;"></div></div>
+<div class="bar-count">15</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#6366f1;"></span><span class="bar-num">10</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:11.8%;background:#6366f1;"></div></div>
+<div class="bar-count">11</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#84cc16;"></span><span class="bar-num">11</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:10.8%;background:#84cc16;"></div></div>
+<div class="bar-count">10</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#f43f5e;"></span><span class="bar-num">12</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:10.8%;background:#f43f5e;"></div></div>
+<div class="bar-count">10</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#0ea5e9;"></span><span class="bar-num">13</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:10.8%;background:#0ea5e9;"></div></div>
+<div class="bar-count">10</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#7c3aed;"></span><span class="bar-num">14</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:10.8%;background:#7c3aed;"></div></div>
+<div class="bar-count">10</div>
+</div>
+<div class="bar-row">
+<div class="bar-label"><span class="color-dot" style="background:#10b981;"></span><span class="bar-num">15</span></div>
+<div class="bar-track"><div class="bar-fill" style="width:10.8%;background:#10b981;"></div></div>
+<div class="bar-count">10</div>
+</div>
+</div>
+<h3>图例说明</h3>
+<table class="legend-table">
+<thead><tr><th>#</th><th>颜色</th><th>关键词</th><th>论文数</th><th>类别</th></tr></thead><tbody>
+<tr><td>1</td><td><span class="color-badge" style="background:#3b82f6;"></span></td><td>quantum computing</td><td>93</td><td>quantum</td></tr>
+<tr><td>2</td><td><span class="color-badge" style="background:#22c55e;"></span></td><td>machine learning</td><td>39</td><td>machine_learning</td></tr>
+<tr><td>3</td><td><span class="color-badge" style="background:#f59e0b;"></span></td><td>quantum simulation</td><td>32</td><td>quantum</td></tr>
+<tr><td>4</td><td><span class="color-badge" style="background:#ef4444;"></span></td><td>open quantum systems</td><td>29</td><td>quantum</td></tr>
+<tr><td>5</td><td><span class="color-badge" style="background:#8b5cf6;"></span></td><td>entanglement</td><td>20</td><td>quantum</td></tr>
+<tr><td>6</td><td><span class="color-badge" style="background:#ec4899;"></span></td><td>quantum information</td><td>18</td><td>quantum</td></tr>
+<tr><td>7</td><td><span class="color-badge" style="background:#06b6d4;"></span></td><td>quantum sensing</td><td>17</td><td>quantum</td></tr>
+<tr><td>8</td><td><span class="color-badge" style="background:#f97316;"></span></td><td>quantum communication</td><td>17</td><td>quantum</td></tr>
+<tr><td>9</td><td><span class="color-badge" style="background:#14b8a6;"></span></td><td>quantum key distribution</td><td>15</td><td>quantum</td></tr>
+<tr><td>10</td><td><span class="color-badge" style="background:#6366f1;"></span></td><td>quantum machine learning</td><td>11</td><td>machine_learning</td></tr>
+<tr><td>11</td><td><span class="color-badge" style="background:#84cc16;"></span></td><td>quantum circuits</td><td>10</td><td>quantum</td></tr>
+<tr><td>12</td><td><span class="color-badge" style="background:#f43f5e;"></span></td><td>quantum dynamics</td><td>10</td><td>quantum</td></tr>
+<tr><td>13</td><td><span class="color-badge" style="background:#0ea5e9;"></span></td><td>quantum metrology</td><td>10</td><td>quantum</td></tr>
+<tr><td>14</td><td><span class="color-badge" style="background:#7c3aed;"></span></td><td>quantum mechanics</td><td>10</td><td>quantum</td></tr>
+<tr><td>15</td><td><span class="color-badge" style="background:#10b981;"></span></td><td>quantum error correction codes</td><td>10</td><td>quantum</td></tr>
+</tbody></table>
+<h2>关键词趋势变化</h2>
+<div style="overflow-x:auto;"><table class="trend-table">
+<thead><tr><th>关键词</th><th>03/10</th><th>03/17</th></tr></thead>
+<tbody>
+<tr><td><span class="color-dot" style="background:#3b82f6;"></span> quantum computing</td><td style="background:rgba(59,130,246,0.90);">54</td><td style="background:rgba(59,130,246,0.68);">39</td></tr>
+<tr><td><span class="color-dot" style="background:#22c55e;"></span> machine learning</td><td style="background:rgba(34,197,94,0.66);">16</td><td style="background:rgba(34,197,94,0.90);">23</td></tr>
+<tr><td><span class="color-dot" style="background:#f59e0b;"></span> quantum simulation</td><td style="background:rgba(245,158,11,0.90);">16</td><td style="background:rgba(245,158,11,0.90);">16</td></tr>
+<tr><td><span class="color-dot" style="background:#ef4444;"></span> open quantum systems</td><td style="background:rgba(239,68,68,0.90);">15</td><td style="background:rgba(239,68,68,0.85);">14</td></tr>
+<tr><td><span class="color-dot" style="background:#8b5cf6;"></span> entanglement</td><td style="background:rgba(139,92,246,0.90);">13</td><td style="background:rgba(139,92,246,0.53);">7</td></tr>
+</tbody></table></div>
+<p class="meta" style="margin-top:40px;text-align:center;">由 ArXiv Daily Researcher 关键词趋势模块生成 | 2026-03-20</p>
+</body></html>

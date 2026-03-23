@@ -1,0 +1,5205 @@
+# 📊 Nature Communications 研究报告 (2026-03-21)
+
+> 生成时间: 2026-03-21 17:01:47
+> 数据源: Nature Communications
+
+> ⚠️ **注意**: 该数据源不支持PDF下载，仅提供评分和摘要翻译，无深度分析
+
+## 📌 配置信息
+
+### 关键词列表（共 8 个，总权重 8.0）
+
+| 关键词 | 权重 | 类型 |
+|--------|------|------|
+| medical image analysis | 1.0 | 主要 |
+| medical image segmentation | 1.0 | 主要 |
+| deep learning medical imaging | 1.0 | 主要 |
+| AI for diagnosis | 1.0 | 主要 |
+| prognosis prediction | 1.0 | 主要 |
+| surgical planning | 1.0 | 主要 |
+| multimodal medical imaging | 1.0 | 主要 |
+| foundation models medical imaging | 1.0 | 主要 |
+
+### 评分设置
+
+- **每个关键词最大分**: 10
+- **及格分公式**: 5.0 + 3.0 × 总权重
+- **当前及格分**: 29.0
+
+## 📈 论文统计
+
+- **总抓取**: 100 篇
+- **及格论文**: 1 篇 (1.0%)
+- **深度分析**: 1 篇
+
+---
+
+## ⭐ 及格论文详细分析
+
+### 1. Divergent white matter metabolic signature patterns indicate impending cognitive decline in aging an
+
+**作者**: Wen Zhang, Sheelakumari Raghavan, Jianqiao Tian, Scott A. Przybelski, Heather J. Wiste, Angela J. Fought, Matthew L. Senjem, Christopher G. Schwarz, Robert I. Reid, Mary M. Machulda, Ronald C. Petersen, Jonathan Graff-Radford, Clifford R. Jack, Val J. Lowe, The Alzheimer’s Disease Neuroimaging Initiative, M. W. Weiner, Paul Aisen, Ronald C. Petersen, Clifford R. Jack, William Jagust
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70707-6](https://doi.org/10.1038/s41467-026-70707-6)
+
+**评分**: 31.0 / 29.0 ✅
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 8.0/10 | 8.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 5.0/10 | 5.0 |
+| prognosis prediction | 1.0 | 8.0/10 | 8.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 10.0/10 | 10.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文使用多模态神经影像（MRI、FDG-PET、淀粉样蛋白-PET）分析白质葡萄糖代谢与认知功能的关系，属于医学影像分析范畴，与'medical image analysis'高度相关（8分）。研究涉及认知衰退预测，与'prognosis prediction'高度相关（8分）。使用多种影像技术融合，与'multimodal medical imaging'完全匹配（10分）。研究提到AI用于诊断的潜力，但未深入展开，与'AI for diagnosis'有一定关联（5分）。论文未涉及图像分割、深度学习具体方法、手术规划或基础模型，这些关键词得0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Divergent WM metabolic patterns shed light on the dynamic role of WM in maintaining cognitive function and complementary information provided by WM metabolism for predicting future cognitive decline and identifying cognitive resilience is emphasized.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过多模态神经影像分析白质葡萄糖代谢模式，发现不同的代谢特征可以预测认知衰退，为阿尔茨海默病和衰老相关的认知变化提供了新的生物标志物。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 白质（White matter, WM）是脑区间神经通讯和认知功能的关键基础，但白质葡萄糖代谢在认知老化中的作用尚未得到充分研究。我们利用两项研究中3142名参与者（共15,287次访视）的多模态神经影像数据（MRI、FDG-PET、淀粉样蛋白-PET），考察了白质对认知的贡献并识别出不同的白质代谢特征。在预期白质（expected WM, EWM；包括胼胝体和扣带束）中较高的葡萄糖代谢与更好的认知表现相关，而非典型白质（atypical WM, AWM；包括放射冠）中代谢增强则与较差的认知表现相关，这提示了一种代偿机制。EWM代谢随衰老、阿尔茨海默病（Alzheimer's disease, AD）进展（β-淀粉样蛋白沉积和APOE-ε4携带状态）以及白质高信号而下降，而AWM代谢则随衰老和血管风险因素增加而上升，但部分受到AD神经病理的削弱。纵向分析显示，较高的EWM代谢和较低的AWM代谢能够预测较慢的认知衰退速度。这些分化的白质代谢模式揭示了白质在维持认知功能中的动态作用。本研究强调了白质代谢所提供的补充信息对于预测未来认知衰退和识别认知韧性的重要性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> White matter (WM) is a key substrate for interregional neural communication and cognitive function but the role of WM glucose metabolism in cognitive aging has been understudied. Using multimodal neuroimaging (MRI, FDG-PET, amyloid-PET) from 3142 participants (15,287 visits) across two studies, we examined the contribution of WM to cognition and identified divergent WM signatures. Higher glucose metabolism in expected WM (EWM; corpus callosum and cingulum) was associated with better cognition, whereas increased metabolism in atypical WM (AWM; corona radiata) was linked to worse cognition, indicating a compensatory mechanism. EWM metabolism declined with aging, Alzheimer's disease (AD) progression (amyloid-β and APOE-ε4 carrier), and white matter hyperintensities, while AWM metabolism increased with aging and vascular risk but was partially weakened by AD neuropathology. Longitudinally, higher EWM and lower AWM metabolism predicted slower cognitive decline. Divergent WM metabolic patterns shed light on the dynamic role of WM in maintaining cognitive function. This study emphasizes the complementary information provided by WM metabolism for predicting future cognitive decline and identifying cognitive resilience.
+
+</details>
+<br>
+
+**关键词**: white matter metabolism, cognitive decline, multimodal neuroimaging, Alzheimer's disease, aging, glucose metabolism, prognostic biomarker, neuroimaging biomarkers
+
+**深度分析**:
+
+#### 白质代谢特征模式的分化预示衰老和痴呆中的认知衰退
+
+**摘要**:
+
+> 本研究探讨了白质葡萄糖代谢在认知老化中的作用，该领域先前研究不足。通过整合来自3142名参与者（15,287次访问）的多模态神经影像数据（MRI、FDG-PET、淀粉样蛋白-PET），研究分析了白质对认知的贡献并识别了分化的代谢特征。研究发现，在预期白质区域（如胼胝体和扣带束）较高的葡萄糖代谢与更好的认知功能相关，而在非典型白质区域（如放射冠）增加的代谢则与更差的认知功能相关，表明存在补偿机制。预期白质代谢随衰老、阿尔茨海默病进展（淀粉样蛋白-β和APOE-ε4携带者）和白质高信号而下降，而非典型白质代谢随衰老和血管风险增加，但部分受阿尔茨海默病神经病理学削弱。纵向分析显示，较高的预期白质代谢和较低的非典型白质代谢可预测较慢的认知衰退。这些分化的白质代谢模式揭示了白质在维持认知功能中的动态作用，强调了白质代谢在预测未来认知衰退和识别认知韧性方面提供的补充信息。
+
+**创新点**:
+- 首次大规模系统研究白质葡萄糖代谢在认知老化中的动态作用，识别了分化的代谢特征模式
+- 提出并验证了白质代谢的补偿机制假说，即不同白质区域代谢变化对认知功能有相反影响
+- 建立了白质代谢特征与多种病理因素（衰老、AD病理、血管风险）的关联模型
+- 证明了白质代谢模式对未来认知衰退的预测价值，为早期干预提供了新靶点
+- 整合多模态神经影像数据，提供了白质在认知功能中作用的全面视角
+
+<details>
+<summary>方法</summary>
+
+!!! info
+
+    研究采用回顾性队列设计，整合了来自梅奥诊所衰老研究和阿尔茨海默病神经影像倡议的两大数据集。使用多模态神经影像技术（结构MRI、FDG-PET、淀粉样蛋白-PET）对3142名参与者进行15,287次纵向评估。通过自动化内部流程（基于SPM12）进行图像预处理，将白质分为预期白质和非典型白质区域。使用R（4.4.0版）进行统计分析，包括线性混合效应模型评估代谢与认知的关联，Cox比例风险模型分析纵向认知衰退预测，并控制年龄、性别、教育等协变量。
+
+</details>
+<br>
+
+**关键结果**:
+- 识别了两种分化的白质代谢模式：预期白质代谢与正性认知关联，非典型白质代谢与负性认知关联
+- 预期白质代谢随衰老、AD病理负担（淀粉样蛋白-β、APOE-ε4）和白质高信号而下降
+- 非典型白质代谢随衰老和血管风险因素增加，但受AD神经病理学部分削弱
+- 纵向分析显示，基线较高的预期白质代谢和较低的非典型白质代谢可显著预测较慢的认知衰退速度
+- 白质代谢模式提供了独立于传统灰质指标的认知预测信息
+
+**技术栈**: 影像处理：SPM12（统计参数映射软件）, 统计分析：R 4.4.0（统计编程语言）, 算法方法：线性混合效应模型、Cox比例风险模型、相对重要性分析（relaimpo包）, 影像模态：结构MRI、FDG-PET（氟代脱氧葡萄糖正电子发射断层扫描）、淀粉样蛋白-PET, 数据来源：梅奥诊所衰老研究、阿尔茨海默病神经影像倡议公开数据
+
+<details>
+<summary>优点</summary>
+
+- 样本量大且具有纵向设计，增强了统计功效和因果推断能力
+- 多模态数据整合提供了全面的神经生物学视角
+- 方法学严谨，控制了多种混杂因素
+- 临床意义明确，为认知衰退预测提供了新生物标志物
+- 开源代码和数据可用性促进了研究可重复性
+
+</details>
+<br>
+
+<details>
+<summary>局限</summary>
+
+- 观察性研究设计限制了因果关系的确定
+- 白质区域划分基于先验解剖知识，可能未涵盖所有功能相关区域
+- FDG-PET信号反映的是葡萄糖摄取而非绝对代谢率，且受多种细胞类型影响
+- 研究人群主要为高加索人种，限制了结果对其他种族的普适性
+- 未深入探讨代谢变化的细胞和分子机制
+
+</details>
+<br>
+
+**与研究方向的相关性**: ['医学图像分割与解剖结构建模：研究涉及白质区域的分割和建模，是医学图像分析的核心应用', '深度学习与多模态医学数据融合：虽然本研究未使用深度学习，但其多模态数据融合方法（MRI、PET）与研究方向高度相关', 'AI疾病诊断与预后预测：研究建立了白质代谢特征与认知衰退的预测模型，直接对应AI辅助临床决策支持', '稳健可泛化的医疗AI模型：研究使用大规模多中心数据，关注模型在衰老和痴呆中的泛化能力', '医学影像分析：整个研究基于先进的神经影像分析技术，是该领域的前沿应用']
+
+---
+
+## 📋 所有论文列表
+
+### 1. ✅ Divergent white matter metabolic signature patterns indicate impending cognitive decline in aging and dementia
+
+**作者**: Wen Zhang, Sheelakumari Raghavan, Jianqiao Tian, Scott A. Przybelski, Heather J. Wiste, Angela J. Fought, Matthew L. Senjem, Christopher G. Schwarz, Robert I. Reid, Mary M. Machulda, Ronald C. Petersen, Jonathan Graff-Radford, Clifford R. Jack, Val J. Lowe, The Alzheimer’s Disease Neuroimaging Initiative, M. W. Weiner, Paul Aisen, Ronald C. Petersen, Clifford R. Jack, William Jagust
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70707-6](https://doi.org/10.1038/s41467-026-70707-6)
+
+**评分**: 31.0 / 29.0 ✅
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 8.0/10 | 8.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 5.0/10 | 5.0 |
+| prognosis prediction | 1.0 | 8.0/10 | 8.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 10.0/10 | 10.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文使用多模态神经影像（MRI、FDG-PET、淀粉样蛋白-PET）分析白质葡萄糖代谢与认知功能的关系，属于医学影像分析范畴，与'medical image analysis'高度相关（8分）。研究涉及认知衰退预测，与'prognosis prediction'高度相关（8分）。使用多种影像技术融合，与'multimodal medical imaging'完全匹配（10分）。研究提到AI用于诊断的潜力，但未深入展开，与'AI for diagnosis'有一定关联（5分）。论文未涉及图像分割、深度学习具体方法、手术规划或基础模型，这些关键词得0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Divergent WM metabolic patterns shed light on the dynamic role of WM in maintaining cognitive function and complementary information provided by WM metabolism for predicting future cognitive decline and identifying cognitive resilience is emphasized.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过多模态神经影像分析白质葡萄糖代谢模式，发现不同的代谢特征可以预测认知衰退，为阿尔茨海默病和衰老相关的认知变化提供了新的生物标志物。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 白质（White matter, WM）是脑区间神经通讯和认知功能的关键基础，但白质葡萄糖代谢在认知老化中的作用尚未得到充分研究。我们利用两项研究中3142名参与者（共15,287次访视）的多模态神经影像数据（MRI、FDG-PET、淀粉样蛋白-PET），考察了白质对认知的贡献并识别出不同的白质代谢特征。在预期白质（expected WM, EWM；包括胼胝体和扣带束）中较高的葡萄糖代谢与更好的认知表现相关，而非典型白质（atypical WM, AWM；包括放射冠）中代谢增强则与较差的认知表现相关，这提示了一种代偿机制。EWM代谢随衰老、阿尔茨海默病（Alzheimer's disease, AD）进展（β-淀粉样蛋白沉积和APOE-ε4携带状态）以及白质高信号而下降，而AWM代谢则随衰老和血管风险因素增加而上升，但部分受到AD神经病理的削弱。纵向分析显示，较高的EWM代谢和较低的AWM代谢能够预测较慢的认知衰退速度。这些分化的白质代谢模式揭示了白质在维持认知功能中的动态作用。本研究强调了白质代谢所提供的补充信息对于预测未来认知衰退和识别认知韧性的重要性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> White matter (WM) is a key substrate for interregional neural communication and cognitive function but the role of WM glucose metabolism in cognitive aging has been understudied. Using multimodal neuroimaging (MRI, FDG-PET, amyloid-PET) from 3142 participants (15,287 visits) across two studies, we examined the contribution of WM to cognition and identified divergent WM signatures. Higher glucose metabolism in expected WM (EWM; corpus callosum and cingulum) was associated with better cognition, whereas increased metabolism in atypical WM (AWM; corona radiata) was linked to worse cognition, indicating a compensatory mechanism. EWM metabolism declined with aging, Alzheimer's disease (AD) progression (amyloid-β and APOE-ε4 carrier), and white matter hyperintensities, while AWM metabolism increased with aging and vascular risk but was partially weakened by AD neuropathology. Longitudinally, higher EWM and lower AWM metabolism predicted slower cognitive decline. Divergent WM metabolic patterns shed light on the dynamic role of WM in maintaining cognitive function. This study emphasizes the complementary information provided by WM metabolism for predicting future cognitive decline and identifying cognitive resilience.
+
+</details>
+<br>
+
+**关键词**: white matter metabolism, cognitive decline, multimodal neuroimaging, Alzheimer's disease, aging, glucose metabolism, prognostic biomarker, neuroimaging biomarkers
+
+---
+
+### 2. ❌ Subgroup performance of a commercial digital breast tomosynthesis model for breast cancer detection
+
+**作者**: Beatrice Brown-Mulry, Rohan Isaac, Sang Mook Lee Lee, Ambika Seth, KyungJee Min, Theo Dapamede, Frank Weikai LI, Aawez Mansuri, MinJae Woo, Christian Allison Fauria-Robinson, Bhavna Paryani, Judy Wawira Gichoya, Hari Trivedi
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70637-3](https://doi.org/10.1038/s41467-026-70637-3)
+
+**评分**: 26.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 8.0/10 | 8.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 8.0/10 | 8.0 |
+| AI for diagnosis | 1.0 | 10.0/10 | 10.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文评估商业数字乳腺断层合成（DBT）模型在乳腺癌检测中的亚组性能，属于医学影像分析领域，使用深度学习进行医学影像诊断，因此与'medical image analysis'、'deep learning medical imaging'和'AI for diagnosis'高度相关。然而，论文未涉及图像分割、预后预测、手术规划、多模态成像或基础模型，因此这些关键词得分为0。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究评估了商业数字乳腺断层合成模型在不同亚组（如年龄、种族、乳腺密度）中检测乳腺癌的性能，发现模型性能存在亚组差异，强调了AI诊断工具在临床应用中需要考虑公平性和代表性。
+
+**关键词**: digital breast tomosynthesis, breast cancer detection, AI model performance, subgroup analysis, clinical validation, diagnostic accuracy, deep learning, medical imaging
+
+---
+
+### 3. ❌ International testing and refinement of AI algorithms predicting acute leukemia subtypes from routine laboratory data
+
+**作者**: A. T. Turki, Yi Fan, Alberto Hernandez-Sanchez, Wellington F. Silva, Shaun Fleming, Koray Yalcin, Catharina H.M.J. Van Elssen, Yazan F. Madanat, Magdalena Karasek, Mahmoud Aljurf, Matteo G. Della Porta, Alexandra Martinez-Roca, Luca Guarnera, Katarina Steffen, Evangelia Antoniou, María Marta Rivas, D. Mishra, Ansgar T. Blum, Stephania Niry Manantsoa, Adeniyi Adiat
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70584-z](https://doi.org/10.1038/s41467-026-70584-z)
+
+**评分**: 10.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 10.0/10 | 10.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究使用AI算法基于常规实验室数据（如血液检测结果）预测急性白血病亚型，属于AI辅助诊断领域，与'AI for diagnosis'高度相关（10分）。但论文未涉及任何医学影像分析（CT、MRI、超声等）、图像分割、深度学习医学影像、手术规划或多模态医学影像，因此这些关键词得0分。论文专注于诊断而非预后预测，'prognosis prediction'得0分。未提及基础模型在医学影像中的应用，'foundation models medical imaging'得0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    An AI tool designed to support leukemia diagnosis using standard laboratory results is tested and accuracy and robustness are improved, while maintaining generalizability via an ensemble of Isolation Forest and Local Outlier Factor.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过国际多中心回顾性队列（6206名患者）测试并改进了基于常规实验室数据的AI算法，用于预测急性白血病亚型，提高了诊断准确性（如AML的AUROC从0.72提升至0.84）并减少了被排除预测的患者比例（从70.8-92.5%降至12.1%）。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：尽管急性白血病患者的诊疗已取得进展，但健康差异仍限制着诊断与治疗的可及性。人工智能（AI）方法或可应对部分差异。我们回顾性地组建了一个包含20个中心、6206例白血病患者的多样化国际队列，以测试一种利用标准实验室检查结果支持白血病诊断的AI工具。执行预训练算法后，其准确度指标存在差异。在设定置信度截断预测值时，2000次自助法得出的曲线下面积（AUROC）指标显示：急性髓系白血病（AML）为0.94，早幼粒细胞亚型为0.98，急性淋巴细胞白血病（ALL）为0.84。然而，此截断值导致70.8%至92.5%的患者被排除在预测范围外。我们通过集成隔离森林（Isolation Forest）与局部离群因子（Local Outlier Factor）方法，在保持泛化能力的同时提升了准确性与稳健性，将AML的AUROC从0.72提高至0.84（基于置信阈值以下的患者保留测试集），且仅排除12.1%的患者。此外，我们针对儿科患者对该算法进行了重新训练。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Despite advances for patients with acute leukemia health disparities limit access to diagnosis and treatment. Artificial Intelligence (AI) approaches may address some disparities. We retrospectively assemble a diverse, international cohort of 6206 leukemia patients from 20 centers to test an AI tool designed to support leukemia diagnosis using standard laboratory results. Executing the pretrained algorithm results in varying accuracy metrics. With confidence cutoff predictions, 2000-fold bootstrapped area under the curve (AUROC) metrics are 0.94 for acute myeloid leukemia (AML), 0.98 for the promyelocytic subtype and 0.84 for acute lymphoblastic leukemia. However, this cutoff excludes 70.8–92.5% of patients from predictions. We improve accuracy and robustness, while maintaining generalizability via an ensemble of Isolation Forest and Local Outlier Factor increasing AUROC for AML from 0.72 to 0.84 (hold-out test set, patients below confidence threshold), while excluding only 12.1% of patients. Furthermore, we retrain the algorithm for pediatric patients.
+
+</details>
+<br>
+
+**关键词**: acute leukemia, AI diagnosis, laboratory data, international cohort, algorithm refinement, ensemble methods, clinical decision support
+
+---
+
+### 4. ❌ Dual-axis myelination covariance drives the functional connectivity emergence during infancy
+
+**作者**: Weijin Liu, Yuanyuan Chen, Xinhao Wang, Tianyu Fang, Rong Wang, Yue Cheng, Xin Zhao, Qun Fan, Wei Gao, Dong Ming
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70660-4](https://doi.org/10.1038/s41467-026-70660-4)
+
+**评分**: 8.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 8.0/10 | 8.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究新生儿大脑结构与功能网络的关系，使用MRI分析灰质髓鞘化与功能连接的相关性，属于医学影像分析范畴（medical image analysis），因此评分为8分。但论文未涉及图像分割、深度学习、AI诊断、预后预测、手术规划、多模态成像或基础模型等具体技术，这些关键词评分为0分。加权总分计算：8.0（medical image analysis） + 0.0（其他关键词） = 8.0分。作者列表中未包含指定专家。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    These findings suggest that during infancy, the integration of brain function is not initially dominated by only the white matter connections but is also shaped by the synchrony of intracortical microstructure that reflects shared developmental trajectories, which offers a framework for understanding the formation of the developmental connectome.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现新生儿大脑功能网络的出现不仅与白质连接有关，更与灰质髓鞘化的同步成熟密切相关，并提出了一个髓鞘化-功能耦合指数来预测后期行为。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 围产期大脑中结构成熟与功能网络涌现之间的关联机制尚未明确。尽管主流模型将功能连接归因于白质髓鞘化，但新生儿虽具有极不成熟的白质束，却矛盾地表现出类成人的静息态网络。本文提出灰质髓鞘化协变性是早期功能连接形成的关键基础。我们引入了双轴髓鞘化协变框架，并推导出新生儿大脑特异的髓鞘化-功能耦合指数。结果显示，该指数呈现出以初级感觉和运动皮层为主导的空间分布模式，随年龄增长而增强，并表现出距离依赖的强度特征。关键发现是，新生儿髓鞘化-功能耦合模式与涉及神经血管耦合的基因表达谱存在强空间相关性，并能特异性预测后期行为。这些研究表明，在婴儿期，脑功能整合并非仅由白质连接主导，同时也受到反映共同发育轨迹的皮层内微结构同步性的塑造，这为理解发育连接组的形成提供了理论框架。本研究发现，新生儿功能性脑网络的涌现不仅与白质布线相关，更与灰质髓鞘化的同步成熟密切相关。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The mechanisms linking structural maturation to the emergence of functional networks in the perinatal brain remain unresolved. While prevailing models attribute functional connectivity to white matter myelination, neonates paradoxically exhibit adult-like resting-state networks despite profoundly immature white matter tracts. Here, we proposed gray matter myelination covariance as a critical basis of early functional connectivity emergence. We introduced a dual-axis myelination covariance framework and derived a myelination-function coupling (MFC) index specific to the newborn brain. Results revealed that the MFC exhibited distinct spatial patterns dominated by primary sensory and motor cortices, increased with age, and showed a distance-dependent strength. Crucially, neonatal MFC patterns showed a strong spatial correlation with gene expression profiles implicated in neurovascular coupling and specifically predicted later behaviors. These findings suggest that during infancy, the integration of brain function is not initially dominated by only the white matter connections but is also shaped by the synchrony of intracortical microstructure that reflects shared developmental trajectories, which offers a framework for understanding the formation of the developmental connectome. This study finds that synchronized maturation of gray matter myelination, not just white matter wiring, is strongly linked to the emergence of functional brain networks in newborns.
+
+</details>
+<br>
+
+**关键词**: myelination covariance, functional connectivity, newborn brain, gray matter myelination, developmental connectome, MRI analysis, neurovascular coupling, infancy brain development
+
+---
+
+### 5. ❌ Epsilon-near-zero time-gate for high-fidelity spatial information transfer through dynamic scattering media
+
+**作者**: Yi Xu, Saumya Choudhary, Long D. Nguyen, Matthew Klein, Shivashankar Vangala, J. Keith Miller, Eric G. Johnson, Joshua R. Hendrickson, M. Zahirul Alam, Robert W. Boyd
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-71039-1](https://doi.org/10.1038/s41467-026-71039-1)
+
+**评分**: 4.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 2.0/10 | 2.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 2.0/10 | 2.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究了一种基于ε-近零材料的超快时间门控技术，用于在动态散射介质中高保真传输空间信息。该技术主要涉及非线性光学、四波混频和散射抑制。虽然论文在摘要末尾提到可能应用于体内诊断成像，但这只是潜在应用方向，并非论文的核心研究内容。论文没有涉及医学图像分割、深度学习、预后预测、手术规划、多模态成像或基础模型等具体医疗AI技术。因此，大多数关键词得分为0分，只有'medical image analysis'和'AI for diagnosis'因提及潜在诊断成像应用而获得2分（微弱关联）。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种基于ε-近零氧化铟锡薄膜的超快时间门控技术，通过四波混频抑制动态散射，实现了散射介质中空间信息的高保真传输，并展示了在体内诊断成像等领域的潜在应用。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 诸如铟锡氧化物（ITO）之类的透明导电氧化物在其介电常数趋近于零的频率范围内表现出强烈的光学非线性。我们利用这种非线性光学响应，在亚微米厚的ITO薄膜中，基于两个中心波长位于介电常数近零（ENZ）波段的超短脉冲之间的上转换四波混频（FWM），实现了一种亚皮秒时间门。通过消除静态和动态散射对信号脉冲的影响，该时间门仅保留未被散射的光子——弹道光子——从而实现了信号脉冲强度和相位中所编码空间信息的高保真传输。此外，在存在时变散射的情况下，我们的时间门可将由此产生的闪烁降低两个数量级。与传统的块体非线性材料相比，在亚波长厚度的ENZ薄膜中通过和频四波混频实现的时间门，可以在不牺牲空间分辨率（通常受限于相位匹配条件）的情况下，产生可见波长的无散射上转换信号。我们的实验可能对体内诊断成像和自由空间光通信等潜在应用产生影响。在此，作者展示了一种使用亚微米厚介电常数近零铟锡氧化物层的超快时间门方案，该方案在产生强四波混频信号的同时，减少了散射和闪烁。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Transparent conducting oxides such as indium-tin oxide (ITO) exhibit strong optical nonlinearity in the frequency range where their permittivity is near zero. We leverage this nonlinear optical response to realize a sub-picosecond time-gate based on upconversion four-wave mixing (FWM) between two ultrashort pulses centered at the epsilon-near-zero (ENZ) wavelength, in a sub-micron-thick ITO film. By removing the effect of both static and dynamic scattering on the signal pulse, the time gate only retains the photons that are not scattered — the ballistic photons — resulting in high-fidelity transmission of the spatial information encoded in both the intensity and the phase of the signal pulse. Furthermore, in the presence of time-varying scattering, our time-gate can reduce the resulting scintillation by two orders of magnitude. In contrast to traditional bulk nonlinear materials, time gating by sum-FWM in a sub-wavelength-thick ENZ film can produce a scattering-free upconverted signal at a visible wavelength without sacrificing spatial resolution, which is usually limited by the phase matching conditions. Our experiment can have implications for possible applications such as in vivo diagnostic imaging and free-space optical communication. Here, authors demonstrate an ultrafast time-gating protocol using a sub-micron-thick layer of epsilon-near-zero indium-tin oxide, yielding a strong four-wave mixing signal while reducing scattering and scintillation.
+
+</details>
+<br>
+
+**关键词**: epsilon-near-zero, time-gating, four-wave mixing, scattering media, spatial information transfer, indium-tin oxide, nonlinear optics, in vivo imaging
+
+---
+
+### 6. ❌ Ultrathin crown ether-based polyamide membrane for ion-ion separations
+
+**作者**: Luis Francisco Villalobos, Junwei Zhang, Junwoo Lee, Alex T. Hall, Ryan M. DuChanois, Camille Violet, John N. Cumings, Mingjiang Zhong, Menachem Elimelech
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70431-1](https://doi.org/10.1038/s41467-026-70431-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是用于离子分离的冠醚基聚酰胺膜，属于材料科学和化学工程领域，涉及膜分离技术、离子选择性传输和界面聚合。所有评分关键词均与医学影像分析、人工智能、疾病诊断、手术规划等医疗AI领域相关，而该论文完全不涉及任何医学影像、医疗数据或临床决策支持内容，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了如何通过界面聚合制备超薄冠醚基聚酰胺膜，实现了对钾离子的选择性分离，其选择性源于冠醚单元与钾离子的特异性结合。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：基于膜技术的液体分离方法能够选择性地从水中提取有价值的离子物种，从而提升跨行业的资源循环利用率。然而，商业膜缺乏针对特定离子所需的选择性。本文受生物离子通道原理启发，设计了基于冠醚的聚合物膜用于离子-离子分离。通过交联18-冠-6单元进行界面聚合，制备了超薄膜（约6纳米）。该膜优先吸附并传输钾离子，因其与冠醚结构单元能形成最稳定的络合物。吸附实验表明，在混合盐环境中膜对钾离子具有强烈偏好性，竞争性相互作用进一步提升了选择性。传输测试证实了钾离子相对于竞争性一价及二价阳离子的选择性渗透，其对铯和锂的选择性比约为4。这种性能得益于超薄结构、高交联度及高结合位点密度的协同作用。本研究确立了界面聚合法作为将大环化合物引入膜结构以实现精准离子分离的有效策略。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Membrane-based liquid separations that selectively extract valuable ionic species from water can enhance resource circularity across industries. However, commercial membranes lack the selectivity required to target specific ions. Here we design crown-ether-based polymeric membranes for ion–ion separations using principles inspired by biological ion channels. Ultrathin membranes (~6 nm) are fabricated via interfacial polymerization of crosslinked 18-crown-6 units. The membranes preferentially sorb and transport potassium, which forms the most stable complexes with the crown ether motifs. Sorption experiments show strong potassium preference in mixed-salt environments, where competitive interactions increase selectivity. Transport measurements demonstrate selective permeation of potassium over competing monovalent and divalent cations, with selectivities of ~4 over cesium and lithium. The combination of ultrathin architecture, high crosslinking degree, and high binding-site density enables this behavior. This work establishes interfacial polymerization as a strategy to incorporate macrocycles into membranes for precise ion separation.
+
+</details>
+<br>
+
+**关键词**: ion-ion separations, crown-ether-based membranes, interfacial polymerization, ultrathin membranes, potassium selectivity, ion channels, polyamide membrane, selective permeation
+
+---
+
+### 7. ❌ Structural mechanism of substrate binding and inhibition of human taurine transporter
+
+**作者**: Yuhan Qi, Yu Zhang, Duanning Wang, Jiameng Liu, Yue Zhou, W. Ji, Xinjing Chen, Luping Liu, Rui Wang, Jing-Xiang Wu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70772-x](https://doi.org/10.1038/s41467-026-70772-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是人牛磺酸转运蛋白（hTauT）的结构机制，属于结构生物学和药物靶点研究领域，与医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态影像、基础模型等关键词完全无关。论文使用冷冻电镜等技术解析蛋白质结构，不涉及任何医学影像处理或AI临床决策支持内容。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Structural insights are presented that reveal that taurine binds at the central substrate-binding site of hTauT, enhancing understanding of the mechanisms underlying substrate and ion recognition and transport in hTauT, paving the way for the future development of taurine transporter substrate analogues or selective inhibitors.
+
+!!! tip deepseek-chat TL;DR
+
+    本研究解析了人牛磺酸转运蛋白在四种状态下的结构，揭示了底物和抑制剂结合机制，为开发靶向该转运蛋白的药物提供了结构基础。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 牛磺酸是一种含硫氨基酸，在体内发挥多种关键作用。其摄取过程由牛磺酸转运蛋白（TauT）介导。TauT的基因突变与功能失调已被证实与多种神经系统疾病、心肌病、儿童进行性视网膜变性及癌症相关，这使得TauT成为治疗这些疾病的一个极具潜力的靶点。然而，目前对TauT的结构与工作机制仍知之甚少。本研究解析了人类牛磺酸转运蛋白（hTauT）在四种状态下的结构：无底物状态、结合牛磺酸状态、结合β-丙氨酸状态以及结合环状抑制剂哌啶-4-磺酸盐（P4S）状态。这些结构揭示，牛磺酸结合于hTauT的中心底物结合位点。值得注意的是，β-丙氨酸与环状P4S抑制剂亦能模拟牛磺酸，占据相同的底物结合位点。在无底物状态和结合P4S的状态下，hTauT均呈现向内开放构象，其跨膜螺旋TM1a向膜内弯曲，促使细胞内门打开以释放离子和底物。这些结构发现深化了我们对hTauT识别与转运底物及离子机制的理解，为未来开发牛磺酸转运蛋白底物类似物或选择性抑制剂奠定了基础。牛磺酸转运蛋白TauT是多种疾病的关键药物靶点。本研究揭示了人类TauT在四种状态下的结构，阐明了抑制剂如何模拟牛磺酸的作用机制，为未来针对TauT的药物设计提供了指导。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Taurine is a sulfur-containing amino acid that plays several crucial roles in the body. Its uptake is mediated by the taurine transporter (TauT). Genetic mutations and dysregulation of TauT have been linked to various neurological disorders, cardiomyopathy, childhood progressive retinal degeneration, and cancer, making TauT a promising target for therapeutic intervention in these diseases. However, the structure and mechanism of TauT remain poorly understood. In this study, we present the structures of the human taurine transporter (hTauT) under four conditions: the substrate-free state, the taurine-bound state, the β-alanine-bound state, and the cyclic inhibitor piperidine-4-sulfonate (P4S)-bound state. These structures reveal that taurine binds at the central substrate-binding site of hTauT. Notably, β-alanine and the cyclic P4S inhibitors also mimic taurine, occupying the same substrate-binding site. In the substrate-free and P4S-bound forms, hTauT also adopt an inward-open conformation, where transmembrane helix TM1a bends toward the membrane, facilitating the opening of the intracellular gate for ion and substrate release. These structural insights enhance our understanding of the mechanisms underlying substrate and ion recognition and transport in hTauT, paving the way for the future development of taurine transporter substrate analogues or selective inhibitors. Taurine transporter TauT is a key drug target for multiple diseases. Here, authors reveal structure of human TauT in four states, showing how inhibitors mimic taurine and guiding future TauT-targeted drug design.
+
+</details>
+<br>
+
+**关键词**: taurine transporter, structural mechanism, substrate binding, inhibition, drug target, cryo-EM structure, hTauT, therapeutic intervention
+
+---
+
+### 8. ❌ Single-pot mechanochemically-enabled fluorine atom closed-loop economy using PFASs as fluorinating agents
+
+**作者**: Hao Long, Georgina Kirby, Prof. Dr. Lutz Ackermann
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70766-9](https://doi.org/10.1038/s41467-026-70766-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是化学工程和环境科学领域，涉及PFASs（全氟和多氟烷基物质）的机械化学脱氟和氟原子循环利用，与医学图像分析、人工智能临床决策支持等医疗领域完全无关。所有关键词均与论文内容无任何关联，因此全部评分为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种单锅机械化学脱氟方法，将PFASs（永久化学品）中的氟原子转移到有机分子中，实现了氟的循环利用，并可扩展到氟塑料和氟化聚合物的降解。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：全氟及多氟烷基化合物（PFASs），亦称“永久性化学品”，对环境和人类健康的威胁日益加剧。尽管近年来PFASs的降解技术已取得进展，但此类分子的回收过程仍局限于使用高温或强还原剂的方法。开发可持续的PFASs降解方法，并对其产生的氟化物进行后续利用或回收，具有显著价值。本研究提出一种操作简便的单罐机械化学脱氟策略，可实现氟原子从PFASs向有机分子的定向转移。该机械化学体系的高效性避免了后续纯化步骤，即使处理规模达到十克级，也仅需简单的溶剂过滤。此外，该策略可拓展至日常含氟塑料及氟化聚合物（如PVDF膜、管材和PTFE）的脱氟处理，从而为可持续分解具有环境持久性与危害性的“永久性化学品”这一关键挑战提供了解决方案。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Per- and polyfluoroalkyl substances (PFASs), also known as “forever chemicals”, pose an increasing threat to the environment and human health. Despite recent advancements in PFASs destruction, the recycling processes for such molecules remain limited to methods using high-temperatures or strong reducing agents. Sustainable degradation methods for PFASs, along with the subsequent utilization or recycling of the resulting fluorides, are indeed highly beneficial. In this study, we present a user-friendly, single-pot mechanochemical defluorination approach for fluorine transfer from PFASs to organic molecules. The high efficiency of this mechanochemical system obviates subsequent purification steps, requiring only minimal solvent filtration, even on a decagram scale. Furthermore, this strategy can be extended to the defluorination of everyday fluoroplastic and fluorinated polymers, such as PVDF membranes, pipes, and PTFE, thus addressing a critical challenge in sustainably breaking down persistent and environmentally harmful “forever chemicals”.
+
+</details>
+<br>
+
+**关键词**: PFASs, mechanochemical defluorination, fluorine transfer, fluorine recycling, fluoroplastics degradation, sustainable degradation, single-pot method, forever chemicals
+
+---
+
+### 9. ❌ Confined-hydrogel fluidic memristor crossbar array for neuromorphic computing
+
+**作者**: Guangguo Guo, Tianyi Xiong, Boyang Xie, Jianping Zhang, Jin Zhang, Yinghai Lü, Yueru Zhao, Wenjie Ma, Cong Pan, Yanan Jiang, Lanqun Mao, Jianhua Wang, Ping YU
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70728-1](https://doi.org/10.1038/s41467-026-70728-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是用于神经形态计算的受限水凝胶流体忆阻器交叉阵列，属于电子器件、材料科学和神经形态计算领域，与医学图像分析、临床决策支持、疾病诊断、手术规划等医疗AI主题完全无关。所有关键词均未在标题或摘要中提及，也没有任何间接关联。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种基于受限水凝胶流体忆阻器的交叉阵列，用于实现神经形态计算，展示了其在模拟突触可塑性和模式识别方面的潜力。
+
+**关键词**: confined-hydrogel, fluidic memristor, crossbar array, neuromorphic computing, synaptic plasticity, pattern recognition, electronic device
+
+---
+
+### 10. ❌ Design of robust networks via reinforcement learning prompts the emergence of multi-backbones
+
+**作者**: Bingyu Zhu, Tianchen Zhu, Jianxi Gao, Shlomo Havlin, Daqing Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70745-0](https://doi.org/10.1038/s41467-026-70745-0)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究聚焦于通过强化学习设计鲁棒网络架构，促使多骨干网络的出现，属于网络科学、复杂系统和机器学习领域，与医学图像分析、临床决策支持等医疗AI主题完全无关。所有关键词均未在内容中提及或暗示。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过强化学习设计鲁棒网络架构，发现并验证了多骨干网络结构在提升网络鲁棒性方面的有效性。
+
+**关键词**: robust networks, reinforcement learning, multi-backbones, network design, network robustness, complex networks, machine learning
+
+---
+
+### 11. ❌ Structural basis of the cyclin Y/14-3-3 protein-mediated activation of CDK16
+
+**作者**: Klara Kohoutova, Dalibor Košek, Adam Brzezina, Karolína Honzejková, Veronika Obsilova, Tomáš Obšil
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70778-5](https://doi.org/10.1038/s41467-026-70778-5)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是细胞周期蛋白Y/14-3-3蛋白介导的CDK16激酶激活的结构基础，属于结构生物学和分子生物学领域，与医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或医学影像基础模型等关键词完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The findings not only clarify the role of CCNY and 14-3-3 in CDK16 activation but also highlight the potential of targeting CDK16 protein-protein interactions for cancer therapy.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过结构生物学方法揭示了cyclin Y和14-3-3蛋白如何协同激活CDK16激酶的分子机制。
+
+**关键词**: cyclin Y, 14-3-3 protein, CDK16, kinase activation, structural basis, protein-protein interaction, molecular mechanism
+
+---
+
+### 12. ❌ Observation of partonic flow in proton—proton and proton—nucleus collisions
+
+**作者**: S. N. Acharya, A. Agarwal, G. Aglieri Rinella, L. Aglietta, M. Agnello, N. Agrawal, Z. Ahammed, S. Ahmad, S. U. Ahn, I. Ahuja, A. Akindinov, V. Akishina, M. Al-Turany, D. Aleksandrov, B. Alessandro, H. M. Alfanda, R. Alfaro Molina, B. Ali, A. Alici, N. Alizadehvandchali
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-025-67795-1](https://doi.org/10.1038/s41467-025-67795-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究高能物理中的量子色动力学、夸克-胶子等离子体（QGP）形成以及重离子碰撞中的各向异性流测量，属于粒子物理领域，与医学图像分析、人工智能临床决策支持等关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文首次在大型强子对撞机的高多重数质子-铅和质子-质子碰撞中观测到重子和介子的各向异性流分组特征，表明这些较小系统中也可能形成部分子流动系统，支持夸克-胶子等离子体形成的可能性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 量子色动力学预言，在高温高能量密度条件下，强子物质会经历相变，形成夸克-胶子等离子体（QGP），此时夸克和胶子（部分子）不再被束缚于强子内部。夸克-胶子等离子体产生于超相对论性重离子碰撞中。各向异性流系数通过量化产生物质的方位角膨胀来探测夸克-胶子等离子体的性质。高能重离子碰撞中的流测量显示，在中等横向动量区间，重子和介子的各向异性流存在明显的分组现象——这一特征与夸克层级传递的流有关，从而证实了夸克-胶子等离子体的存在。而在质子-质子和质子-离子碰撞中观测到的类夸克-胶子等离子体特征，引发了关于较小系统中是否形成夸克-胶子等离子体的争论。本研究首次在大型强子对撞机（LHC）的高多重数质子-铅和质子-质子碰撞中，证明了重子与介子各向异性流的显著分组现象。这些结果可以通过一个包含流体力学演化及随后夸克组合形成强子的模型来描述，与该类碰撞中部分子流动态系统的形成相一致。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Quantum Chromodynamics predicts a phase transition from hadronic matter to quark–gluon plasma (QGP) at high temperatures and energy densities, where quarks and gluons (partons) are no longer confined within hadrons. The QGP forms in ultrarelativistic heavy-ion collisions. Anisotropic flow coefficients, quantifying the azimuthal expansion of produced matter, probe QGP properties. Flow measurements in high-energy heavy-ion collisions show a distinctive grouping of anisotropic flow for baryons and mesons at intermediate transverse momentum – a feature associated with flow imparted at the quark level, confirming QGP existence. The observation of QGP-like features in proton–proton and proton–ion collisions has sparked debate about QGP formation in smaller systems. For the first time, we demonstrate the distinctive grouping of anisotropic flow for baryons and mesons in high-multiplicity proton–lead and proton–proton collisions at the Large Hadron Collider (LHC). These results are described by a model including hydrodynamic flow followed by hadron formation via quark coalescence, consistent with the formation of partonic flowing systems in these collisions.
+
+</details>
+<br>
+
+**关键词**: quantum chromodynamics, quark-gluon plasma, anisotropic flow, heavy-ion collisions, partonic flow, Large Hadron Collider, baryon-meson grouping, hydrodynamic flow
+
+---
+
+### 13. ❌ Copper single-atom nanozyme with intelligent capture and photo-enhanced activity for controlling plant bacterial diseases
+
+**作者**: Hao Jiang, Yue Xing, Zhifeng Ma, Guangjin Fan, Zhongwei Liu, Song Yang (162335), Lin Cai
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70930-1](https://doi.org/10.1038/s41467-026-70930-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是铜单原子纳米酶在植物细菌病害控制中的应用，属于农业纳米技术和植物病理学领域，与医学影像分析、临床决策支持、疾病诊断预测、手术规划等医学人工智能主题完全无关。所有关键词均未在标题或摘要中出现，也没有相关概念提及。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种具有智能捕获和光增强活性的铜单原子纳米酶，用于有效控制植物细菌病害。
+
+**关键词**: copper single-atom nanozyme, intelligent capture, photo-enhanced activity, plant bacterial diseases, bacterial disease control, nanozyme, agricultural nanotechnology
+
+---
+
+### 14. ❌ Formaldehyde hydrazone as a methyl reagent for nickel-catalyzed cross-coupling methylation of aryl and heteroaryl electrophiles
+
+**作者**: Daliah Farajat, Léa Philippe, Faraz Alaghemand, Anastasiia M. Afanasenko, Durbis J. Castillo-Pazos, Juan D. Lasso, Y. S. KIM, E. C. Chen, Joaquı́n Barroso-Flores, Rustam Z. Khaliullin, Chao-Jun Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-69467-0](https://doi.org/10.1038/s41467-026-69467-0)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究属于有机化学领域，具体涉及镍催化交叉偶联反应和甲醛腙作为甲基化试剂，与医学影像分析、人工智能、临床决策支持等关键词完全无关。所有关键词均得0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了一种使用甲醛腙作为甲基化试剂，在镍催化下实现芳基和杂芳基亲电试剂的交叉偶联甲基化反应的方法。
+
+**关键词**: formaldehyde hydrazone, methyl reagent, nickel-catalyzed, cross-coupling, methylation, aryl electrophiles, heteroaryl electrophiles, organic synthesis
+
+---
+
+### 15. ❌ Room temperature photochemical synthesis of metal–organic frameworks for enhanced photocatalysis
+
+**作者**: Yong Chao Wang, Jingzhuo Guan, Kush Kumar, Wanting He, Jesus Valdez, Ruiqi Yang, Guoping Hu, Shengyun Huang, Audrey Moores, Santosh Kumar Meena, Yongfeng Zhou, Yannan Liu, Dongling Ma
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70927-w](https://doi.org/10.1038/s41467-026-70927-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究的是金属有机框架（MOFs）的光化学合成方法及其光催化性能，属于材料化学和光化学领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。论文内容涉及MOFs合成、光催化、材料表征等，未提及任何医学成像、疾病诊断、手术规划或医疗AI相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种室温光化学合成金属有机框架（MOFs）的新方法，实现了对钴-卟啉框架的结构控制，并展示了其在光催化反应中的优异性能。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：金属有机框架（MOFs）的功能从根本上受其合成精度调控。本文报道了一种光驱动策略，可在常温（15°C，4小时）下实现钴-卟啉框架（phoPPF-3）的合成，突破了传统热力学限制。该方法实现了多维控制，表现为二维沙漏形貌结构以及选择性Co²⁺-羧酸盐配位，从而保留了传统方法无法获得的游离碱卟啉核心。相较于溶剂热法合成的类似物，所得phoPPF-3在苯甲醇氧化和析氢反应中表现出增强的热稳定性和更高的光催化活性。该策略通过成功拓展至其他MOFs体系，展现出一定的普适性。本工作标志着利用光子引发并引导MOFs合成的首次实证，为通过光化学调控实现原子精度MOFs工程建立了可持续的途径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract The function of metal–organic frameworks (MOFs) is fundamentally governed by their synthesis precision. Here, we report a light-driven strategy enabling ambient-temperature MOFs synthesis (15 °C, 4 hours) for cobalt-porphyrin frameworks (phoPPF-3), overcoming traditional thermal constraints. This approach achieves multidimensional control, manifested in two-dimensional hourglass morphologies and selective Co 2 ⁺-carboxylate coordination that preserves free-base porphyrin cores unattainable conventionally. Resulting phoPPF-3 exhibits enhanced thermal stability and higher photocatalytic activity in benzyl alcohol oxidation and H 2 evolution comparing to solvothermal analogues. The methodology demonstrates a certain generality through successful extension to other MOFs. This work marks the demonstration of using photons to initiate and guide MOFs synthesis and establishes a sustainable approach for atomically precise MOFs engineering via photochemical control.
+
+</details>
+<br>
+
+**关键词**: metal-organic frameworks, photochemical synthesis, room temperature synthesis, cobalt-porphyrin frameworks, photocatalysis, benzyl alcohol oxidation, hydrogen evolution, morphology control
+
+---
+
+### 16. ❌ High-resolution phage-host assignment through key proteins using large language models
+
+**作者**: Zhihua Du, Min Li, Kai-Che Lin, Bo Xing, Yuehua Ou, Zihao Lin, Wenchen Song, Jie Chen, Junhua Li, Jianqiang Li, Minfeng Xiao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70613-x](https://doi.org/10.1038/s41467-026-70613-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究专注于生物信息学领域，具体研究噬菌体-宿主相互作用预测，使用大型语言模型分析蛋白质序列。所有评分关键词均涉及医学影像分析、临床决策支持、疾病诊断/预后、手术规划等医疗AI应用，而该论文完全不涉及医学影像、临床数据或医疗应用，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究利用大型语言模型分析蛋白质序列，实现了高分辨率的噬菌体-宿主相互作用预测。
+
+**关键词**: phage-host interaction, large language models, protein sequences, bioinformatics, prediction, key proteins, high-resolution assignment
+
+---
+
+### 17. ❌ Intrinsic mechanisms and microenvironmental cues fine-tune plasticity of esophageal progenitors
+
+**作者**: Louison Descampe, Benjamin Dassy, Fadi Charara, Ligia Craciun, Laurine Verset, Sheleya Pirard, Quentin Verheye, Morgane Leprovost, Marie Garcia, Alizée Vercauteren Drubbel, Benjamin Beck
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70957-4](https://doi.org/10.1038/s41467-026-70957-4)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究聚焦于食管祖细胞的分子生物学机制（如Notch信号通路、细胞可塑性、微环境调控），属于基础医学和细胞生物学领域。所有评分关键词均涉及医学影像分析、人工智能、深度学习、诊断预测、手术规划等临床技术应用，与论文的分子机制研究主题完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了食管祖细胞通过Notch信号通路和微环境因子调控其可塑性，从而影响食管稳态和疾病发生。
+
+**关键词**: esophageal progenitors, cell plasticity, Notch signaling, microenvironment, tissue homeostasis, Barrett's esophagus, squamous cell carcinoma, lineage tracing
+
+---
+
+### 18. ❌ Pre-splicing conformation and stepwise circularization of a group I intron in Azoarcus pre-tRNA
+
+**作者**: Yibao Hong, Jiashu Liu, Xiaojing Zhang, Ji Liu, Shanshan Li, Kaiming Zhang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70747-y](https://doi.org/10.1038/s41467-026-70747-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是Azoarcus pre-tRNA中I组内含子的剪接前构象和逐步环化机制，属于分子生物学和RNA结构研究领域。所有评分关键词均涉及医学影像分析、人工智能辅助诊断、手术规划等临床医学应用，与论文的分子生物学主题完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了Azoarcus pre-tRNA中I组内含子在剪接前的三维构象特征及其逐步环化的分子机制。
+
+**关键词**: group I intron, pre-tRNA, Azoarcus, pre-splicing conformation, circularization, RNA structure, molecular mechanism
+
+---
+
+### 19. ❌ Ultra-precision deconvolution of spatial transcriptomics decodes immune heterogeneity and fate-defining programs in tissues
+
+**作者**: Yin Xu, Zurui Huang, Yawei Zhang, Minghui Gong, Zhenghang Wang, Peijin Guo, Feifan Zhang, Jing Yang, Guanghao Liang, Lihui Dong, Renbao Chang, Yu Xia, Haochen Ni, Wenxuan Gong, Boyuan Mei, Yuan Gao, Zhaoqi Liu, Lin Shen, Jian Li, Meng Michelle Xu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70645-3](https://doi.org/10.1038/s41467-026-70645-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是空间转录组学技术（spatial transcriptomics）用于解码组织中的免疫异质性和命运决定程序，属于生物信息学和基因组学领域。所有评分关键词均围绕医学影像分析、深度学习医学影像、AI诊断/预后、手术规划等临床影像应用，而该论文完全不涉及医学影像数据、影像分析技术或临床决策支持系统。因此，所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种超精度去卷积方法用于空间转录组学数据，以解码组织微环境中的免疫细胞异质性和决定细胞命运的基因程序。
+
+**关键词**: spatial transcriptomics, deconvolution, immune heterogeneity, tissue microenvironment, cell fate programs, gene expression, computational biology, bioinformatics
+
+---
+
+### 20. ❌ Phanerozoic seawater Mg/Ca variations driven by supercontinent cycles
+
+**作者**: Pan Zhang, Mark A. Kendrick, Yigui Han, Long Ma, Kang-Jun Huang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70649-z](https://doi.org/10.1038/s41467-026-70649-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题《Phanerozoic seawater Mg/Ca variations driven by supercontinent cycles》和摘要内容表明，该研究属于地球科学领域，聚焦于地质历史时期海水化学组成变化与超大陆旋回的关联，完全不涉及医学影像分析、人工智能、临床决策支持或任何医疗相关主题。所有评分关键词均与论文内容无任何关联，因此所有关键词相关度评分均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究探讨了显生宙时期海水镁钙比（Mg/Ca）的变化是否由超大陆旋回驱动，并基于地质记录分析得出结论：超大陆的聚合与裂解过程通过改变大陆风化输入和洋中脊热液通量，是控制海水Mg/Ca长期变化的主要机制。
+
+**关键词**: seawater Mg/Ca, Phanerozoic, supercontinent cycles, continental weathering, mid-ocean ridge hydrothermal flux, geochemical evolution, paleoceanography, geological record
+
+---
+
+### 21. ❌ A disease-agnostic approach to ensemble learning for infectious disease forecasting
+
+**作者**: Alexander C. Murph, Lauren J. Beesley, G. Casey Gibson, Lauren A. Castro, Sara Y. Del Valle, Dave Osthus
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70937-8](https://doi.org/10.1038/s41467-026-70937-8)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是传染病预测的集成学习方法（epiFFORMA），专注于流行病学建模和预测，而非医学影像分析。论文内容涉及疾病预测、集成学习、流行病学动态和合成数据，与所有给定的医学影像相关关键词（如医学影像分割、深度学习医学影像、AI诊断、手术规划等）完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种疾病无关的集成学习方法（epiFFORMA），用于在没有历史数据的情况下预测多种传染病爆发，并证明其优于等权重集成策略和单个模型。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：传染病的精准预测是推动现代公共卫生干预、降低发病率和死亡率的关键。然而，实时进行准确预测对建模领域而言仍是一项挑战。集成预测通过将多个组件（个体）模型合并为单一加权平均值，已成为实现精准预测的重要工具。传统的集成策略依赖于定制化的组件模型，这些模型根据特定疾病的大量历史数据来加权各模型的贡献。这对于新发疾病并不适用，因为相关数据往往极少甚至没有。我们提出一种名为epiFFORMA的集成策略，该策略无需历史数据即可确定集成模型中各组件权重，因此具有疾病无关性。epiFFORMA模型基于M4预测竞赛中的FFORMA模型，通过合成数据来捕捉流行病学动态特征。我们证明，在对COVID-19、白喉、流感样疾病、登革热、麻疹、腮腺炎、脊髓灰质炎、风疹、天花和基孔肯雅热的疫情进行预测时，epiFFORMA的表现优于简单的等权重集成策略。我们进一步表明，epiFFORMA在整体上的平均预测性能优于集成中的各独立组件模型。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Accurate forecasting of infectious diseases drives modern public health interventions that reduce morbidity and mortality. However, accurate forecasting in real-time remains a challenge for the modeling community. Ensembling has emerged as a critical tool for accurate forecasting by leveraging multiple component (individual) models into a single weighted average. Traditional ensembling strategies have relied on bespoke component models that weight the contributions of individual models according to extensive historical data for specific diseases. This is impractical for an emerging disease, since there would be very little – if any – data. We propose an ensembling strategy, called epiFFORMA , that determines component weights for an ensemble model without historical data and is therefore disease-agnostic. The epiFFORMA model builds upon the FFORMA model from the M4 forecasting competition to harness epidemiological dynamics through synthetic data. We demonstrate that epiFFORMA performs better than a naive, equal-weighting ensembling strategy when forecasting outbreaks of COVID-19, diphtheria, influenza-like illness, dengue, measles, mumps, polio, rubella, smallpox, and chikungunya. We further show that epiFFORMA, on average, performs better than the individual component models in the ensemble.
+
+</details>
+<br>
+
+**关键词**: infectious disease forecasting, ensemble learning, disease-agnostic, epiFFORMA, epidemiological dynamics, synthetic data, public health interventions
+
+---
+
+### 22. ❌ A cell cycle-dependent transition of acetylation to phosphorylation regulates timely centrosome maturation
+
+**作者**: Jimin Li, Jianqiang Liang, Guifang Chen, Xuejie Wang, Yanyan Wang, Jingfei Zhan, Yunjing Guo, Jiadong Wang, Xuefeng Chen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70271-z](https://doi.org/10.1038/s41467-026-70271-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究细胞周期中乙酰化向磷酸化转变调控中心体成熟，属于细胞生物学和分子生物学领域，与医学影像分析、人工智能、临床决策支持等关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现细胞周期中乙酰化向磷酸化的转变调控中心体及时成熟，揭示了细胞周期调控的新机制。
+
+**关键词**: cell cycle, acetylation, phosphorylation, centrosome maturation, regulatory transition, timely regulation, molecular mechanism
+
+---
+
+### 23. ❌ Ultrahigh energy-storage dielectric ceramics via synergistic polymorphic nanodomain and defect design
+
+**作者**: Min Zhang, Y.‐L. He, Hao Pan, Qinghua Zhang, Peixuan Jing, Weijia Guo, Hongdong Cai, Ce-Wen Nan, Yuan-Hua Lin
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70768-7](https://doi.org/10.1038/s41467-026-70768-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究聚焦于材料科学领域的高能量存储介电陶瓷，通过纳米域和缺陷设计优化性能，与医学图像分析、人工智能临床决策支持等关键词完全无关。所有关键词均涉及医疗影像技术、AI诊断或手术规划，而论文内容属于功能材料与电子工程领域，无任何医学或影像相关讨论。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过协同多态纳米域和缺陷设计，开发了具有超高能量存储性能的介电陶瓷材料。
+
+**关键词**: dielectric ceramics, energy storage, polymorphic nanodomain, defect design, ultrahigh performance, material engineering, functional materials
+
+---
+
+### 24. ❌ Transcriptional competence defines the heterochromatin nucleating potential of isolated MSR units
+
+**作者**: Yi-Hsuan Lo, Nicholas Shukeir, Galina Erikson, Raghu Ram Edupuganti, Reagan W. Ching, Deepika Puri, Lisa Jerabek, Ramin Shiekhattar, Thomas Jenuwein
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70991-2](https://doi.org/10.1038/s41467-026-70991-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是小鼠细胞中异染色质形成的分子机制，具体探讨转录活性MSR重复序列如何通过DNA/RNA逻辑和转录偶联机制诱导异染色质成核。所有评分关键词均涉及医学影像分析、AI诊断、手术规划等临床决策支持技术，而该论文属于基础分子生物学研究，两者在研究对象、方法、应用领域上完全不同，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A DNA/RNA-based logic and transcription-coupled mechanism for the nucleation of heterochromatin is uncovered for the nucleation of MSR DNA.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了小鼠细胞中转录活性MSR重复序列通过DNA/RNA机制和转录偶联过程诱导异染色质成核的分子基础。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 在小鼠细胞中，组成型异染色质与富含A/T的DNA重复元件阵列（称为主要卫星重复序列，MaSat或MSR）相关。我们检测了小鼠胚胎干细胞中超过18,000个MSR拷贝，发现异染色质仅在具有转录能力的MSR单元处形成。为直接解析MSR DNA的功能，我们将分离的MSR单元插入到一个无重复序列且无基因的惰性基因组区域。插入三个或更多完整MSR单元会诱导异染色质组蛋白标记、招募HP1蛋白并掺入组蛋白H1。只有具有转录能力的MSR单元能够从头成核形成异染色质，而经置换的MSR变体或LINE1 5'UTR元件则不能。MSR的转录是双向的，且MSR来源的转录本会被RNAPII相关的整合子复合体所衰减。具有指导意义的是，多拷贝完整MSR单元提供了一个解旋的DNA模板，促进了RNAPII的募集。综上，本研究揭示了一种基于DNA/RNA的逻辑以及转录偶联的异染色质成核机制。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract In mouse cells, constitutive heterochromatin is associated with underlying arrays of A/T-rich DNA repeat elements, called the major satellite repeats (MaSat or MSR). We examine &gt;18,000 MSR copies in mouse ES cells and identify that heterochromatin forms only at transcriptionally competent MSR units. To directly dissect the function of MSR DNA, we insert isolated MSR units into an inert genomic region that is repeat- and gene-free. Insertion of three or more intact MSR units induces heterochromatic histone marks, recruitment of HP1 and incorporation of histone H1. Only transcriptionally competent MSR units, but not permutated MSR variants or LINE1 5’UTR elements, nucleate de novo heterochromatin. MSR-derived transcription is bi-directional and MSR-originating transcripts are attenuated by the RNAPII-associated Integrator complex. Instructively, multi-copy intact MSR units impart an unwound DNA template that facilitates RNAPII engagement. Together, this study uncovers a DNA/RNA-based logic and transcription-coupled mechanism for the nucleation of heterochromatin.
+
+</details>
+<br>
+
+**关键词**: heterochromatin, major satellite repeats, transcriptional competence, nucleation, RNAPII, Integrator complex, histone modifications, mouse ES cells
+
+---
+
+### 25. ❌ Distinct roles of cortical layer 5 subtypes in associative learning
+
+**作者**: Sara Moberg, Michele Garibbo, Camille Mazo, Ariel Gilad, Dietmar Schmitz, Rui Ponte Costa, Matthew E. Larkum, Naoya Takahashi
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-68307-5](https://doi.org/10.1038/s41467-026-68307-5)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是小鼠初级体感皮层中特定神经元亚型在联想学习中的作用，使用转基因小鼠、双光子成像和化学遗传学技术，属于基础神经科学领域。所有评分关键词均涉及医学影像分析、人工智能在医疗诊断/预后/手术规划中的应用，与论文的神经机制研究完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了小鼠初级体感皮层中第5层神经元的不同亚型在联想学习中发挥互补作用：IT神经元稳定编码感觉信息以形成线索-奖励关联，而ET神经元编码奖励预期以优化行为。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：适应性行为依赖于将感觉线索与奖赏性或厌恶性的结果相关联。在哺乳动物中，初级感觉皮层处理刺激并将信息分发至皮层和皮层下靶区。第5层包含两类主要的投射神经元：端脑内投射神经元和端脑外投射神经元；然而，它们在联想学习中的作用尚不明确。本研究利用转基因小鼠，在初级体感皮层中识别了IT与ET神经元，并通过纵向双光子成像技术，在结合胡须刺激的巴甫洛夫条件反射过程中追踪了它们的活动。IT神经元在整个训练过程中稳定地编码刺激身份，而ET神经元则表现出动态变化，这种变化与预期舔食行为的出现同步。对每种亚型进行化学遗传学沉默，会以不同的、阶段特异性的方式损害学习过程。一个强化学习模型重现了这些动态变化，表明IT神经元提供了形成线索-奖赏关联所需的稳定感觉表征，而ET神经元则编码奖赏预期以优化行为。这些发现揭示了第5层神经元在联想学习中具有互补的、细胞类型特异性的贡献。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Adaptive behavior relies on associating sensory cues with rewarding or aversive outcomes. In mammals, the primary sensory cortex processes stimuli and distributes information to cortical and subcortical targets. Layer 5 (L5) contains two major projection neuron classes, intratelencephalic (IT) and extratelencephalic (ET); however, their roles in associative learning remain unclear. Using transgenic mice, we identified IT and ET neurons in primary somatosensory cortex and tracked their activity with longitudinal two-photon imaging during Pavlovian conditioning with whisker stimulation. IT neurons stably encoded stimulus identity across training, whereas ET neurons showed dynamic changes that paralleled the emergence of anticipatory licking. Chemogenetic silencing of each subtype impaired learning in distinct, phase-specific ways. A reinforcement-learning model reproduced these dynamics, suggesting that IT neurons provide stable sensory representations needed to form cue-reward associations, while ET neurons encode reward expectation to refine behavior. These findings reveal complementary, cell-type-specific contributions of L5 neurons to associative learning.
+
+</details>
+<br>
+
+**关键词**: associative learning, cortical layer 5, IT neurons, ET neurons, two-photon imaging, Pavlovian conditioning, reinforcement learning model, somatosensory cortex
+
+---
+
+### 26. ❌ AP-1 mediates cellular adaptation and memory formation
+
+**作者**: Jingxin Li, Pavithran T. Ravindran, Aoife O’Farrell, Gianna T. Busch, Ryan H. Boe, Zijian Niu, Sean Woo, Margaret C. Dunagin, Naveen Jain, Yogesh Goyal, Kavitha Sarma, Meenhard Herlyn, Arjun Raj
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70862-w](https://doi.org/10.1038/s41467-026-70862-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究癌症细胞在药物压力下通过转录因子AP-1形成细胞记忆并产生耐药性的分子机制，属于基础细胞生物学和癌症研究领域。所有评分关键词均涉及医学影像分析、AI诊断、手术规划等临床技术应用，与论文的分子生物学研究内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现癌症细胞在药物治疗压力下能通过转录因子AP-1形成细胞记忆，从而获得耐药性，揭示了细胞适应和记忆形成的分子机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 细胞对环境刺激的反应通常被认为受基因编码程序调控。本研究证明，癌细胞在产生耐药性时能够形成并维持细胞记忆，表现出依赖于转录因子AP-1的细胞学习特征。我们发现，暴露于低剂量治疗的细胞能够适应并产生对高剂量治疗的耐药性，表明细胞可在应激期间实现适应性变化。治疗干预本身会导致瞬时基因表达被编码为细胞记忆，这种编码既发生在瞬时诱导的表达中，也出现在概率性产生的表达中。染色质可及性分析显示其具有伴随的持续性。双色AP-1报告系统表明这些记忆以顺式作用方式编码，构成了激活性顺式表观遗传调控的例证。我们的研究确立了细胞记忆的形成与维持作为治疗耐药性发展过程中基因调控的关键环节。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Cellular responses to environmental stimuli are typically thought to be governed by genetically encoded programs. We demonstrate that cancer cells can form and maintain cellular memories when becoming drug resistant, exhibiting characteristics of cellular learning that are dependent on the transcription factor AP-1. We show that cells exposed to a low dose of therapy adapt to become resistant to a high dose, demonstrating that cells can adapt during this time of stress. The application of therapy itself results in the encoding of transient gene expression into cellular memory and that this encoding occurs for both transiently induced and probabilistically arising expression. Chromatin accessibility shows concomitant persistence. A two-color AP-1 reporter system shows that these memories are encoded in cis , constituting an example of activating cis epigenetics. Our findings establish the formation and maintenance of cellular memories as a critical aspect of gene regulation during the development of therapy resistance.
+
+</details>
+<br>
+
+**关键词**: cellular memory, drug resistance, AP-1 transcription factor, cancer cells, therapy adaptation, chromatin accessibility, cis epigenetics, gene regulation
+
+---
+
+### 27. ❌ One-step fabrication of superhydrophobic fabrics with stable mechanical performance in harsh conditions
+
+**作者**: Zhuoxing Liu, Kexin Zhao, Jie Ma, Shijie Liu, Zidong Zhan, Cunlong Yu, Lei Wu, Dezhao Hao, Lei Jiang, Zhichao Dong
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70857-7](https://doi.org/10.1038/s41467-026-70857-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究是关于超疏水织物的制备及其机械性能，属于材料科学和表面工程领域，与医学图像分析、人工智能临床决策支持、深度学习医学成像、疾病诊断/预后、手术规划、多模态医学成像或医学成像基础模型等主题完全无关。所有关键词均未在论文内容中体现，因此相关度评分为0。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了超疏水织物在恶劣条件下机械性能不稳定的问题，通过一步法制备出具有优异机械耐久性和化学稳定性的超疏水织物。
+
+**关键词**: superhydrophobic fabrics, one-step fabrication, mechanical performance, harsh conditions, mechanical durability, chemical stability, robust superhydrophobicity
+
+---
+
+### 28. ❌ Structural basis for prostaglandin and drug transport via SLCO2A1
+
+**作者**: Chitra Joshi, Justin C. Deme, Yoshinobu Nakamura, Wei-Tse Hsu, Jonathan D. Goult, Takafumi Kato, Joanne L. Parker, Philip C. Biggin, Susan M. Lea, Takeo Nakanishi, Simon Newstead
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70227-3](https://doi.org/10.1038/s41467-026-70227-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究的是药物转运蛋白SLCO2A1的结构生物学机制，使用冷冻电镜技术解析其与前列腺素和药物结合的结构，并通过分子动力学模拟和细胞实验阐明底物识别机制。论文内容属于结构生物学、生物化学和药物转运领域，与医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像等关键词完全无关。论文未涉及任何医学影像处理或临床决策支持相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过冷冻电镜解析了药物转运蛋白SLCO2A1与前列腺素及四种临床药物结合的结构，揭示了该转运蛋白底物选择的分子机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：有机阴离子转运多肽转运蛋白（SLCO/OATPs）作为细胞“守门员”，调控药物及代谢物在人体内的肠道吸收、肝肾清除与组织分布。然而，SLCO超家族内部底物选择的分子机制尚不明确，这阻碍了理性阐释药物及代谢物与这些转运蛋白相互作用的努力。SLCO2A1（亦称OATP2A1）除转运数类非甾体抗炎药（NSAIDs）外，还负责类二十烷酸（包括前列腺素[PGs]和血栓烷）在全身的分布。本研究报道了SLCO2A1分别与内源性前列腺素及四种广泛用于治疗炎症、慢性哮喘和帕金森病（PD）的临床药物结合的冷冻电镜结构。结合分子动力学模拟与体内细胞实验，我们阐明了前列腺素与药物识别的分子基础。本研究揭示了支撑更广泛的药物及代谢物转运蛋白SLCO超家族内部底物选择及亚家族功能分化的关键机制细节。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Organic anion-transporting polypeptide transporters (SLCO/OATPs) function as cellular gatekeepers, regulating intestinal absorption, hepatic and renal clearance, and the tissue distribution of drugs and metabolites in the human body. However, the mechanisms underlying substrate selection within the SLCO superfamily remain unclear, hampering efforts to rationalize the interaction of drugs and metabolites with these transporters. SLCO2A1 (also known as OATP2A1) is responsible for the distribution of eicosanoids, including prostaglandins (PGs) and thromboxanes, throughout the body, in addition to several families of nonsteroidal anti-inflammatory drugs (NSAIDs). Here, we present cryogenic electron microscopy structures of SLCO2A1 bound to endogenous PGs and to four widely prescribed medications for treating inflammation, chronic asthma, and Parkinson’s disease (PD). Complementary molecular dynamics and in vivo cellular assays elucidate the molecular basis for PG and drug recognition. Our study reports essential mechanistic details that underpin substrate selection and subfamily adaptation within the broader SLCO superfamily of drug and metabolite transporters.
+
+</details>
+<br>
+
+**关键词**: SLCO2A1, prostaglandin transport, drug transporter, cryo-EM structure, molecular dynamics, substrate recognition, NSAIDs, organic anion-transporting polypeptide
+
+---
+
+### 29. ❌ Single-cell multiomics uncovers an endothelial mechanosensitive PIEZO1-IL-33 axis driving pulmonary fibrosis
+
+**作者**: Lanlan Zhang, Xuezhen Gui, Ruijie Hou, Liping Jia, Shu Xia, Xin Zhang, Yingyun Fu, Qian-Fang Meng, Qun Luo, Xingming Shi, Bingxin Guo, Ruifang Liang, Ludan Yue, Xue Chen, Haizhao Xu, Pengbo Wang, Xia Tong, Lujie Liu, Lingwei Wang, Baicun Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70193-w](https://doi.org/10.1038/s41467-026-70193-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究聚焦于单细胞多组学技术揭示肺纤维化中内皮细胞PIEZO1-IL-33轴的机制，属于分子生物学、细胞生物学和呼吸系统疾病的基础研究范畴。研究内容涉及单细胞测序、基因表达分析、信号通路和动物模型验证，未提及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划或多模态医学影像相关内容。因此，与所有给定的医学影像和AI临床决策支持关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过单细胞多组学分析发现内皮细胞中机械敏感通道PIEZO1通过调控IL-33表达驱动肺纤维化的新机制，为治疗提供了潜在靶点。
+
+**关键词**: single-cell multiomics, endothelial cells, PIEZO1, IL-33, pulmonary fibrosis, mechanosensitive axis, lung disease, molecular mechanism
+
+---
+
+### 30. ❌ Physics-informed Hamiltonian learning for large-scale optoelectronic property prediction
+
+**作者**: Martin Schwade, Shaoming Zhang, Frederik Vonhoff, Frederico P. Delgado, David A. Egger
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**arXiv链接**: [https://arxiv.org/abs/2508.20536](https://arxiv.org/abs/2508.20536)
+**DOI**: [10.1038/s41467-026-70865-7](https://doi.org/10.1038/s41467-026-70865-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是材料科学领域的物理信息机器学习框架HAMSTER，用于预测复杂化学系统的量子力学哈密顿量和光电性质，涉及卤化物钙钛矿、大规模原子系统、温度变化等。所有评分关键词均属于医学影像分析和临床决策支持领域，与论文的研究内容（材料科学、量子力学、光电性质预测）完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work presents HAMSTER, a physics-informed machine learning framework for predicting the quantum-mechanical Hamiltonian of complex chemical systems, and demonstrates the power of physics-informed Hamiltonian learning for accurate and interpretable optoelectronic property prediction in large, complex systems.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一个物理信息机器学习框架HAMSTER，用于准确预测大规模复杂化学系统的光电性质，并在卤化物钙钛矿材料上验证了其有效性和可扩展性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：在真实条件下预测大规模原子系统的光电特性对于理性材料设计至关重要，但采用第一性原理模拟计算成本过高。近期神经网络模型在克服这些挑战方面展现出潜力，但通常需要大量数据集且缺乏物理解释性。受物理学启发的近似模型具有更高的数据效率和直观理解优势，却往往以牺牲精度和可迁移性为代价。本文提出HAMSTER框架，这是一种基于物理信息的机器学习方法，用于预测复杂化学系统的量子力学哈密顿量。该方法从编码基本物理效应的近似模型出发，仅需少量显式第一性原理计算即可捕捉动态环境对哈密顿量的关键影响。我们在卤化物钙钛矿体系上验证了该方法，实现了跨温度和组分变化的光电特性精确预测，并可扩展至包含数万个原子的系统。本工作彰显了基于物理信息的哈密顿量学习在大型复杂体系中实现精确且可解释的光电特性预测的强大能力。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Predicting optoelectronic properties of large-scale atomistic systems under realistic conditions is crucial for rational materials design, yet computationally prohibitive with first-principles simulations. Recent neural network models have shown promise in overcoming these challenges, but typically require large datasets and lack physical interpretability. Physics-inspired approximate models offer greater data efficiency and intuitive understanding, but often sacrifice accuracy and transferability. Here we present HAMSTER, a physics-informed machine learning framework for predicting the quantum-mechanical Hamiltonian of complex chemical systems. Starting from an approximate model encoding essential physical effects, HAMSTER captures the critical influence of dynamic environments on Hamiltonians using only few explicit first-principles calculations. We demonstrate our approach on halide perovskites, achieving accurate prediction of optoelectronic properties across temperature and compositional variations, and scalability to systems containing tens of thousands of atoms. This work highlights the power of physics-informed Hamiltonian learning for accurate and interpretable optoelectronic property prediction in large, complex systems.
+
+</details>
+<br>
+
+**关键词**: physics-informed machine learning, Hamiltonian learning, optoelectronic property prediction, large-scale atomistic systems, halide perovskites, quantum-mechanical Hamiltonian, materials design, neural network models
+
+---
+
+### 31. ❌ Printable Newtonian fluid photocatalysts for scale-up solar CO2 conversion
+
+**作者**: Ziyang Lu, Yu Cheng, Yangrui Xu, Liguang Tang, Hongping Li, Tianhua Zhou, Kan Zhang, Weidong Shi
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70819-z](https://doi.org/10.1038/s41467-026-70819-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要显示该研究是关于可打印牛顿流体光催化剂用于规模化太阳能CO2转化，属于材料科学、化学工程和可再生能源领域，与医学图像分析、人工智能临床决策支持、医学影像分割、深度学习医学成像、AI诊断、预后预测、手术规划、多模态医学成像或医学影像基础模型完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种可打印的牛顿流体光催化剂，用于规模化太阳能驱动的二氧化碳转化，实现了高效、稳定的光催化性能。
+
+**关键词**: printable Newtonian fluid, photocatalyst, solar CO2 conversion, scale-up, photocatalytic performance, CO2 reduction, renewable energy
+
+---
+
+### 32. ❌ Giant magneto-cubic in-plane Hall effect in a nonmagnetic material
+
+**作者**: Jie Chen, Jin Cao, Yue Lu, Hang Li, Xiaodong Zhou, Xuekui Xi, Orest Pavlosiuk, Piotr Wiśniewski, Dariusz Kaczorowski, Yong-Chang Lau, Cong Xiao, Yue Li, Yong Jiang, Wenhong Wang, Shengyuan A. Yang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70726-3](https://doi.org/10.1038/s41467-026-70726-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是凝聚态物理中的磁电输运现象，具体涉及非磁性材料中的巨磁立方面内霍尔效应，属于物理学领域，与医学图像分析、人工智能临床决策支持等医学领域关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文研究了非磁性材料中巨磁立方面内霍尔效应的物理机制，发现了一种新的磁电输运现象。
+
+**关键词**: giant magneto-cubic in-plane Hall effect, nonmagnetic material, magnetoelectric transport, condensed matter physics, Hall effect, magnetic materials, electronic properties
+
+---
+
+### 33. ❌ Aligned representation of visual and tactile motion directions in hMT+/V5 and fronto-parietal regions
+
+**作者**: Iqra Shahzad, Ceren Battal, Filippo Cerpelloni, Alice Van Audenhaege, André Mouraux, Olivier Collignon
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70537-6](https://doi.org/10.1038/s41467-026-70537-6)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究视觉和触觉运动方向在hMT+/V5和额顶叶区域的神经表征对齐，属于认知神经科学领域，使用fMRI和MEG技术研究多感觉整合。所有评分关键词均涉及医学影像分析、AI诊断、手术规划等临床应用，而该论文是基础神经机制研究，无医学影像处理、疾病诊断或临床决策支持内容，因此所有关键词相关度为0。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过fMRI和MEG实验发现，视觉和触觉运动方向信息在hMT+/V5和额顶叶区域存在对齐的神经表征，揭示了跨模态运动信息处理的大脑机制。
+
+**关键词**: multisensory integration, motion direction, hMT+/V5, fronto-parietal regions, fMRI, MEG, neural representation, cross-modal alignment
+
+---
+
+### 34. ❌ Parvalbumin-positive neurons in the medial septum participate in the formation of hippocampal-dependent spatial memory
+
+**作者**: Yawen Zheng, Jifu Tong, Yuanwei Xing, Shan Shao, Naizheng Liu, Shuting Liu, Jiao Wu, Wang Yin, Jiaxin Wang, Shulu Yuan, Kun Cui, Xuetao Qi, Shuang Cui, You Wan, Ming Yi
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70268-8](https://doi.org/10.1038/s41467-026-70268-8)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是神经科学领域，具体关注内侧隔核中parvalbumin阳性神经元在海马依赖性空间记忆形成中的作用。所有评分关键词均涉及医学影像分析、人工智能在临床决策支持中的应用，而该论文完全不涉及医学影像处理、深度学习模型、疾病诊断、预后预测、手术规划或多模态医学数据融合等内容。因此，所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现内侧隔核中的parvalbumin阳性神经元对海马依赖性空间记忆的形成具有重要作用。
+
+**关键词**: parvalbumin-positive neurons, medial septum, hippocampal-dependent spatial memory, neural circuits, memory formation, brain function
+
+---
+
+### 35. ❌ Carbene-catalyzed double esterification enables enantioselective conformational self-locking of pillar[5]arenes
+
+**作者**: Vojtěch Dočekal, Ondřej Hladík, Ladislav Lóška, Martin Kamlar, Michael Franc, Ivana Císařová, Ján Veselý
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70809-1](https://doi.org/10.1038/s41467-026-70809-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是有机化学领域，具体涉及柱[5]芳烃的卡宾催化双酯化反应以实现对映选择性构象自锁定，属于合成化学和材料科学范畴。论文内容完全不涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学成像或医学成像基础模型等任何医学或人工智能相关主题。所有关键词均与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种卡宾催化的双酯化方法，实现了柱[5]芳烃的对映选择性构象自锁定，简化了手性大环主体的不对称合成，并为手性功能材料和主客体系统的设计开辟了新途径。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 柱[5]芳烃因其手性特征，成为有机主体分子中最具通用性和应用最广泛的类别之一，在材料科学与生物医学领域拥有众多应用。这类大环化合物的手性源于空间位阻较大的取代基诱导的构象锁定。然而，制备高对映体富集的柱[5]芳烃通常需要繁琐的手性或非对映异构体分离步骤。本文报道了一种简单高效的无金属双甲酰基柱[5]芳烃氧化双酯化方法。该策略为合成高对映体富集产物提供了通用且操作简便的途径，并展现出广泛的官能团兼容性，这通过引入具有生物活性及天然来源的片段得以验证。此外，该反应易于放大规模，并能实现后续衍生化以合成轮烷。因此，本研究中柱[5]芳烃自锁的有机催化方法不仅简化了高对映体富集大环主体的不对称合成，也为手性功能材料及主客体系统的设计开辟了新路径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract For their chirality, pillar[5]arenes stand out among the most versatile and widely utilized classes of organic host molecules, with numerous applications in materials science and biomedicine. The chirality of these macrocyclic compounds arises from conformational locking induced by sterically demanding substituents. However, preparing enantioenriched pillar[5]arenes often requires laborious chiral or diastereomeric separations. Here, we describe a simple and efficient metal-free protocol for oxidative double esterification of diformylpillar[5]arenes. This method provides a versatile and operationally straightforward route to highly enantioenriched products with broad functional group tolerance, as shown by incorporating biologically active and naturally derived fragments. Moreover, the reaction is readily scalable and enables subsequent derivatization, yielding rotaxane. Therefore, our organocatalytic method for pillar[5]arene self-locking not only streamlines the asymmetric synthesis of enantioenriched macrocyclic hosts but also opens new avenues for the design of chiral functional materials and host-guest systems.
+
+</details>
+<br>
+
+**关键词**: carbene catalysis, double esterification, pillar[5]arenes, enantioselective conformational locking, asymmetric synthesis, macrocyclic hosts, chiral functional materials, host-guest systems
+
+---
+
+### 36. ❌ Dalpiciclib plus chidamide in HR + /HER2−advanced breast cancer after CDK4/6 inhibitor failure: a phase Ib trial
+
+**作者**: Jinmei Zhou, Xuexue Wu, Yimeng Du, Jinyi Xiao, Xiaofeng Kang, Jiaxin Chen, Xiaobo Wang, Yanhong Tai, Li Bian, Shaohua Zhang, Zheng Pang, Yang Li, Zefei Jiang, Xiaojie Xu, Tao Wang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70650-6](https://doi.org/10.1038/s41467-026-70650-6)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文是一项关于乳腺癌治疗的临床Ib期试验，研究达匹西利布联合西达本胺在CDK4/6抑制剂治疗失败后的HR+/HER2-晚期乳腺癌患者中的安全性、耐受性和初步抗肿瘤活性。论文内容完全聚焦于临床肿瘤学、药物试验、药理学和分子生物学（如PIK3CA突变分析），未涉及任何医学影像分析、分割、深度学习、AI诊断、预后预测、手术规划、多模态成像或基础模型。所有关键词均与论文主题无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    本研究评估了达匹西利布联合西达本胺在CDK4/6抑制剂治疗失败的HR+/HER2-晚期乳腺癌患者中的疗效和安全性，确定了最大耐受剂量，并显示该联合疗法具有可控的安全性和初步抗肿瘤活性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 激素受体阳性/人表皮生长因子受体2阴性（HR+/HER2-）晚期乳腺癌（BC）患者在细胞周期蛋白依赖性激酶4/6抑制剂（CDK4/6i）治疗失败后的最佳疗法尚未明确。本研究证明，达尔西利联合西达本胺在雌激素受体阳性（ER+）/HER2-乳腺癌细胞系和患者来源类器官中产生协同抗肿瘤效应，为后续临床评估提供了依据。我们开展了一项单臂、Ib期、采用贝叶斯最优区间剂量递增设计的研究（NCT05586841），评估达尔西利联合西达本胺在四个剂量组中的效果[A组：达尔西利125 mg/日，西达本胺25 mg每周两次（BIW）；B组：达尔西利125 mg/日，西达本胺20 mg BIW；C组：达尔西利100 mg/日，西达本胺25 mg BIW；D组：达尔西利100 mg/日，西达本胺20 mg BIW]。主要终点为最大耐受剂量（MTD），次要终点包括客观缓解率（ORR）、无进展生存期（PFS）、疾病控制率和安全性。在22例入组患者中，3例出现剂量限制性毒性，MTD确定为C组。3-4级不良事件包括中性粒细胞减少（100%）、白细胞减少（64%）和血小板减少（36%）。总体ORR为9.1%，MTD组ORR为16.7%；总体中位PFS为5.8个月，MTD组中位PFS为12.3个月。与PIK3CA野生型患者（9.25个月；95% CI: 1.97–NE）相比，携带PIK3CA突变患者的mPFS更短（5.04个月；95% CI: 2.0–不可估计）。本研究结果表明，达尔西利联合西达本胺在CDK4/6i治疗失败的HR+/HER2-晚期乳腺癌患者中具有可控的安全性和初步的抗肿瘤活性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract The optimal therapy after cyclin‑dependent kinase 4/6 inhibitor (CDK4/6i) failure in hormone receptor-positive/human epidermal growth factor receptor 2-negative (HR + /HER2 − ) advanced breast cancer (BC) remains undefined. In this study, we demonstrate that dalpiciclib combined with chidamide exerted synergistic antitumor effects in estrogen receptor-positive (ER + )/HER2 − BC cell lines and patient-derived organoids, providing a rationale for subsequent clinical evaluation. We conducte a single‑arm, phase Ib, Bayesian optimal interval dose‑escalation study (NCT05586841) evaluating dalpiciclib plus chidamide across four groups [A, 125 mg dalpiciclib mg/d and chidamide 25 mg twice a week (BIW); B, dalpiciclib 125 mg/d, chidamide 20 mg BIW; C, dalpiciclib 100 mg/d, 25 mg chidamide BIW; D, dalpiciclib 100 mg/d, chidamide 20 mg BIW]. The primary endpoint is maximum tolerated dose (MTD), and the secondary endpoints are objective response rate (ORR), progression‑free survival (PFS), disease control rate and safety. Among 22 enrolled patients, dose‑limiting toxicities occur in 3 patients, and the MTD is identified as group C. Grade 3–4 adverse events include neutropenia (100%), leukopenia (64%), and thrombocytopenia (36%). The ORR is 9.1% overall and 16.7% at the MTD, with median PFS of 5.8 months overall and 12.3 months at the MTD. Patients with PIK3CA mutations have shorter mPFS [5.04 months; 95% CI: 2.0−not estimable (NE)] compared to those with wild type (9.25 months; 95% CI: 1.97–NE). Here we show that dalpiciclib plus chidamide has manageable safety and preliminary antitumor activity in HR + /HER2− advanced BC following CDK4/6i failure.
+
+</details>
+<br>
+
+**关键词**: dalpiciclib, chidamide, HR+/HER2- breast cancer, CDK4/6 inhibitor failure, phase Ib trial, maximum tolerated dose, progression-free survival, PIK3CA mutation
+
+---
+
+### 37. ❌ A single cluster of RNA Polymerase II molecules is stably associated with active genes
+
+**作者**: Apratim Mukherjee, Manya Kapoor, Kareena Shankta, Samantha Fallacaro, Raymond D. Carter, Gabriela Hayward-Lara, Puttachai Ratchasanmuang, Yara I. Haloush, Mustafa Mir
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70775-8](https://doi.org/10.1038/s41467-026-70775-8)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是果蝇胚胎中RNA聚合酶II（RNAPII）在转录过程中的聚集机制，属于基础分子生物学和发育生物学领域。研究使用单分子追踪和晶格光片显微镜技术，探讨RNAPII簇的形成、稳定性和与基因活性的关系。所有评分关键词均涉及医学影像分析、人工智能在医疗中的应用（如诊断、预后、手术规划）或医学影像基础模型，而本文完全不涉及任何医学影像、临床数据、疾病诊断或医疗应用，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    本研究通过单分子追踪和显微镜技术，揭示了果蝇胚胎中RNA聚合酶II簇的形成依赖于转录起始，且单个簇与活性基因位点稳定关联，其强度与转录输出强相关，表明这些簇是转录中聚合酶的局部积累而非通过相分离等高阶机制形成。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 在真核细胞核中，转录过程伴随着RNA聚合酶II（RNAPII）分子的聚集现象。关于这些聚集簇的形成机制、它们与基因的相互作用及其对转录活性的影响，目前仍存在广泛争议。本研究利用黑腹果蝇胚胎中合子基因组激活（ZGA）期间转录活性自然增强的特性，在发育背景下系统探究RNAPII聚集簇的功能作用。通过单分子追踪与晶格层光显微技术，我们发现RNAPII聚集簇的形成依赖于转录起始过程，且当不受细胞间期时长限制时，聚集簇的存续时间与转录活性密切相关。研究表明，单个聚集簇在转录过程中与活性基因位点稳定结合，且聚集簇的强度与转录输出量呈显著正相关。综合实验数据与聚集簇形成动力学的模拟结果，我们证明RNAPII聚集簇本质上是参与转录过程的聚合酶局部富集体，而非通过相分离等高阶机制形成。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract In eukaryotic nuclei, transcription is associated with the clustering of RNA Polymerase II (RNAPII) molecules. The mechanisms underlying cluster formation, their interactions with genes, and their impact on transcriptional activity remain heavily debated. Here, we take advantage of the naturally occurring increase in transcriptional activity during Zygotic Genome Activation (ZGA) in Drosophila melanogaster embryos to characterize the functional roles of RNAPII clusters in a developmental context. Using single-molecule tracking and lattice light-sheet microscopy, we find that RNAPII cluster formation depends on transcription initiation and that cluster lifetimes depend on transcriptional activity when not constrained by interphase duration. We show that single clusters are stably associated with active gene loci during transcription and that cluster intensities are strongly correlated with transcriptional output. Collectively, our data and simulations on cluster formation kinetics show that RNAPII clusters reflect local accumulations of transcriptionally engaged polymerases and do not form through higher-order mechanisms such as phase separation.
+
+</details>
+<br>
+
+**关键词**: RNA Polymerase II, transcription, single-molecule tracking, Zygotic Genome Activation, Drosophila melanogaster, cluster formation, gene activity, lattice light-sheet microscopy
+
+---
+
+### 38. ❌ Modulating coordinate site occupancy in high-entropy spinel electrocatalysts
+
+**作者**: Jihyun Baek, Kiran Hamkins, Yuzhe Li, Angel T. Garcia-Esparza, Tianying Liu, Cheng‐Tai Kuo, Jun-Sik Lee, Arron R. Potter, Sungsoon Kim, Yifan Wang, Honghe Ding, Jialu Li, Zengqing Zhuo, Jinghua Guo, Michal Bajdich, Xiaolin Zheng
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-20
+**DOI**: [10.1038/s41467-026-70982-3](https://doi.org/10.1038/s41467-026-70982-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究高熵尖晶石电催化剂中坐标位点占位的调制，属于材料科学和电化学领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。论文内容涉及催化剂设计、X射线吸收光谱、电催化性能等，未提及任何医学影像、深度学习、疾病诊断或手术规划相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过调制高熵尖晶石电催化剂中金属阳离子的坐标位点占位，优化了其电子结构和催化活性，显著提升了析氧反应性能。
+
+**关键词**: high-entropy spinel, electrocatalysts, coordinate site occupancy, oxygen evolution reaction, X-ray absorption spectroscopy, catalytic activity, electronic structure, transition metals
+
+---
+
+### 39. ❌ A bioinspired microdevice unifying energy storage and actuation through hydration control
+
+**作者**: Wenlan Zhang, Leandro Merces, Jiachen Ma, Christian Becker, Daniil Karnaushenko, Hongmei Tang, Jiang Qu, Letícia M. M. Ferro, Yan Huang, Yaping Yan, Yeji Lee, Vineeth Kumar Bandari, Dmitriy D. Karnaushenko, Aleksandr I. Egunov, Minshen Zhu, Oliver G. Schmidt
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70831-3](https://doi.org/10.1038/s41467-026-70831-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是生物启发式微器件，通过水合控制实现能量存储和驱动的集成，属于材料科学、微纳器件和能源技术领域。所有评分关键词均涉及医学影像分析、人工智能诊断、手术规划等医疗AI应用，与论文内容完全无关。论文未涉及任何医学影像、深度学习、疾病诊断或手术相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了合成材料中能量存储与驱动功能分离的问题，通过控制阴离子水合作用减少聚合物降解，实现了在亚毫米尺度上集成能量存储和驱动的单片微器件。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 生物系统能在紧凑结构中无缝整合能量存储与驱动功能，而人工合成方法大多将这些功能实现为独立组件。共轭聚合物虽能耦合两者，但其运作依赖于离子嵌入及聚合物主链中伴随的水合水，这导致性能与稳定性之间存在固有矛盾。本文揭示阴离子水合作用主导了这一矛盾。原位拉曼光谱与时间分辨质量测量表明，降低阴离子水合度可抑制水分渗入、减轻主链降解，并将聚合物响应从两步溶胀过程转变为单一快速的体积弛豫。基于此原理，我们实现了一种亚毫米级单体器件，在0.56平方毫米的占位面积内集成了能量存储与驱动功能。采用中心对称配置的双单元微电池可提供161毫安时每平方厘米的容量，并将周围驱动器的能耗降低四倍。水合控制作为多功能器件的关键设计参数，为微尺度集成能量-运动架构的转化应用提供了前景。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Biological systems seamlessly integrate energy storage and actuation within compact architectures, whereas synthetic approaches largely implement these functions as separate components. Conjugated polymers can couple both, yet their operation relies on ion insertion accompanied by hydration water within the polymer backbone, creating an intrinsic trade-off between performance and stability. Here we show that anion hydration governs this trade-off. In-operando Raman spectroscopy and time-resolved mass measurements reveal that reducing anion hydration suppresses water ingress, mitigates backbone degradation and converts the polymer response from a two-step swelling process into a single, rapid volumetric relaxation. Leveraging this principle, we realize a sub-millimetre monolithic device that integrates energy storage and actuation within a 0.56 mm<sup>2</sup> footprint. A centrally configured dual-cell microbattery delivers 161 mAh cm<sup>-2</sup> and reduces the energy consumption of surrounding actuators by fourfold. Hydration control, as the governing design parameter for multifunctional devices, holds translational promise for integrated energy-motion architectures at the microscale.
+
+</details>
+<br>
+
+**关键词**: bioinspired microdevice, energy storage, actuation, hydration control, conjugated polymers, microbattery, multifunctional devices, integrated energy-motion architectures
+
+---
+
+### 40. ❌ Reversible DNA condensation drives natural transformation
+
+**作者**: Joshua I. Santiago, Ishtiyaq Ahmed, Jeanette Hahn, Abigail Rubino, Heonhwa Choi, Guy R. Adami, David Dubnau, Matthew B. Neiditch, Keith J. Mickolajczyk
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70559-0](https://doi.org/10.1038/s41467-026-70559-0)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究细菌自然转化过程中DNA的凝聚机制，属于分子生物学和微生物学领域，与医学影像分析、人工智能、临床决策支持等关键词完全无关。论文使用单分子光镊和电子显微镜技术研究ComEA蛋白在DNA上的动态行为，不涉及任何医学影像、深度学习、AI诊断、预后预测、手术规划或多模态医学数据。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The results show that ComEA reversibly condenses DNA during natural transformation, first producing force to pull DNA into the periplasm and then abating force production to promote transport into the cytoplasm.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了细菌自然转化过程中ComEA蛋白通过可逆的DNA凝聚机制产生拉力将外部DNA拉入细胞，然后解除凝聚以促进DNA运输进入细胞质。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：自然转化驱动抗生素耐药性在细菌间的传播。DNA受体ComEA对于将外部转化DNA转运至周质空间至关重要，但其作用机制尚不明确。本研究通过单分子光镊与电子显微镜技术发现，嗜热脂肪土芽孢杆菌（Geobacillus stearothermophilus）的ComEA可在DNA上形成动态寡聚体，这些寡聚体能根据局部浓度在两种构象间切换。当ComEA稀疏分布于DNA时，会形成桥接寡聚体，通过产生亚皮牛顿（sub-pN）拉力使DNA凝聚；而当ComEA密集覆盖DNA时，则形成非桥接寡聚体，使DNA解凝聚且无法产生拉力。通过突变使ComEA偏向桥接或非桥接构象，均会导致枯草芽孢杆菌（Bacillus subtilis）的转化缺陷，表明凝聚与解凝聚过程各自具有关键机制作用。我们的研究结果揭示，在自然转化过程中，ComEA可逆地调控DNA凝聚状态：首先产生拉力将DNA拖入周质空间，随后减弱拉力以促进DNA向细胞质内转运。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Natural transformation drives the spread of antibiotic resistance among bacteria. The DNA receptor ComEA is essential for transporting external transforming DNA into the periplasm by an unknown mechanism. Here, single-molecule optical tweezers and electron microscopy approaches show that Geobacillus stearothermophilus ComEA forms dynamic oligomers on DNA that can switch between two conformations depending on local concentration. When ComEA sparsely decorates DNA, it forms bridging oligomers that condense the DNA to generate sub-pN pulling forces. When ComEA more fully decorates DNA, it forms non-bridging oligomers that decondense DNA and cannot generate force. Mutating ComEA to favor either bridging or non-bridging conformations causes transformation deficiency in Bacillus subtilis , meaning condensation and decondensation each play mechanistic roles. Our results show that ComEA reversibly condenses DNA during natural transformation, first producing force to pull DNA into the periplasm and then abating force production to promote transport into the cytoplasm.
+
+</details>
+<br>
+
+**关键词**: natural transformation, DNA condensation, ComEA, optical tweezers, bacterial transformation, DNA transport, Geobacillus stearothermophilus, single-molecule imaging
+
+---
+
+### 41. ❌ Coagulation pretreatment could deteriorate reverse osmosis membrane fouling
+
+**作者**: Haojie Ding, Shuai Liang, Weichen Lin, Chao Chen, Ruonan Gao, Yufang Li, Ye Li, Kang Xiao, Xu Huang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70892-4](https://doi.org/10.1038/s41467-026-70892-4)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是水处理领域中的反渗透膜污染问题，具体探讨混凝预处理对膜污染的影响机制，属于环境工程和化学工程领域。所有评分关键词均涉及医学影像分析、人工智能诊断、手术规划等医疗健康领域，与论文的水处理主题完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了铁基和铝基混凝预处理会通过不同机制加剧反渗透膜污染，从而降低系统性能，为优化水处理操作提供了重要指导。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 在零液体排放应用的反渗透系统中，混凝被广泛视为不可或缺的预处理工艺。然而在实际应用中，混凝预处理常对膜污染产生令人困惑的影响，甚至以不明确的机制恶化反渗透性能，从而严重干扰基于反渗透技术的应用进展。本研究系统揭示了铁基或铝基混凝预处理引发的反渗透性能退化，并阐明了残留混凝剂导致膜污染恶化的根本机制。铝基混凝主要引发无机污染，同时铜诱导的氧化应激加剧了生物膜内微生物生态互作网络的破坏。铁残留物显著提升了胞外聚合物的产量，并促进了坚固污染层的形成，从而加剧膜污染并降低反渗透性能。这些发现不仅为优化实际运行提供了重要的工程指导，而且深化了对混凝-反渗透相互作用的理解，为提升先进水处理系统的效率与可持续性建立了精细化框架。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Coagulation is widely regarded as an indispensable pretreatment process in reverse osmosis (RO) systems of zero liquid discharge applications. Yet in practical applications, coagulation pretreatment often causes perplexing impact on membrane fouling and even deteriorates the RO performance with ambiguous mechanisms, thereby seriously disrupting the progress of RO-based applications. This study systematically reveals the RO performance devolution caused by Fe- or Al-based coagulation pretreatment, and elucidates the fundamental mechanism of membrane fouling deterioration due to residual coagulants. The Al-based coagulation predominantly triggers inorganic fouling, with the disruption of microbial ecological interaction networks within the biofilm exacerbated by copper-induced oxidative stresses. The Fe residues dramatically enhance the production of extracellular polymeric substances and facilitate robust fouling layer development, exacerbating membrane fouling and diminishing RO performance. These findings not only provide essential engineering guidance for optimizing practical operations but also deepen the understanding of the coagulation–RO interactions, establishing a refined framework for enhancing the efficiency and sustainability of advanced water treatment systems.
+
+</details>
+<br>
+
+**关键词**: reverse osmosis membrane fouling, coagulation pretreatment, Fe-based coagulation, Al-based coagulation, extracellular polymeric substances, biofilm, water treatment systems, membrane performance deterioration
+
+---
+
+### 42. ❌ DC-CD4 bispecific tolerogenic nanovesicles induce antigen-specific regulatory T cells and ameliorate collagen-induced arthritis in mice
+
+**作者**: Lei Zhao, Zihao Gao, Ze Yuan, Xiaodie Yang, Duxin LI, Qian Ren, Yunli Yu, Jie Pan, Yiran Zheng, Xinyun Zhang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70898-y](https://doi.org/10.1038/s41467-026-70898-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是免疫疗法和纳米技术，专注于通过双特异性纳米囊泡诱导抗原特异性调节性T细胞来治疗自身免疫性疾病（胶原诱导性关节炎小鼠模型）。论文内容涉及免疫学、纳米医学和自身免疫疾病治疗，完全不涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或基础模型等关键词。所有关键词与论文主题完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The data support DC-CD4 bispecific tolerogenic NVs as a platform to induce antigen-specific Treg cells for precise immune tolerance in AIDs and confirm the pivotal role of bispecific NV-induced antigen-specific Treg cells in mediating the anti-inflammatory efficacy.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种DC-CD4双特异性耐受性纳米囊泡，通过诱导抗原特异性调节性T细胞，在胶原诱导性关节炎小鼠模型中有效治疗自身免疫性疾病。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 诱导抗原特异性调节性T细胞（T<sub>reg</sub>）是治疗自身免疫病（autoimmune diseases, AID）的一种前景广阔的策略。本文提出了一种共载抗原肽与雷帕霉素的树突状细胞-CD4⁺ T细胞（DC-CD4）双特异性耐受性纳米囊泡（nanovesicles, NV）。研究表明，这些纳米囊泡通过CTLA4-CD80/86和抗CD4（aCD4）-CD4相互作用，使树突状细胞与CD4⁺ T细胞在空间上紧密接近，从而促进抗原特异性T<sub>reg</sub>细胞的生成。在胶原诱导性关节炎（collagen-induced arthritis, CIA）小鼠模型中，无论是在治疗还是预防性给药条件下，双特异性纳米囊泡均显示出增强的淋巴结（lymph node, LN）趋向性，并增加了淋巴结和脾脏中的抗原特异性T<sub>reg</sub>细胞数量，从而对CIA产生显著的疗效。此外，通过关节炎致病细胞转移实验以及将T<sub>reg</sub>细胞过继转移至T<sub>reg</sub>细胞缺失的小鼠体内，证实了双特异性纳米囊泡诱导的抗原特异性T<sub>reg</sub>细胞在介导抗炎疗效中的关键作用。综上所述，我们的数据支持DC-CD4双特异性耐受性纳米囊泡作为一种平台技术，可用于诱导抗原特异性T<sub>reg</sub>细胞，从而在自身免疫病中实现精准的免疫耐受。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Inducing antigen-specific regulatory T (T<sub>reg</sub>) cells is a promising strategy for treating autoimmune diseases (AID). Here, we present dendritic cells-CD4⁺ T cells (DC-CD4) bispecific tolerogenic nanovesicles (NV) co-loaded with an antigenic peptide and rapamycin. We show that these NVs bring DCs and CD4⁺ T cells into close spatial proximity through CTLA4-CD80/86 and anti-CD4 (aCD4)-CD4 interactions, thereby promoting antigen-specific T<sub>reg</sub> cell generation. In a collagen-induced arthritis mouse model, the bispecific NVs display enhanced lymph node (LN) tropism and increase antigen-specific T<sub>reg</sub> cells in LNs and spleen, when administered in both therapeutic and prophylactic settings, resulting in robust efficacy against CIA. Furthermore, arthritogenic cell transfer and adoptive transfer of T<sub>reg</sub> cells into T<sub>reg</sub>-ablated mice confirm the pivotal role of bispecific NV-induced antigen-specific T<sub>reg</sub> cells in mediating the anti-inflammatory efficacy. Collectively, our data support DC-CD4 bispecific tolerogenic NVs as a platform to induce antigen-specific T<sub>reg</sub> cells for precise immune tolerance in AIDs.
+
+</details>
+<br>
+
+**关键词**: bispecific nanovesicles, regulatory T cells, antigen-specific tolerance, collagen-induced arthritis, autoimmune diseases, immune therapy, nanomedicine, DC-CD4 interaction
+
+---
+
+### 43. ❌ Aptamers with magnetically tunable affinity for divalent cobalt ions
+
+**作者**: Shengjie Gao, Linlin Wang, Lili Yao, Yu Mao, Michael Eisenstein, Hyongsok Tom Soh, Lei Zheng
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70871-9](https://doi.org/10.1038/s41467-026-70871-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是利用磁场调控适配体与钴离子的结合亲和力，属于生物化学、分子工程和磁学交叉领域，完全不涉及医学影像分析、深度学习、疾病诊断、手术规划或医疗AI模型等主题。所有关键词均与论文内容无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A strategy for selecting aptamers that exhibit enhanced binding to paramagnetic metal ions under a strong magnetic field is demonstrated and opportunities to generate aptamer switches that can be used to manipulate biorecognition processes via an externally applied magnetic field in diverse applications are suggested.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种通过磁场调控适配体与钴离子结合亲和力的方法，并揭示了磁场通过增强静电相互作用和诱导构象重排来优化结合机制的分子机理。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 利用磁场调控生物过程的能力引起了广泛关注。本文展示了一种在强磁场下筛选适配体的策略，该适配体对顺磁性金属离子具有增强的结合能力。通过采用针对Co<sup>2+</sup>的高磁场（HM）-SELEX方法，我们鉴定出两类具有磁场调控结合行为的适配体。其中一类适配体的亲和力随磁场强度增加而逐渐提高2-3倍；另一类在环境场强下几乎不结合靶标，而在≥6 T场强下亲和力可达约200 μM。分子模拟表明，磁场通过增强适配体-金属静电相互作用，诱导了全局构象重排，从而优化了核苷酸的配位几何构型。化学足迹分析与突变研究证实了特定构象变化在磁场诱导离子结合过程中的作用。这些研究结果为开发适配体开关提供了新机遇，此类开关可通过外加磁场调控生物识别过程，应用于多种领域。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> There is considerable interest in the ability to modulate biological processes with magnetic fields. Here we demonstrate a strategy for selecting aptamers that exhibit enhanced binding to paramagnetic metal ions under a strong magnetic field. Using a high-magnetic-field (HM)-SELEX method targeting Co<sup>2+</sup>, we identified two classes of aptamers with magnetically-modulated binding behavior. One displayed a gradual 2-3-fold increase in affinity as magnetic field strength increased, while the other went from minimal target binding at ambient field strength to an affinity of ~200 μM at ≥ 6 T. Molecular simulations revealed that the magnetic field induces a global conformational rearrangement by enhancing aptamer-metal electrostatic interactions, optimizing the coordination geometry of the nucleotides. Chemical footprinting and mutational analysis confirmed the role of certain conformational changes in magnetically-induced ion binding. These results suggest opportunities to generate aptamer switches that can be used to manipulate biorecognition processes via an externally applied magnetic field in diverse applications.
+
+</details>
+<br>
+
+**关键词**: aptamers, magnetic field modulation, cobalt ions, affinity tuning, HM-SELEX, conformational rearrangement, biorecognition, paramagnetic metal ions
+
+---
+
+### 44. ❌ Noncollinear ferrielectricity in a van der Waals crystal
+
+**作者**: Jierui Fu, Geyang Wang, Yingpeng Qi, W. M. He, Yuqiang Fang, Gang Tang, Y.Z. Peng, Dong Wang, Zhenjie Guan, Xuzhou Sun, Shufen Zhang, Zunyi Deng, Yue Liu, Jiapeng Wang, Songge Li, Tao Li, Jinjing Zhou, Yuchen Shang, Yuyi Yin, Zhaoju Yang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70975-2](https://doi.org/10.1038/s41467-026-70975-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是二维材料WO2Br2中的非共线铁电性、极化翻转和超快声子动力学，属于凝聚态物理和材料科学领域。所有评分关键词均涉及医学影像分析、人工智能辅助诊断、手术规划等临床医学应用，与论文的物理材料研究内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究在二维材料WO2Br2中发现了非共线铁电性，实现了压力驱动的90°极化翻转，并观测到与铁电和反铁电序相关的超快声子动力学。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 受非共线磁偶极序的启发，非共线电偶极序有望开辟丰富的铁电物理机制并为器件应用提供新机遇。然而，在单晶中建立这种序态仍具挑战性，因为电极化通常被锁定在晶轴上。本文报道了范德华晶体WO2Br2中的非共线亚铁电性，其源于铁电与反铁电声子模式之间的竞争。通过解耦反极性位移分量与极性位移分量，我们揭示了WO2Br2的非共线偶极序，这两种位移分量均通过扫描透射电子显微镜直接观测到。这种非共线偶极序使得晶体在静水压下可通过两条能量简并的转变路径实现90°极化翻转。此外，超快电子衍射测量表明，光激发可驱动两种分别与铁电序和反铁电序相关的独特相干声子模式。本工作丰富了非共线电偶极序的物理内涵，为新兴铁电器件应用提供了基础。作者在范德华晶体WO2Br2中揭示了本征长程有序的非共线电偶极序，该序态支持通过多重转变路径实现压力驱动的90°极化旋转，并展现出独特的超快声子动力学。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Inspired by noncollinear magnetic dipole order, noncollinear electric dipole order is anticipated to open up rich ferroelectric physics and new opportunities for device applications. However, establishing such order in single crystals remains challenging, as electric polarization is typically locked to crystallographic axes. Here we report noncollinear ferrielectricity in the van der Waals crystal WO2Br2, arising from competition between ferroelectric and antiferroelectric phonon modes. The noncollinear dipole order of WO2Br2 is revealed by decoupling the antipolar and the polar displacement components, both of which are directly visualized by scanning transmission electron microscopy. This noncollinear dipole order enables 90° polarization flip under hydrostatic pressure through two energetically degenerate transition pathways. Moreover, ultrafast electron diffraction measurements show that optical excitation drives two distinct coherent phonon modes associated with the ferroelectric and antiferroelectric orders. This work enriches the physics of noncollinear electric dipole order for emergent ferroelectric device applications. The authors reveal intrinsic long-range-order noncollinear electric dipole order in the van der Waals crystal WO2Br2, enabling pressure-driven 90° polarization rotation via multiple transition pathways and distinctive ultrafast phonon dynamics.
+
+</details>
+<br>
+
+**关键词**: noncollinear ferrielectricity, van der Waals crystal, WO2Br2, polarization rotation, ultrafast phonon dynamics, scanning transmission electron microscopy, hydrostatic pressure, electric dipole order
+
+---
+
+### 45. ❌ FGF1 orchestrates circadian hepatic triglyceride secretion
+
+**作者**: Benan Pelin Sermikli, Sihao Liu, Kyeongkyu Kim, Linnea Hases, Tim van Zutphen, Ashley Untereiner, Jocelyn Torres, Mingxiao He, Lillian Crossley, Yang Dai, Jonathan Zhu, Chandra Lekha Koopari, Weiwei Fan, Morgan Truitt, Johan W. Jonker, Annette R. Atkins, Michael Downes, Ronald Evans
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70849-7](https://doi.org/10.1038/s41467-026-70849-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是肝脏代谢疾病（MASLD/MASH）中FGF1蛋白如何通过昼夜节律调控甘油三酯分泌的分子机制，属于基础医学/分子生物学领域。所有评分关键词均涉及医学影像分析、人工智能、深度学习等技术在临床决策支持中的应用，而本文完全不涉及任何医学影像技术、图像处理、AI模型或计算机辅助诊断/手术规划等内容。论文使用小鼠模型和分子生物学方法，与医学影像分析领域无直接关联。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This study causally associates FGF1 circadian rhythmicity with TG secretion to establish FGF1 as a crucial pacemaker in hepatic lipid homeostasis.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了肝脏FGF1通过昼夜节律同步调控甘油三酯分泌的分子通路，并证明FGF1缺失会加剧代谢相关脂肪肝病，而外源性FGF1可阻止疾病进展。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 代谢功能障碍相关脂肪性肝病（Metabolic dysfunction-Associated Steatotic Liver Disease, MASLD）是一种全球性健康危机，与肝脏甘油三酯（Triglyceride, TG）的合成、氧化和分泌失调相关。尽管针对肝脏脂质合成/氧化治疗MASLD已取得进展，且昼夜节律与脂质代谢之间的关系已有充分记载，但协调TG分泌与昼夜节律的适应性机制仍未完全阐明。本研究揭示了一种自分泌调控通路：肝脏成纤维细胞生长因子1（Fibroblast Growth Factor 1, Fgf1）的昼夜节律性表达将TG的日间分泌同步至活跃期。FGF1激活FGFR4后，诱导了一条涉及非典型IRE1激活的mTORC1-IRE1-XBP1信号级联反应，从而促进TG分泌。一致地，在肝脏特异性FGF1敲除小鼠中，饮食诱导的MASLD病情加剧，而在代谢功能障碍相关脂肪性肝炎（Metabolic dysfunction-Associated Steatohepatitis, MASH）小鼠模型中，外源性FGF1可阻断疾病进展。本研究将FGF1的昼夜节律性与TG分泌建立因果关联，确立了FGF1作为肝脏脂质稳态的关键节律调节因子。该研究发现了肝脏FGF1的自分泌功能，即其昼夜节律性使甘油三酯分泌与活动周期同步。这一时钟调控通路的破坏会损害脂质稳态。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Metabolic dysfunction-Associated Steatotic Liver Disease (MASLD) represents a global health crisis associated with dysregulated hepatic triglyceride (TG) synthesis, oxidation and secretion. Despite progress in targeting hepatic lipid synthesis/oxidation for MASLD treatment and a well-documented relationship between circadian rhythms and lipid metabolism, the adaptive mechanisms coordinating TG secretion with circadian timing remain incompletely understood. Here we identify an autocrine regulatory pathway where circadian hepatic Fibroblast Growth Factor 1 (Fgf1) expression synchronizes diurnal TG secretion with the active phase. FGF1 activation of FGFR4 induces an mTORC1-IRE1-XBP1 signaling cascade involving atypical IRE1 activation that promotes TG secretion. Consistently, dietary-driven MASLD is exacerbated in liver-specific FGF1 knockout mice, while exogenous FGF1 halts disease progression in a Metabolic dysfunction-Associated Steatohepatitis (MASH) mouse model. This study causally associates FGF1 circadian rhythmicity with TG secretion to establish FGF1 as a crucial pacemaker in hepatic lipid homeostasis. This study identifies an autocrine role for hepatic FGF1, wherein its circadian rhythmicity synchronizes triglyceride secretion with activity. Disruption of this clock-regulated pathway impairs lipid homeostasis.
+
+</details>
+<br>
+
+**关键词**: FGF1, circadian rhythm, triglyceride secretion, MASLD, MASH, hepatic lipid homeostasis, mouse model, mTORC1-IRE1-XBP1 signaling
+
+---
+
+### 46. ❌ Intrinsic stabilization of synaptic plasticity improves learning and robustness in artificial neural networks
+
+**作者**: Artem Pilzak, Bobby Pennington, Jean-Philippe Thivierge
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70920-3](https://doi.org/10.1038/s41467-026-70920-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是人工神经网络中突触可塑性的内在稳定机制（iTDS），属于计算神经科学和机器学习基础理论研究。虽然涉及人工神经网络、学习效率和鲁棒性，但所有关键词都聚焦于医学影像分析、疾病诊断、手术规划等临床应用领域。论文中没有任何医学影像、临床数据、疾病诊断或医疗应用的内容，仅使用手写字符识别和图像分类作为通用测试任务，与医疗领域完全无关。因此所有关键词相关度均为0。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work proposes a framework that stabilizes synaptic changes in artificial neural networks through top-down signals derived from the network's own output, and demonstrates that this simple mechanism improves training efficiency, enhances generalization, and increases resilience to noise perturbations.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种受生物启发的内在自上而下稳定机制（iTDS），通过慢速输出反馈调节突触可塑性，从而提高了人工神经网络的训练效率、泛化能力和抗噪声鲁棒性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 突触可塑性（synaptic plasticity）指神经元间连接强度随时间增强或减弱的能力，它对学习至关重要，但不受调控的可塑性可能导致系统失稳。受生物反馈机制启发，我们提出一种框架，通过源自网络自身输出的自上而下信号来稳定人工神经网络中的突触变化。该模型被称为“内在自上而下稳定机制”（intrinsic Top-Down Stabilization, iTDS），通过引入一种缓慢的自上而下信号来增强传统监督学习，该信号持续追踪网络输出并调节突触更新。这些自上而下信号不直接干预感觉输入，而是通过逐渐与持续的网络活动对齐来引导突触可塑性。我们证明，这种简单机制能提升训练效率、增强泛化能力并提高对噪声干扰的鲁棒性。该方法在循环网络、前馈网络和储备池网络等架构上，通过16项合成与真实任务进行评估，包括时序信号编码、合成数据分类、手写字符识别和图像分类。我们的结果阐明了网络活动如何影响自上而下信号与监督学习的对齐过程，为理解生物网络中反馈投射如何稳定学习提供了可检验的预测。本研究提出的内在自上而下稳定机制（iTDS）是一种受生物学启发的机制，通过缓慢的、源自输出的反馈来稳定突触可塑性。在多种网络架构与任务中，iTDS均能提升训练效率、泛化能力和抗噪声鲁棒性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Synaptic plasticity, defined as the ability of connections between neurons to strengthen or weaken over time, is essential for learning, yet unregulated plasticity can lead to instability. Inspired by biological feedback mechanisms, we propose a framework that stabilizes synaptic changes in artificial neural networks through top-down signals derived from the network’s own output. The model, termed intrinsic Top-Down Stabilization (iTDS), augments traditional supervised learning by introducing a slower, top-down signal that tracks the network’s output over time and modulates synaptic updates. Instead of directly influencing sensory inputs, these top-down signals guide synaptic plasticity by gradually aligning with ongoing network activity. We demonstrate that this simple mechanism improves training efficiency, enhances generalization, and increases resilience to noise perturbations. The approach is evaluated across recurrent, feedforward, and reservoir networks on 16 synthetic and real-world tasks, including temporal signal encoding, synthetic data categorization, handwritten character recognition, and image classification. Our results clarify how network activity influences the alignment of top-down signals with supervised learning, providing testable predictions for how feedback projections can stabilize learning in biological networks. The study proposes intrinsic Top-Down Stabilization (iTDS), a biologically inspired mechanism that stabilizes synaptic plasticity via slow output-derived feedback. Across diverse architectures and tasks, iTDS improves training efficiency, generalization, and robustness to noise.
+
+</details>
+<br>
+
+**关键词**: synaptic plasticity, top-down stabilization, artificial neural networks, learning efficiency, generalization, robustness, feedback mechanisms, intrinsic stabilization
+
+---
+
+### 47. ❌ Engineering programmable CAR and antigen pairing via drug-gated light activation
+
+**作者**: Z. Josh Huang, Praopim Limsakul, Yiqian Wu, Tianze Guo, Yuxuan Wang, Zhuohang Wu, Linshan Zhu, Molly E. Allen, Longwei Liu, Yingxiao Wang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70855-9](https://doi.org/10.1038/s41467-026-70855-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是CAR-T细胞免疫疗法的工程化改进，通过药物门控光激活和可编程抗原配对技术解决实体瘤治疗中的抗原逃逸和异质性难题。所有评分关键词均涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态成像和基础模型等医学影像与AI领域，而论文完全不涉及医学影像处理、分析或相关AI技术，专注于细胞工程、免疫疗法和分子生物学方法，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    DGLA-sPAT provides a modular and spatially controlled framework to overcome antigen escape and heterogeneity while improving safety in solid-tumor CAR-T therapy.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种药物门控光激活的可编程CAR-T细胞系统（DGLA-sPAT），通过空间控制CAR功能和可编程抗原配对，有效克服实体瘤治疗中的抗原逃逸和异质性，在体内实验中实现了局部T细胞激活和强效肿瘤抑制，同时显著降低脱靶毒性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：嵌合抗原受体（CAR）T细胞免疫疗法已取得临床成功，但在实体瘤中仍因抗原逃逸和肿瘤异质性而受限。本研究通过设计一种高亲和力的R-藻红蛋白（R-phycoerythrin, PE）结合单抗体，构建了可编程的PE导向CAR系统，能够按序或同时靶向用户定义的抗原。为降低脱瘤毒性，我们采用了药物门控光激活（drug-gated light-activation approach, DGLA）策略，以空间限制CAR功能。进一步将DGLA控制的肿瘤抗原呈递与synNotch介导的可编程抗原靶向CAR（synNotch-mediated programmable antigen-targeting CAR, sPAT）相结合，建立了可编程的CAR-抗原配对系统（DGLA-sPAT）。该系统能在肿瘤细胞上诱导临床已验证的抗原作为局部“训练中心”，募集并激活sPAT CAR T细胞，从而通过PE偶联抗体靶向广泛表达的肿瘤抗原，实现对整个肿瘤群体的清除。在体内实验中，DGLA-sPAT展现出局部T细胞活化及强大的肿瘤抑制效果，且脱瘤毒性极低。因此，DGLA-sPAT提供了一个模块化且空间可控的技术框架，可在提高实体瘤CAR-T疗法安全性的同时，克服抗原逃逸与肿瘤异质性难题。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Chimeric antigen receptor (CAR) T-cell immunotherapy has achieved clinical success, but remains limited in solid tumors by antigen escape and tumor heterogeneity. Here, we engineer a high-affinity R-phycoerythrin (PE)-binding monobody to create a PE-programmable CAR toward user-defined antigens sequentially or simultaneously. To reduce off-tumor toxicity, we implement a drug-gated light-activation approach (DGLA) strategy to spatially confine CAR function. We further couple DGLA-controlled tumor antigen presentation with synNotch-mediated programmable antigen-targeting CAR (sPAT) to establish programmable CAR-antigen pairing (DGLA-sPAT). This system induces clinically validated antigens on tumor cells as local ‘training centers’ that recruit and activate sPAT CAR T cells, enabling elimination of entire tumor populations through broadly expressed tumor antigens using PE-conjugated antibodies. In vivo, DGLA-sPAT manifests local T cell activation and potent tumor suppression with minimal off-tumor toxicity. Thus DGLA-sPAT provides a modular and spatially controlled framework to overcome antigen escape and heterogeneity while improving safety in solid-tumor CAR-T therapy.
+
+</details>
+<br>
+
+**关键词**: CAR-T immunotherapy, antigen escape, tumor heterogeneity, drug-gated light activation, programmable antigen pairing, solid tumors, off-tumor toxicity, spatial control
+
+---
+
+### 48. ❌ Concise synthesis of bufogargarizin B by a conformation-controlled skeletal reorganization approach
+
+**作者**: Peicheng Yang, Yi Shen, Jinghan Gui
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70735-2](https://doi.org/10.1038/s41467-026-70735-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确显示这是一篇关于有机化学合成的研究，具体描述了从脱氢表雄酮合成bufogargarizin B的化学方法，涉及骨架重组、环化反应和立体化学控制。所有评分关键词均属于医学影像分析和人工智能临床决策支持领域，与论文的化学合成主题完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了bufogargarizin B的合成难题，通过构象控制的骨架重组方法，实现了从廉价原料高效合成这种复杂天然产物。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 蟾酥灵类化合物是从中华大蟾蜍（Bufo bufo gargarizans）毒液中分离得到的一类独特的19-去甲蟾蜍二烯内酯。本文报道了以廉价易得的脱氢表雄酮为原料，通过构象控制的骨架重组策略，实现了蟾酥灵B的简洁合成。该合成的特点在于：通过SmI<sub>2</sub>介导的酮-烯丙基乙酸酯跨环环化反应快速构建了5/7/6/5四环核心骨架，并借助仿生逆羟醛/跨环羟醛级联反应构建了立体化学多样的5,7-和7,5-稠合环系。此外，本研究开发了一种高效、可放大的2-吡喃酮-5-硼酸酯（2-pyrone-5-boronate）合成方法，该砌块是引入蟾蜍二烯内酯侧链的关键；并通过一系列高化学选择性和区域选择性的氧化还原转化，成功构建了蟾酥灵B中高度官能团化的全顺式D环。本工作生动地证明了在跨环环化产物中，构象控制对于精确安装所需立体中心起着至关重要的作用。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Bufogargarizins are a class of unique 19-norbufadienolides isolated from the venom of Bufo bufo gargarizans. Here we report a concise synthesis of bufogargarizin B from inexpensive, commercially available dehydroepiandrosterone by means of a conformation-controlled skeletal reorganization approach. The synthesis features the rapid construction of the 5/7/6/5 tetracyclic core framework by means of a SmI<sub>2</sub>-mediated ketone-allylic acetate transannular cyclization, and the installation of stereochemically diverse 5,7- and 7,5-fused ring systems through a biomimetic retro-aldol/transannular aldol cascade reaction. In addition, an efficient, scalable synthesis of 2-pyrone-5-boronate, a key building block for the introduction of the side chain of bufadienolides, has been developed, and the highly functionalized all-cis D ring of bufogargarizin B is installed by means of a series of highly chemo- and regioselective redox transformations. This work vividly demonstrates that conformational control plays a critical role in the precise installation of desired stereocenters in transannular cyclization products.
+
+</details>
+<br>
+
+**关键词**: bufogargarizin B, organic synthesis, skeletal reorganization, transannular cyclization, stereochemical control, bufadienolides, SmI2-mediated reaction, biomimetic cascade
+
+---
+
+### 49. ❌ Parkinson’s disease-associated PLA2G6 protects IP3R1 protein to control ER-mitochondria tethering and Ca2+ transfer
+
+**作者**: Zhi-Hao Lin, Nai-Jia Xue, Yi Liu, Zhang, Feng, 1973-, Xiaoli Si, Ran Zheng, Luyan Gu, Yaolin Li, Yi Fan, Jun Tian, Wolfgang H. Oertel, Hyemyung Seo, Jia-Li Pu, Bao-Rong Zhang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70752-1](https://doi.org/10.1038/s41467-026-70752-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是帕金森病的分子机制，聚焦于PLA2G6基因突变如何通过破坏线粒体-内质网膜接触来影响钙离子转移和能量稳态。研究采用细胞模型、动物模型和患者来源的神经元，属于分子生物学、细胞生物学和神经科学领域。论文完全没有涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态影像或基础模型等关键词相关的任何内容。所有关键词与论文主题完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    In iPSCs-derived dopaminergic neurons from patients with PD harboring PLA2G6 mutations, the structural and functional disruption of the MAM is further confirmed, underscoring its role in PD pathogenesis and suggest that modulating inter-organelle contacts could be a therapeutic strategy for correcting PD's ion channel dysfunction and energy imbalances.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现帕金森病相关基因PLA2G6通过稳定IP3R1蛋白来维持线粒体-内质网膜接触和钙离子转移，其功能缺失会导致这些接触破坏，从而揭示了帕金森病发病的新机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：磷脂酶A2第六组（PLA2G6）基因突变与常染色体隐性遗传帕金森病（PD）相关，但其分子机制尚不明确。本研究在源自PD患者的多巴胺能神经元中，提供了体外与体内证据，表明PLA2G6功能丧失会破坏线粒体相关内质网膜（MAM）——一个调控钙离子（Ca 2+）转移与能量稳态的关键结构。研究证实，PLA2G6蛋白定位于MAM，并与IP3R1-GRP75-VDAC1复合物发生物理结合。PLA2G6缺陷会 destabilize 该复合物，加速IP3R1降解，进而减少内质网-线粒体接触并损害Ca 2+转移。值得注意的是，引入MAM连接子可恢复由PLA2G6缺失引起的表型。在携带PLA2G6突变的PD患者诱导多能干细胞（iPSCs）来源的多巴胺能神经元中，进一步确认了MAM的结构与功能破坏，这凸显了其在PD发病机制中的作用。这些发现揭示了PLA2G6在MAM中的关键功能，并提示调控细胞器间接触可能成为纠正PD离子通道功能障碍与能量失衡的治疗策略。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Mutations in the phospholipase A2 group VI ( PLA2G6 ) gene have been linked to autosomal recessive Parkinson’s disease (PD), yet the molecular mechanisms remain poorly understood. This study provides the in vitro and in vivo evidence, specifically in dopaminergic neurons derived from patients with PD, that PLA2G6 loss-of-function disrupts the mitochondria-associated endoplasmic reticulum (ER) membrane (MAM), a critical regulator of Ca 2+ transfer and energy homeostasis. This study demonstrates that the PLA2G6 protein localizes to the MAM and physically associates with the IP3R1-GRP75-VDAC1 complex. PLA2G6 deficiency destabilizes this complex, accelerating IP3R1 degradation, which in turn reduces ER-mitochondria contacts and impairs Ca 2+ transfer. Notably, introducing a MAM linker restores the phenotypes caused by PLA2G6 loss. In iPSCs-derived dopaminergic neurons from patients with PD harboring PLA2G6 mutations, the structural and functional disruption of the MAM is further confirmed, underscoring its role in PD pathogenesis. These findings uncover the pivotal function of PLA2G6 within the MAM and suggest that modulating inter-organelle contacts could be a therapeutic strategy for correcting PD’s ion channel dysfunction and energy imbalances.
+
+</details>
+<br>
+
+**关键词**: Parkinson's disease, PLA2G6, mitochondria-associated endoplasmic reticulum membrane, Ca2+ transfer, IP3R1, dopaminergic neurons, energy homeostasis, therapeutic strategy
+
+---
+
+### 50. ❌ The relative role of direct orbital forcing versus CO2 and ice feedbacks on Quaternary climate
+
+**作者**: C. J. R. Williams, N. S. Lord, A. T. Kennedy-Asser, X. Ren, D. A. Richards, M. Crucifix, A. Kontula, M C Thorne, P. J. Valdes, G. L. Foster, R. M. Brown, E. L. McClymont, D. J. Lunt
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70750-3](https://doi.org/10.1038/s41467-026-70750-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是第四纪（过去258万年）气候变化机制，使用GCM（通用环流模型）和统计模拟器分析轨道强迫、CO2和冰盖反馈对气候波动的影响。所有评分关键词均涉及医学影像分析、人工智能诊断、手术规划等医疗领域，而论文完全不涉及任何医学、影像学或临床相关内容，属于地球科学/古气候学领域，因此所有关键词相关度均为0。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过气候模型模拟发现，在第四纪气候波动中，CO2和冰盖反馈是驱动年均温度变化的主要因素，而直接的轨道辐射强迫作用较小。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 在第四纪（过去258万年）期间，地球气候在冰期与间冰期之间波动，其变化受外部强迫驱动并通过内部反馈机制调节。然而，用于探究这些波动机制的关键工具——大气环流模式（General Circulation Models, GCMs）需要大量计算资源，这意味着它们不适用于在百万年时间尺度上探索轨道尺度变率。本研究利用GCM校准了一个更快速的统计模型（即仿真模型），并将其应用于第四纪气候模拟。结果表明，过去80万年间仿真模拟的气候与代用资料数据高度吻合，尤其在冰期-间冰期旋回的发生时间上。通过一系列敏感性实验，我们识别出驱动长期气候变化的主导因素。结果显示，二氧化碳与冰盖反馈的共同作用是年均温信号的主要贡献来源，而直接的轨道辐射强迫仅扮演次要角色。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract During the Quaternary (the last 2.58 million years), Earth’s climate has fluctuated between glacials and interglacials, paced by external forcings and mediated by internal feedbacks. However, General Circulation Models (GCMs), essential for addressing the mechanisms associated with these fluctuations, require substantial computational resources, meaning they are unsuitable for exploring orbital-scale variability on million-year timescales. Here, we use a GCM to calibrate a faster statistical model, or emulator, and apply this to the Quaternary. We show a good agreement between the emulated climate and proxy data over the last 800,000 years, especially the timing of glacial-interglacial cycles. A series of sensitivity experiments allows us to identify the dominant components driving long-term climate change. The results show that a combination of the CO 2 and ice sheet feedbacks provide the dominant contribution to the annual mean temperature signal, with the direct orbital radiative forcing playing only a minor role.
+
+</details>
+<br>
+
+**关键词**: Quaternary climate, glacial-interglacial cycles, General Circulation Models, orbital forcing, CO2 feedback, ice sheet feedback, climate emulator, paleoclimate
+
+---
+
+### 51. ❌ StrucGAP: a modular, streamlined and traceable data mining platform for structural and site-specific glycoproteomics
+
+**作者**: Muyao Yang, Yongqi Wu, Zhida Zhang, Yongchao Xu, Tianjia Lei, Xiaohan Wang, Zhehui Jin, Ke Hou, Y.-M. CAI, Shisheng Sun
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70560-7](https://doi.org/10.1038/s41467-026-70560-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是糖蛋白组学数据分析平台（StrucGAP），专注于糖基化位点分析、数据挖掘和功能注释，属于生物信息学和蛋白质组学领域。所有评分关键词均涉及医学影像分析、深度学习、AI诊断、手术规划等临床影像AI应用，与论文的糖蛋白组学数据分析主题完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Applying StrucGAP to an uncharacterized aging mouse uterus dataset reveals bidirectional regulation of core-fucosylation, and progressive, coordinated enrichment of glycans featuring sialylation via Neu5Ac, Lewis epitopes, and hybrid glycans along glycosylation dynamics, demonstrating StrucGAP's ability to distill critical glycosylation insights from multi-dimensional information of structural N-glycoproteome datasets.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一个名为StrucGAP的结构糖蛋白组学分析平台，用于从糖蛋白组数据中挖掘糖基化结构和功能信息，并应用于小鼠子宫衰老数据集揭示了核心岩藻糖基化的双向调控等糖基化动态变化。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 快速发展的糖肽鉴定搜索引擎与积累的高分辨率糖蛋白质组数据，凸显了对稳健的下游数据挖掘平台的迫切需求，以支撑后续功能与机制研究。本文介绍StrucGAP（Structural Glycoproteomics Analysis Platform），一个用于位点特异性N-糖蛋白质组学可扩展下游数据挖掘的结构糖蛋白质组学分析平台。它集成了数据质量控制、整体聚糖结构表征、差异聚糖特征提取、功能注释以及上游调控与下游网络分析等模块。其可视化与洞察追踪功能可对数百项输出结果进行解读提炼，独特地支持生成基于图表的分析报告并提取关键的糖基化洞察——这些能力在现有组学工具中较为罕见。将StrucGAP应用于一个未充分研究的小鼠子宫衰老数据集，揭示了核心岩藻糖基化的双向调控，以及伴随糖基化动态过程出现的、通过Neu5Ac介导的唾液酸化、Lewis表位和杂合聚糖所呈现的渐进式协调富集。这些变化在功能上与黏附和重塑过程相关联，证明了StrucGAP能够从结构N-糖蛋白质组数据集的多维信息中提炼出关键的糖基化洞察。StrucGAP是一个结构糖蛋白质组学分析平台，能够将糖蛋白质组数据集的多维信息提炼为面向机制研究的结构与功能见解。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The rapidly developing search engines for glycopeptide identification and accumulated high-resolution glycoproteomic data underscore the need for robust downstream data mining platforms towards subsequently functional and mechanistic studies. Here, we introduce StrucGAP, a Structural Glycoproteomics Analysis Platform for scalable downstream data mining of site-specific N-glycoproteomics. It integrates modules for data quality control, overall glycan structural characterization, altered glycan feature extraction, functional annotation, as well as upstream regulation and downstream networks. Its visualization and insight-tracking functionalities distill interpretation across hundreds of outputs, uniquely enabling to generate chart-based analysis reports and extract key glycosylation insights—capabilities rarely found in existing omics tools. Applying StrucGAP to an uncharacterized aging mouse uterus dataset reveals bidirectional regulation of core-fucosylation, and progressive, coordinated enrichment of glycans featuring sialylation via Neu5Ac, Lewis epitopes, and hybrid glycans along glycosylation dynamics. These changes are functionally linked to adhesion and remodeling, demonstrating StrucGAP’s ability to distill critical glycosylation insights from multi-dimensional information of structural N-glycoproteome datasets. StrucGAP is a structural glycoproteomics analysis platform that distills multi-dimensional information of glycoproteome datasets into structural and functional insights towards mechanistic studies.
+
+</details>
+<br>
+
+**关键词**: glycoproteomics, data mining platform, structural glycoproteomics, glycosylation analysis, N-glycoproteomics, functional annotation, glycan characterization, multi-dimensional data analysis
+
+---
+
+### 52. ❌ Assessing the effectiveness of riparian buffers in protecting biodiversity: a meta-analysis
+
+**作者**: Renato B. Dala-Corte, Xingli Giam, David S. Wilcove
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70191-y](https://doi.org/10.1038/s41467-026-70191-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是河岸缓冲带对生物多样性的保护效果，属于生态学、保护生物学领域，通过元分析方法评估森林河岸缓冲带与转化河岸带在生物多样性方面的差异。所有评分关键词均涉及医学影像分析、人工智能医疗应用、疾病诊断预测、手术规划等医学领域，与论文的生态保护主题完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过全球元分析研究发现，森林河岸缓冲带比转化河岸带支持更高的动物生物多样性，特别是在农业区域，且保护不同类群物种所需的最佳缓冲带宽度存在显著差异。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 河岸缓冲带——即沿水道保留或建立的植被带——在许多国家被规定用于水土保持，但其在生物多样性保护中的作用尚不明确。我们的全球荟萃分析比较了森林生物群落中人类改造景观内的森林河岸缓冲带与已转化河岸带。研究发现，在局部和景观尺度上，森林河岸缓冲带比已转化河岸带支持更高的动物多样性，尤其在农业区域。这一模式在热带和温带地区的大多数淡水及河岸类群中均保持一致。森林河岸缓冲带所包含的参照物种（即连续河岸森林中存在的物种）数量平均比已转化河岸带多32%。为物种保护而估算的最佳森林缓冲带宽度，对于鸟类和哺乳动物（河流每侧200-380米）大约比两栖动物（20-50米）和无脊椎动物（6-50米）宽一个数量级。我们的研究结果支持将森林河岸缓冲带作为森林生物群落中保护生物多样性的一项重要全球策略。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Riparian buffers - vegetation strips retained or established along waterways - are mandated in many countries for water and soil protection, yet their role in biodiversity conservation remains unclear. Our global meta-analysis compares forested riparian buffers with converted riparian zones in human-modified landscapes across forest biomes. We find that forested riparian buffers support higher animal biodiversity than converted riparian zones at both local and landscape scales, particularly in agricultural areas. This pattern is consistent across most freshwater and riparian taxa, in both tropical and temperate regions. Forested riparian buffers also harbor, on average, 32% more reference species (i.e., species found in continuous riparian forests) than do converted riparian zones. Optimum forested buffer width estimates for species conservation are roughly an order of magnitude wider for birds and mammals (200-380 m on each river side), than for amphibians (20-50 m) and invertebrates (6-50 m). Our findings support forested riparian buffers as an important global strategy for conserving biodiversity in forest biomes.
+
+</details>
+<br>
+
+**关键词**: riparian buffers, biodiversity conservation, meta-analysis, forested buffers, species conservation, buffer width, agricultural areas, global strategy
+
+---
+
+### 53. ❌ Shape-optimized metasurface beamformer for high-efficiency full-duplex optical wireless communications across an ultra-wide field-of-view
+
+**作者**: Zhongyi Yuan, Ji Chen, Yin Wang, Yue Wu, Muyang Li, Shengjian Chen, Chuanyou Chen, Xiaohu You, Zaichen Zhang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70665-z](https://doi.org/10.1038/s41467-026-70665-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是光学无线通信（OWC）中的超表面波束成形技术，属于通信工程和光学工程领域，与医疗图像分析、人工智能临床决策支持等医学领域完全无关。论文内容涉及形状优化超表面设计、宽视场角波束偏转、高速数据传输等通信技术，未提及任何医学成像、疾病诊断、手术规划或医疗AI相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种形状优化超表面设计策略，实现了超过160°视场角和80%偏转效率的全双工光学无线通信系统，支持200米传输距离和225Gbps单通道数据率。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 光无线通信（Optical Wireless Communication, OWC）是第六代（6G）移动网络中一项前景广阔的技术。在大偏转角下建立高质量的光学链路对于提升光无线通信性能至关重要。超表面凭借其亚波长结构，能够实现超越传统技术极限的大角度光束偏转。然而，若缺乏精心的结构设计，偏转效率会不可避免地随偏转角增大而下降。本文提出一种形状优化策略，用于设计兼具高效率光束偏转特性和低制造复杂度的自由曲面超表面。利用形状优化超表面（Shape-Optimized Metasurface, SOM），我们展示了一种视场角超过160°、偏转效率高于80%的全双工光无线通信系统，可实现高清、超低延迟的视频通话。此外，基于SOM的光无线通信系统展现出进一步的性能提升，实现了200米的传输距离和225 Gbps的单通道数据速率。我们的工作具有高效率、宽角度覆盖、高集成度和强可扩展性等优势，为未来革命性的高性能、低成本光无线通信系统铺平了道路。形状优化超表面的发展使得光无线通信系统能够同时提供宽角度覆盖、高效率、长距离传输和高数据速率，非常适用于下一代无线网络。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Optical wireless communication (OWC) is a promising technology for sixth-generation (6 G) mobile networks. Establishing high-quality optical links over large deflection angles is crucial for improving OWC performances. Metasurfaces, owing to their subwavelength structures, enable large-angle beam deflection beyond conventional techniques limits. However, without careful structural design, deflection efficiency inevitably decreases with increasing deflection angles. Here, we propose a shape-optimization strategy to design freeform metasurfaces with high-efficiency beam deflection property and low fabrication complexity. Using the shape-optimized metasurface (SOM), we demonstrate a full-duplex OWC system with a field-of-view exceeding 160° and a deflection efficiency over 80%, enabling high-definition, ultra-low-latency video calls. Furthermore, the SOM-based OWC system demonstrates further performance enhancement, achieving a 200 m transmission distance and a 225 Gbps single-channel data rate. Our work offers advantages of high-efficiency, wide angular coverage, high integration and strong scalability, paving the way for revolutionary high-performance and cost-effective OWC systems in the future. Shape-optimized metasurfaces have been developed to enable optical wireless communication systems that simultaneously provide wide angular coverage, high efficiency, long-distance transmission, and high data rates, well suited for next-generation wireless networks.
+
+</details>
+<br>
+
+**关键词**: optical wireless communication, metasurface beamformer, shape-optimized metasurface, wide field-of-view, beam deflection efficiency, full-duplex communication, high data rate transmission, 6G mobile networks
+
+---
+
+### 54. ❌ Superacid-resistant macrocyclic BODIPYs
+
+**作者**: K. Watanabe, Gentaro Honda, Yuki Terauchi, Shunsuke Mamiya, Yuya Inaba, Tasuku Nakajima, Jian Ping Gong, Yusaku Yamaguchi, Yuichi Kitagawa, Yasuchika Hasegawa, Yuki Ide, Min Gao, Tomoki Yoneda, Yasuhide Inokuma
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70499-9](https://doi.org/10.1038/s41467-026-70499-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是超强酸稳定性的环状BODIPY荧光染料，属于化学材料科学领域，专注于荧光染料的合成、光学性质及其在酸性环境中的应用。所有评分关键词均涉及医学影像分析、人工智能诊断、手术规划等临床决策支持技术，与论文的化学材料研究内容完全无关。论文仅提及生物成像作为潜在应用方向之一，但未涉及任何医学影像分析技术或AI方法。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文解决了传统BODIPY荧光染料在酸性条件下不稳定的问题，通过设计环状结构合成了超强酸稳定的BODIPY，实现了在强酸环境中的荧光保持和开关响应，并展示了其在酸性材料荧光染色中的应用。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：硼-二吡咯亚甲基（BODIPYs）是一类用途广泛的荧光团，具有强荧光特性，在生物成像与传感领域应用广泛。然而，其在酸性条件下会发生脱硼反应，导致荧光淬灭。本文中，我们通过利用杯[3]吡咯类大环化合物的协同硼螯合效应，设计出了具有卓越酸稳定性的BODIPYs。研究表明，即使在包括超强酸在内的强酸性介质中，该类大环BODIPYs仍能保持其特征光学性质而不发生脱硼。大环BODIPYs表现出尖锐的吸收峰和质子化诱导的荧光开关效应，其量子产率高达0.90，且斯托克斯位移较窄。值得注意的是，即使在未稀释的氟磺酸中也未观察到脱硼现象，可见荧光可持续一天以上。除了非凡的耐酸性外，大环BODIPYs相较于传统BODIPYs还具有更高的热稳定性和光稳定性。通过外围取代可调控其吸收与发射波长，而通过轴向配体交换进行的氟标记使其能在氟溶剂中响应全氟辛酸并实现荧光开关。我们利用这种耐超强酸的BODIPYs作为酸性指示剂，对Nafion微球和磺化凝胶进行了荧光染色——这些材料酸性过强，传统BODIPYs无法在其中维持荧光发射。本研究将BODIPYs的应用范围拓展至强酸性非水环境，为材料与生物系统中的荧光成像与传感开辟了新机遇。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Boron-dipyrromethenes (BODIPYs) are versatile fluorophores with intense fluorescence and broad applications in bioimaging and sensing. However, they undergo deboronation under acidic conditions, which causes fluorescence degradation. Herein, we designed exceptionally acid-stable BODIPYs by harnessing the synergistic boron-chelation effect of calix[3]pyrrole-like macrocycles. We show that their characteristic optical properties are retained in strongly acidic media, including superacids, without undergoing deboronation. Macrocyclic BODIPYs exhibit sharp absorption and protonation-induced fluorescence switching, with quantum yields of up to 0.90 and narrow Stokes shifts. Notably, no deboronation was observed even in non-diluted fluorosulfuric acid, and visible fluorescence was sustained for over a day. Beyond their unusual acid resistance, the macrocyclic BODIPYs had higher thermal- and photostability compared with conventional BODIPYs. Peripheral substitution allowed the modulation of absorption and emission wavelengths, and fluorous-tagging through axial ligand exchange enabled fluorescence switching in response to perfluorooctanoic acid in a fluorous solvent. We used superacid-resistant BODIPYs as acid indicators for the fluorescence staining of Nafion beads and sulfonylated gels, which are too acidic to sustain the fluorescence emission of conventional BODIPYs. Our findings expand the scope of BODIPYs into strongly acidic, non-aqueous environments, opening opportunities for fluorescence imaging and sensing in materials and biological systems.
+
+</details>
+<br>
+
+**关键词**: BODIPY, acid-stable fluorophores, macrocyclic structure, fluorescence switching, superacid resistance, fluorescence imaging, chemical sensors, optical properties
+
+---
+
+### 55. ❌ A snow-fire bridge mechanism for the 2025 Southern California winter wildfire
+
+**作者**: Shizuo Liu, Shineng Hu, Richard Seager
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70827-z](https://doi.org/10.1038/s41467-026-70827-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是气候科学领域，具体探讨欧亚大陆积雪减少与加利福尼亚冬季野火风险之间的远程大气遥相关机制，使用观测分析和数值模拟方法。所有评分关键词均属于医学影像分析与人工智能在医疗决策支持中的应用范畴，与论文的气候、野火、大气动力学研究内容完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过观测和模拟发现，欧亚大陆西部积雪减少可通过激发罗斯贝波列等大气遥相关机制，导致北美冬季西暖东冷的温度偶极子型，从而增加加利福尼亚后续野火风险，并建立了欧亚积雪异常与北美气候极端事件的预测性联系。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 2025年1月，一场罕见且极具破坏性的野火肆虐南加州，成为有记录以来损失最惨重的野火事件。此次野火发生的异常时间节点表明，其可能存在与以往野火不同的独特远程、大规模气候前兆。本文通过观测分析和大型集合数值模拟发现，欧亚大陆西部积雪减少与12月至1月期间南加州有利于野火发生的天气条件存在关联；模拟结果表明，这一关联可通过从欧亚大陆西部经北太平洋延伸至北美洲的大气遥相关过程实现。观测与模拟结果均显示，欧亚大陆西部积雪减少有助于形成北美典型的冬季"西暖东冷"偶极型温度模态。其主要动力机制涉及欧亚大陆西部积雪减少激发的下游罗斯贝波列传播，以及北太平洋上空的波-平均流相互作用。我们的研究表明，欧亚大陆积雪异常可预测性地关联到加州后续的野火风险及冬季北美纬向偶极型温度模态，这凸显了欧亚冰冻圈变率对远程气候极端事件的广泛影响。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract In January 2025, a rare and highly destructive wildfire devastated Southern California, becoming the costliest wildfire event in recorded history. The unusual timing of this wildfire suggests the possibility of unique remote, large-scale climatic precursors that differ from those of previous wildfires. Here, through observational analysis and large-ensemble numerical simulations, we identify that western Eurasian snow cover reduction is associated with weather conditions favorable for wildfires in Southern California in December-January, and simulations indicate that this can occur via an atmospheric teleconnection from western Eurasia, across the North Pacific and into North America. Both observations and simulations show that the reduced snow cover over western Eurasia contributes to the typical wintertime western warming-eastern cooling dipole pattern in North America. The main dynamical mechanisms involve downstream propagating Rossby wave trains triggered by the reduced snow cover in western Eurasia, as well as wave-mean flow interaction over the North Pacific. Our study suggests that Eurasian snow cover anomalies can be predictively linked to both subsequent wildfire risk in California and the wintertime North American zonal dipole temperature pattern, highlighting the broader impacts of Eurasian cryosphere variability on remote climate extremes.
+
+</details>
+<br>
+
+**关键词**: wildfire, snow cover, atmospheric teleconnection, Rossby wave, climate extremes, California, Eurasia, numerical simulation
+
+---
+
+### 56. ❌ Systematic identification of variant-specific RNA structure-small molecule interactions exemplified by RNA G-quadruplexes
+
+**作者**: Emi Miyashita, Kazumitsu Onizuka, Yutong Chen, Hiroki Yoshida, Hina Hatayama, Shunya Ishikawa, Peijie Yan, Takahito Hasegawa, Mamiko Ozawa, Kaho Maeta, Fumi Nagatsugi, Hirohide Saito, Kaoru R. Komatsu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70097-9](https://doi.org/10.1038/s41467-026-70097-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究RNA结构-小分子相互作用检测方法（BIVID-MaP），聚焦RNA生物学、化学和基因组学，与医学影像分析、深度学习医学影像、AI诊断、预后预测、手术规划、多模态医学影像及医学影像基础模型等关键词完全无关。论文未涉及任何医学影像技术或临床应用。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Using BIVID-MaP, numerous variant-specific interactions between a G-quadruplex (G4)-binding small molecule and RNAs harboring single-nucleotide variants are uncovered, which may contribute to the development of RNA-targeting drugs in the future.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种名为BIVID-MaP的高通量方法，用于检测RNA结构与小分子之间的相互作用，特别是由单核苷酸变异引起的特异性结合变化，并发现癌症相关体细胞突变可通过影响G-四链体结构显著改变小分子结合强度。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：个体遗传变异（如癌症相关体细胞突变）会改变RNA结构，从而可能增强或抑制靶向RNA的小分子结合。然而，由于技术限制，迄今尚无方法能系统识别这些变异特异性的RNA-小分子相互作用。本文提出“结合与乙烯基喹唑啉酮诱导缺失的突变谱分析技术”（Binding- and Vinyl-Quinazolinone-Induced Deletion-Based Mutational Profiling, BIVID-MaP），这是一种通过结合依赖型共价修饰与深度测序逆转录缺失谱分析相结合的高通量检测方法。运用BIVID-MaP技术，我们发现了G-四链体（G-quadruplex, G4）结合小分子与携带单核苷酸变异的RNA之间大量变异特异性相互作用。若干癌症相关体细胞突变通过影响靶标G4结构，显著改变了小分子的结合强度。这些结果表明，BIVID-MaP能够揭示以往被忽视的、仅由单核苷酸突变影响的变异特异性RNA-小分子相互作用，这可能为未来靶向RNA药物的开发提供新思路。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Individual genetic variations, such as cancer-associated somatic mutations, alter RNA structures, thereby potentially enhancing or inhibiting the binding of RNA-targeting small molecules. However, to date, no approach has been available to identify these variant-specific RNA-small molecule interactions due to technical limitations. Here, we present Binding- and Vinyl-Quinazolinone-Induced Deletion-Based Mutational Profiling (BIVID-MaP), a high-throughput method for detecting RNA-small molecule interactions that combines binding-dependent covalent modification with profiling of deletions upon reverse transcription via deep sequencing. Using BIVID-MaP, we uncovered numerous variant-specific interactions between a G-quadruplex (G4)-binding small molecule and RNAs harboring single-nucleotide variants. Several cancer-associated somatic mutations significantly influence the binding intensity of a small molecule by affecting target G4 structures. These results demonstrate that BIVID-MaP can reveal previously ignored variant-specific RNA-small molecule interactions affected only by a single-nucleotide mutation, which may contribute to the development of RNA-targeting drugs in the future.
+
+</details>
+<br>
+
+**关键词**: RNA-small molecule interactions, BIVID-MaP, G-quadruplex, single-nucleotide variants, cancer-associated mutations, high-throughput method, RNA-targeting drugs, variant-specific binding
+
+---
+
+### 57. ❌ Human-induced intensification of sea surface temperature regime shifts threatens global Large Marine Ecosystems
+
+**作者**: Qinwang Xing, Zihui Gao, Shin-ichi Ito, Haiqing Yu, Wei Yu, Xinjun Chen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70986-z](https://doi.org/10.1038/s41467-026-70986-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究全球海洋表面温度突变及其生态影响，属于气候科学和海洋生态学领域，完全不涉及医学影像分析、人工智能临床决策支持或任何医疗相关主题。所有评分关键词均与论文内容无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    研究发现过去150年全球大型海洋生态系统的海表温度突变频率和幅度因人为变暖增加了130-140%，并与生态渔业突变相关，未来若不减排可能进一步加剧。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 全球海洋已显著变暖并将持续这一趋势。在此长期趋势之上，叠加着在暖相位与冷相位之间发生的、持续数十年的突发性气候态跃迁，这些跃迁改变了海洋-大气动力学并重塑了生态系统的组成与功能。尽管人们已认识到不可逆气候临界点的风险日益增加，但这些年代际冷暖跃迁的过去演变与未来趋势仍不明确。本研究结合观测与模拟数据表明，在过去150年间，全球各大海洋生态系统（Large Marine Ecosystems）的海表温度气候态跃迁频率和幅度普遍增加了130–140%，且北半球的不对称性更为显著。气候模型将这些趋势归因于人为变暖，其抑制了向冷态的转换并强化了暖态。若无减缓措施，预计到21世纪末，这些跃迁的强度将较近期水平再增加130–180%；而只有最低排放情景能够遏制其加剧趋势——北极海域除外。进一步分析揭示了温度气候态跃迁的加剧与生态及渔业的突变之间存在紧密联系，显示出21–46%的同步性且正在上升，这可能放大年代际生态系统的不稳定性与社会经济挑战。从海洋视角看，这些发现凸显了达成《巴黎协定》目标的紧迫性以及北极显著的脆弱性。观测与模型表明，由于人类活动导致的变暖，过去150年来海洋温度年代际气候态跃迁已显著增强，并与生态和渔业的突变相关联，若不大幅减排，未来很可能进一步加剧。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Global oceans have warmed markedly and will continue to do so. Superimposed on this trend are abrupt, persistent decadal regime shifts between warm and cold phases that alter ocean–atmosphere dynamics and reshape ecosystem composition and function. Despite recognition of the increasing risk of irreversible climate tipping points, the past and future evolution of these decadal warm–cold shifts remains unclear. Here, combining observations and simulations, we show a widespread 130–140% increase in the frequency and amplitude of sea surface temperature regime shifts across global Large Marine Ecosystems over the past 150 years, with asymmetries stronger in the Northern Hemisphere. Climate models attribute these trends to anthropogenic warming, which suppresses cold-regime transitions and reinforces warm regimes. Without mitigation, these shifts are projected to rise 130–180% by the late-21st century relative to recent levels, whereas only the lowest-emission scenario could constrain their intensification—except in the Arctic oceans. Further analyses reveal close links between intensified temperature regime shifts and abrupt ecological and fishery changes, showing 21–46% synchrony that is rising, potentially amplifying decadal ecosystem instability and socio economic challenges. From a marine perspective, these findings underscore the urgency of achieving the Paris Agreement’s target and the Arctic’s marked vulnerability. Observations and models show decadal ocean temperature regime shifts have increased strongly over the past 150 years due to human warming, linked to abrupt ecological and fishery changes and likely to further intensify without major emission cuts.
+
+</details>
+<br>
+
+**关键词**: sea surface temperature, regime shifts, Large Marine Ecosystems, anthropogenic warming, climate models, ecological changes, fishery changes, Paris Agreement
+
+---
+
+### 58. ❌ Functional protein design and enhancement with ontology reinforcement iteration
+
+**作者**: Bing He, Chenchen Qin, Yu Zhao, Long-Kai Huang, Zihan Wu, Fang Wang, Fandi Wu, Fan Yang, Jianhua Yao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-69855-6](https://doi.org/10.1038/s41467-026-69855-6)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题为'Functional protein design and enhancement with ontology reinforcement iteration'，摘要内容完全围绕蛋白质工程展开，具体涉及计算建模与实验性能之间的差距、ORI框架（本体强化迭代）、蛋白质生成与优化、酶活性增强、热稳定性改进和多功能蛋白质设计。所有评分关键词均与医学影像分析、诊断、预后、手术规划等临床决策支持相关，而本论文的研究领域是蛋白质工程和计算生物学，两者属于完全不同的学科领域，没有任何交叉或关联内容。因此，所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work presents ORI (Ontology Reinforcement Iteration), a scalable framework integrating ontology-conditioned decoding with reinforcement learning from experimental feedback (RLWF), which leverages structured ontologies as semantic prompts to impose multi-level constraints, enabling controllable and interpretable protein generation.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文解决了蛋白质工程中计算建模与实验性能之间的差距问题，通过提出ORI（本体强化迭代）框架，成功设计出具有100倍更高活性、85°C热稳定性和双功能酶活性的蛋白质变体。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 计算建模与实验性能之间的差异仍是蛋白质工程领域的主要挑战。本文提出ORI（本体论强化迭代）框架，该可扩展框架将本体条件解码与实验反馈强化学习（RLWF）相结合。ORI利用结构化本体作为语义提示，施加多层次约束，实现可控且可解释的蛋白质生成。其闭环迭代工作流——包含生成、实验测量与模型更新——能够在真实世界目标下实现持续优化。我们通过多种任务展示了ORI的实际应用潜力，包括酶活性优化、热稳定性增强及多功能蛋白质工程。应用该框架，我们设计出的变体较天然基准蛋白有显著提升，例如活性提高100倍的溶菌酶、在85°C下稳定的几丁质酶，以及同时具备溶菌酶与几丁质酶活性的双功能酶。这些成果确立了ORI作为一个稳健的技术平台，能够在真实实验场景中实现高效、多目标的蛋白质工程。蛋白质工程常受建模与实验间鸿沟的制约。本研究提出的ORI闭环计算框架通过迭代优化蛋白质，实现了活性百倍提升、热稳定性增强及多功能酶的设计。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The discrepancy between computational modeling and experimental performance remains a major challenge in protein engineering. We present ORI (Ontology Reinforcement Iteration), a scalable framework integrating ontology-conditioned decoding with reinforcement learning from experimental feedback (RLWF). ORI leverages structured ontologies as semantic prompts to impose multi-level constraints, enabling controllable and interpretable protein generation. A closed-loop iterative workflow—comprising generation, experimental measurement, and model updating—enables continuous optimization under real-world objectives. We demonstrate ORI’s practical applicability through diverse tasks, including enzymatic activity optimization, thermal stability enhancement, and multifunctional protein engineering. Using this framework, we engineer variants with substantial improvements over natural baselines, such as a lysozyme with 100-fold higher activity, a chitinase stable at 85 °C, and dual-function enzymes exhibiting both lysozyme and chitinase activities. These results establish ORI as a robust technical platform for efficient, multi-objective protein engineering in real-world experimental settings. Protein engineering is often hindered by the gap between modelling and experiment. Here, authors present ORI, a closed-loop computational framework to iteratively optimize proteins, achieving 100-fold higher activity, enhanced thermal stability, and the design of multifunctional enzymes.
+
+</details>
+<br>
+
+**关键词**: protein engineering, ontology reinforcement iteration, computational modeling, experimental feedback, enzyme activity optimization, thermal stability enhancement, multifunctional protein design, closed-loop framework
+
+---
+
+### 59. ❌ Stronger ENSO-induced global SST variability in a warming climate
+
+**作者**: S. S. Hong, Geon-Il Kim, Yechul Shin, Tomoki Iwakiri, Jong-Seong Kug
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70140-9](https://doi.org/10.1038/s41467-026-70140-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是气候科学中的厄尔尼诺-南方涛动（ENSO）现象及其在全球变暖背景下的变化，涉及气候模型、海表温度、大气遥相关等气候学内容。所有评分关键词均与医学影像分析、人工智能医疗应用相关，而论文完全不涉及医学、影像、诊断、手术或任何医疗健康领域，因此所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过气候模型预测，在全球变暖背景下，厄尔尼诺-南方涛动（ENSO）对全球海表温度的影响将因更强的风驱动遥相关和更大的海气湿度差而增强。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 厄尔尼诺-南方涛动（ENSO）是年际气候变率的主导模态，具有深远的全球性影响。理解ENSO驱动下的变化如何在气候变暖背景下演变，对于预测未来气候变率至关重要。本文指出，气候模型一致预测在温室气体增暖背景下，ENSO对全球海表温度（SST）的影响将显著增强。这种增强主要由两个因素驱动：厄尔尼诺诱导的表面风速变化，以及气候态海气湿度差的改变。前者与ENSO相关的大气遥联系增强有关，而后者则源于全球SST的整体上升。我们的研究结果表明，未来的厄尔尼诺事件可能通过更强的大气遥联系和增强的局地海气相互作用，对区域气候产生更显著的影响。作者揭示，由于风驱动的遥联系增强和海气湿度差增大，在变暖的气候中厄尔尼诺对全球海表温度的影响预计将加剧。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The El Niño-Southern Oscillation (ENSO) is a leading mode of interannual climate variability with far-reaching global impacts. Understanding how ENSO-driven changes evolve in a warming climate is essential to project future climate variability. Here, we show that climate models robustly project an amplification of ENSO’s influence on global sea surface temperature (SST) under greenhouse warming. This amplification is primarily driven by two factors: changes in El Niño-induced surface wind speed and alterations in the climatological air-sea humidity difference. The former is linked to enhanced atmospheric teleconnections associated with ENSO, while the latter stems from an overall increase in global SST. Our findings suggest that future El Niño events may exert stronger regional climate impacts, not only through intensified atmospheric teleconnections but also by reinforcing local air-sea interactions. The authors show that El Niño’s influence on global sea surface temperatures is projected to intensify in a warming climate due to stronger wind-driven teleconnections and larger air-sea humidity differences.
+
+</details>
+<br>
+
+**关键词**: ENSO, global warming, sea surface temperature, climate models, atmospheric teleconnections, air-sea humidity difference, El Niño
+
+---
+
+### 60. ❌ CD177⁺ neutrophil-platelet aggregates contribute to thromboinflammation via NETs in necrotizing enterocolitis
+
+**作者**: Chaoting Lan, Bowen Tian, Yuanzhi Shi, Yuling Yang, Yan Tian, Chun Yan, Longlong Hou, Lei Li, Li Yuan, Lianwei Lu, Junjian Lv, Weizhe Wu, Qiuming He, Huimin Xia, Wei Zhou, Wei Zhong, Yi Liu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70717-4](https://doi.org/10.1038/s41467-026-70717-4)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究坏死性小肠结肠炎（NEC）的发病机制，聚焦于CD177⁺中性粒细胞-血小板聚集物（NPAs）通过中性粒细胞胞外诱捕网（NETs）介导的血栓炎症作用。研究采用多组学分析、组织病理学分析和功能研究，未涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或基础模型等主题。所有关键词均与论文内容完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Findings establish CD177⁺ NPAs as central drivers of NEC pathogenesis, support a thromboinflammatory framework for NEC, and highlight LMWH therapy and CD177⁺ NPA monitoring as possible clinically translatable strategies for neonatal care are established.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现CD177⁺中性粒细胞-血小板聚集物通过中性粒细胞胞外诱捕网介导的血栓炎症驱动坏死性小肠结肠炎的发病，并表明低分子量肝素治疗和CD177⁺ NPA监测可能成为临床转化策略。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 坏死性小肠结肠炎（Necrotizing enterocolitis, NEC）是一种影响早产儿的严重胃肠道疾病，但其确切致病机制尚不明确。尽管免疫血栓形成（即炎症与凝血之间的相互作用）在全身性炎症疾病中已得到充分认识，但其在NEC发病机制及局部肠道调控中的作用尚未完全阐明。本研究结合多组学分析、组织病理学评估及功能实验，利用临床NEC样本和新生小鼠模型展开研究。我们证实了NEC中存在显著的肠道血栓炎症，其组织学特征表现为伴有CD177⁺中性粒细胞浸润、血小板活化及纤维蛋白沉积的免疫血栓形成。研究发现，CD177⁺中性粒细胞-血小板聚集体（neutrophil–platelet aggregates, NPAs）的大量形成通过中性粒细胞胞外诱捕网（neutrophil extracellular trap, NET）介导的血栓炎症加剧了肠道损伤。在小鼠模型中，阻断CD177⁺ NPAs或抑制NET形成能显著减轻NEC的严重程度。临床分析显示，CD177⁺ NPA水平升高与NEC严重程度及血栓性生物标志物增加相关，提示其作为诊断和预后生物标志物的潜力。重要的是，预防性给予低分子量肝素（low-molecular-weight heparin, LMWH）可破坏NPA形成、降低NET负荷，并在实验性NEC中提高存活率。综上所述，这些研究结果确立了CD177⁺ NPAs作为NEC发病机制的核心驱动因素，支持了NEC的血栓炎症理论框架，并指出LMWH治疗与CD177⁺ NPA监测可能成为新生儿护理中具有临床转化潜力的策略。坏死性小肠结肠炎（NEC）是一种机制不明的早产儿严重胃肠道疾病。本研究表明，CD177⁺中性粒细胞-血小板聚集体在NEC中促进了NET相关的血栓炎症，而阻断CD177/NET形成或使用低分子量肝素可减轻小鼠模型的疾病严重程度。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Necrotizing enterocolitis (NEC) is a severe gastrointestinal disease affecting premature infants, yet its precise pathogenic mechanisms remain unclear. While immunothrombosis, an interplay between inflammation and coagulation, is well recognized in systemic inflammatory diseases, its role in NEC pathogenesis and local intestinal regulation has been incompletely characterized. Here, we combine multi-omics profiling, histopathological analyses, and functional studies using clinical NEC samples and neonatal mouse models. We demonstrate prominent intestinal thromboinflammation in NEC, histologically characterized by immunothrombosis with infiltrating CD177⁺ neutrophils, activated platelets, and fibrin deposition. We show that extensive formation of CD177⁺ neutrophil–platelet aggregates (NPAs) amplifies intestinal injury through neutrophil extracellular trap (NET)-mediated thromboinflammation. Blocking CD177⁺ NPAs or inhibiting NET formation significantly alleviates NEC severity in mouse models. Clinically, elevated CD177⁺ NPA levels correlate with NEC severity and increased thrombotic biomarkers, highlighting their potential as diagnostic and prognostic biomarkers. Importantly, prophylactic administration of low-molecular-weight heparin (LMWH) disrupts NPA formation, reduces NET burden, and improves survival in experimental NEC. Collectively, these findings establish CD177⁺ NPAs as central drivers of NEC pathogenesis, support a thromboinflammatory framework for NEC, and highlight LMWH therapy and CD177⁺ NPA monitoring as possible clinically translatable strategies for neonatal care. Necrotizing enterocolitis (NEC) is a severe gastrointestinal disease of premature infants with unclear mechanisms. Here, the authors show that CD177⁺ neutrophil–platelet aggregates promote neutrophil extracellular trap (NET)-linked thromboinflammation in NEC and that blocking CD177/NET formation or low-molecular-weight heparin alleviates disease in mouse models.
+
+</details>
+<br>
+
+**关键词**: necrotizing enterocolitis, CD177⁺ neutrophil-platelet aggregates, thromboinflammation, neutrophil extracellular traps, low-molecular-weight heparin, immunothrombosis, neonatal mouse models, multi-omics profiling
+
+---
+
+### 61. ❌ Low-intensity focused ultrasound-activated piezoelectric gel bandage for diabetic wound repair and neuropathic pain relief
+
+**作者**: Xi Li, Lizhou Lin, Mingrui Zhu, Xi Li, Jifeng Yu, Dan Lu, Shaoyue Li, Yuting Shen, Bing Xiong, Chongke Zhao, Boyang Zhou, Haohao Yin, Huixiong Xu, Xin Guan
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70771-y](https://doi.org/10.1038/s41467-026-70771-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是用于糖尿病伤口修复和神经病理性疼痛缓解的低强度聚焦超声激活压电凝胶绷带，属于生物医学工程、材料科学和伤口愈合领域。论文内容完全不涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学成像或基础模型等主题。所有关键词与论文研究内容无直接关联。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A low-intensity focused ultrasound (LIFU)-activated piezoelectric gel bandage for DFU wound repair and neuropathic pain relief that can promote CGRP neuropeptides release from sensory neurons to invigorate M2-like macrophages-mediated protective cutaneous immunity and is potentially applicable to other non-healing tissue regeneration.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种低强度聚焦超声激活的压电凝胶绷带，通过调节免疫稳态和缓解神经病理性疼痛来促进糖尿病伤口的全面修复。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 由周围神经病变与局部免疫紊乱相互作用引发的痛觉过敏与伤口愈合延迟，是糖尿病足溃疡（DFU）再生修复中需解决的关键问题。本文提出一种低强度聚焦超声（LIFU）激活的压电凝胶绷带，用于DFU伤口修复与神经病理性疼痛缓解。该自驱动功能化绷带作为人造“皮肤”，不仅能暂时屏蔽组织免受外部环境影响，还可作为药物储库，在LIFU作用下原位释放一氧化氮以促进巨噬细胞极化，产生压电电流以脱敏TRPV1伤害感受器从而实现按需神经病理性疼痛缓解，并产生活性氧以清除雄性啮齿动物体内的病原体。更重要的是，该方案能促进感觉神经元释放CGRP神经肽，从而激活M2型巨噬细胞介导的保护性皮肤免疫。这种LIFU激活的免疫-伤害感受器调控策略有望应用于其他难愈性组织再生。周围神经病变与局部免疫紊乱相互作用导致的痛觉过敏与伤口愈合延迟，阻碍了糖尿病足溃疡的再生修复。本研究报道了一种低强度聚焦超声激活的压电凝胶绷带，其具备免疫稳态调节与神经病理性疼痛缓解功能，可实现糖尿病伤口的综合修复。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Nociceptive hypersensitivity and prolonged wound healing due to the interaction of peripheral neuropathy and local immune disorders are key issues that need to be addressed in diabetic foot ulcer (DFU) regenerative repair. Here, we present a low-intensity focused ultrasound (LIFU)-activated piezoelectric gel bandage for DFU wound repair and neuropathic pain relief. Acting as an artificial “skin”, this self-powered, functionalized bandage not only temporarily shields tissue from external environment, but also serves as a drug reservoir that can in situ release nitric oxide upon LIFU to promote macrophage polarization, generate piezoelectric current to desensitize TRPV1 nociceptor for on demand neuropathic pain relief and produce reactive oxygen species to eliminate pathogens in male rodents. More importantly, this regimen can promote CGRP neuropeptides release from sensory neurons to invigorate M2-like macrophages-mediated protective cutaneous immunity. This LIFU-activated immune-nociceptor modulation strategy is potentially applicable to other non-healing tissue regeneration. Nociceptive hypersensitivity and prolonged wound healing due to the interaction of peripheral neuropathy and local immune disorders hinder the regenerative repair of diabetic foot ulcer. Here, the authors report a low-intensity focused ultrasound-activated piezoelectric gel bandage with immune homeostasis modulation and neuropathic pain relief functions for comprehensive repair of diabetic wounds.
+
+</details>
+<br>
+
+**关键词**: low-intensity focused ultrasound, piezoelectric gel bandage, diabetic wound repair, neuropathic pain relief, immune homeostasis modulation, diabetic foot ulcer, wound healing, macrophage polarization
+
+---
+
+### 62. ❌ Cryo-EM structure of TRPM1 reveals a non-canonical architecture with an inverted transmembrane domain
+
+**作者**: Michael Fabrizio, Mackenzie Brewer, Nebojša Bogdanovic, Chen Zhao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70722-7](https://doi.org/10.1038/s41467-026-70722-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文使用冷冻电镜（cryo-EM）研究TRPM1膜蛋白的结构，属于结构生物学和分子生物学领域。论文内容完全围绕蛋白质结构、离子通道功能和视觉相关的分子机制展开，未涉及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划或多模态医学影像等主题。所有评分关键词均与论文研究内容无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The structures of TRPM1 reveal a canonical tetrameric fold in the intracellular domain, consistent with other TRPM family members that are ion channels, but in the transmembrane domain, the VSLD and PD are arranged with an opposite handedness compared to other related channels.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过冷冻电镜解析了TRPM1膜蛋白的结构，发现其跨膜结构域具有与其他相关通道相反的取向，形成了一个支持离子通道功能的大孔结构。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 瞬时受体电位褪黑素1型（TRPM1）是一种对弱光视觉至关重要的膜蛋白，其突变会导致完全型先天性静止性夜盲症。尽管TRPM1与其他TRPM离子通道（如TRPM3）具有序列相似性，但其是否能独立发挥离子通道功能仍存在争议。这一争议主要源于TRPM1具有挑战性的生化特性，阻碍了对其详细的分子表征。本研究通过低温电子显微镜（cryo-EM）分离并解析了TRPM1的结构。结构显示其胞内域具有典型的四聚体折叠，这与作为离子通道的其他TRPM家族成员一致。出乎意料的是，在跨膜域中，尽管存在以结构域交换方式排列的保守电压传感器样结构域（VSLD）和孔道结构域（PD），但VSLD与PD的排列手性与其它相关通道相反。这种反向的跨膜域形成了一个大型的类孔道结构，支持了TRPM1作为离子通道的功能。TRPM1这种非典型结构也可能赋予其独特的通透性和药理学特性。TRPM1是对弱光视觉不可或缺的整合膜蛋白。本研究作者揭示，其跨膜域与所有其他相关蛋白相比呈反向构型。这种构型形成了一个大型开放孔道，支持其构成性离子通道功能。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Transient receptor potential melastatin 1 (TRPM1) is a membrane protein essential for vision in dim light, and mutations in TRPM1 cause complete congenital stationary night blindness. Although TRPM1 shares sequence similarity to other TRPM ion channels such as TRPM3, whether it independently functions as an ion channel remains controversial. This controversy is largely caused by TRPM1’s challenging biochemical behaviors that prevent detailed molecular characterization. In this work, we isolate TRPM1 and determine its structures using cryogenic electron microscopy (cryo-EM). The structures reveal a canonical tetrameric fold in the intracellular domain, consistent with other TRPM family members that are ion channels. Surprisingly, in the transmembrane domain, despite the presence of the conserved voltage sensor-like domain (VSLD) and pore domain (PD) in a domain-swapped fashion, the VSLD and PD are arranged with an opposite handedness compared to other related channels. This inverted transmembrane domain allows the formation of a large pore-like structure that supports the role of TRPM1 as an ion channel. This non-canonical architecture of TRPM1 may also confer unique permeation and pharmacological properties. TRPM1 is an integral membrane protein essential for dim light vision. Here, the authors show that its transmembrane domain is configured with an inverted orientation compared to all other related proteins. This configuration creates a large open pore that supports constitutive ion channel function.
+
+</details>
+<br>
+
+**关键词**: TRPM1, cryo-EM structure, ion channel, transmembrane domain, inverted orientation, congenital stationary night blindness, membrane protein, voltage sensor-like domain
+
+---
+
+### 63. ❌ Cross-ketone deacylative coupling via oxidative SH2 homolytic substitution
+
+**作者**: Jianxiong Yang, M. Zhang, Qi Wen, Jia‐Run Wang, Yan Zhang, Heng Jiang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70619-5](https://doi.org/10.1038/s41467-026-70619-5)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确描述了有机化学合成领域的研究，涉及酮类化合物的脱酰交叉偶联、镍催化、光催化、SH2均裂取代机制和C(sp³)–C(sp³)键形成。所有评分关键词均与医学影像分析、人工智能临床决策支持相关，而论文内容完全不涉及医学、影像、诊断、手术或AI技术，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了两种不同酮类化合物选择性脱酰交叉偶联的挑战，通过镍催化和光氧化催化协同作用，实现了基于SH2均裂取代机制的C(sp³)–C(sp³)键高效构建，合成了β-季碳脂肪胺及相关生物活性分子。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 酮的α-C-C键断裂偶联为碳碳键的形成提供了一种极具挑战性但前景广阔的方法，这尤其得益于酮作为有机合成中基础合成子的普遍存在和易得性。然而，尽管这种偶联模式可用于构建具有卓越结构多样性的C(sp³)–C(sp³)连接，但通过单一活化模式实现两种不同酮之间的脱酰交叉偶联仍是一个尚未解决的难题。本文中，我们描述了一种通过镍催化的双分子均裂取代（SH2）实现的交叉酮脱酰偶联反应，其中协同的氧化光催化被结合使用，以从酮衍生的二氢喹唑啉酮中同时产生两种不同的开壳碳物种。这种异选择性自由基-自由基偶联方案，通过关键的SH2置换机制实现了季碳中心的构建，为制备β-季碳脂肪胺提供了一条高效途径。此外，通过这种不同酮之间的交叉双脱酰C1-烷基化方法，还能获得包括β-氨基醇、β-二胺和β-氨基硫醇衍生物在内的多种生物相关小分子。酮的α-C–C键断裂为碳碳键的形成提供了通用途径，但仍具挑战性，特别是在不同酮之间的选择性交叉偶联方面。本文作者报道了一种通过镍催化和光催化实现的双分子均裂取代脱酰偶联反应，用于构建多样化的C(sp³)–C(sp³)键。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The α-C-C cleavage coupling of ketones offers a highly challenging yet promising approach for C–C bond formation, particularly given the ubiquity and ready accessibility of ketones as fundamental synthons in organic synthesis. However, the deacylative cross-coupling between two distinct ketones via a single activation mode remains an unmet challenge, although this coupling paradigm could be leveraged to construct C(sp3)–C(sp3) linkages with exceptional structural diversity. Herein, we describe a cross-ketone deacylative coupling via nickel-catalyzed bimolecular homolytic substitution (SH2), in which the synergistic oxidative photocatalysis is combined to produce simultaneously two distinct open-shell carbons from ketone-derived dihydroquinazolinones. This hetero-selective radical-radical coupling protocol enables the construction of quaternary carbon centers through a critical SH2 displacement mechanism, providing an efficient approach to furnish β-quaternary aliphatic amines. Additionally, a wide array of biorelevant small molecules, including β-amino alcohol, β-diamine and β-aminothiol derivatives, can also be obtained via this cross-double deacylative C1-alkylation approach between distinct ketones. The α-C–C cleavage of ketones provides a versatile route for C–C bond formation but remains challenging, particularly for selective cross-coupling between distinct ketones. Here the authors report a nickel- and photocatalysis-enabled deacylative coupling via bimolecular homolytic substitution to forge diverse C(sp³)–C(sp³) bonds.
+
+</details>
+<br>
+
+**关键词**: cross-ketone deacylative coupling, nickel catalysis, photocatalysis, bimolecular homolytic substitution (SH2), C(sp³)–C(sp³) bond formation, β-quaternary aliphatic amines, organic synthesis, radical-radical coupling
+
+---
+
+### 64. ❌ IVNS1ABP mutation drives cellular senescence in newly identified progeroid neuropathy
+
+**作者**: Fang Yuan, Y. H. Tan, Haofei Wang, Ain Nur Ali, Qiang Yuan, Shu-Min Chou, Yu-Hsin Yen, Gunaseelan Narayanan, Lei Zhou, Mohammad Shboul, Carine Bonnard, Bruno Reversade, Su-Chun Zhang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70756-x](https://doi.org/10.1038/s41467-026-70756-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是由IVNS1ABP基因突变引起的早衰性神经病变的细胞和分子机制，涉及干细胞模型、细胞衰老、细胞分裂缺陷等分子生物学和遗传学内容。所有评分关键词均与医学影像分析、人工智能、深度学习、手术规划等计算机科学和工程领域相关，而论文完全不涉及这些技术或应用，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    It is proposed that mutant IVNS1ABP dysregulates actin polymerization and organization which is at least partly responsible for the cellular senescence phenotypes in this progeroid neuropathy.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现了IVNS1ABP基因突变导致一种新型早衰性神经病变，并通过干细胞模型证明该突变通过破坏肌动蛋白动力学引起细胞分裂缺陷、DNA损伤和细胞衰老，最终导致过早神经发生。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 我们鉴定出一种伴有严重神经病变与智力缺陷的新型早衰综合征，但其细胞与分子机制尚不明确。外显子组测序揭示了IVNS1ABP基因（编码流感病毒非结构蛋白-1结合蛋白IVNS1ABP）的纯合突变。为探究疾病机制，我们从患者成纤维细胞中构建了等基因诱导多能干细胞（iPSCs），并将其分化为神经祖细胞（NPCs）。突变型IVNS1ABP的成纤维细胞、iPSCs及NPCs均表现出胞质分裂缺陷、DNA损伤增加和细胞早衰现象。与此一致的是，大脑类器官模型显示NPCs过早分化为神经元。分子谱分析及生化与细胞实验表明，突变型IVNS1ABP与肌动蛋白/肌动蛋白相关蛋白的结合发生改变，导致胞质分裂过程中肌动蛋白动力学失调。综合以上发现，我们认为突变型IVNS1ABP通过扰乱肌动蛋白的聚合与组织过程，至少部分导致了这种早衰性神经病变中的细胞衰老表型。研究者发现了一种由IVNS1ABP基因突变引起的、此前未被认识的早衰性神经病变。患者来源的成纤维细胞、诱导多能干细胞及神经祖细胞均表现出动力学紊乱，引发胞质分裂缺陷、DNA损伤和细胞衰老，进而导致大脑类器官中神经元过早生成。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> We identified a new progeroid syndrome with severe neuropathy and intellectual deficits but its underlying cellular and molecular mechanism is unknown. Exome sequencing revealed a homozygous mutation in the IVNS1ABP gene, which encodes IVNS1ABP, an influenza virus non-structural protein-1 binding protein. To investigate disease mechanisms, we generated isogenic induced pluripotent stem cells (iPSCs) from patient fibroblasts and differentiated them into neural progenitor cells (NPCs). Mutant IVNS1ABP fibroblasts, iPSCs, and NPCs exhibited defective cytokinesis, increased DNA damage, and premature cellular senescence. Consistent with these findings, cerebral organoids showed early differentiation of NPCs into neurons. Molecular profiling as well as biochemical and cellular analysis revealed altered binding of mutant IVNS1ABP to actin / actin-associated proteins and dysregulated actin dynamics during cytokinesis. Taken together, we propose that mutant IVNS1ABP dysregulates actin polymerization and organization which is at least partly responsible for the cellular senescence phenotypes in this progeroid neuropathy. Researchers identified a previously unrecognized progeroid neuropathy caused by mutations in IVNS1ABP. Patient-derived fibroblasts, induced pluripotent stem cells, and neural progenitor cells exhibited disrupted dynamics, resulting in defective cytokinesis, DNA damage, and cellular senescence, which in turn led to premature neurogenesis in cerebral organoids.
+
+</details>
+<br>
+
+**关键词**: IVNS1ABP mutation, progeroid neuropathy, cellular senescence, cytokinesis defect, actin dynamics, induced pluripotent stem cells, neural progenitor cells, DNA damage
+
+---
+
+### 65. ❌ Engineering synthetic cells with intramembrane domains possessing distinct bilayer asymmetries
+
+**作者**: Naresh Yandrapalli, Tina Seemann, Reinhard Lipowsky, Tom Robinson
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-68997-x](https://doi.org/10.1038/s41467-026-68997-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是合成细胞和膜不对称性的生物物理工程，属于合成生物学和生物物理学领域。所有评分关键词都涉及医学影像分析和人工智能在临床决策支持中的应用，而该论文完全不涉及医学影像、深度学习、疾病诊断、手术规划或任何医疗应用。论文内容与评分关键词领域完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    An inverted emulsion method is presented that can be used to produce synthetic cells with symmetric and asymmetric bilayers, as well as phase separation where the intermembrane domains possess distinct bilayer asymmetries.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种倒置乳液方法，用于制造具有对称和不对称双层以及相分离的合成细胞，发现不对称膜会导致结构域弯曲和膜出芽分裂。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要 目前对膜不对称性如何调控生物功能的理解，受限于缺乏能够可靠且精确模拟细胞膜不对称性的模型膜制备技术。这种不对称性不仅涉及脂质分布的不对称，还包括如何将这种不对称性限制在膜平面上的特定区域。本文提出了一种反相乳液法，可用于制备具有对称及不对称双层的合成细胞，并能实现相分离，使膜间区域具备截然不同的双层不对称性。我们通过蛋白质-脂质相互作用实验与淬灭实验评估了脂质不对称程度。出乎意料的是，具有不对称及相分离膜的合成细胞显示出显著的结构域弯曲，并引发了膜出芽与分裂现象。总体而言，本研究开发了脂质组成类同于天然生物膜的仿生膜体系——这是构建功能性合成细胞的关键要素。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Our understanding of how membrane asymmetry governs biological function is limited by the lack of techniques to produce model membranes which can reliably and accurately mimic cellular membrane asymmetry. Not only in terms of asymmetric lipid distribution, but also how that asymmetry can be confined to specific lateral locations across the membrane. Here we present an inverted emulsion method that can be used to produce synthetic cells with symmetric and asymmetric bilayers, as well as phase separation where the intermembrane domains possess distinct bilayer asymmetries. We assess the degree of lipid asymmetry using protein-lipid interaction and quenching assays. Surprisingly, the synthetic cells with asymmetric and phase separated membranes displayed pronounced curvature of the domains and resulted in membrane budding and division. Overall, this work develops biomimetic membranes with lipid compositions akin to natural biomembranes – an essential element in the development of functional synthetic cells.
+
+</details>
+<br>
+
+**关键词**: synthetic cells, membrane asymmetry, bilayer asymmetries, inverted emulsion method, phase separation, membrane budding, lipid asymmetry, biomimetic membranes
+
+---
+
+### 66. ❌ Coexisting kagome and heavy fermion flat bands in YbCr6Ge6
+
+**作者**: Hanoh Lee, Churlhi Lyi, Taehee Lee, H. Na, Jinyoung Kim, Sangjae Lee, Y.K. Kim, Anil Rajapitamahuni, Asish K. Kundu, Elio Vescovo, B. -G. Park, Changyoung Kim, Charles H. Ahn, F. J. Walker, Ji Seop Oh, Bo Gyu Jang, Youngkuk Kim, Byungmin Sohn, Tuson Park
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**arXiv链接**: [https://arxiv.org/abs/2509.04902](https://arxiv.org/abs/2509.04902)
+**DOI**: [10.1038/s41467-026-70958-3](https://doi.org/10.1038/s41467-026-70958-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是凝聚态物理中的拓扑材料YbCr6Ge6，涉及kagome晶格、平带、重费米子、Kondo共振等物理概念，属于量子材料与强关联电子系统领域。所有评分关键词均与医学影像分析、人工智能临床决策支持相关，而论文完全不涉及任何医学、影像、诊断、手术或AI内容，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现了层状kagome金属YbCr6Ge6中拓扑平带与重费米子Kondo共振态的共存，揭示了其作为拓扑重费米子系统的原型，为几何阻挫、强关联和拓扑的汇聚提供了平台。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 平带，即能量-动量结构几乎无弥散的电子态，为非常规量子相提供了肥沃的研究土壤。近期在Kagome金属中费米能级处观测到的平带，为统一拓扑性与关联驱动的重费米子物理提供了可能。本文研究表明，在层状Kagome金属YbCr6Ge6中，拓扑性与重费米子关联效应共存。在高温条件下，源于Kagome晶格中阻挫跳跃的本征Kagome平带主导了费米能级。随着温度降低，局域的Yb 4f态与拓扑Kagome平带发生杂化，将该态转变为在整个布里渊区内动量无关的Kondo共振态。对杂化能隙的拓扑分析揭示了填充可调的弱拓扑与强拓扑Kondo绝缘体相，并识别出一种拓扑Dirac-Kondo半金属态。综上所述，这些结果确立了YbCr6Ge6作为拓扑重费米子体系的原型，以及一个几何阻挫、强关联与拓扑性汇聚的研究平台，对关联量子物质研究具有广泛意义。重费米子体系与几何平带间的相互作用常因材料实现的稀缺而受限。本文中，作者报道了在YbCr6Ge6中费米能级附近几何阻挫平带与Kondo共振态的共存现象。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Flat bands, electronic states with nearly dispersionless energy-momentum structure, provide fertile ground for unconventional quantum phases. Recent observations of flat bands at the Fermi level in kagome metals open the possibility of unifying topology and correlation-driven heavy-fermion physics. Here we show that topology and heavy-fermion correlations coexist in the layered kagome metal YbCr6Ge6. At high temperatures, an intrinsic kagome flat band—arising from frustrated hopping on the kagome lattice—dominates the Fermi level. Upon cooling, localized Yb 4f-states hybridize with the topological kagome flat bands, transforming this state into momentum-independent Kondo resonance states across the entire Brillouin zone. Topological analysis of the hybridization gaps reveals filling-tunable weak and strong topological Kondo-insulating regimes, and identifies a topological Dirac–Kondo semimetal. Taken together, these results identify YbCr6Ge6 as a prototype of a topological heavy-fermion system and a platform where geometric frustration, strong correlations, and topology converge, with broad implications for correlated quantum matter. The interplay between heavy fermion systems and geometric flat bands is often hindered by a scarcity of material realizations. Here, the authors report on the coexistence of geometrically frustrated flat bands and Kondo resonance states near the Fermi level in YbCr6Ge6.
+
+</details>
+<br>
+
+**关键词**: kagome metal, flat bands, heavy fermion, Kondo resonance, topological insulator, YbCr6Ge6, geometric frustration, strong correlations
+
+---
+
+### 67. ❌ Atom-economy upcycling of commodity thermoset polyurethane into photocuring 3D printing resins based on selective cleavage—crosslink strategy
+
+**作者**: Yan Huang, Xiaoxiao Guo, Yi Deng, S Ye, Yanling Zhu, Zenghe Liu, Jianwen Chen, Yutian Zhu
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70951-w](https://doi.org/10.1038/s41467-026-70951-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文主题是化学工程和材料科学领域，专注于聚氨酯废料的化学回收和升级再造技术，具体涉及选择性裂解-交联策略、光固化3D打印树脂等。所有评分关键词均属于医学影像分析和人工智能临床决策支持领域，与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究解决了热固性聚氨酯废料回收中试剂消耗高、副产物多和经济价值低的问题，通过选择性裂解-交联策略成功将废料升级再造为高附加值的光固化3D打印产品。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 聚氨酯废弃物因其庞大的体积和热固性特质，构成了严峻的环境挑战。现有回收方法存在试剂消耗量大、产生氨基甲酸酯副产物以及经济价值有限等问题。本研究通过采用食品级乙酰乙酸乙酯（EAA）的选择性断裂-交联策略，有效解决了这些难题：该策略可精准断裂缩二脲交联键，同时使非交联区域的氨基甲酸酯/脲键基本保持完整。该方法极大减少了试剂消耗，并避免了氨基甲酸酯副产物的生成。尤为重要的是，解构后的产物能够完全升级再造为高附加值的光固化3D打印产品，其废弃物含量极高（可达约90%），且具备优异的力学性能。除3D打印外，该解构产物还有潜力作为粘合剂、聚氨酯合成及环氧树脂改性剂的原材料。本策略使用廉价的商业试剂，且无需对现有聚氨酯生产设施进行改造，为聚氨酯废弃物回收开辟了一条具备商业化可行性的路径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Polyurethane waste poses significant environmental challenges due to its large bulk volume and thermoset nature. Current recycling methods suffer from high reagent consumption, urethane byproduct generation, and limited economic value. Here, we well address these issues through a selective cleavage-crosslink strategy using food-grade ethyl acetoacetate (EAA) to break biuret crosslinks while preserving urethane/urea bonds in non-crosslinked regions virtually intact. This strategy minimizes reagent consumption and avoids urethane byproduct. Importantly, the deconstructed product can be fully upcycled to high value-added photocuring 3D printing products with an exceptionally high waste content (up to ~90%) and excellent mechanical properties. Beyond 3D printing, the deconstructed product also holds potential as raw material for adhesives, PU synthesis, and epoxy modifiers. This strategy uses inexpensive commercial reagents and requires no modification to existing polyurethane infrastructure, establishing a commercially implementable pathway for polyurethane waste recycling.
+
+</details>
+<br>
+
+**关键词**: polyurethane waste recycling, selective cleavage-crosslink strategy, upcycling, photocuring 3D printing, ethyl acetoacetate, thermoset polyurethane, waste content, mechanical properties
+
+---
+
+### 68. ❌ 4polar3D single molecule imaging of 3D orientation in dense actin networks using ratiometric polarization splitting
+
+**作者**: Charitra S. Senthil Kumar, Cesar A. Valades Cruz, Miguel Sison, Arturo G. Vesga, Javier Rey-Barroso, Valentina Curcio, Luis A. Alemán-Castañeda, Miguel A. Alonso, Renaud Poincloux, Manos Mavrakis, Sophie Brasselet
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70852-y](https://doi.org/10.1038/s41467-026-70852-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是单分子取向和定位显微镜（SMOLM）技术，特别是4polar3D方法用于测量单分子的3D取向和角波动，应用于密集肌动蛋白网络的成像。该研究属于生物物理学、光学显微镜和细胞生物学领域，专注于分子成像技术开发，而非医学图像分析、临床决策支持或医疗AI应用。所有评分关键词均针对医学影像和临床AI，与论文内容完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    4polar3D is proposed, a simpler and effective method based on the estimation of single molecule intensities projected onto four polarized channels with controlled numerical apertures that enables 3D orientation measurements of single molecules within a 0-180° azimuthal range in addition to their angular range of fluctuations and their 2D localization.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种名为4polar3D的单分子成像方法，通过四个偏振通道的强度估计，实现了在密集细胞环境中对单分子3D取向和角波动的快速测量，并成功应用于解析肌动蛋白丝网络的纳米级分子组织。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：单分子取向与定位显微技术（SMOLM）旨在同步测量单分子的位置与取向，通过估算其三维平均取向及角波动幅度（摆动），生成取向编码的超分辨图像。现有SMOLM方法多依赖于对单分子点扩散函数的工程化改造，这需要复杂的光学系统与较长的计算时间，在高探测密度、成像条件苛刻的致密细胞环境中可能成为技术障碍。本研究提出一种基于四通道偏振强度估计的简化高效方法——4polar3D。该方法通过测量单分子在四个受控数值孔径偏振通道上的投影强度，在实现二维定位的同时，可测量单分子0-180°方位角范围内的三维取向及其角波动范围，且所需光路系统具有极低的校准复杂度。该技术完全基于强度估计，使得数据处理速度远快于复杂的点扩散函数形态分析，并对几何像差不敏感。我们证明4polar3D能够解析完整细胞拥挤结构中的纳米级分子排布，成功揭示了致密板状伪足和伪足小体中具有三维取向性的肌动蛋白丝网络。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Single Molecule Orientation and Localization Microscopy (SMOLM) aims at simultaneously measuring the position and orientation of single molecules, generating orientation-encoded super-resolved images by estimating both their 3D mean orientation and the extent of their angular fluctuations (wobble). Most existing SMOLM approaches rely on the engineering of single molecules’ point spread functions, which requires complex optical setups and long computational times that can be an obstacle in dense cellular environments with high detection density and challenging imaging conditions. In this work, we propose a simpler and effective method named 4polar3D, based on the estimation of single molecule intensities projected onto four polarized channels with controlled numerical apertures. This strategy enables 3D orientation measurements of single molecules within a 0-180° azimuthal range in addition to their angular range of fluctuations and their 2D localization, using a setup requiring minimal alignment complexity. It is moreover based on pure intensity-estimation, making data processing considerably faster than complex PSF shape analysis and relatively insensitive to geometrical aberrations. We demonstrate that 4polar3D can resolve nanoscale molecular organization in whole cells’ crowded structures, uncovering 3D-oriented actin filament networks in densely packed lamellipodia and podosomes.
+
+</details>
+<br>
+
+**关键词**: single molecule orientation, SMOLM, 4polar3D, 3D orientation imaging, actin networks, polarization splitting, super-resolution microscopy, molecular organization
+
+---
+
+### 69. ❌ CXCR5+ monocyte emigration impairs the radiation-induced antitumor immune response
+
+**作者**: Yutiantian Lei, Rui Jia, Chen Chen, Peihai Cao, Jiahong Shi, Mengdi Huang, Qiuyu Mu, Yixin Wang, Dairu Hou, Mingjun Si, Ruishan Guo, Jiahao Sun, D. Zhongyi Jiang, Yihan Wang, Tingting Lv, Ruiying Wang, J. Zhang, Du Yang, Hanmin Tang, Jianan Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70858-6](https://doi.org/10.1038/s41467-026-70858-6)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是放射治疗抵抗的免疫机制，具体探讨CXCR5+单核细胞在放疗后如何通过CXCL13/CXCR5轴被招募到肿瘤微环境，并通过PD-1/PD-L1相互作用抑制CD8+ T细胞，从而介导放疗抵抗。研究内容完全聚焦于肿瘤免疫学、分子机制和临床转化，未涉及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划或多模态医学影像。所有关键词均与论文主题无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Findings suggest potential strategies for blocking the CXCR5/CXCL13 axis to improve radiotherapy efficacy and suggest the CXCR5+ and CD14+ populations are increased in patients with cancer following radiotherapy.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现放疗通过上调肿瘤细胞CXCL13表达，招募免疫抑制性CXCR5+单核细胞，后者通过PD-1/PD-L1轴抑制CD8+ T细胞功能，从而介导放疗抵抗，阻断CXCR5/CXCL13轴可改善放疗疗效。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 相当比例的患者存在放射抗性，这阻碍了临床获益。既往研究表明，辐射诱导的“促肿瘤”免疫反应会限制抗肿瘤疗效，但其具体机制仍有待阐明。本研究发现，CXCR5+单核细胞在放疗后于肿瘤内富集。宿主单核细胞上的CXCR5表达是由肿瘤来源的血管内皮生长因子（VEGF）通过PI3K/mTOR/HIF-1α信号轴诱导产生的。局部放疗增强了肿瘤细胞特异性配体CXCL13的表达，从而募集CXCR5+单核细胞。肿瘤浸润的CXCR5+单核细胞通过PD-1/PD-L1相互作用抑制CD8+ T细胞，进而诱导放射抗性。此外，辐射诱导的粒细胞-巨噬细胞集落刺激因子（GM-CSF）促进了CXCR5+单核细胞向M2样巨噬细胞分化。相反，抑制VEGFR信号、中和CXCL13与GM-CSF或阻断PD-L1，可通过消除CXCR5+单核细胞介导的免疫抑制来增强放疗的肿瘤控制效果。进一步研究发现，癌症患者放疗后体内CXCR5+和CD14+细胞群比例增加，且疾病进展患者外周血中单核细胞数量上升。这些发现提示，阻断CXCR5/CXCL13轴可能成为提高放疗疗效的潜在策略。癌症患者放射抗性的免疫机制尚待深入探索。本研究作者揭示，放疗后肿瘤区域CXCL13表达上调，进而募集具有免疫抑制功能的CXCR5+单核细胞；阻断CXCR5/CXCL13相互作用有助于增强放疗后的肿瘤控制。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> A substantial portion of patients experience radioresistance, which impedes clinical benefit. The radiation-induced ‘protumor’ immune response is previously demonstrated to limit antitumor efficacy. However, the detailed mechanism remains to be explored. In this study, we observe CXCR5+ monocytes are enriched in tumor upon radiation. CXCR5 expression on monocytes in host is induced by tumor-derived VEGF through PI3K/mTOR/HIF-1α axis. Local radiation enhances CXCL13 expression from tumor cells, a specific ligand of CXCR5, which leads to the recruitment of CXCR5+ monocytes. Tumor-infiltrating CXCR5+ monocytes induce radioresistance by inhibiting CD8+ T cells through PD-1/PD-L1 interaction. Moreover, radiation-induced GM-CSF promotes the differentiation of CXCR5+ monocytes toward M2-like macrophages. In contrast, inhibiting VEGFR signaling, neutralizing CXCL13 and GM-CSF, or blocking PD-L1 facilitates radiation-induced tumor control by abrogating CXCR5+ monocyte-mediated immunosuppression. Furthermore, the CXCR5+ and CD14+ populations are increased in patients with cancer following radiotherapy. Monocyte is increased in the peripheral blood of patients with progressive disease following radiotherapy. These findings suggest potential strategies for blocking the CXCR5/CXCL13 axis to improve radiotherapy efficacy. The immune mechanism of radioresistance in cancer patients remains to be explored. The authors here show that CXCL13 is upregulated in tumor regions upon radiation, which recruits immune suppressive CXCR5+ monocytes. Blocking CXCR5/CXCL13 interactions facilitate tumor control following radiation.
+
+</details>
+<br>
+
+**关键词**: radioresistance, CXCR5+ monocytes, CXCL13, PD-1/PD-L1, immunosuppression, radiotherapy, tumor microenvironment, CD8+ T cells
+
+---
+
+### 70. ❌ Plasmonic Dirac-vortex lasers via three-dimensional photonic mass vortices engineering
+
+**作者**: Mou Zhong, Xiaoqiong Bi, Mengyuan Song, Nanli Mou, Delin Zhang, Xiaolu Zhuo, Jingtian Hu, Biye Xie, Xianyu Ao, Jun Guan
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70833-1](https://doi.org/10.1038/s41467-026-70833-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是拓扑光子晶体、等离子体狄拉克涡旋激光器和三维光子质量涡旋工程，属于光子学、纳米光子学和拓扑光子学领域。论文内容涉及铝纳米粒子蜂窝晶格、有机染料分子、远场辐射调控、偏振态和强度分布编程等。所有评分关键词均与医学图像分析、临床决策支持、疾病诊断/预后、手术规划或医疗AI模型相关，而该论文完全不涉及任何医学、医疗或生物医学应用，因此所有关键词的相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过三维参数空间中的光子质量涡旋工程，实现了具有可控偏振和强度分布的等离子体狄拉克涡旋激光器，为多维质量调控腔工程建立了新范式。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 拓扑光子晶体为调控光提供了强大平台。然而，其在实现多样化远场光束分布与偏振态方面的灵活性受限于晶格所能提供的空间对称性数量。本文通过在三维参数空间中构建光子质量涡旋，展示了具有可控偏振态与强度分布的等离激元狄拉克涡旋激光器。我们设计了由铝纳米颗粒蜂窝晶格构成的等离激元狄拉克涡旋腔，其中通过将畸变单元按角向卷绕排列实现了光子质量涡旋。通过调控纳米颗粒的径向与角向位移以及其尺寸（作为系统的第三维度），我们预测了具有空间可编程偏振态与非对称强度分布的远场辐射。实验中，这一目标通过将有机染料分子集成于等离激元狄拉克涡旋腔内实现。我们的工作确立了多维质量调控腔体工程的新范式，为塑造奇异光子态提供了灵活性，对光子电路、量子器件及玻色子系统具有广泛意义。拓扑光子晶体赋予光束的强度分布与偏振态原本受限于晶格可实现的空间对称性。本文作者基于光子质量涡旋工程，展示了具有可定制强度与偏振分布的等离激元狄拉克涡旋激光。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Topological photonic crystals provide a powerful platform for manipulating light. However, their flexibility in realizing diverse far-field beam profiles and polarization states is limited by the number of spatial symmetries lattices can provide. Here, we demonstrate plasmonic Dirac-vortex lasers with controlled polarization and intensity distributions by engineering photonic mass vortices in a three-dimensional parameter space. We design plasmonic Dirac-vortex cavities consisting of honeycomb lattices of aluminum nanoparticles, where photonic mass vortices are achieved by arranging distorted unit cells in an angular winding configuration. By manipulating the radial and azimuthal displacements of the nanoparticles as well as their size, taken as the third dimension of the system, we predict far-field radiation with spatially programmable polarization states and asymmetric intensity distributions. Experimentally, this is achieved by integrating organic dye molecules within the plasmonic Dirac-vortex cavities. Our work establishes a paradigm for multi-dimensional mass-enabled cavity engineering, which offers flexibility in sculpting exotic photonic states with broad implications for photonic circuits, quantum devices, and bosonic systems. The intensity profiles and polarization states bestowed upon a beam by topological photonic crystals are limited to the spatial symmetries that can be realized with the crystal lattice. Here, authors demonstrate plasmonic Dirac-vortex lasing with tailorable intensity and polarisation distributions, based on photonic mass vortices engineering.
+
+</details>
+<br>
+
+**关键词**: plasmonic Dirac-vortex lasers, photonic mass vortices, topological photonic crystals, three-dimensional parameter space, polarization control, intensity distribution, honeycomb lattices, aluminum nanoparticles
+
+---
+
+### 71. ❌ Volumetric 3D printing of a fluoropolymer and closed-loop chemical recycling of its fluorinated content
+
+**作者**: Quinten Thijssen, Antonio Alberto Jaén-Ortega, Nele Pien, Sandra Van Vlierberghe
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70897-z](https://doi.org/10.1038/s41467-026-70897-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是氟化聚合物的3D打印技术和化学回收方法，属于材料科学、化学工程和增材制造领域。论文虽然提到生物相容性和潜在生物医学应用，但完全没有涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学成像或医学成像基础模型等主题。所有关键词都与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种氟化光刻胶，实现了氟化聚合物的高分辨率断层体积3D打印，并建立了其氟化成分的闭环化学回收方法，回收的单体可重新功能化并打印而不损失性能。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 氟化聚合物在微流控、电子与生物医学工程等领域不可或缺。然而，其化学稳定性导致其在环境中长期存留，使得对其废弃阶段的管理至关重要。与此同时，这类材料的不溶性和无熔融特性使其难以加工成复杂几何结构，限制了其在三维打印中的应用。本文提出一种氟化光敏树脂，可实现断层扫描体三维打印，并对其含氟组分进行闭环化学回收。该光敏树脂基于烯烃功能化的氟化二醇与多官能团硫醇，支持快速制造厘米尺度物体，其可重复的特征尺寸可低至56微米，是迄今报道的最小尺寸之一。在碱性条件下选择性水解氨基甲酸酯键，可实现约97%的氟化单体回收率。回收的单体经重新功能化后可用于再次打印，且打印精度、热稳定性与力学性能均未出现衰减。通过体三维打印制得的部件在体外实验中表现出生物相容性，具备生物医学应用潜力。本研究首次实现了氟化聚合物的高分辨率断层扫描体三维打印，并对其含氟组分实现了闭环化学回收。氟化聚合物的化学稳定性导致其在环境中长期存留，使得对其废弃阶段的管理至关重要。本文作者报道了一种氟化光敏树脂，可通过断层扫描体三维打印技术进行加工，并实现其含氟组分的闭环化学回收。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Fluorinated polymers are indispensable in fields such as microfluidics, electronics, and biomedical engineering. Yet, their chemical stability leads to long-term environmental persistence, rendering end-of-life management essential. In parallel, their insolubility and lack of melt behavior complicate fabrication into complex geometries, restricting their use in 3D printing. Here, a fluorinated photoresist is introduced that enables tomographic volumetric 3D printing with closed-loop chemical recycling of its fluorinated content. The photoresist—based on an alkene-functionalized fluorinated diol and a multifunctional thiol—supports rapid fabrication of centimeter-scale objects with reproducible feature sizes down to 56μm, among the smallest reported to date. Selective urethane hydrolysis under alkaline conditions yields ~97% recovery of the fluorinated monomer. The recovered monomer is re-functionalized and reprinted without loss of print fidelity, thermal stability, or mechanical performance. Volumetric 3D printed parts are biocompatible in vitro, supporting potential biomedical use. This represents the first demonstration of high-resolution tomographic volumetric printing of a fluoropolymer with closed-loop chemical recycling of its fluorinated content. The chemical stability of fluorinated polymers leads to long-term environmental persistence, rendering end-of-life management essential. Here the authors report a fluorinated photoresist that enables tomographic volumetric 3D printing with closed loop chemical recycling of its fluorinated content.
+
+</details>
+<br>
+
+**关键词**: fluorinated polymers, volumetric 3D printing, tomographic printing, chemical recycling, fluorinated photoresist, biocompatibility, closed-loop recycling, high-resolution fabrication
+
+---
+
+### 72. ❌ Tumor-specific lncRNA IGF1R-AS1 trans-regulates chromatin interactions associated with oncogenic MYC signaling
+
+**作者**: Yongyong Yang, Ting-You Wang, Joshua Fry, YINGMING LI, Qingshu Meng, Qingxiang Guo, Nathan E. Patchen, Kyle H. White, Abhirami Ramakrishnan, Yanan Ren, Qianru Li, Xingxing Zhang, Taufeeque Ali, Courtney Dawes, S. Fragkogianni, Parker Irvin, Sk Kayum Alam, Luke H. Hoeppner, Xiao Hui Zhang, Douglas Yee
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70814-4](https://doi.org/10.1038/s41467-026-70814-4)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究肿瘤特异性lncRNA IGF1R-AS1通过染色质相互作用调控MYC致癌信号通路的分子机制，属于癌症生物学和表观遗传学领域。论文内容完全基于分子生物学、转录组学和表观遗传学分析，未涉及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划或多模态医学影像相关内容。所有评分关键词均与医学影像分析和AI临床决策支持相关，而该论文完全不涉及这些技术领域，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A mechanism by which a tumor-specific trans-acting lncRNA modulates oncogenic MYC expression through long-range chromatin interactions is elucidated, suggesting IGF1R-AS1 may play an important role in the pathogenesis of MYC-driven malignancies.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现肿瘤特异性lncRNA IGF1R-AS1通过促进远端MYC增强子与启动子之间的染色质环化来调控MYC过表达，从而增强肿瘤发生能力。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：长链非编码RNA（lncRNA）已成为多种人类癌症发生发展的关键调控因子。然而，理解lncRNA影响癌症进展的确切机制仍面临重大挑战，这主要源于其细胞类型和组织特异性的表达模式，以及缺乏明确的功能结构域或基序。本研究通过对一组转移性去势抵抗性前列腺癌患者的lncRNA表达进行全面分析，探讨了超级增强子与lncRNA之间复杂的相互作用。我们的分析共识别出1344个lncRNA，其中位于IGF1R基因座的一个反义lncRNA——命名为IGF1R-AS1——显示出最强的超级增强子关联性。通过泛癌转录组分析，我们发现IGF1R-AS1在肿瘤样本中特异性转录，并在前列腺癌和肺癌中过度表达。值得注意的是，我们揭示了IGF1R-AS1的一种非经典反式作用机制：它通过与染色质重塑复合物和结构蛋白相互作用，促进远端MYC增强子与其启动子之间的长程染色质环化，从而导致MYC过表达并增强肿瘤发生能力。总体而言，我们的研究阐明了一种肿瘤特异性反式作用lncRNA通过长程染色质相互作用调控致癌基因MYC表达的机制，提示IGF1R-AS1可能在MYC驱动的恶性肿瘤发病机制中发挥重要作用。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract LncRNAs have emerged as pivotal regulators in the development and progression of various human cancers. However, understanding the precise mechanisms by which lncRNAs influence cancer progression remains a substantial challenge, largely due to their cell type- and tissue-specific expression patterns and the lack of well-defined functional domains or motifs. In this study, we investigate the complex interplay between super-enhancers and lncRNAs through a comprehensive analysis of lncRNA expression in a cohort of metastatic castration-resistant prostate cancer patients. Our analysis identifies 1344 lncRNAs, among which an antisense lncRNA in the IGF1R locus named IGF1R-AS1 displayed the strongest super-enhancer association. Through pan-cancer transcriptome analysis, we find that IGF1R-AS1 is specifically transcribed in tumor specimens and is overexpressed in prostate and lung cancers. Notably, we reveal a non-canonical trans -acting role for IGF1R-AS1 whereby it interacts with chromatin remodeling complexes and architectural proteins to facilitate long-range chromatin looping between distal MYC enhancers and its promoter, leading to MYC overexpression and enhanced tumorigenicity. Collectively, our findings elucidate a mechanism by which a tumor-specific trans -acting lncRNA modulates oncogenic MYC expression through long-range chromatin interactions, suggesting IGF1R-AS1 may play an important role in the pathogenesis of MYC-driven malignancies.
+
+</details>
+<br>
+
+**关键词**: lncRNA, IGF1R-AS1, MYC, chromatin interactions, super-enhancers, prostate cancer, oncogenic signaling, transcriptome analysis
+
+---
+
+### 73. ❌ Data-In-situ Computing with One-Pixel-Multiple-Memristor Architecture for Neuromorphic Sequential Vision
+
+**作者**: Z. J. Sun, Peiwen Tong, Jiangrong Shen, H. Xu, Rongrong Cao, Changli Liu, Chao Chen, Bing Song, Yinan Wang, Wei Wang, Yuchao Yang, Xiang Li
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70860-y](https://doi.org/10.1038/s41467-026-70860-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是神经形态视觉系统的硬件架构（1PnR架构）和内存计算技术，用于高效图像采集和处理，并在Weizmann人类动作数据集上验证性能。所有评分关键词均与医学图像分析、临床决策支持相关，而论文完全不涉及医学领域、医疗影像（CT/MRI/超声）、疾病诊断/预后、手术规划或多模态医疗数据。论文属于计算机硬件/神经形态计算领域，与医疗AI无任何关联。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A one-pixel-multiple-memristor (1PnR) architecture with a rolling exposure strategy for fast sequential image acquisition and a data-in-situ computing network for efficient image processing is developed.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种用于神经形态视觉系统的单像素多忆阻器（1PnR）架构和内存计算网络，在Weizmann人类动作数据集上实现了95.7%的识别准确率，相比传统CMOS系统在图像传感延迟和能耗上分别降低了2000倍和160倍。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 摘要：基于忆阻器的神经形态视觉系统为人工视觉提供了一种高能效的实现途径，然而传统的“单像素对应单忆阻器”架构由于临时存储能力有限，在动态图像处理中仍存在效率不足的问题。受人类视觉工作记忆的启发，本文提出了一种“单像素对应多忆阻器”（one-pixel-multiple-memristor, 1PnR）架构，并采用滚动曝光策略以实现快速序列图像采集。此外，我们开发了一种用于高效图像处理的数据原位计算网络。通过将网络权重映射为电压向量并施加于存储图像的忆阻器阵列，该网络能够在图像存储位置直接进行计算，从而消除了高能耗的数据传输过程。基于1PnR架构的硬件原型在魏茨曼人体动作流数据集上实现了95.7%的识别准确率。与基于CMOS的系统相比，该架构预计可将图像传感与存储的延迟降低2000倍，并将图像处理的能耗降低160倍，展现了其在未来神经形态视觉系统中的巨大潜力。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Abstract Neuromorphic vision systems based on memristors offer an energy-efficient approach to artificial vision, yet traditional pixel(s)-to-one-memristor architectures remain inefficient in dynamic image processing due to limited temporary storage. Here, inspired by human visual working memory, we propose a one-pixel-multiple-memristor (1PnR) architecture with a rolling exposure strategy for fast sequential image acquisition. Furthermore, a data-in-situ computing network for efficient image processing is developed. With network weights mapped to voltage vectors and applied to the image storage memristor array, direct computation is enabled where the image is stored, and the energy-intensive data transmission is eliminated. A hardware prototype of the 1PnR architecture achieved 95.7% recognition accuracy on the Weizmann human action flow dataset. Compared to CMOS-based systems, this architecture is estimated to have a 2000× reduction in latency for image sensing and storage, and a 160× reduction in energy consumption image processing, demonstrating significant potential for future neuromorphic visual systems.
+
+</details>
+<br>
+
+**关键词**: neuromorphic vision, memristor, one-pixel-multiple-memristor architecture, in-situ computing, sequential image acquisition, hardware prototype, energy-efficient, image recognition accuracy
+
+---
+
+### 74. ❌ Electrochemical tyrosine-click bioconjugation enables multiplexed cytokine sensing and immunoprofiling in native serum
+
+**作者**: Kaixin Song, Yinghuan Liu, Qijia Ma, Chunjing Liang, Lanqun Mao, Ying Jiang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70815-3](https://doi.org/10.1038/s41467-026-70815-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是电化学生物传感器技术，具体开发了一种名为i-eY-Click的酪氨酸选择性电化学方法，用于在生理条件下快速共价固定天然蛋白质，以改进抗体单层形成和细胞因子传感性能。该研究属于生物传感器、电化学和免疫分析领域，与给定的所有关键词（均围绕医学影像分析、深度学习、AI诊断、手术规划等）完全无关。论文未涉及任何医学影像处理、AI模型或临床决策支持内容。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    i-eY-Click provides a general, chemistry-driven route to high-performance biointerfaces for multiplexed immunosensing and biomarker profiling, and is used for in vivo serum immunoprofiling in a nanoplastic exposure model.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种快速、酪氨酸选择性的电化学方法（i-eY-Click），用于共价固定天然蛋白质，显著提高了电化学生物传感器在血清中多重细胞因子检测的灵敏度和重现性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 电化学生物传感器需要稳健且受控良好的生物界面，但现有的蛋白质固定化学方法存在过程缓慢且界定模糊的问题。本文报道了一种界面电化学酪氨酸点击（i-eY-Click）策略，该策略能够在生理条件下实现天然蛋白质的快速（<3分钟）、化学选择性共价固定。在温和电位下（+0.36 V vs Ag/AgCl），电极接枝的4-苯基尿唑被原位氧化为苯基三唑二酮中间体，该中间体能够特异性与酪氨酸残基反应，无需基因修饰或可溶性催化剂。i-eY-Click的动力学比传统的酰胺偶联快约20倍，同时能保持蛋白质活性。将其应用于碳微电极阵列，可形成受控良好的抗体单分子层，并支持在天然血清中进行多重细胞因子检测，其灵敏度、检测限和重现性均得到显著提升。我们进一步利用该平台在纳米塑料暴露模型中进行体内血清免疫谱分析，揭示了电荷依赖性的细胞因子特征以及对聚乳酸颗粒的延迟炎症反应。因此，i-eY-Click为构建用于多重免疫传感和生物标志物分析的高性能生物界面，提供了一条通用的、化学驱动的途径。高性能电化学生物传感器的发展受限于缺乏构建受控良好生物界面的稳健方法。本文中，作者提出了i-eY-Click，这是一种快速（<3分钟）、酪氨酸选择性的电化学方法，可在温和条件下共价固定天然蛋白质。将其应用于碳微电极阵列，可形成受控良好的抗体层并增强细胞因子检测，从而改善灵敏度、检测限和重现性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Electrochemical biosensors require robust, well-controlled biointerfaces, but existing protein immobilization chemistries are slow and poorly defined. Here we report an interfacial electrochemical tyrosine-click (i-eY-Click) strategy that enables rapid (<3 min), chemoselective covalent attachment of native proteins under physiological conditions. At mild potentials (+0.36 V vs Ag/AgCl), electrode-grafted 4-phenylurazole is oxidized in situ to phenyltriazolinedione intermediates that react specifically with tyrosine residues, without genetic modification or soluble catalysts. i-eY-Click displays ~20-fold faster kinetics than conventional amide coupling while preserving protein activity. Implemented on carbon microelectrode arrays, it yields well-controlled antibody monolayers and supports multiplexed cytokine sensing in native serum with markedly improved sensitivity, detection limits and reproducibility. We further use this platform for in vivo serum immunoprofiling in a nanoplastic exposure model, revealing charge-dependent cytokine signatures and delayed inflammatory responses to polylactic acid particles. i-eY-Click thus provides a general, chemistry-driven route to high-performance biointerfaces for multiplexed immunosensing and biomarker profiling. The development of high-performance electrochemical biosensors is limited by the lack of robust methods for creating well-controlled biointerfaces. Here, the authors present i-eY-Click, a rapid (<3 min), tyrosine-selective electrochemical method for covalently immobilizing native proteins under mild conditions. Applied to carbon microelectrode arrays, it forms well-controlled antibody layers and enhances cytokine sensing, improving sensitivity, detection limits, and reproducibility.
+
+</details>
+<br>
+
+**关键词**: electrochemical biosensors, tyrosine-click bioconjugation, protein immobilization, multiplexed cytokine sensing, immunoprofiling, carbon microelectrode arrays, serum analysis, biointerfaces
+
+---
+
+### 75. ❌ Asymmetric global urban cooling potential demands accelerated and context-specific actions
+
+**作者**: Xiaotian Ding, J. Fang, Yufen Zhao, Diana Ürge-Vorsatz, Jian Ge, Jan Carmeliet
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70662-2](https://doi.org/10.1038/s41467-026-70662-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究全球城市热岛效应缓解潜力，使用城市气候模拟评估反射表面、绿化改造和人为热减排的冷却效果，属于城市气候学、环境科学和城市规划领域。所有评分关键词均涉及医学影像分析、人工智能医疗应用、疾病诊断/预后、手术规划等医学主题，与论文内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究量化了全球2265个城市到2050年代的冷却潜力，发现冷却潜力与纬度呈正相关但热风险集中在低中纬度区域，强调需要针对性的区域适应策略。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 城市气温上升与极端高温事件构成了紧迫的全球性挑战，然而缓解城市过度热负荷的潜力——尤其是在全球尺度上——仍不明确。本研究通过经过验证的城市气候模拟，量化了全球2,265个城市至2050年代的降温潜力。降温效应以夏季平均湿球黑球温度（WBGT）以及热危险小时数（HDH；WBGT > 31.4 °C）的减少量来量化，评估情景为综合实施反射表面、绿化转型和人为热排放减少措施。我们发现了一种显著的空间不对称性：尽管降温潜力随纬度增加而上升（主要源于反射表面带来的更强冷却效应），但最高的热风险却集中在低至中纬度地区（北纬10°-40°）。在这些高风险区域，综合缓解措施在夜间更为有效，平均可减少37%的HDH，而对白天的热缓解程度较低（11%）。这些不对称性凸显了制定因地制宜策略的必要性——特别是对低纬度湿润地区需加速行动和本地化创新——以及将城市尺度的规划与针对性的白天热风险干预措施相结合。未来城市热风险与降温潜力之间存在一种跨纬度普遍存在的错配，呈现出相反的格局：热负荷峰值集中在低纬度地区，这进一步强调了制定因地制宜适应策略的明确必要性。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Rising urban temperatures and heat extremes pose an urgent global challenge, yet the potential for mitigating excessive urban heat–particularly at the global scale–remains unclear. Here, we quantify the cooling potential across 2,265 cities worldwide by the 2050s using validated urban climate simulations. Cooling effects are quantified as the reduction in the summer average wet-bulb globe temperature (WBGT) and heat danger hours (HDH; WBGT > 31.4 °C) under the combined implementation of reflective surfaces, green transformation, and anthropogenic heat reduction. We show a distinct spatial asymmetry: while the cooling potential increases with latitude, primarily due to greater cooling from reflective surfaces, the highest heat risk is concentrated in low- to mid-latitude regions (10°N-40°N). In these high-risk regions, combined mitigation is more effective at night, reducing HDH by an average of 37%, whereas daytime heat is mitigated to a lesser extent (11%). These asymmetries underscore the need for context-specific strategies—particularly accelerated action and localized innovation for low-latitude humid regions—as well as the integration of city-scale planning with targeted daytime heat risk interventions. A mismatch—salient across latitudes—between future urban heat risk and cooling potential reveals opposing patterns, with peak heat burden concentrated in lower-latitude regions, accentuating a clear imperative for context-specific adaptation strategies.
+
+</details>
+<br>
+
+**关键词**: urban cooling potential, urban heat mitigation, wet-bulb globe temperature, heat danger hours, reflective surfaces, green transformation, anthropogenic heat reduction, context-specific adaptation
+
+---
+
+### 76. ❌ Photoresist-guided indirect photopatterning of quantum dots via carbene-mediated ligand thermocrosslinking
+
+**作者**: Hyeokjun Kim, Hyobin Ham, Chang Hyeok Lim, Jin Su Park, Seunghwan Roh, Hak June Lee, Myeongjae Lee, Jinho Keum, Se Young Park, Jeong Woo Park, Seongjae Lee, H. Bhang, Seunghan Lee, Hyunwoo Jo, Yong Hyun Jo, J. Felix Shin, Wan Ki Bae, Chan‐mo Kang, Moon Sung Kang, BongSoo Kim
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70770-z](https://doi.org/10.1038/s41467-026-70770-z)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究量子点（QDs）的光刻图案化技术，用于下一代光电子学和显示应用（如虚拟/增强/混合现实显示器），属于材料科学、纳米技术和显示工程领域。论文内容完全不涉及医学图像分析、医学图像分割、深度学习医学成像、AI诊断、预后预测、手术规划、多模态医学成像或医学成像基础模型。所有关键词均与医学无关，因此相关度评分为0。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文提出了一种光刻胶引导的间接（PIN）光刻图案化策略，用于制造高分辨率、高保真度的全彩量子点图案，实现了超过4000 PPI的RGB图案，并展示了可扩展的10×10被动矩阵全彩量子点LED阵列。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 胶体量子点（Quantum Dots, QDs）因其可调带隙、窄发射线宽和高发光量子产率，成为下一代光电子学领域的重要候选材料。在虚拟现实、增强现实和混合现实显示应用中，实现微米级尺度的全彩量子点图案化至关重要。然而，现有的光刻方法常因使量子点暴露于严苛的加工条件而导致其发光特性下降，或损害所得图案的结构保真度。本文报道了一种光刻胶引导的间接（Photoresist-guided Indirect, PIN）光图案化策略，该策略包括：（i）通过光刻形成牺牲性光刻胶图案，（ii）在其上方沉积交联量子点薄膜，以及（iii）剥离光刻胶，移除牺牲性光刻胶，从而在基底上留下交联的量子点图案。量子点的交联由基于重氮化合物的配体热交联剂Diazo-4-LiXer介导。利用低温（110–120 °C）激活的卡宾化学，Diazo-4-LiXer在连接相邻量子点的同时，通过重复加工过程保持其固有的光致发光和电致发光性能。此外，Diazo-4-LiXer可实现热交联而不影响底层的光刻胶预图案，这些预图案作为结构模板决定了量子点图案的厚度和保真度。采用PIN光图案化技术，我们实现了分辨率超过4,000像素每英寸的高保真度红绿蓝（RGB）图案，并通过制造一个10 × 10无源矩阵全彩RGB量子点发光二极管阵列，展示了其集成级可扩展性。高分辨率显示要求在不损害量子点性能的前提下实现其精确图案化。本文中，作者报道了一种制造密集RGB像素阵列的工艺，该阵列分辨率超过4,000像素每英寸且具有高保真度，适用于未来显示技术。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Colloidal quantum dots (QDs) are leading candidates for next-generation optoelectronics owing to their tuneable bandgaps, narrow emission linewidths, and high luminescence quantum yields. For virtual-, augmented-, and mixed-reality display applications of these materials, patterning full-color QDs at μm-length scales is essential. However, existing photolithographic approaches often degrade QD luminance characteristics by exposing them to harsh processing conditions, or they compromise the structural fidelity of the resulting patterns. Here we report a photoresist-guided indirect (PIN) photopatterning strategy that includes (i) lithographic formation of sacrificial PR patterns, (ii) deposition of a crosslinked QD film on top, and (iii) PR stripping that removes the sacrificial PR, leaving behind crosslinked QD patterns on the substrate. QD crosslinking is mediated by a diazo-based ligand thermocrosslinker, Diazo-4-LiXer. Leveraging low-temperature (110–120 °C)-activated carbene chemistry, Diazo-4-LiXer bridges neighbouring QDs while maintaining their intrinsic photoluminescence and electroluminescence through repeated processing. Moreover, Diazo-4-LiXer enables thermocrosslinking without affecting the underlying photoresist pre-patterns, which serve as structural templates determining the thickness and fidelity of the QD patterns. Using PIN photopatterning, we realize high-fidelity RGB patterns exceeding 4,000 pixels per inch resolution and demonstrate integration-level scalability by fabricating a 10 × 10 passive-matrix full-colour RGB QD–LED array. High-resolution displays require precise patterning of quantum dots without compromising their performance. Here, the authors report on a process for manufacturing dense RGB pixel arrays with a resolution exceeding 4,000 pixels per inch and high fidelity for future displays.
+
+</details>
+<br>
+
+**关键词**: quantum dots, photopatterning, photoresist-guided indirect, thermocrosslinking, high-resolution displays, RGB patterns, QD-LED array, Diazo-4-LiXer
+
+---
+
+### 77. ❌ MDM2 Inhibition with Alrizomadlin (APG-115) in TP53 wild-type salivary gland cancers: a phase I clinical trial
+
+**作者**: Alexander T. Pearson, J. Muzaffar, Kedar Kirtane, Emily Bellile, Krithika Suresh, Ari J. Rosenberg, Francis P. Worden, Christine H. Chung, E. Vokes, J. Chad Brenner, Apurva D. Bhangale, Jon McHugh, Kristy A. Warner, Felipe Nör, Jacques E. Nör, K L Innes, Yifan Zhai, Tommy Fu, P. Swiecicki
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70653-3](https://doi.org/10.1038/s41467-026-70653-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文是一项关于MDM2抑制剂alrizomadlin（APG-115）在TP53野生型唾液腺癌中的I期临床试验，主要研究药物安全性、剂量限制性毒性和抗肿瘤活性。论文内容完全聚焦于临床药理学、肿瘤治疗和临床试验设计，不涉及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态成像或基础模型等主题。所有关键词均与论文内容无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    Findings demonstrate encouraging tolerability of alrizomadlin monotherapy with antitumor activity in patients with TP53 wild type SGC, especially ACC.
+
+!!! tip deepseek-chat TL;DR
+
+    这项I期临床试验评估了口服MDM2抑制剂alrizomadlin在TP53野生型不可切除复发/转移性唾液腺癌患者中的安全性和抗肿瘤活性，结果显示单药治疗具有可接受的耐受性和15%的缓解率。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 临床前研究已评估小鼠双微体2（Murine Double Minute 2, MDM2）抑制剂作为腺样囊性癌（Adenoid Cystic Carcinoma, ACC）的治疗手段，但尚缺乏临床试验。此项Ⅰ期临床试验（NCT03781986）旨在评估口服MDM2抑制剂艾瑞莫德林（Alrizomadlin, APG-115）联合或不联合卡铂治疗TP53野生型不可切除的复发/转移性唾液腺癌（R/M SGC）的安全性与抗肿瘤活性，原计划按1:1随机分组接受卡铂化疗。共同主要终点为确定艾瑞莫德林单药或联合卡铂的剂量限制性毒性（DLT）及缓解率（RR）。次要终点包括安全性、生存期及按肿瘤组织学分类的缓解率。在联合治疗组入组4例患者后，因毒性过高，试验调整为艾瑞莫德林单药的单臂研究。联合治疗组出现1例DLT，所有患者均发生≥3级的治疗相关不良事件（TRAE）。艾瑞莫德林单药组共入组37例患者，出现3例DLT，67%的患者发生≥3级TRAE。缓解率为15%，中位无进展生存期为10.5个月。这些结果表明艾瑞莫德林单药在TP53野生型唾液腺癌（尤其是ACC）患者中具有可耐受的毒性特征及抗肿瘤活性。临床前研究已评估MDM2抑制剂治疗腺样囊性癌的潜力。本文作者报告了一项Ⅰ期临床试验，提供了MDM2抑制剂艾瑞莫德林在TP53野生型唾液腺癌（特别是腺样囊性癌）患者中的耐受性与疗效初步数据。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Preclinical studies have evaluated murine double minue 2 (MDM2) inhibitors as a treatment for adenoid cystic carcinoma (ACC), but clinical trials are lacking. This phase I trial (NCT03781986) assesses the safety and antitumor activity of an oral MDM2 inhibitor, alrizomadlin (APG-115), +/- carboplatin in TP53 wild type unresectable recurrent/metastatic salivary gland cancers (R/M SGC) with a planned 1:1 randomization to carboplatin chemotherapy. The co-primary endpoints are determination of dose-limiting toxicity (DLT) and response rate (RR) for alrizomadlin monotherapy +/- carboplatin. Secondary endpoints include safety, survival, and RR by tumor histology. After enrollment of 4 patients to combination therapy, the trial was modified to a single arm study of alrizomadlin monotherapy due to excess toxicity. 1 DLT was seen in the combination arm, all patients had ≥ G3 treatment related adverse events (TRAE). 37 patients were enrolled to alrizomadlin monotherapy. 3 DLTs were encountered, 67% of patients had ≥ G3 TRAE. The RR was 15% with median progression free survival 10.5 months. These findings demonstrate encouraging tolerability of alrizomadlin monotherapy with antitumor activity in patients with TP53 wild type SGC, especially ACC. Preclinical studies have evaluated murine double minue 2 (MDM2) inhibitors as a treatment for adenoid cystic carcinoma (ACC). Here the authors present a phase I clinical trial reporting tolerability and efficacy preliminary data for the MDM2 inhibitor alrizomadlin (APG-115) in patients with TP53 wild type salivary gland cancers, especially adenoid cystic carcinoma.
+
+</details>
+<br>
+
+**关键词**: MDM2 inhibitor, alrizomadlin, APG-115, salivary gland cancer, phase I clinical trial, TP53 wild-type, adenoid cystic carcinoma, antitumor activity
+
+---
+
+### 78. ❌ Deciphering the liquid-solid interactions in dealkalization of O3 layered oxides
+
+**作者**: Weiya Zhang, Jifu Zhu, Amin Song, Mengjie Huang, Xin Zhang, Xiekun Xu, Cheng Liu, Chuhan Yuan, Nan Li, Shipeng Zhang, Ying, Lei Dong, C. P. Shen, Keyu Xie
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70581-2](https://doi.org/10.1038/s41467-026-70581-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是电池材料化学领域，具体探讨O3相层状氧化物在去碱化过程中的液固相互作用机制，以及如何通过溶剂选择防止结构降解。所有评分关键词均涉及医学影像分析、人工智能辅助临床决策等医疗健康领域，与论文的电池材料化学研究内容完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了水洗导致钠基O3相层状氧化物结构坍塌的机制，并发现乙二醇可作为高效去碱剂在去除杂质的同时保持材料完整性。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> O3相层状氧化物因其稳定的拓扑晶格框架和可调控潜力，已成为先进电池的主流正极活性材料之一。然而，材料表面对环境敏感导致的残余碱问题阻碍了其大规模应用。水洗作为锂基正极材料工业中去除表面残余碱的方法，在钠基材料中会引发严重问题，如晶格坍塌和大量活性碱金属离子溶出。本文提出了主体固相正极材料与客体液相溶剂之间的相互作用机制，阐明了在脱碱过程中材料结构降解与分散溶剂的分子构型及碱金属-氧键共价性的依赖关系。对于H2O（H3O+），其自传播式分子嵌入钠层及后续质子化过程会诱发钠离子流失，导致晶格失稳。相比之下，高效脱碱剂——乙二醇（ethylene glycol）因其尺寸效应的限制，可阻止进一步的结构退化。基于正极材料在液相中随时间扩展的劣化行为，我们建立了一个适应性分析框架，用于评估材料对抗液相的稳定性。本研究为O3相层状氧化物的液相工程提供了基础理论指导。高性能电池材料在标准清洗过程中常发生降解，本文揭示了水洗导致钠基氧化物结构坍塌的原因，并证明乙二醇可在保持材料完整性的同时安全去除杂质。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> O3-phase layered oxides are among the mainstream positive electrode active materials for advanced batteries due to a stable topological lattice framework and potential for tunability. However, surface residual alkali due to sensitivity hinders their large-scale application. Water washing, an industrial surface residual alkali removal method in lithium-based positive electrode materials, brings about severe issues in sodium-based materials, such as lattice collapse and extensive active alkali metal ion leaching. Here, we propose an interaction mechanism between host solid-phase positive electrode materials and guest liquid-phase solvents, which elucidates the dependent structural degradation on the molecular configuration of dispersed solvents and the alkali metal–oxygen bond covalency during dealkalization. For H2O (H3O+), self-propagating molecule intercalation into Na slabs and subsequent protonation induce the leakage of Na ions, leading to lattice destabilization. In contrast, the efficient dealkalizing agent—ethylene glycol—prevents further structural degradation due to the constraint of size effect. Based on the time-dependent deterioration of the extended scope of positive electrode materials, an adaptable analytical framework is established for stability assessment against the liquid phase. Our work provides fundamental theoretical guidance for liquid-phase engineering of O3-phase layered oxides. High-performance battery materials often degrade during standard cleaning processes. Here, the authors identify why water washing causes structural collapse in sodium-based oxides and demonstrate that ethylene glycol can safely remove impurities while maintaining the material’s integrity.
+
+</details>
+<br>
+
+**关键词**: O3 layered oxides, dealkalization, liquid-solid interactions, structural degradation, ethylene glycol, battery materials, surface residual alkali, stability assessment
+
+---
+
+### 79. ❌ A connectivity threshold between grass patches amplifies coastal dune formation
+
+**作者**: Paul M. J. Berghuis, Valérie C. Reijers, J. van de Koppel, Ángeles G. Mayor, Daniil J. P. Scheifes, M. Rietkerk, Tjisse van der Heide
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70552-7](https://doi.org/10.1038/s41467-026-70552-7)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是沿海沙丘形成的生态地貌过程，关注植物斑块（grass patches）的空间连通性如何影响沙丘发育。所有评分关键词均涉及医学影像分析、人工智能在医疗诊断/手术规划中的应用，与论文的生态学、地貌学研究领域完全无关。论文未涉及任何医学影像、深度学习、疾病诊断或手术相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现沿海沙丘形成的关键机制在于沙丘草斑块之间的空间连通性：当斑块密度达到渗流阈值时，会从孤立的斑块转变为功能连接的集群，从而显著增强沙丘的发育能力。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 生物地貌系统作为生态系统服务的关键提供者，源于景观构建生物群与地貌过程之间自我强化的反馈机制。传统上，这些反馈被认为在单个斑块尺度上运作，但斑块间的相互作用如何塑造更大尺度的景观仍不明确。本研究揭示了筑丘禾草如何形成相互作用的斑块功能集群，从而显著放大其生态工程能力。通过分析一个正在形成的海岸沙丘系统十年间的形态发育过程，我们发现沙丘高度主要受邻近斑块初始密度驱动，而非单个斑块规模。我们识别出一种符合空间渗透阈值的S形关系：局部斑块密度的增加会引发从孤立捕沙斑块向功能连通集群的突变，从而促进沙丘生长。这项工作揭示了生态系统工程中一个重要但被忽视的空间维度，该维度可用于指导未来生态修复设计并增强生态系统韧性。海岸沙丘的形成源于植物与沙粒的反馈作用。本研究表明，筑丘禾草的生态工程效应超越了斑块尺度：物理分离的斑块能够形成功能连接的集群，从而强化沙丘的形成过程。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Biogeomorphic systems, key providers of ecosystem services, emerge from self-reinforcing feedbacks between landscape-building biota and geomorphic processes. Typically, these feedbacks are considered to operate at an individual patch scale, yet it remains unclear how interactions between patches shape landscapes at larger scales. Here we show how dune-building grasses form functional clusters of interacting patches that strongly amplify engineering capacity. By analyzing a decade of morphological development in an establishing coastal dune system, we discover that dune height is primarily driven by the initial density of neighboring patches, rather than individual patch size. We identify an S-shaped relationship consistent with a spatial percolation threshold: increasing local patch density triggers an abrupt shift from isolated sand-trapping patches to functionally connected clusters that enhance dune growth. This work reveals an important yet overlooked spatial dimension of ecosystem engineering, one that can be harnessed to inform future restoration designs and enhance ecosystem resilience. Coastal dunes emerge from feedbacks between plants and sand. Here, the authors show that dune-building grasses engineer the landscape beyond the patch scale: physically separated patches can form functionally connected clusters that enhance dune formation.
+
+</details>
+<br>
+
+**关键词**: coastal dune formation, grass patches, spatial connectivity, percolation threshold, ecosystem engineering, biogeomorphic feedbacks, dune-building grasses, functional clusters
+
+---
+
+### 80. ❌ Endemism and regionalization patterns of squamate reptiles in Amazonia
+
+**作者**: Marco Antônio Ribeiro-Júnior, Josué A. R. Azevedo, Cristiano de Campos Nogueira,  Silvana Amaral
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-025-67554-2](https://doi.org/10.1038/s41467-025-67554-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究亚马逊地区爬行动物的生物地理分布和特有性模式，属于生态学、生物地理学和保护生物学领域。所有评分关键词均涉及医学影像分析、人工智能临床决策支持等医疗技术主题，与论文的生物学研究内容完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    This work proposes a regionalisation and endemism scheme for Amazonian squamate reptiles, based on a taxonomically verified checklist, and suggests that conservation efforts should include the borders of Amazonia, and create a connected network of conservation areas to protect endemism hotspots harbouring rare and threatened species.
+
+!!! tip deepseek-chat TL;DR
+
+    本研究基于分类学验证的清单，提出了亚马逊地区有鳞爬行动物的区域化和特有性方案，识别出14个特有性区域和22个生物区域，并建议将亚马逊边界作为保护重点。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 世界正密切关注亚马逊地区，这既因为其作为生物多样性中心的重要性，也因其在调节全球气候中的关键作用。为确保气候服务的持续供给，景观和物种多样性需要得到保护。然而，人们对亚马逊的超高多样性分布格局知之甚少，对于有鳞类爬行动物（蜥蜴、蛇和蚓蜥）而言，这种信息的匮乏更为突出。本文基于一份经过分类学验证的物种名录，提出了亚马逊地区有鳞类爬行动物的区域划分和特有分布方案。我们识别出14个特有分布区和22个生物地理区，这些区域由分布范围受限的物种界定，并表现出高度的空间异质性。这与物种丰富度格局形成对比，后者似乎由空间同质性定义，没有明显的梯度变化。尽管河流屏障假说在界定特有分布区方面支持有限，但河流与植被、地质、地形和气候变量共同解释了物种组成的空间格局。我们的研究结果表明，保护工作应涵盖亚马逊地区的边缘地带，并建立一个相互连接的保护区域网络，以保护蕴藏稀有和受威胁物种的特有分布热点，并作为缓冲带，防止栖息地破坏向亚马逊腹地扩张。亚马逊地区是重要的生物多样性中心，但其超高多样性模式尚不明确。本研究基于分类学验证的物种名录，提出了亚马逊有鳞类爬行动物的区域划分和特有分布方案，并强调亚马逊边缘地带应作为保护优先区域。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The world is keeping a close eye on Amazonia, due to its importance as a centre of biodiversity and its essential role in regulating global climate. To ensure the provision of climatic services, landscape and species diversity need protection. However, little is known about Amazonian megadiversity patterns. This lack of information is more acute for squamate reptiles (lizards, snakes, and amphisbaenians). Here we propose a regionalisation and endemism scheme for Amazonian squamate reptiles, based on a taxonomically verified checklist. We recognise 14 areas of endemism and 22 bioregions, determined by range restricted species and exhibiting high spatial heterogeneity. This contrasts species richness patterns, which are apparently defined by spatial homogeneity, without a marked gradient. While there is little support for the river barrier hypothesis in defining the areas of endemism, rivers, together with vegetation, geology, relief, and climatic variables, collectively explain spatial patterns of species composition. Our findings suggest that conservation efforts should include the borders of Amazonia, and create a connected network of conservation areas to protect endemism hotspots harbouring rare and threatened species and to function as a buffer against the expansion of habitat destruction to deeper parts of Amazonia. Amazonia is an important centre of biodiversity, but little is known about Amazonian megadiversity patterns. This study proposes a regionalisation and endemism scheme for Amazonian squamate reptiles based on a taxonomically verified checklist and highlights Amazonian borders as a conservation priority.
+
+</details>
+<br>
+
+**关键词**: Amazonia, squamate reptiles, endemism, regionalization, biogeography, conservation, biodiversity, species distribution
+
+---
+
+### 81. ❌ Polycomb repressive-deubiquitinase complex safeguards oocyte epigenome and female fertility by restraining Polycomb activity
+
+**作者**: Jinwen Kang, Peiyao Liu, S Ichimura, Lauryn Cook, Mengwen Hu, Satoshi H. Namekawa, Zhiyuan Chen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70845-x](https://doi.org/10.1038/s41467-026-70845-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究的是生殖生物学和表观遗传学领域，具体探讨BAP1/PR-DUB复合物在卵母细胞表观基因组调控和女性生育力中的作用机制。论文内容涉及染色质修饰（H3K27ac、H3K27me3、H2AK119ub1）、转录调控、卵子发生和胚胎发育等分子生物学过程，与给定的所有医学影像分析、人工智能诊断、手术规划等关键词完全无关。所有关键词评分均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A critical role is revealed for PR-DUB in safeguarding the oocyte epigenome by protecting euchromatin from ectopic Polycomb activity, rather than enforcing transcriptional repression.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现BAP1/PR-DUB复合物通过限制Polycomb活性、保护卵母细胞特异性染色质景观来维持卵母细胞发育能力和女性生育力，而不是执行转录抑制功能。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 小鼠卵母细胞展现出独特的染色质景观，其特征是广泛的H3K27ac和H3K27me3结构域，分别界定了常染色质和兼性异染色质。然而，这种非典型景观的形成机制尚不明确。本研究报道了BAP1——Polycomb抑制性去泛素化酶（PR-DUB）复合物的核心组分——作为卵子发生过程中Polycomb活性的关键负调控因子。BAP1限制弥漫性H2AK119ub1的积累，并保护卵母细胞特异的广泛H3K27ac（尤其在基因稀疏区域）免受异位H3K27me3沉积的影响。尽管PR-DUB通常与基因抑制相关，但在卵母细胞中，BAP1主要促进转录，对Polycomb介导的沉默作用甚微。卵子发生过程中BAP1依赖的转录激活对于卵母细胞发育能力、母源-合子转换以及雌性生育力至关重要。值得注意的是，在BAP1缺陷卵母细胞中建立的异位H3K27me3结构域会在植入前胚胎中持续存在，但在植入后被消除；且母源BAP1的缺失并不损害经典或非经典的基因组印记。综上，这些发现揭示了PR-DUB通过保护常染色质免受异位Polycomb活性影响（而非强制转录抑制）来维护卵母细胞表观基因组的关键作用。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Mouse oocytes exhibit a unique chromatin landscape characterized by broad H3K27ac and H3K27me3 domains, demarcating euchromatin and facultative heterochromatin, respectively. However, the mechanisms underlying this non-canonical landscape remain elusive. Here we report BAP1, a core component of the Polycomb Repressive-Deubiquitinase (PR-DUB) complex, as a key negative regulator of Polycomb activity during oogenesis. BAP1 restricts pervasive H2AK119ub1 accumulation and protects oocyte-specific broad H3K27ac, particularly within gene-poor regions, from ectopic H3K27me3 deposition. While PR-DUB has been linked to gene repression, in oocytes BAP1 primarily promotes transcription and contributes minimally to Polycomb-mediated silencing. BAP1-dependent transcriptional activation during oogenesis is essential for oocyte developmental competence, maternal-to-zygotic transition, and female fertility. Notably, ectopic H3K27me3 domains established in BAP1-deficient oocytes persist in preimplantation embryos but are resolved after implantation, and loss of maternal BAP1 does not impair either canonical or non-canonical genomic imprinting. Together, these findings reveal a critical role for PR-DUB in safeguarding the oocyte epigenome by protecting euchromatin from ectopic Polycomb activity, rather than enforcing transcriptional repression.
+
+</details>
+<br>
+
+**关键词**: BAP1, PR-DUB complex, oocyte epigenome, H3K27ac, H3K27me3, female fertility, Polycomb activity, transcriptional activation
+
+---
+
+### 82. ❌ Genomic inference of sites of transmission during regional spread of blaNDM Klebsiella pneumoniae in Michigan
+
+**作者**: Tiffany Wan, Sara McNamara, Brenda Brennan, Ali Pirani, Arianna Miles-Jay, Heather M. Blankenship, Evan S. Snitkin
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70839-9](https://doi.org/10.1038/s41467-026-70839-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是利用基因组数据和医疗暴露史追踪医疗机构内耐药菌传播，属于微生物基因组学、医院感染控制和公共卫生领域。所有评分关键词均涉及医学影像分析、深度学习、AI诊断、手术规划等方向，与论文内容完全无关。论文未涉及任何医学影像技术或AI影像分析内容。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The ability to infer facility sources of transmission using passively collected regional isolates supports the potential for real-time genome-informed surveillance to enable timely targeting of interventions to interrupt regional spread of healthcare-associated pathogens.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种整合基因组和医疗暴露数据的方法来追踪医疗机构内碳青霉烯类耐药肺炎克雷伯菌的传播，并在密歇根州区域性暴发中验证了该方法能识别主要传播设施并支持实时基因组监测。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 在医疗机构间频繁转移的定植与感染患者，使得追溯个体患者获得医疗相关病原体的具体地点变得困难，进而难以识别对区域传播贡献最大的机构。本研究采用一种方法，利用被动收集的区域分离株的基因组数据及医疗暴露史，通过分析新分离株与先前系统发育关系最接近病例之间的共同医疗暴露情况，推断每个新分离株的可能来源机构。作为原理验证，我们将此方法应用于某州卫生部门在2019年10月至2022年5月期间收集的数据——该数据涉及密歇根州一起疑似区域性耐碳青霉烯类肺炎克雷伯菌（carbapenem-resistant Klebsiella pneumoniae）暴发事件，涵盖72名患者及47家医疗机构。对传播链的分析表明，一家核心机构持续发挥了关键作用，而其他机构则被推断为少数病例的来源。重要的是，在多个实例中，基于基因组关联病例间的暴露史重叠，某些机构在本地病例被发现之前即被确认为传播场所。利用被动收集的区域分离株推断传播源机构的能力，证明了实时基因组监测具有及时指导针对性干预措施、阻断医疗相关病原体区域传播的潜力。作者实施了一种整合基因组与医疗暴露数据的策略以实时追踪院内传播，并在密歇根州的区域性暴发中进行了验证。被动收集的分离株可为阻断传播的干预措施提供关键信息。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The frequent movement of colonized and infected patients between healthcare facilities makes it challenging to discern where individual patients acquire healthcare-associated pathogens, and in turn, identify facilities making the greatest contributions to regional spread. Here, we implement an approach using genomic and healthcare exposure histories from passively collected regional isolates to identify the putative facility source for each new isolate by analyzing shared healthcare exposures with earlier case patients whose isolates were phylogenetically closest. As a proof of principle, we apply this approach to data collected by a state health department during a suspected regional outbreak of carbapenem-resistant Klebsiella pneumoniae involving 72 patients exposed to 47 healthcare facilities in Michigan from October 2019 to May 2022. Examination of transmission linkages supported a sustained role played by a single focal facility, with other facilities inferred as sources of smaller numbers of cases. Importantly, in several instances, facilities were implicated as sites of transmission prior to cases being detected there, based on overlapping exposures among genomically linked cases. The ability to infer facility sources of transmission using passively collected regional isolates supports the potential for real-time genome-informed surveillance to enable timely targeting of interventions to interrupt regional spread of healthcare-associated pathogens. Authors implemented a strategy integrating genomic and healthcare exposure data to track nosocomial transmission in real-time and evaluated it on a regional outbreak in Michigan. Passively collected isolates may inform interventions to stop spread.
+
+</details>
+<br>
+
+**关键词**: genomic inference, transmission tracking, carbapenem-resistant Klebsiella pneumoniae, healthcare-associated pathogens, regional outbreak, real-time surveillance, nosocomial transmission, facility source identification
+
+---
+
+### 83. ❌ Membrane interfacial potential governs surface condensation and fibrillation of α-Synuclein in neurons
+
+**作者**: Jafarulla Shaikh, Aniruddha Nagarajan, Tapan Mitra, Aninda Sundar Modak, Krittika Biswas, Geetanjali Meher, Aher Jayesh Bhausaheb, Natarajan Kannan, Bhavani S. Sahu, Swagata Ghatak, Sandeep Choubey, Mohammed Saleem
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-19
+**DOI**: [10.1038/s41467-026-70840-2](https://doi.org/10.1038/s41467-026-70840-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究α-突触核蛋白在神经元中的相分离和纤维化机制，属于分子生物学、神经退行性疾病和生物物理学领域。所有评分关键词均涉及医学影像分析、人工智能诊断、手术规划等临床决策支持技术，与论文的生物分子机制研究完全无关。论文未涉及任何医学影像、深度学习、AI诊断或手术相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究发现神经元中脂质膜界面电位调控α-突触核蛋白在生理浓度下的相分离，这些凝聚物驱动纤维形成并导致膜变形和破裂，揭示了神经退行性疾病中细胞间传播的潜在机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 通过液-液相分离（LLPS）形成的生物分子凝聚体对细胞组织至关重要。α-突触核蛋白是一种与帕金森病（PD）相关的淀粉样蛋白，在高浓度下会发生相分离，但脂质膜对此过程的影响尚不明确。本研究结合体外重构、细胞生物学和模拟手段，发现膜界面能在生理相关的亚临界浓度（约10 nM）下促进α-突触核蛋白凝聚，且无需拥挤剂。值得注意的是，凝聚仅发生在具有特定化学计量比脂质的膜上，这凸显了界面电势的关键作用。这些凝聚体可作为纤维形成的成核位点，进而导致膜变形与破裂。晶格气体模型揭示了该行为类似于预润湿转变：具有吸引力的膜能在体相饱和浓度以下诱导局部相分离。事实上，通过改变脂质组成和膜去极化来调控界面电势，不仅显著改变α-突触核蛋白凝聚斑点的尺寸和数量，还会触发其从神经元中释放。这些发现揭示了脂质膜界面在调控α-突触核蛋白凝聚、聚集和释放中的核心作用，为神经退行性疾病中细胞间传播的潜在机制提供了新见解。作者证实，在神经元生理相关浓度下，膜界面电势主导着α-突触核蛋白的凝聚过程，而这些凝聚体驱动纤维形成，进而导致膜变形与破裂。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Biomolecular condensates formed via liquid-liquid phase separation (LLPS) are essential for cellular organization. α-Synuclein, an amyloidogenic protein linked to Parkinson’s Disease (PD), undergoes phase separation at high concentrations, but the influence of lipid membranes on this process remains unclear. Here, combining in vitro reconstitution, cell biology, and simulations, we show that membranous interfaces promote α-Synuclein condensation at physiologically relevant sub-critical concentrations ( ~ 10 nM) without crowding agents. Notably, condensation occurs only on membranes with a specific stoichiometry of lipids, underscoring the role of interfacial potential. These condensates serve as nucleation sites for fibril formation, leading to membrane deformation and rupture. A lattice gas model reveals this behavior as a prewetting-like transition, where an attractive membrane induces local phase separation below the bulk saturation concentration. Indeed altering interfacial potential by lipid composition and membrane depolarization not only drastically changes α-Synuclein puncta size and number but also triggers their release from neurons. These findings reveal the crucial role of lipid membrane interfaces in regulating α-Synuclein condensation, aggregation and release, shedding light on a potential mechanism of their cell-to-cell propagation during neurodegeneration. Authors demonstrate that membrane interfacial potential governs the condensation of α-Synuclein at physiologically relevant concentrations in neurons. These condensates drive fibril formation, which in turn can deform and rupture the membrane.
+
+</details>
+<br>
+
+**关键词**: α-Synuclein, liquid-liquid phase separation, membrane interfacial potential, fibril formation, Parkinson's Disease, neurons, biomolecular condensates, lipid membranes
+
+---
+
+### 84. ❌ Increasing fatigue resistance in ordered intermetallic alloys with multi-element symbiosis
+
+**作者**: Q. Li, Lijun Jing, Fenghui Duan, Yantao Sun, Weibing Wang, Biao Xu, Dongpeng Hua, Jianyang Zhang, Zheling Shen, Wu Zhou, Junhua Luan, Peter K. Liaw, Xiaodong Han, Jian Lu, Yilu Zhao, T. Yang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70838-w](https://doi.org/10.1038/s41467-026-70838-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是金属材料科学领域的新型L1₂结构多元素共生金属间化合物合金（MSIMA），重点研究其疲劳性能提升机制，包括抗疲劳极限、晶界无序界面纳米层（DINL）设计、变形机制等。所有评分关键词均涉及医学影像分析、人工智能辅助诊断、手术规划等医疗领域，与论文的材料科学主题完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过设计新型多元素共生金属间化合物合金（MSIMA），实现了约1100 MPa的疲劳极限，并通过调控局部化学和构建无序界面纳米层（DINL）将疲劳断裂模式从沿晶断裂转变为穿晶断裂，从而显著提升了合金的疲劳抗力。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 金属间化合物合金因其长程原子有序性及由此产生的优异力学性能，在航空航天、汽车和核能等众多先进领域备受青睐。然而，其较差的疲劳耐久性严重阻碍了其广泛应用。本文设计了一种新型L1<sub>2</sub>结构多元素共生金属间化合物合金（MSIMA），并实现了约1,100 MPa的疲劳极限，显著超过其屈服强度1.1倍，优于目前使用的其他结构合金。复杂的亚晶格占据通过提高超晶格的反相边界能来强化合金，从而抑制疲劳诱发的晶格缺陷。同时，多元素共生特性使得能够调控局部化学成分，并在晶界附近构筑无序界面纳米层（DINL），从而将疲劳断裂模式从沿晶断裂转变为穿晶断裂。此外，作为增韧源，这些无序界面纳米层促进了罕见的抗疲劳机制——机械层错和孪生，这些机制在室温有序合金中极少被观察到。这种变形行为有效缓解了应变局域化并钝化了裂纹扩展，从而增强了合金的抗疲劳性能。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Intermetallic alloys, recognized for the long-range atomic ordering and resultant impressive mechanical properties, are highly sought after in various advanced fields, including aerospace, automotive, and nuclear energy. However, their widespread application is still hindered seriously due to the poor fatigue endurance. Here, we design a new-type L1<sub>2</sub>-structured multi-element symbiotic intermetallic alloy (MSIMA) and achieve a fatigue limit of ~1,100 MPa that remarkably surpasses its yield strength by 1.1 times, which is superior to other structural alloys currently in use. The complex sublattice occupation strengthens the alloy by increasing the antiphase boundary energy of the superlattice, thereby suppressing the fatigue-induced lattice defects. Concurrently, the multi-element symbiosis enables the modulation of local chemistries and the architecting of the disordered interfacial nanolayer (DINL) near grain boundaries, thereby shifting the fatigue fracture mode from intergranular to transgranular cracking. Furthermore, serving as the ductilizing sources, these DINLs facilitate the unusual anti-fatigue mechanisms-mechanical faulting and twinning-that are rarely observed in ordered alloys at room temperature. This deformation behavior effectively alleviates the strain localization and blunts the crack propagation, thereby enhancing their fatigue resistance.
+
+</details>
+<br>
+
+**关键词**: intermetallic alloys, fatigue resistance, multi-element symbiotic, L1₂ structure, disordered interfacial nanolayer, transgranular cracking, mechanical faulting, twinning
+
+---
+
+### 85. ❌ An equilibrium rotator glass-forming phase for long-ranged repulsive colloidal rods
+
+**作者**: Thijs H. Besseling, Berend van der Meer, Bing Liu, Laura Filion, Arnout Imhof, Alfons van Blaaderen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70295-5](https://doi.org/10.1038/s41467-026-70295-5)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究的是胶体棒系统的平衡玻璃形成相，属于软物质物理和胶体科学领域，涉及相变、玻璃态和晶体结构。论文内容完全不涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学成像或医学成像基础模型等任何医疗或AI相关主题。所有关键词均与论文研究内容无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文通过实验和模拟发现，带电胶体棒系统中存在一种平衡的旋转玻璃形成相，其中位置坐标呈玻璃态而旋转保持液态，且该相可通过外部电场可逆地转变为晶体。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 玻璃作为几乎总是处于非平衡态的无定形固体相，尽管近期研究有所进展，其本质仍未被充分理解。本文通过定量实空间实验与计算机模拟，揭示了在带电胶体棒系统中，由于旋转自由度与平动自由度之间微妙的相互作用，形成了一种平衡态玻璃形成相。在此旋转玻璃形成相中，粒子位置坐标呈现类玻璃态特征，而旋转运动仍保持类液态特性。该相可通过外部电场作用，经由一级相变可逆地转变为晶体固体，且此过程中粒子重排程度极低。我们推测，这种类旋转玻璃相的形成源于较高体积分数下各向异性的粒子相互作用，这种作用破坏了晶体的稳定性。发现这种平衡态玻璃状旋转相，将为理解平动与旋转如何影响相行为（包括玻璃形成）提供新视角，并有望为研究玻璃化转变开辟新的理论途径。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Glasses, amorphous solid phases nearly always out of equilibrium, remain poorly understood despite recent progress. Here we show by quantitative real-space experiments and computer simulations the existence of an equilibrium glass-forming phase which forms due to a subtle interplay between the rotational and translational degrees of freedom in a system of charged colloidal rods. In this rotational glass-forming phase, the positional coordinates are glass-like, while the rotations remain liquid-like. This phase can be reversibly switched into a crystalline solid through a first-order phase transition with minimal particle rearrangements by an external electric field. We speculate that this rotator glass-like phase forms due to the anisotropic particle interactions at higher volume fractions, destabilizing the crystal. Finding an equilibrium glassy rotator phase will lead to new insights on how translations and rotations affect phase behavior, including glass formation and, additionally, allow new theoretical approaches to be used to study the glass transition.
+
+</details>
+<br>
+
+**关键词**: colloidal rods, glass-forming phase, rotational degrees of freedom, equilibrium glass, phase transition, charged colloids, anisotropic interactions, crystalline solid
+
+---
+
+### 86. ❌ Mushroom biotech startups help address global challenges
+
+**作者**: Elena Lurie-Luke
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70167-y](https://doi.org/10.1038/s41467-026-70167-y)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要完全围绕蘑菇生物技术、生物制造和可持续产业，未提及任何医学影像分析、人工智能诊断、手术规划或医疗AI模型相关内容，与所有评分关键词均无关联。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    It is demonstrated that mushrooms represent more than a scientific resource - they embody a cross-sectoral model for bioinspired innovation with profound impact on sustainable industry and human wellbeing.
+
+!!! tip deepseek-chat TL;DR
+
+    This perspective paper examines how mushroom biotechnology startups translate scientific advances into products, demonstrating mushrooms as a cross-sectoral model for bioinspired innovation impacting sustainable industry and human wellbeing.
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 蘑菇创新生态系统凸显了真菌学、生物技术和生物制造领域的重大进展，以及初创企业在将这些突破转化为产品过程中发挥的作用。通过追踪这些转化路径，本文旨在阐明蘑菇不仅是一种科学资源，更代表了一种跨领域的仿生创新模式，对可持续产业和人类福祉具有深远影响。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The mushroom innovation ecosystem highlights significant advances in mycology, biotechnology, and biofabrication, as well as the role of startups in translating these breakthroughs into products. By tracing these translational pathways, this Perspective aims to demonstrate that mushrooms represent more than a scientific resource - they embody a cross-sectoral model for bioinspired innovation with profound impact on sustainable industry and human wellbeing.
+
+</details>
+<br>
+
+**关键词**: mushroom biotechnology, biofabrication, startups, mycology, bioinspired innovation, sustainable industry, translational pathways, human wellbeing
+
+---
+
+### 87. ❌ Spatial heterogeneity of MDSCs mediated by ANXA1-FPRs signaling drives immune suppression in OSCC progression
+
+**作者**: Fengtian Li, Yunwei Han, Farong Ou, Liyuan Deng, Hui Li, Xi Yu, Yong Yi, Ruidong Ma, Zhiqiang Wu, Zhen You, Hu Chen
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70861-x](https://doi.org/10.1038/s41467-026-70861-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是口腔鳞状细胞癌（OSCC）的免疫微环境，使用单细胞和空间转录组学技术分析肿瘤内空间异质性、MDSCs细胞的空间动态以及ANXA1-FPR2信号通路在免疫抑制中的作用，完全不涉及医学影像分析、深度学习医学成像、AI诊断、预后预测、手术规划、多模态医学成像或医学影像基础模型等主题。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The spatial dynamics of MDSCs are revealed as key modulators of immune suppression and therapeutic resistance, offering a promising target to improve immunotherapy outcomes in OSCC.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了口腔鳞状细胞癌中MDSCs通过ANXA1-FPR2信号介导的空间异质性驱动免疫抑制，阻断该通路可增强免疫检查点阻断疗法的疗效。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 免疫疗法在口腔鳞状细胞癌（OSCC）中的疗效有限，主要受免疫抑制性肿瘤微环境驱动，然而肿瘤内空间异质性在免疫应答中的作用尚不明确。本研究采用单细胞转录组学与空间转录组学技术，解析了OSCC的细胞组成与空间组织结构。我们发现，在晚期OSCC中，CD8<sup>+</sup> T细胞虽在空间上聚集但功能受到抑制；而髓源性抑制细胞（MDSCs）在早期OSCC中主要浸润肿瘤核心，在进展期则转变为与CD8<sup>+</sup> T细胞共同定位于肿瘤边缘。ANXA1-FPR2信号通路介导了肿瘤细胞与MDSCs之间的通讯，维持了MDSCs的募集与免疫抑制功能。在OSCC小鼠模型中，使用拮抗剂阻断ANXA1-FPR2可增强免疫检查点阻断疗法的疗效。这些发现揭示了MDSCs的空间动态变化是免疫抑制与治疗抵抗的关键调节因素，为改善OSCC免疫治疗效果提供了一个具有潜力的干预靶点。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Limited efficacy of immunotherapy in oral squamous cell carcinoma (OSCC) is driven by an immunosuppressive tumor microenvironment, yet the role of intratumoral spatial heterogeneity in immune responses remains unclear. Here, we employ single-cell and spatial transcriptomics to dissect the cellular composition and spatial organization of OSCC. We find CD8<sup>+</sup> T cells are spatially localized yet functionally suppressed in late-stage OSCC, while myeloid-derived suppressor cells (MDSCs) transition from tumor core infiltration in early-stage OSCC to marginal localization with CD8<sup>+</sup> T cells in advanced stages. ANXA1-FPR2 signaling mediates tumor-MDSCs communications, sustaining MDSCs recruitment and immune suppression. Disrupting ANXA1-FPR2 with an antagonist enhances the efficacy of immune checkpoint blockade therapy in OSCC mouse models. These findings reveal the spatial dynamics of MDSCs as key modulators of immune suppression and therapeutic resistance, offering a promising target to improve immunotherapy outcomes in OSCC.
+
+</details>
+<br>
+
+**关键词**: oral squamous cell carcinoma, spatial heterogeneity, myeloid-derived suppressor cells, ANXA1-FPR2 signaling, immune suppression, immunotherapy, single-cell transcriptomics, spatial transcriptomics
+
+---
+
+### 88. ❌ Chromatin reorganization drives overexpression of a Btaf1 variant underpinning hematopoietic aging
+
+**作者**: Le Zong, B. S. Park, Yaqiang Cao, Fei Ma, Ferda Tekin-Turhan, Wakako Kuribayashi, Keji Zhao, Isabel Beerman
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70787-4](https://doi.org/10.1038/s41467-026-70787-4)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是造血干细胞衰老的表观遗传机制，具体涉及染色质重组、Btaf1基因变异体表达调控、转录组变化等分子生物学内容。所有评分关键词均属于医学影像分析与人工智能临床决策支持领域，而该论文完全不涉及医学影像、深度学习、AI诊断、手术规划或多模态影像融合等任何相关技术或应用。论文属于基础生物医学研究，与给定的医学影像AI关键词无任何关联。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    High resolution analysis of a dysregulated HSC aging epigenome is provided and a Btaf1 variant is revealed that drives HSC aging phenotypes in mice.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了小鼠造血干细胞衰老过程中，染色质重组导致Btaf1基因变异体（nBtaf1）过表达，进而通过调控TBP结合驱动衰老相关转录程序，促进造血干细胞扩增和巨核祖细胞产生。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 与年龄相关的造血干细胞（HSC）功能障碍伴随着显著的转录变化，但特定转录本是否能协调这些HSC衰老表型仍不清楚。本研究通过对雄性小鼠进行表观遗传分析，探究HSC衰老转录组的调控机制，并筛选潜在的衰老驱动基因。我们发现在衰老HSC中，Btaf1基因的部分区域与整个Ide基因之间形成了一种环状结构，同时伴随一种较短的Btaf1变体（nBtaf1）的过度表达。机制上，nBtaf1表达升高通过调控TBP在其启动子区域的结合，驱动了衰老相关的HSC及巨核祖细胞（megakaryocyte progenitor, MkP）特征基因的过度表达，这促进了老年小鼠中HSC的扩增和MkP产量的增加。利用ShRNA介导的nBtaf1敲低可恢复更年轻的HSC转录组，并特异性抑制衰老相关的HSC扩增及MkP产量升高。总之，我们的数据提供了对失调的HSC衰老表观基因组的高分辨率分析，并揭示了一种驱动小鼠HSC衰老表型的Btaf1变体。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Age-associated hematopoietic stem cell (HSC) dysfunction is accompanied by dramatic transcription changes, but it remains unclear whether specific transcripts could orchestrate these HSC aging phenotypes. Here, we perform epigenetic profiling in male mice to investigate the regulatory mechanisms underlying the HSC aging transcriptome and screen for potential aging driver genes. We identify a looping structure formed between part of the Btaf1 gene and the whole Ide gene in old HSCs which is accompanied by overexpression of a shorter variant of Btaf1 (nBtaf1). Mechanistically, elevated expression of nBtaf1 drives the aging-associated overexpression of HSC and megakaryocyte progenitor (MkP) signature genes via regulating TBP binding at their promoters, which contributes to HSC expansion and elevated MkP production in aged mice. ShRNA-mediated knockdown of nBtaf1 restores a younger HSC transcriptome and specifically represses aging-associated HSC expansion and elevated MkP production. In summary, our data provide high resolution analysis of a dysregulated HSC aging epigenome and reveal a Btaf1 variant that drives HSC aging phenotypes in mice.
+
+</details>
+<br>
+
+**关键词**: hematopoietic stem cell aging, chromatin reorganization, Btaf1 variant, epigenetic regulation, transcriptome, TBP binding, megakaryocyte progenitor, mouse model
+
+---
+
+### 89. ❌ An orthogonal RNA aptamer for targeted RNA regulation in phase-separated subcellular compartments
+
+**作者**: Jingcheng Wang, Kaicheng Ma, Xiaomeng Cao, Huirui Wang, Hao Shang, YINGHUI GAO, Mengmeng Wang, Wenru Zhang, Kaige Lyu, Yue Dong, Guangkai Luo, H Yu, Hui Li, C M An, Xindan Zhang, Yingying Wu, Jia Ren, Man Li, Ting Dong, P. Zhang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70638-2](https://doi.org/10.1038/s41467-026-70638-2)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是细胞生物学和RNA调控领域，开发了一种名为Clivia-HT的正交RNA适配体系统，用于活细胞中RNA的可视化和靶向降解，并应用于研究RNA在相分离亚细胞区室中的功能。所有评分关键词均涉及医学影像分析、AI辅助诊断、手术规划等临床医学应用，与论文的分子细胞生物学研究内容完全无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    An orthogonal RNA aptamer system is developed, Clivia-HT, which integrates a fluorescent imager with a ribonuclease-targeting chimera (RIBOTAC) degrader that enables simultaneous RNA visualization and targeted degradation in living cells and establishes a versatile method for spatiotemporal RNA manipulation.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了一种集成了荧光成像和核糖核酸酶靶向嵌合体降解器的正交RNA适配体系统，实现了活细胞中RNA的时空可视化与靶向降解，并应用该系统揭示了ATF4 mRNA在应激颗粒中的定位调控作用以及NORAD在RNA-蛋白质凝聚体组装中的功能。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 亚细胞区室通过相分离凝聚体组织RNA，从而显著影响RNA代谢。然而，由于缺乏先进的成像与调控工具，特定RNA如何调控互作因子及其表型结果的研究受到阻碍。为此，我们开发了一种正交RNA适配子系统Clivia-HT，该系统将荧光成像模块与核糖核酸酶靶向嵌合体（RIBOTAC）降解剂相整合。该平台能够在活细胞内实现RNA的同步可视化与靶向降解。此外，我们设计了光激活与光失活型RIBOTAC，以实现对RNA降解的时序控制。应用此系统，我们证明了激活转录因子4（ATF4）mRNA定位于应激颗粒并调控其动态。我们还检测到DNA损伤激活的非编码RNA（Non-Coding RNA Activated by DNA Damage, NORAD）在RNA-蛋白质凝聚体组装中的作用。我们的方法建立了一种多功能的时空RNA操控策略，为探究动态细胞环境中RNA的功能提供了强大工具。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Subcellular compartments organize RNAs into phase-separated condensates, significantly influencing RNA metabolism. However, the study of how specific RNAs regulate interacting factors and their phenotypic outcomes is hindered by the lack of advanced imaging and regulation tools. To address this, we developed an orthogonal RNA aptamer system, Clivia-HT, which integrates a fluorescent imager with a ribonuclease-targeting chimera (RIBOTAC) degrader. This platform enables simultaneous RNA visualization and targeted degradation in living cells. Furthermore, we engineered light-activatable and light-inactivatable RIBOTACs to achieve temporal RNA degradation control. Applying this system, we demonstrated that Activating Transcription Factor 4 (ATF4) mRNA localizes to stress granules and regulates their dynamics. We also detected the role of Non-Coding RNA Activated by DNA Damage (NORAD) in RNA-protein condensate assembly. Our approach establishes a versatile method for spatiotemporal RNA manipulation, providing a powerful tool for probing RNA function in dynamic cellular environments.
+
+</details>
+<br>
+
+**关键词**: RNA aptamer, phase-separated compartments, RNA visualization, targeted RNA degradation, RIBOTAC, stress granules, ATF4 mRNA, NORAD
+
+---
+
+### 90. ❌ Multimodal ion-gated transistor based on 2D superionic conductor for in-memory computing in deep learning
+
+**作者**: Bo Tong, Tengda Du, Jinhong Du, Xin Yu, Jinmeng Tong, Jiajun Xu, Wanying Li, Zhibo Liu, Chen Li, Wencai Ren
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70587-w](https://doi.org/10.1038/s41467-026-70587-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是用于神经形态计算的硬件设备（基于2D超离子导体的多模态离子门晶体管），属于电子器件和硬件计算领域。所有评分关键词均围绕医学影像分析、AI临床决策支持等医疗应用，而论文完全不涉及医学影像、疾病诊断、手术规划或任何医疗相关内容。论文仅使用手写数字分类作为硬件性能演示，与医疗AI应用无关。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A multimodal ion-gate transistor using 2D CdPS3-Li as dielectric layer and MoS2 as channel material is constructed, achieving high accuracy in handwritten digit classification and offering a promising hardware solution for neuromorphic computing.
+
+!!! tip deepseek-chat TL;DR
+
+    该论文解决了在单个设备中集成乘累加运算和非线性激活的挑战，通过构建基于2D CdPS3-Li超离子导体的多模态离子门晶体管，实现了同时执行这两种操作，并在手写数字分类中达到高精度，为神经形态计算提供了有前景的硬件解决方案。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 在神经形态计算领域，将乘累加运算与非线性激活功能集成于单一器件内，可降低延迟与功耗，同时提升计算效率。然而，这两类操作存在相互冲突的要求：乘累加运算需要高度线性且非易失的电阻状态，而激活功能则需要多样化的非线性突触行为。这些矛盾的需求使得在单一器件中集成两种功能具有挑战性。本研究构建了一种多模态离子栅晶体管，采用二维CdPS<sub>3</sub>-Li作为介电层，MoS<sub>2</sub>作为沟道材料。CdPS<sub>3</sub>-Li的层状结构促进了锂离子（Li<sup>+</sup>）存储的各向异性离子传输，并产生强离子-电子耦合效应，从而在电脉冲下实现高线性度与非易失性电阻状态。此外，CdPS<sub>3</sub>-Li中的镉空位能够吸引并捕获来自MoS<sub>2</sub>的光生空穴，进而在光脉冲下产生丰富的非线性行为。因此，该CdPS<sub>3</sub>-Li晶体管可同时执行两种运算。基于CdPS<sub>3</sub>-Li晶体管阵列的手写数字分类任务实现了高准确率，为神经形态计算提供了一种具有前景的硬件解决方案。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> For neuromorphic computing, integrating multiply-accumulate operations and nonlinear activation within a single device can reduce latency and power consumption while improving computational efficiency. However, these operations impose conflicting requirements: multiply-accumulate requires highly linear and non-volatile resistance states, while activation requires diverse nonlinear synaptic behaviors. These contrasting demands make integrating both functions in a single device challenging. Here, we construct a multimodal ion-gate transistor using 2D CdPS<sub>3</sub>-Li as dielectric layer and MoS<sub>2</sub> as channel material. The layered structure of CdPS<sub>3</sub>-Li facilitates anisotropic ion transport for Li<sup>+</sup> storage and produces strong ion-electron coupling, resulting in high-linearity and non-volatile resistance states under electrical pulses. Moreover, Cd vacancies in CdPS<sub>3</sub>-Li attract and trap photo-generated holes from MoS<sub>2</sub>, leading to rich nonlinear behavior under light pulses. Therefore, the CdPS<sub>3</sub>-Li transistor can simultaneously perform both operations. The CdPS<sub>3</sub>-Li transistor arrays achieved high accuracy in handwritten digit classification, offering a promising hardware solution for neuromorphic computing.
+
+</details>
+<br>
+
+**关键词**: neuromorphic computing, multimodal ion-gated transistor, 2D superionic conductor, in-memory computing, deep learning hardware, CdPS3-Li, multiply-accumulate operations, nonlinear activation
+
+---
+
+### 91. ❌ Paired electrolysis enables para-C–H amination of phenols with nitroarenes and mechanistic visualization via multifunctional electrochemical mass spectrometry
+
+**作者**: Tianjiao Peng, Ziyue Chen, Xi Cui, Hanning Jiang, Yongyi Li, Zhenwei Wei, Aiwen Lei, Hong Yi
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70691-x](https://doi.org/10.1038/s41467-026-70691-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 该论文研究的是有机化学合成方法，具体涉及电化学驱动的C-N键形成反应和机理研究，与医学图像分析、人工智能、临床决策支持等医学领域完全无关。论文内容聚焦于电化学合成、质谱分析、反应机理等化学主题，未涉及任何医学成像、疾病诊断、手术规划或医疗AI相关内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该论文开发了一种配对电解策略，实现了酚类与硝基芳烃的高选择性对位C-H胺化反应，无需过渡金属催化剂或外部还原剂，并通过电化学质谱平台揭示了反应机理。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 由硝基芳烃直接构建C-N键为依赖苯胺中间体的传统路径提供了极具吸引力的替代方案，然而现有的金属催化方法通常存在底物范围狭窄且需要化学计量添加剂的局限。本文报道了一种配对电解策略，该策略能够实现酚类化合物与硝基芳烃的高选择性对位C-H胺化反应，一步即可获得无需保护的对羟基二苯胺类化合物，且无需过渡金属催化剂或外部还原剂。这一进展的核心在于一个多功能自动化进样电化学质谱联用平台，该平台加速了反应筛选，确定了高效的电化学条件，并揭示了其对多种酚类和硝基芳烃底物的广泛兼容性。实时电化学-质谱分析捕获了关键的瞬态中间体——包括一种推测的芳基氮宾物种——从而提供了机理可视化，阐明了阳极与阴极过程如何协同生成反应活性物种。这些研究结果共同揭示了配对电解法在直接构建C-N键方面兼具合成实用性与独特的反应机理。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Direct C-N bond formation from nitroarenes offers an appealing alternative to conventional routes that rely on aniline intermediates, yet existing metal-catalyzed approaches often suffer from narrow substrate scope and the need for stoichiometric additives. Herein, we report a paired electrolysis strategy that enables highly selective para-C-H amination of phenols with nitroarenes, delivering unprotected p-hydroxy diphenylamines in a single step without transition-metal catalysts or external reductants. Central to this advance is a multifunctional automated injection electrochemical mass spectrometry (AIEC-MS) platform, which accelerates reaction screening, identifies productive electrochemical conditions, and reveals broad compatibility with diverse phenolic and nitroarene substrates. Real-time EC-MS analysis captures key transient intermediates-including a putative aryl-nitrene species-thus providing mechanistic visualization that clarifies how anodic and cathodic events cooperatively generate the reactive partners. Together, these insights demonstrate both the synthetic utility and mechanistic distinctiveness of paired electrolysis for direct C-N bond construction.
+
+</details>
+<br>
+
+**关键词**: paired electrolysis, C-H amination, phenols, nitroarenes, electrochemical mass spectrometry, reaction mechanism, C-N bond formation, aryl-nitrene intermediate
+
+---
+
+### 92. ❌ RPA directly stimulates Mer3 helicase processivity to ensure normal crossover formation in meiosis
+
+**作者**: Veronika Altmannová, Lucija Orlić, Carolina Carrasco, Céline Adam, Clara Aicart-Ramos, Dario Guerrini, Petra Janning, Valérie Borde, Joao Matos, Fernando Moreno-Herrero, John R. Weir
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-69985-x](https://doi.org/10.1038/s41467-026-69985-x)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是减数分裂中交叉形成（meiotic crossover formation）的分子机制，具体探讨了Mer3解旋酶与复制蛋白A（RPA）的相互作用及其对交叉频率的影响。研究涉及分子生物学、结构生物学（AlphaFold2建模）和单分子生物物理学（磁镊实验），但完全不涉及医学影像分析、人工智能、疾病诊断、手术规划或任何医疗应用。所有关键词均与医学影像和AI临床决策支持相关，而论文主题属于基础细胞生物学和遗传学领域，因此所有关键词的相关度均为0。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    These findings provide mechanistic insights into coordination of meiotic recombination by the Mer3 helicase through interactions with the canonical DNA repair machinery, highlighting a conserved mechanism underlying crossover control during sexual reproduction.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了在减数分裂中，复制蛋白A（RPA）通过直接与Mer3解旋酶相互作用来维持其解旋进程性，从而确保正常交叉形成和遗传多样性的分子机制。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 减数分裂交叉的形成对于产生有活力的配子和增强遗传多样性至关重要。解旋酶Mer3（在人类中称为HFM1）是促进交叉并确保其正常分布的高度保守因子。本研究鉴定出复制蛋白A（RPA）作为芽殖酵母Mer3的直接相互作用蛋白。我们证明人类HFM1与RPA之间的这种相互作用具有保守性。通过交联质谱分析和AlphaFold2结构建模，揭示了Mer3-RPA之间存在保守且特异的相互作用界面。单分子磁镊实验表明，在低DNA张力条件下，Mer3解旋酶的持续合成能力依赖于与RPA的直接相互作用。与此一致的是，结合RPA能力缺陷的mer3突变体在芽殖酵母减数分裂中表现出交叉频率降低，并积累未解离的重组中间体。通过全基因组定位实验，我们将这种效应归因于mer3突变体向双链断裂位点募集的减弱。我们的研究从机制层面揭示了Mer3解旋酶通过与经典DNA修复机制（RPA）的相互作用来协调减数分裂重组的过程，阐明了有性生殖中交叉控制的一个保守机制。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Meiotic crossover formation is critical for generating viable gametes and enhancing genetic diversity. The helicase Mer3 (HFM1 in humans) is a highly conserved factor essential for promoting crossovers and ensuring their proper distribution. Here, we identify replication protein A (RPA) as a direct interactor of budding yeast Mer3. We demonstrate that this interaction is conserved between human HFM1 and RPA. Cross-linking mass spectrometry and structural modelling with AlphaFold2 reveal a conserved and specific Mer3-RPA interface. Single-molecule magnetic tweezers assays demonstrate that direct RPA interaction is required for Mer3 helicase processivity under conditions of low DNA tension. Consistently, a mer3 mutant deficient in RPA binding exhibits reduced crossover frequencies and accumulates unresolved recombination intermediates during budding yeast meiosis. Via genome-wide localisation experiments, we link this effect to weakened recruitment of the mer3 mutant to double-strand break sites. Our findings provide mechanistic insights into coordination of meiotic recombination by the Mer3 helicase through interactions with the canonical DNA repair machinery, highlighting a conserved mechanism underlying crossover control during sexual reproduction.
+
+</details>
+<br>
+
+**关键词**: meiotic crossover formation, Mer3 helicase, RPA (replication protein A), helicase processivity, single-molecule magnetic tweezers, AlphaFold2 structural modelling, double-strand break recruitment, conserved interaction mechanism
+
+---
+
+### 93. ❌ Solvation-mediated isomerization of surface motifs tunes emissions and electron transfer dynamics in gold nanoclusters
+
+**作者**: Xue Wang, Yong Zhong, Ting Li, Lei Xu, Wenwu Xu, Yingguo Yang, Chunru Fan, Wei Dong, Guizhong Luo, Feng Jiang, Xiaotong Zhang, M. Q. Lu, Yu Zhang, Zhennan Wu, Xue Bai
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70812-6](https://doi.org/10.1038/s41467-026-70812-6)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是金纳米团簇的溶剂化介导异构化及其对光致发光和电子转移动力学的调控，属于材料科学、纳米技术和物理化学领域。所有评分关键词均涉及医学影像分析和人工智能在临床决策支持中的应用，与论文的研究内容完全无关。论文未涉及任何医学影像、疾病诊断、手术规划或医疗AI模型的内容。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究揭示了溶剂化触发表面基团异构化如何调控金纳米团簇的电子转移动力学，从而实现从495 nm天蓝光到800 nm近红外光的可控发射调谐。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 金属纳米团簇因其类分子的光致发光特性而受到日益广泛的关注，然而实现发射调控仍具挑战性。本文报道了通过溶剂化触发6-巯基嘌呤-9-β-D-呋喃核糖苷保护的金属纳米团簇表面末端异构化及电子转移动力学调控，实现了从495 nm天蓝色至800 nm近红外光的宽谱可控发射。具体而言，6-MPR的异构化形成了Au(I)-硫酮异构末端（即R<sub>1</sub>结构域）与Au(I)-硫醇异构末端（即R<sub>2</sub>结构域），分别使金纳米团簇在590 nm（即源于电子转移发射态的PL I）和770 nm（即源于三重态的PL II）处产生两个显著发射带。通过依据粘度、极性、配位能力及供质子强度等固有性质将十四种有机溶剂划分为四类，我们进一步对金纳米团簇的溶剂化环境进行了理性设计。该策略实现了R<sub>1</sub>与R<sub>2</sub>结构域之间的可控转换，同时调控了质子耦合电子转移动力学，从而实现了可定制的发射调节。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Metal nanoclusters (NCs) are attracting increasing attention for their molecule-like photoluminescence (PL) properties, while achieving emission tuning remains a challenge. Here, we report the solvation-triggered isomerization of surface terminations and modulation of electron transfer dynamics in the 6-mercaptopurine-9-β-D-ribofuranoside (6-MPR)-protected gold NCs, to attain a controllable emission spanning widely from 495 nm sky-blue to 800 nm near-infrared light. Specifically, the isomerization of 6-MPR gives Au(I)-thione isomer terminals (i.e., R<sub>1</sub> domain) and Au(I)-thiol isomer terminals (i.e., R<sub>2</sub> domain), confers the gold NCs with two prominent emission bands at 590 nm (i.e., PL I from the electron transfer emission state) and 770 nm (i.e., PL II from the triplet state), respectively. The further solvation of gold NCs is rationally designed by mapping out fourteen different organic solvents into four categories referring to their inherent properties of viscosity, polarity, coordination ability, and the strength of proton-giving capacity. This allows for rational conversion between R<sub>1</sub> and R<sub>2</sub> domains, and is concurrent with modulation of the proton-coupled electron transfer dynamics and thus customizable emission tuning.
+
+</details>
+<br>
+
+**关键词**: gold nanoclusters, solvation-triggered isomerization, emission tuning, electron transfer dynamics, photoluminescence, surface terminations, proton-coupled electron transfer, organic solvents
+
+---
+
+### 94. ❌ Self-polymerized polyphenol-based platform for the management of dry eye pathogenesis
+
+**作者**: Zixin Wang, Zeen Lv, Yuxuan Ge, Ruiyang Xue, Fang Wu, Hu Han, Yin Wang
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70388-1](https://doi.org/10.1038/s41467-026-70388-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是干眼症治疗的新型纳米药物递送系统，通过自聚合多酚纳米颗粒改善眼部药物递送和抗炎效果。所有评分关键词均涉及医学影像分析、人工智能、深度学习、诊断预测、手术规划等计算机辅助医疗技术领域，而本论文属于药物递送、纳米材料、眼科治疗等生物医学工程领域，两者研究领域完全不同，没有任何相关性。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A polyphenol-based eye drop is developed via the self-polymerization of rosmarinic acid in the presence of hyaluronic acid, followed by co-assembly with cerium ions to afford monodispersed RHC NPs to enhance the ocular retention efficiency.
+
+!!! tip deepseek-chat TL;DR
+
+    本研究开发了一种基于迷迭香酸自聚合的多酚纳米颗粒眼药水，通过增强眼部滞留和抗炎作用，在小鼠干眼症模型中实现了症状的全面缓解。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 眼表炎症的管理，尤其是在干眼症等疾病中，由于多重致病因素和眼部屏障的存在，仍然具有挑战性。传统滴眼液通常只能提供短暂且部分的症状缓解，因此需要联合疗法来打破氧化应激与炎症的恶性循环。为克服这些局限，本研究通过在透明质酸存在下使迷迭香酸自聚合，并与铈离子共组装，开发了一种基于多酚的滴眼液，从而获得了单分散的RHC纳米颗粒。为提高眼部滞留效率，进一步在纳米颗粒上修饰了巯基（称为s-RHC NPs）。在两种干眼症小鼠模型中，局部施用s-RHC NPs可全面缓解症状，包括抑制炎症反应、修复角膜上皮缺损以及恢复泪液分泌。我们预计这项工作可能有助于干眼症的治疗，并通过自聚合策略启发基于多酚的纳米颗粒的设计。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The management of ocular surface inflammation, particularly in conditions like dry eye disease (DED), remains challenging due to multiple pathogenic causes and ocular barriers. Traditional eye drops usually provide transient and partial symptom relief, necessitating combined therapies to break the vicious cycle of oxidative stress and inflammation. To surmount these limitations, a polyphenol-based eye drop is developed via the self-polymerization of rosmarinic acid in the presence of hyaluronic acid, followed by co-assembly with cerium ions to afford monodispersed RHC NPs. To enhance the ocular retention efficiency, thiol groups are further decorated on NPs (termed as s-RHC NPs). In two mouse models of DED, topical administration of s-RHC NPs leads to comprehensive relief of symptoms, including inflammatory response suppression, corneal epithelial defect repair, and tear secretion recovery. We envision that this work might facilitate the treatment of DED and inspire the design of polyphenol-based nanoparticles via a self-polymerization strategy.
+
+</details>
+<br>
+
+**关键词**: dry eye disease, polyphenol-based nanoparticles, self-polymerization, rosmarinic acid, ocular drug delivery, anti-inflammatory, nanomedicine, corneal repair
+
+---
+
+### 95. ❌ C6-ROMP Enabled by Structure-Guided Monomer Design for Chemically Recyclable Polymers
+
+**作者**: Kyungmin Choi, Wootae Choi, Minjun Chung, Byeongwoo Im, Soon Hyeok Hong
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70372-9](https://doi.org/10.1038/s41467-026-70372-9)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文标题和摘要明确表明这是一篇化学/材料科学领域的论文，研究主题是环己烯衍生物单体的理性设计，用于可化学回收聚合物的开环复分解聚合（ROMP）和闭环回收。论文内容涉及单体设计、热力学分析、聚合物性能调控和可持续性，与所有给定的医学影像分析、人工智能、疾病诊断、手术规划等关键词完全无关。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过理性设计环己烯衍生物单体，利用融合五元杂环调节环应变，实现了在温和条件下高效的可化学回收聚合物合成与解聚，并建立了可预测反应性和可回收性的设计原则。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 环己烯作为一种低张力环状烯烃，由于其固有的低环张力能，长期以来对开环易位聚合（ROMP）构成持续挑战。本研究提出了一种针对环己烯衍生单体的理性设计框架，该框架通过稠合五元杂环（包括碳酸酯、氨基甲酸酯、缩醛、硅醚和硼酸酯结构单元）实现自适应环应变调控，从而在提升聚合能力的同时实现闭环回收。密度泛函理论计算与实验热力学分析揭示了单体构象、乙烯解环张力能以及取代基效应如何共同调控ROMP热力学与闭环易位解聚效率。研究发现，在温和条件下实现有效聚合需要约4.3 kcal/mol的乙烯解环张力能阈值。此外，由取代基柔性驱动的熵差异显著影响解聚温度与效率。所得聚合物表现出可调控的热性能，其玻璃化转变温度范围在-42至120°C之间，并具备高效解聚性能。本研究为开发具有可预测反应性与可回收性的可持续功能聚合物提供了实用设计原则。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Cyclohexene, a minimally strained cyclic olefin, presents a long-standing challenge for ring-opening metathesis polymerization (ROMP) due to its inherently low ring strain energy. In this study, we present a rational monomer design framework for cyclohexene-derived monomers that leverages adaptive ring strain modulation via fused five-membered heterocycles-including carbonate, carbamate, acetal, silyl ether, and boronic ester motifs-to enhance polymerizability while enabling closed-loop recycling. Density functional theory (DFT) calculations and experimental thermodynamic analyses reveal how monomer conformation, ethenolysis ring strain energy (ERSE), and substituent effects govern ROMP thermodynamics and ring-closing metathesis depolymerization (RCMD) efficiency. An ERSE threshold of approximately 4.3 kcal/mol is identified as necessary for effective polymerization under mild conditions. Additionally, entropy differences driven by substituent flexibility significantly impact depolymerization temperature and efficiency. The resulting polymers exhibit tunable thermal properties, with glass transition temperatures ranging from -42 to 120°C and efficient depolymerization performance. This study provides practical design principles for the development of sustainable functional polymers with predictable reactivity and recyclability.
+
+</details>
+<br>
+
+**关键词**: ring-opening metathesis polymerization, chemically recyclable polymers, monomer design, cyclohexene-derived monomers, ring strain modulation, depolymerization, sustainable polymers, thermodynamic analysis
+
+---
+
+### 96. ❌ The combination of a cancer vaccine, pembrolizumab, and stereotactic body radiation in patients with locally advanced pancreatic cancer: a single-arm, phase II study
+
+**作者**: Valerie Lee, Apoorvaa S. Sachidanand, Christina Rodriguez, Junke Wang, Beth Onners, Hanfei Qi, Rose Parkinson, Thomas McPhaul, Jennifer N. Durham, Dan Ding, Amy Hacker-Prietz, MS, PA-C, Amol Narang, Dung T. Le, Ana De Jesus, Michael Pishvaian, Eric S. Christenson, Elizabeth D. Thompson, Robert A. Anders, Arsen Osipov, M. S. Weiss
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-69294-3](https://doi.org/10.1038/s41467-026-69294-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是局部晚期胰腺癌的免疫疗法联合放疗的II期临床试验，主要关注治疗方案的有效性、安全性和生存结果。所有评分关键词均涉及医学影像分析、人工智能、深度学习、诊断、预后预测、手术规划、多模态成像和基础模型等医学影像AI领域，而论文完全不涉及这些技术或方法。论文内容纯粹是临床肿瘤学试验，没有使用或讨论任何医学影像分析技术、AI算法或相关计算模型。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The combination of GVAX, pembrolizumab, and SBRT showed promising efficacy in LAPC patients with favorable survival outcomes, especially those who underwent R0/R1 resections, however, patients with unresectable disease still maintained significantly worse DMFS and OS.
+
+!!! tip deepseek-chat TL;DR
+
+    这项II期临床试验评估了GVAX疫苗、pembrolizumab和立体定向放疗联合治疗局部晚期胰腺癌的疗效，结果显示该方案具有可控的安全性，并使可切除患者获得更长的生存期（中位总生存期36.7个月）。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 在这项针对局部进展期胰腺癌（LAPC）的II期研究（NCT02648282）中，共入组58例患者，计划在标准化疗后接受包含粒细胞-巨噬细胞集落刺激因子分泌型同种异体胰腺癌疫苗（GVAX）、帕博利珠单抗（pembrolizumab）及立体定向体部放疗（SBRT）的免疫治疗方案。其中54例可评估患者完成了两个周期的免疫治疗与SBRT，并接受了可切除性再评估。在切除或活检后，患者继续接受为期两年的免疫治疗。中位随访19.6个月时，主要终点指标——所有可评估患者的中位无远处转移生存期（DMFS）为9.8个月。次要终点分析显示，其中35例患者（64.8%）被评估为潜在可切除，24例接受了R0/R1切除。切除患者中绝大多数为R0切除（91.7%），总体切除率为44.4%。接受切除患者的中位DMFS达20.3个月。次要终点指标——所有可评估患者从免疫治疗开始的中位总生存期（OS）为21.8个月，其中切除患者为29.7个月，未切除患者为12.1个月；从确诊起算的中位OS为28.2个月，切除患者达36.7个月，未切除患者为19.7个月。结论表明，GVAX、帕博利珠单抗联合SBRT的方案在LAPC患者中显示出良好的疗效及生存获益，尤其是接受R0/R1切除的患者。然而，不可切除患者的DMFS与OS仍显著较差。该方案表现出可控的安全性特征。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> In this Phase II study (NCT02648282) of locally advanced pancreatic cancer (LAPC), 58 patients were enrolled and intended for an immunotherapy including GM-CSF-secreting allogeneic pancreatic cancer vaccine (GVAX) and pembrolizumab and stereotactic body radiation therapy (SBRT) following standard chemotherapy. Fifty-four evaluable patients received two cycles of immunotherapy and SBRT and reassessed for resectability. After resection or biopsy, patients received continued immunotherapy for two years. At a median follow-up of 19.6 months, the median distant metastasis free survival (DMFS), the primary endpoint, for all evaluable patients was 9.8 months. Secondary endpoint analysis shows that, of these, 35 patients (64.8%) were deemed potentially resectable, and 24 underwent R0/R1 resections. Resected patients had a majority of R0 resections (91.7%). The overall resection rate was 44.4%. Patients who underwent resection had a median DMFS of 20.3 months. Median overall survival (OS), a secondary endpoint, for all evaluable patients from the start of the immunotherapy was 21.8 months, with resected patients reaching 29.7 months and unresected patients at 12.1 months. From diagnosis, median OS was 28.2 months, with resected patients achieving 36.7 months, while unresected patients had 19.7 months. In conclusion, the combination of GVAX, pembrolizumab, and SBRT showed promising efficacy in LAPC patients with favorable survival outcomes, especially those who underwent R0/R1 resections. However, patients with unresectable disease still maintained significantly worse DMFS and OS. The regimen demonstrated a manageable safety profile.
+
+</details>
+<br>
+
+**关键词**: locally advanced pancreatic cancer, immunotherapy, GVAX, pembrolizumab, stereotactic body radiation therapy, phase II study, resection, overall survival
+
+---
+
+### 97. ❌ Impacts of local anthropogenic stressors outpace those of climate on coral reef collapse in the northern South China Sea
+
+**作者**: Huili Xu, Yuanchao Li, Tong Liu, Binxue Wang, Lin Ma, Zhaohai Bai, Chaoqing Yu, Xiaoyang Shan, Zichen Li, Shuqing Zhao, Xiaoping Diao, Yuehua Huang, Dongdan Yuan, Qipei Li, Weilu Kang, Jilin Liang, Shiquan Chen, Zhongjie Wu, XiuBao Li, Shuh-Ji Kao
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70760-1](https://doi.org/10.1038/s41467-026-70760-1)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究珊瑚礁退化，属于海洋生态学领域，与医学影像分析、人工智能临床决策支持等关键词完全无关。论文使用现场数据、面板回归和结构方程模型，不涉及任何医学影像、深度学习、AI诊断、手术规划或多模态医学数据。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过分析南海北部珊瑚礁二十年的现场数据，发现当地人为压力（过度捕捞、营养污染）比气候相关的热压力对珊瑚覆盖率下降的影响更大，并提出了一个综合海岸-珊瑚礁管理框架来提升珊瑚覆盖率。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 珊瑚礁正在全球范围内衰退，但区域性的退化驱动因素仍缺乏量化研究，这阻碍了地方性保护政策的制定。通过收集南海北部22个珊瑚礁102个站点长达二十年的实地数据，并运用面板回归与结构方程模型，我们识别出导致活珊瑚覆盖度下降40%（17-50%）的关键压力因子。本地人为压力因子——过度捕捞、农业与沿海城市化带来的营养盐污染——共同解释了73%的活珊瑚覆盖度变化，其影响超过气候相关的热应力。基于此，我们提出一种"海岸-珊瑚礁一体化管理"框架，该框架耦合陆海干预措施，包括优先实施可持续渔业、流域营养盐管理以及控制长棘海星暴发。空间模拟表明，在全球变暖情景下，这种协同策略可使活珊瑚覆盖度提升2至4倍，从而避免礁体钙化崩溃。我们的研究通过强调超越全球化路径的地方性定制策略，为珊瑚保护范式提供了新视角，并为面临类似压力的区域提供了可推广的解决方案。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Coral reefs are declining globally, but region-specific drivers of degradation remain poorly quantified, hindering local conservation policymaking. By collecting two decades of field data from 102 sites across 22 coral reefs in the northern South China Sea and employing panel regressions and structural equation modeling, we identify key stressors that are responsible for 40% (17-50%) of the declines in live coral cover. Local anthropogenic stressors-overfishing, nutrient pollution from agriculture and coastal urbanization-collectively explain 73% of live coral coverage variance, outweighing climate-associated thermal stress. We then propose an Integrated Coast-Reef Management framework that couples land-sea interventions-prioritizing sustainable fisheries, watershed nutrient management, and controls of crown-of-thorns starfish outbreaks. Spatial simulations indicate that this synergistical strategy could elevate live coral coverage by two to four times under global warming scenarios, avoiding reef calcification collapse. Our findings contribute to coral conservation paradigms by highlighting tailored strategies at the local level beyond globalized approaches, which offer scalable solutions for regions facing similar pressures.
+
+</details>
+<br>
+
+**关键词**: coral reef decline, anthropogenic stressors, climate stress, South China Sea, integrated management, live coral cover, panel regression, structural equation modeling
+
+---
+
+### 98. ❌ Microbial growth rates captured using Raman-SIP reveal a highly active subsurface biosphere fueled by serpentinization
+
+**作者**: Srishti Kashyap, A. Tristan, Alexis S. Templeton
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70622-w](https://doi.org/10.1038/s41467-026-70622-w)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是地质微生物学领域，使用拉曼稳定同位素探测技术测量蛇纹岩化地下环境中微生物的生长速率和甲烷生成速率，与医学图像分析、人工智能临床决策支持等主题完全无关。所有关键词均涉及医学影像、AI诊断、手术规划等医疗技术，而本文专注于地球科学和微生物生态学，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    The majority of measured generation times are faster than those previously reported in subsurface rock-hosted ecosystems, showing extensive microbial growth can be supported by actively serpentinizing systems.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究使用拉曼稳定同位素探测技术测量了阿曼蛇纹岩地下流体中微生物的生长速率，发现蛇纹岩化系统支持广泛的微生物生长，其中碳酸氢盐添加刺激了最快的生长和甲烷生成速率。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 微生物生产力、代谢物通量、营养循环与生物标志物均与微生物生长速率直接相关，而后者在地下环境中很大程度上仍属未知。本研究采用氘代水拉曼稳定同位素探针技术（Raman-<sup>2</sup>H-SIP），对阿曼蛇纹岩地层250-270米深度处三种地球化学性质不同的流体中微生物的单细胞生长速率进行了测定。我们观察到生长速率呈现广泛分布且随流体地球化学特征变化，推算得出的细胞特异性微生物世代时间从数天到数年不等。大部分测得的世代时间快于先前报道的地下岩石生态系统数据，表明活跃蛇纹石化系统能够支持大规模的微生物生长。添加碳酸氢盐可刺激部分最快的生长速率和甲烷产率，这凸显了微生物对利用溶解无机碳的偏好，即使在[超]碱性地下水中亦是如此。总体而言，我们获得的细胞特异性生长速率与产甲烷速率为理解大陆蛇纹石化生态系统的宜居性及其储层尺度的生物地球化学动力学提供了定量依据。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Microbial productivity, metabolite fluxes, nutrient cycling and biosignatures are directly linked to microbial growth rates, which remain largely unknown in subsurface environments. Here, we apply Raman-stable isotope probing with deuterated water (Raman-<sup>2</sup>H-SIP) to measure single-cell microbial growth rates in three geochemically distinct fluids obtained at 250-270 m depth in serpentinite rocks in Oman. We observe wide distributions in growth that vary with fluid geochemistry, with inferred cell-specific microbial generation times ranging from days to years. The majority of measured generation times are faster than those previously reported in subsurface rock-hosted ecosystems, showing extensive microbial growth can be supported by actively serpentinizing systems. Amendment with bicarbonate stimulates some of the fastest growth and methane production rates, highlighting microbial preference to utilizing dissolved inorganic carbon, even in [hyper]alkaline groundwaters. Overall, our cell-specific rates of growth and methanogenesis provide quantitative insights into the habitability of continental serpentinizing ecosystems and their reservoir-scale biogeochemical dynamics.
+
+</details>
+<br>
+
+**关键词**: microbial growth rates, Raman-stable isotope probing, serpentinization, subsurface biosphere, methanogenesis, geochemical fluids, cell-specific growth, continental serpentinizing ecosystems
+
+---
+
+### 99. ❌ Lysosome-targeting live attenuated influenza vaccines elicit robust and broad immunity in mice
+
+**作者**: Jiawei Hao, Peng Wang, Qi Shen, Xuetong Xi, Le Tong, Jihuan Hou, Le Li, Qikai Wang, Chaoying Liu, Jing Li, Huafang Zhao, Qisi Zhang, Roberto Plebani, David Chou, Lihe Zhang, Demin Zhou, Longlong Si
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-69920-0](https://doi.org/10.1038/s41467-026-69920-0)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是基于溶酶体靶向技术的减毒流感疫苗开发（LYTAR平台），属于疫苗学和病毒学领域。所有评分关键词均涉及医学影像分析、深度学习、AI诊断、手术规划等方向，与论文的疫苗开发、免疫反应研究内容完全无关。论文未涉及任何医学影像处理、AI模型或临床决策支持技术。
+
+</details>
+<br>
+
+!!! info Semantic Scholar TL;DR
+
+    A lysosome-targeting vaccine platform for developing safe and effective live attenuated vaccines is established by harnessing the lysosome to conditionally degrade viral proteins of influenza virus.
+
+!!! tip deepseek-chat TL;DR
+
+    该研究开发了两种溶酶体靶向的减毒流感疫苗平台（LYTAR 1.0和2.0），通过在病毒蛋白中引入可条件性移除的溶酶体靶向基序实现减毒，在小鼠模型中能诱导强效、广泛的免疫反应并提供交叉保护。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 溶酶体是负责降解蛋白质的细胞内源性机制。本研究通过利用溶酶体条件性降解流感病毒蛋白，提出了两种靶向溶酶体的减毒活疫苗策略：LYTAR 1.0与LYTAR 2.0。LYTAR 1.0在病毒蛋白的N端或C端引入可条件性移除的溶酶体靶向基序；LYTAR 2.0则允许将溶酶体靶向基序灵活置于病毒蛋白的内部或末端位点。由此构建的靶向溶酶体疫苗株在常规细胞中通过溶酶体介导的病毒蛋白降解实现减毒，同时在生产细胞系中保持与野生型病毒相当的复制效率。在小鼠模型中，这些候选疫苗表现出减毒特性，能诱导强烈而广泛的适应性免疫应答，并对H1N1和H3N2流感病毒攻击提供交叉保护。本研究建立了一个靶向溶酶体的疫苗平台，为开发安全有效的减毒活疫苗奠定了基础。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> The lysosome is a cell's endogenous machinery responsible for degrading proteins. Here we describe two lysosome-targeting live attenuated vaccine approaches, LYTAR 1.0 and LYTAR 2.0, by harnessing the lysosome to conditionally degrade viral proteins of influenza virus. LYTAR 1.0 incorporates a conditionally removable lysosome-targeting motif at the N- or C-terminus of viral proteins. LYTAR 2.0 allows flexible placement of lysosome-targeting motifs at internal or terminal sites of viral proteins. The resulting lysosome-targeting vaccine strains are attenuated by lysosome-mediated viral protein degradation in conventional cells, while maintaining replication efficiencies comparable to the wild-type virus in producer cell lines. In mouse models, these vaccine candidates are attenuated, induce strong and broad adaptive immune responses, and provide cross-reactive protection against H1N1 and H3N2 influenza viral challenges. This study establishes a lysosome-targeting vaccine platform for developing safe and effective live attenuated vaccines.
+
+</details>
+<br>
+
+**关键词**: lysosome-targeting vaccine, live attenuated influenza vaccine, LYTAR platform, viral protein degradation, broad adaptive immunity, cross-reactive protection, mouse model, influenza virus
+
+---
+
+### 100. ❌ Carbon, nitrogen, and sulfur cycling unveil deep-sea microbial niches in the Atacama Trench
+
+**作者**: Miguel Arribas Tiemblo, Armando Azúa-Bustos, Javier Sánchez-España, Daniel Carrizo, Antonio Molina, Isabel Herreros, Olga Prieto-Ballesteros, M.A. Lominchar, Oscar Ercilla Herrero, Victoria Baca-González, Iñaki Yusta, Andrey Ilin, Felipe Gómez
+**期刊/来源**: nature_communications
+**发布日期**: 2026-03-18
+**DOI**: [10.1038/s41467-026-70869-3](https://doi.org/10.1038/s41467-026-70869-3)
+
+**评分**: 0.0 / 29.0 ❌
+
+<details>
+<summary>评分详情</summary>
+
+| 关键词 | 权重 | 相关度 | 得分 |
+|------|------|------|------|
+| medical image analysis | 1.0 | 0.0/10 | 0.0 |
+| medical image segmentation | 1.0 | 0.0/10 | 0.0 |
+| deep learning medical imaging | 1.0 | 0.0/10 | 0.0 |
+| AI for diagnosis | 1.0 | 0.0/10 | 0.0 |
+| prognosis prediction | 1.0 | 0.0/10 | 0.0 |
+| surgical planning | 1.0 | 0.0/10 | 0.0 |
+| multimodal medical imaging | 1.0 | 0.0/10 | 0.0 |
+| foundation models medical imaging | 1.0 | 0.0/10 | 0.0 |
+
+**评分理由**: 论文研究的是深海沉积物中的微生物群落及其在碳、氮、硫循环中的作用，属于海洋微生物学和生物地球化学领域。所有评分关键词均涉及医学影像分析、人工智能辅助临床决策等医学信息学主题，与论文的海洋环境微生物研究内容完全无关，因此所有关键词相关度均为0分。
+
+</details>
+<br>
+
+!!! tip deepseek-chat TL;DR
+
+    该研究通过宏转录组学分析了智利北部海沟沉积物中的微生物群落，发现大部分区域是依赖海洋雪降解的均匀深海生态系统，而一个特定站点则是硫基冷泉，具有活跃的硫循环和化能合成群落。
+
+<details open>
+<summary>摘要翻译</summary>
+
+> 深海沉积物中栖息着对氮、硫和碳循环至关重要的微生物群落，然而南半球的此类群落仍未得到充分研究。本研究通过宏转录组学分析了智利北部海沟的沉积物，旨在将群落组成与功能活性相关联。大多数采样点构成了一个广泛均一的深海生态系统，其能量来源依赖于通过多种好氧和厌氧途径降解的海雪（marine snow）。其中的氮循环主要由古菌硝化作用和细菌异化硝酸盐还原作用驱动。然而，一处站点似乎是一个硫基冷泉，其较深色沉积物中栖息着硫氧化菌垫和 Vesicomyidae 科蛤类。在该站点，尽管存在通常与厌氧甲烷氧化相关的白云石晶体，但ANME古菌（厌氧甲烷氧化古菌）基本缺失。相反，丰富的次生黄铁矿和活跃的硫酸盐还原作用表明存在显著的硫循环。在整个区域，依赖海雪的异养微生物群落，在流体活动极微的硫驱动冷泉中，转变为以还原态硫支撑的化能合成群落。
+
+</details>
+<br>
+
+<details>
+<summary>摘要 (Abstract)</summary>
+
+> Deep-sea sediments host microbial communities essential to nitrogen, sulfur, and carbon cycling, yet those in the Southern Hemisphere remain understudied. In this work, we analyze sediments from an oceanic trench off northern Chile using metatranscriptomics, aiming to relate community composition with functional activity. Most assayed sites form part of a broadly uniform deep-sea ecosystem fueled by the degradation of marine snow through diverse aerobic and anaerobic pathways. Nitrogen cycling within them is driven by archaeal nitrification and bacterial dissimilatory nitrate reduction. One site, however, appears to be a sulfur-based cold seep inhabited by mats of thiotrophs and vesicomyid clams within darker sediments. In this site, ANME archaea are largely absent despite the presence of dolomite crystals, which are typically associated with anaerobic methane oxidation. Instead, abundant subsurface pyrite and active sulfate reduction point to substantial sulfur cycling. Across the region, heterotrophic communities dependent on marine snow transition to chemosynthetic ones supported by reduced sulfur in a sulfur-driven cold seep with minimal fluid flow.
+
+</details>
+<br>
+
+**关键词**: deep-sea sediments, microbial communities, carbon nitrogen sulfur cycling, metatranscriptomics, cold seep, sulfur cycling, Atacama Trench, marine snow degradation
+
+---
+
+## Token 消耗统计
+
+- **总计**: 352,773 tokens（输入 246,011 / 输出 106,762）

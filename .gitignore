@@ -22,12 +22,12 @@ logs/
 *.log
 
 # Data (runtime generated)
-data/
+#data/
 
 # Database
-*.db-journal
-*.db-wal
-*.db-shm
+#*.db-journal
+#*.db-wal
+#*.db-shm
 
 # OS
 .DS_Store

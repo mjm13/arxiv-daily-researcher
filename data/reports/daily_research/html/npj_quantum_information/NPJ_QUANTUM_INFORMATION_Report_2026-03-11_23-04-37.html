@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>npj Quantum Information Report 2026-03-11</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg: #f0f2f5;
+    --color-surface: #ffffff;
+    --color-border: #e5e7eb;
+    --color-primary: #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass: #16a34a;
+    --color-pass-bg: #dcfce7;
+    --color-fail: #dc2626;
+    --color-fail-bg: #fee2e2;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-tldr-bg: #eff6ff;
+    --color-tldr-border: #bfdbfe;
+    --color-cn-bg: #fefce8;
+    --color-cn-border: #fde68a;
+    --color-analysis-bg: #f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass {
+    border-left-color: var(--color-pass);
+}
+
+.card.fail {
+    border-left-color: var(--color-fail);
+}
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover {
+    color: var(--color-primary-dk);
+}
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p {
+    margin: 6px 0;
+}
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li {
+    margin: 3px 0;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body {
+        padding: 16px 12px 40px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-bar {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 80px;
+        padding: 12px 14px;
+    }
+
+    .stat .num {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* ── 模型标签 ── */
+.model-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #6366f1;
+    background: #ede9ff;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    letter-spacing: 0.02em;
+}
+
+/* ── TLDR 增强样式 ── */
+.tldr {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 3px solid #38bdf8;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+
+.tldr-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0369a1;
+}
+
+.tldr-body {
+    font-size: 0.88rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* ── 趋势分析区块 ── */
+.trend-section {
+    margin: 32px 0 16px;
+    border-top: 2px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.trend-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trend-section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trend-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.trend-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ede9ff;
+}</style>
+</head><body>
+<h1>npj Quantum Information Research Report</h1>
+<p class="meta">Generated: 2026-03-11 23:04:37 | Passing score: 29.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">4</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1038/s41534-026-01204-3" target="_blank">1. Witness high-dimensional quantum steering via majorization lattice</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Ma-Cheng Yang, Cong-Feng Qiao</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-09</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文提出了一种基于majorization lattice的框架，用于检测任意维度和测量设置下的量子导向，并为两量子比特态、高维Werner态和isotropic态建立了比现有方法更严格的导向不等式。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>量子导引使得一方能够通过局域测量影响另一方的远程量子态。尽管导引是众多量子信息任务的基础，但现有文献中的检测方法主要局限于特定测量场景或低维系统。在本研究中，我们提出了一种用于导引检测的偏序格框架，该框架能够探索任意维度和任意测量设置下的导引现象。我们推导出了两比特态、高维Werner态和各向同性态的导引不等式，这些不等式设定了比现有结果更为严格的判定标准。值得注意的是，已知的高维结果实际上是新方法在某种意义上的近似极限。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Quantum steering enables one party to influence another remote quantum state by local measurement. While steering is fundamental to many quantum information tasks, the existing detection methods in the literature are mainly constrained to either specific measurement scenario or low-dimensional systems. In this work, we propose a majorization lattice framework for steering detection, which is capable of exploring the steering in arbitrary dimension and measurement setting. Steering inequalities for two-qubit states, high-dimensional Werner states and isotropic states are obtained, which set even stringent bars than what has been reached yet. Notably, the known high-dimensional results turn out to be some kind of approximate limits of the new approach.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Witness high-dimensional quantum steering via majorization lattice&#x27;，摘要讨论量子导向（quantum steering）、量子信息任务、两量子比特态、高维Werner态和isotropic态等。所有关键词均涉及医学影像分析、深度学习医学影像、AI诊断、预后预测、手术规划、多模态医学影像和医学影像基础模型。论文内容属于量子物理和量子信息科学领域，与医学影像或临床决策支持完全无关。因此，所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum steering, majorization lattice, high-dimensional quantum systems, steering detection, two-qubit states, Werner states, isotropic states, quantum information</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1038/s41534-026-01214-1" target="_blank">2. Overcoming limitations on gate fidelity in noisy static exchange-coupled surface qubits</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Hoang-Anh Le, Saba Taherpour, Denis Janković, Christoph Wolf</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-07</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了在噪声静态交换耦合表面量子比特平台上如何通过量子最优控制理论克服门保真度限制，并展示了在特定条件下实现高保真度操作的可行性。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>摘要：近期实验表明，可通过全电性电子自旋共振对表面单个原子的自旋态进行量子相干控制。通过构建原子相互作用阵列，这形成了一种原子尺度的量子比特平台。然而，量子比特间的静态交换耦合、有限寿命以及初始态的极化对高保真度量子控制构成了显著限制。本研究采用开放量子系统模拟与量子最优控制理论来解决这一问题。我们论证了在该量子比特平台中实现高保真度操作（保真度 $${\mathcal{F}}\,\gtrsim\, 0.9$$ ）的可行条件，并展示了量子最优控制理论中的Krotov方法如何针对特定噪声源进行自适应优化，从而超越传统的拉比驱动方案。最后，我们重新审视了该量子比特平台首次实验演示所采用的装置配置，提出了优化实验设计方案，以最大化该平台的量子门保真度。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Abstract Recent experiments demonstrated that the spin state of individual atoms on surfaces can be quantum-coherently controlled through all-electric electron spin resonance. By constructing interacting arrays of atoms, this results in an atomic-scale qubit platform. However, the static exchange coupling between qubits, limited lifetime, and polarization of the initial state impose significant limits on high-fidelity quantum control. We address this issue using open quantum systems simulation and quantum optimal control theory. We demonstrate the conditions under which high-fidelity operations ( $${\mathcal{F}}\,\gtrsim\, 0.9$$ &lt;mml:math xmlns:mml=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt; &lt;mml:mrow&gt; &lt;mml:mi&gt;F&lt;/mml:mi&gt; &lt;mml:mspace/&gt; &lt;mml:mo&gt;≳&lt;/mml:mo&gt; &lt;mml:mspace/&gt; &lt;mml:mn&gt;0.9&lt;/mml:mn&gt; &lt;/mml:mrow&gt; &lt;/mml:math&gt; ) are feasible in this qubit platform, and show how the Krotov method of quantum optimal control theory adapts to specific noise sources to outperform the conventional Rabi drivings. Finally, we re-examine the experimental setup used in the initial demonstration of this qubit platform and propose optimized experimental designs to maximize gate fidelity in this platform.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究量子计算中的表面量子比特门保真度优化，使用开放量子系统模拟和量子最优控制理论，与医学影像分析、深度学习、疾病诊断、手术规划等医疗AI领域完全无关。所有关键词均未在标题或摘要中出现，且研究领域（量子物理/量子计算）与医疗影像无交集。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>surface qubits, gate fidelity, quantum optimal control, open quantum systems, Krotov method, static exchange coupling, quantum control, noisy qubits</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1038/s41534-026-01211-4" target="_blank">3. Polychromatic continuous-variable quantum communication network enabled by optical frequency combs</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yuehan Xu, Qijun Zhang, Junpeng Zhang, Xiaojuan Liao, Ziyi Shen, Xu Liu, Beibei Zhang, Zicong Tan, Zehao Zhou, Jisheng Dai, Xueqin Jiang, Peng Huang, Tao Wang, Guihua Zeng</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-07</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文提出并实验验证了一种基于光学频率梳的多色连续变量量子通信网络，实现了高速多节点量子密钥分发，网络容量达19，在5公里距离下总密钥率可达8.75 Gbps。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>多色资源通过提升速率与可扩展性革新了经典通信网络；量子通信网络正面临类似的转折点。本文报道了一种基于光学频率梳实现的多色连续变量量子通信网络。我们研究了由多色量子网络构成的多模密度矩阵，并将有限模式隔离纳入安全性分析以界定窃听者可获取的信息量，进而计算网络总密钥率。研究表明，相较于其他复用技术，多色量子网络理论上可实现密钥率不随用户数量增加而下降的性能。实验中采用光学频率梳及双梳干涉探测技术构建了直传型与往返型量子通信网络，验证了高斯调制连续变量量子密钥分发协议，在均匀传输距离5公里时网络容量达19、总密钥率达8.75 Gbps（渐进情况），120公里时达0.82 Mbps（有限长效应），40公里时达89.10 Mbps（可组合安全性），40公里时达13.66 Mbps（可组合有限长安全性）。该实现不仅为高速多节点量子网络提供了技术支撑，也为未来连续变量量子互联网提供了解决方案。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Polychromatic resources have transformed classical communication networks by boosting rate and scalability; quantum communication networks are reaching a similar inflection point. Here, we report a polychromatic continuous-variable quantum communication network enabled by optical frequency combs. The multi-mode density matrices constituted by polychromatic quantum networks are studied. We incorporate finite mode isolation into the security analysis to bound Eve’s accessible information and compute the total network secret key rate. It is demonstrated that, compared to other multiplexing techniques, polychromatic quantum networks can theoretically achieve a secret key rate without decreasing with the increase in users. In the experiment, direct-transmission type and round-trip type quantum communication networks were built using optical frequency combs and dual-comb interference detection technology. The Gaussian-modulated continuous-variable quantum key distribution (CV-QKD) protocol has been validated, with a network capacity of 19 and a total secret key rate of 8.75 Gbps at a uniform distance of 5 km (asymptotic case), 0.82 Mbps at 120 km (finite-size effect), 89.10 Mbps at 40 km (composable security), 13.66 Mbps at 40 km (composable finite-size security). This implementation not only provides technical support for a high-speed multi-node quantum network, but also provides a solution for the future quantum Internet with continuous variables.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是基于光学频率梳的多色连续变量量子通信网络，属于量子通信和量子信息领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。论文内容涉及量子密钥分发、网络容量、安全分析等，未提及任何医学图像、疾病诊断、手术规划或医疗数据相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>quantum communication network, optical frequency combs, continuous-variable quantum key distribution, polychromatic quantum networks, secret key rate, multi-mode density matrices, dual-comb interference detection, quantum Internet</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1038/s41534-026-01209-y" target="_blank">4. Integration of a single photon source with a fibre-compatible photonic waveguide</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Aurélie Broussier, Muhammad H. Muhammad, Nancy Rahbany, Abdelhamid Hmima, Paul Robineau, Cyrille Vézy, Régis Déturche, A. Kévorkian, Sylvain Blaize, Christophe Couteau</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-06</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文解决了将基于胶体半导体纳米晶体的单光子源集成到光纤兼容玻璃波导中的挑战，通过表面功能化和二氧化钛二次波导层实现了单光子耦合，并展示了室温下集成单光子源与光纤的耦合效率提升。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>将基于固态发射器的单光子源与光子结构集成仍具挑战性，尤其是在实现与光纤兼容方面。这对于量子技术至关重要，因为单光子源是众多量子技术的基础构建模块。本研究展示了一种由胶体半导体纳米晶体构成的单光子源与通过离子交换技术制备的玻璃光波导（一种电信光子学中常用的光纤兼容平台）的集成。通过表面功能化和二氧化钛次级波导结构，我们成功将纳米发射器产生的单光子耦合至光波导中。实验证实单光子特性得以保持，并实现了1.2的珀塞尔因子。得益于二氧化钛次级波导层，耦合效率预计可超过25%，而仅将纳米晶体置于波导上方时耦合效率约为2%。该光波导通过尾纤与光纤连接，首次在室温下验证了基于玻璃光纤兼容平台的集成单光子源原理，其耦合效率提升了2.8倍。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The integration of a single photon source based on a solid-state emitter with a photonic structure remains challenging and specifically when it comes to be compatible with optical fibres. It is important to do so for quantum technologies where single photon sources constitute building blocks for many technologies. In this work, we demonstrate the integration of a single photon source, made of a colloidal semiconductor nanocrystal, with a photonic structure made of a glass waveguide obtained by the ion-exchange technique, which is a fibre-compatible platform used in telecom photonics. Using surface functionalisation and a secondary waveguide of titanium dioxide, we manage to couple single photons from the nanoemitter to the optical waveguide. We observe the single photon character is preserved and demonstrates a 1.2 Purcell factor. A coupling efficiency over 25% is expected thanks to the titanium dioxide secondary waveguiding layer, compared to around 2% obtained for simply positioning the nanocrystal on top of the waveguide alone. The optical waveguide is then pigtailed to an optical fibre to demonstrate a first proof of principle of an integrated single photon source at room temperature with a fibre-compatible platform made of glass with a coupling efficiency increase of 2.8.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是量子技术中的单光子源与光纤兼容光子波导的集成，属于光子学、量子光学和纳米技术领域。论文内容完全不涉及医学图像分析、深度学习、疾病诊断、预后预测、手术规划或多模态医学成像等医疗AI主题。所有关键词均与论文研究内容无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>single photon source, photonic waveguide, fibre-compatible, colloidal semiconductor nanocrystal, ion-exchange technique, coupling efficiency, Purcell factor, quantum technologies</p></div></details>
+</div>
+<p class="meta" style="margin-top:24px;border-top:1px solid #e5e7eb;padding-top:12px;">Token 消耗: <strong>681,985</strong> tokens（输入 475,628 / 输出 206,357）</p>
+</body></html>

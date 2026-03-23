@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Science Report 2026-03-14</title>
+<style>/* ============================================================
+   ArXiv Daily Researcher - HTML Report Stylesheet
+   可自由修改此文件来定制报告外观
+   ============================================================ */
+
+/* ── 全局重置 ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── CSS 变量（主题色板） ── */
+:root {
+    --color-bg: #f0f2f5;
+    --color-surface: #ffffff;
+    --color-border: #e5e7eb;
+    --color-primary: #2563eb;
+    --color-primary-dk: #1d4ed8;
+    --color-pass: #16a34a;
+    --color-pass-bg: #dcfce7;
+    --color-fail: #dc2626;
+    --color-fail-bg: #fee2e2;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-tldr-bg: #eff6ff;
+    --color-tldr-border: #bfdbfe;
+    --color-cn-bg: #fefce8;
+    --color-cn-border: #fde68a;
+    --color-analysis-bg: #f8fafc;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── 页面布局 ── */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text);
+    background: var(--color-bg);
+    padding: 28px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ── 页面标题 ── */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ── 元信息行 ── */
+.meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+/* ── 统计栏 ── */
+.stats-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 110px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-primary);
+    display: block;
+}
+
+.stat .label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── 论文卡片 ── */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-border);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.card.pass {
+    border-left-color: var(--color-pass);
+}
+
+.card.fail {
+    border-left-color: var(--color-fail);
+}
+
+/* ── 卡片标题 ── */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.card-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── 状态徽章 ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge.pass {
+    background: var(--color-pass-bg);
+    color: var(--color-pass);
+}
+
+.badge.fail {
+    background: var(--color-fail-bg);
+    color: var(--color-fail);
+}
+
+/* ── 字段行 ── */
+.field {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 5px 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ── TL;DR 块 ── */
+.tldr {
+    background: var(--color-tldr-bg);
+    border: 1px solid var(--color-tldr-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    margin: 10px 0;
+    line-height: 1.55;
+}
+
+/* ── 中文摘要块 ── */
+.abstract-cn {
+    background: var(--color-cn-bg);
+    border: 1px solid var(--color-cn-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #713f12;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ── 深度分析折叠 ── */
+details {
+    margin-top: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 14px;
+    background: var(--color-analysis-bg);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:hover {
+    color: var(--color-primary-dk);
+}
+
+.analysis-content {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.65;
+    background: var(--color-surface);
+}
+
+.analysis-content p {
+    margin: 6px 0;
+}
+
+.analysis-content ul {
+    margin: 6px 0 6px 20px;
+    color: #4b5563;
+}
+
+.analysis-content li {
+    margin: 3px 0;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+    body {
+        padding: 16px 12px 40px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-bar {
+        gap: 10px;
+    }
+
+    .stat {
+        min-width: 80px;
+        padding: 12px 14px;
+    }
+
+    .stat .num {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* ── 模型标签 ── */
+.model-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #6366f1;
+    background: #ede9ff;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    letter-spacing: 0.02em;
+}
+
+/* ── TLDR 增强样式 ── */
+.tldr {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 3px solid #38bdf8;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+
+.tldr-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0369a1;
+}
+
+.tldr-body {
+    font-size: 0.88rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* ── 趋势分析区块 ── */
+.trend-section {
+    margin: 32px 0 16px;
+    border-top: 2px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.trend-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trend-section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trend-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.trend-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ede9ff;
+}</style>
+</head><body>
+<h1>Science Research Report</h1>
+<p class="meta">Generated: 2026-03-14 17:14:14 | Passing score: 29.0</p>
+<div class="stats-bar">
+<div class="stat"><div class="num">35</div><div class="label">Total</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Qualified</div></div>
+<div class="stat"><div class="num">0%</div><div class="label">Pass Rate</div></div>
+</div>
+<h2>Papers</h2>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aea9795" target="_blank">1. Lifelong behavioral screen reveals an architecture of vertebrate aging</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">10.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Claire N. Bedbrook, Ravi D. Nath, Libby Zhang, Scott W. Linderman, Anne Brunet, Karl Deisseroth</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过连续行为追踪非洲鳉鱼整个生命周期，发现个体衰老轨迹不同，并利用机器学习模型基于早期行为准确预测个体年龄和未来寿命，揭示了衰老的行为结构。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>对脊椎动物个体在整个生命周期中的行为进行图谱化绘制，可为衰老这一终身过程提供前所未有的观察视角。我们构建了一个平台，能够对非洲鳉鱼从幼年到死亡的自然寿命期进行高分辨率连续行为追踪。研究发现，动物遵循着各自不同的个体衰老轨迹。长寿动物的行为模式与短寿动物存在显著差异，这种差异甚至在生命相对早期就已显现，并且与器官特异性转录组变化相关联。仅依据动物年轻时的行为数据，机器学习模型便能准确推断其年龄，甚至预测其未来寿命。最后，我们发现动物在成年期会经历一系列稳定且模式化的行为阶段，阶段间存在突然转换，这揭示了衰老架构中存在的精密结构。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Mapping behavior of individual vertebrate animals across lifespan could provide an unprecedented view into the lifelong process of aging. We created a platform for high-resolution continuous behavioral tracking of the African killifish across natural lifespan from adolescence to death. We found that animals follow distinct individual aging trajectories. The behaviors of long-lived animals differed markedly from those of short-lived animals, even relatively early in life, and were linked to organ-specific transcriptomic shifts. Machine-learning models accurately inferred age and even forecasted an individual’s future lifespan, given only behavior at a young age. Finally, we found that animals progressed through adulthood in a sequence of stable and stereotyped behavioral stages with abrupt transitions, revealing precise structure for an architecture of aging.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">2.0/10</td><td style="text-align:center;padding:4px 8px;">2.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">8.0/10</td><td style="text-align:center;padding:4px 8px;">8.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是通过行为追踪和机器学习预测脊椎动物（非洲鳉鱼）的衰老轨迹和寿命，属于行为学、衰老生物学和计算生物学领域。与医学影像分析、分割、深度学习医学影像、手术规划、多模态医学影像、医学影像基础模型等关键词完全无关（0分）。与AI诊断有一定微弱关联（2分），因为使用了机器学习模型，但并非用于医学诊断。与预后预测高度相关（8分），因为核心内容是使用机器学习模型基于早期行为预测个体未来寿命，这本质上是一种预后预测，尽管对象是动物而非人类患者。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>aging, lifespan prediction, behavioral tracking, machine learning, vertebrate model, individual trajectories, transcriptomics, behavioral stages</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adx9367" target="_blank">2. Seal and sea lion brains have evolved to support volitional control of vocal behavior and learning</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">2.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Peter F. Cook, Andrew A. Rouse, Eva K. Sawyer, Karla L. Miller, Gregory S. Berns</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 本研究通过组织学和扩散磁共振成像追踪，揭示了海豹和海狮大脑中支持自主发声控制和学习能力的神经通路进化适应。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>海豹与海狮具有高度发达的自发性呼吸控制能力，其中鳍足类海豹还具备发声学习能力（包括模仿行为）。本研究通过组织学与离体扩散磁共振成像纤维追踪技术，揭示了鳍足类动物为支持自发性发声控制而演化出的累积性神经适应谱系证据。与郊狼不同，海狮类与海豹类动物均存在发声运动皮层与脑干发声核团的直接神经连接。港海豹的前腹外侧丘脑与发声前运动皮层之间呈现肥大化连接通路——该前脑环路与鸟类的发声学习、人类及鹦鹉的模仿行为相关。我们证实海豹类动物具有可能与发育期叫声学习相关的听觉-前运动神经通路。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Seals and sea lions have highly developed volitional breathing control, to which the phocid seals add vocal production learning, including mimicry. In this work, using histology and ex vivo diffusion magnetic resonance imaging tractography, we provide evidence for a phylogenetic spectrum of accumulative neural adaptations supporting aspects of volitional vocal control across pinnipeds. Otariids and phocid seals, but not coyotes, have a direct connection between the vocal motor cortex and phonatory brainstem nuclei. Harbor seals showed hypertrophic connectivity between the anterior ventrolateral thalamus and the vocal premotor cortex—part of a forebrain circuit related to vocal learning in birds and mimicry in humans and parrots. We demonstrate that phocid seals have auditory-premotor pathways potentially related to developmental call learning.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">2.0/10</td><td style="text-align:center;padding:4px 8px;">2.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究海豹和海狮大脑的神经解剖学特征，使用组织学和扩散磁共振成像追踪技术，探讨与发声控制和学习相关的神经通路。虽然使用了磁共振成像（一种医学成像技术），但研究对象是动物大脑，目的是理解进化神经生物学，而非临床医学应用。因此，与医学图像分析仅有微弱关联（得2分），因为使用了成像技术但非医学目的。其他关键词如医学图像分割、深度学习医学成像、AI诊断、预后预测、手术规划、多模态医学成像和基础模型医学成像均完全不相关，因为这些涉及临床决策支持、疾病诊断或医疗AI模型开发，而本文是基础神经科学研究。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>pinnipeds, vocal control, diffusion MRI tractography, neural adaptations, vocal learning, brain connectivity, phocid seals, auditory-premotor pathways</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh1094" target="_blank">3. NASA administrator teases new science efforts</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Paul Voosen</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> NASA局长在采访中透露，该机构可能加速机器人月球着陆任务，并考虑在2028年开展新的火星探测任务。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>贾里德·艾萨克曼在采访中表示，该机构或加速机器人月球着陆任务，并可能在2028年启动新的火星探测任务。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>In an interview, Jared Isaacman says agency may accelerate robotic Moon landings and could tackle a new Mars mission in 2028</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要讨论的是NASA的太空探索计划，包括月球和火星任务，与医学图像分析、人工智能医疗、诊断预测、手术规划等医疗领域关键词完全无关。所有关键词均得0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>NASA, space exploration, Moon landings, Mars mission, robotic missions, Jared Isaacman, 2028 timeline, agency plans</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh0792" target="_blank">4. In Science Journals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Peter Stern, Marc S. Lavine, Di Jiang, Sacha Vignieri, Michael A Funk, Claire Olingy, Aaron Shaw, Mattia Maroso, Caroline Ash, Stella M. Hurtley, Priscilla N. Kelly, Corinne Simonti, Courtney S. Malo, Annalisa M. VanHook</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 这篇论文并非原创研究，而是对《科学》系列期刊内容的概览或新闻摘要，没有具体的研究问题和结果。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>《科学》系列期刊亮点摘要</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Highlights from the Science family of journals</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;In Science Journals&#x27;和摘要&#x27;Highlights from the Science family of journals&#x27;表明这是一篇期刊内容概览或新闻文章，而非具体的研究论文，因此与所有给定的医学影像分析、人工智能诊断、预后预测、手术规划等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Science journals, highlights, family of journals, journal content, overview, news summary</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adr6632" target="_blank">5. Polymerase trapping as the mechanism of H5 highly pathogenic avian influenza virus genesis</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Mathis Funk, Monique I. Spronken, Roy M. Hutchinson, Benoit Arragain, Pauline Juyoux, Theo M. Bestebroer, Anja C. M. de Bruin, Alexander P. Gultyaev, Ron A. M. Fouchier, Stephen Cusack, Aartjan J. W. te Velthuis, Mathilde Richard</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究揭示了H5高致病性禽流感病毒通过RNA结构驱动的聚合酶捕获机制产生核苷酸插入，从而获得多碱性裂解位点的分子机制。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>高致病性禽流感病毒（HPAIVs）源自H5和H7亚型的低致病性禽流感病毒（LPAIVs）。尽管数十年前已发现，在血凝素基因中插入一个弗林蛋白酶可切割的多碱性裂解位点（multibasic cleavage site, MBCS）是LPAIV向HPAIV转变的遗传基础，但插入发生的机制尚不明确。本研究证明，预测可捕获流感病毒聚合酶于富含嘌呤序列的瞬时H5 RNA结构会驱动核苷酸插入，为RNA结构参与MBCS的获得提供了实证证据。将类H5序列与结构引入H6血凝素中，可产生导致MBCS的插入。我们的结果表明，H5高致病性禽流感病毒出现所依赖的核苷酸插入，源于一种由RNA结构驱动的多样性生成机制，该机制也可能发生于其他RNA病毒中。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Highly pathogenic avian influenza viruses (HPAIVs) derive from H5 and H7 low pathogenic avian influenza viruses (LPAIVs). Although insertion of a furin-cleavable multibasic cleavage site (MBCS) in the hemagglutinin gene was identified decades ago as the genetic basis for the LPAIV-to-HPAIV transition, the mechanisms underlying the occurrence of insertion are unknown. Here, we show that transient H5 RNA structures, predicted to trap the influenza virus polymerase on purine-rich sequences, drive nucleotide insertions, providing empirical evidence of RNA structure involvement in MBCS acquisition. Introduction of H5-like sequences and structures into an H6 hemagglutinin resulted in MBCS-yielding insertions. Our results show that nucleotide insertions that underlie H5 HPAIV emergence result from an RNA structure–driven diversity-generating mechanism, which could also occur in other RNA viruses.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究H5高致病性禽流感病毒的生成机制，聚焦于RNA结构如何驱动核苷酸插入形成多碱性裂解位点，属于病毒学、分子生物学和RNA结构研究领域。所有评分关键词均涉及医学影像分析、人工智能、深度学习、诊断、预后、手术规划等临床决策支持技术，与论文的病毒机制研究完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>H5 highly pathogenic avian influenza virus, polymerase trapping, RNA structure, multibasic cleavage site, nucleotide insertions, avian influenza virus genesis, HPAIV emergence, diversity-generating mechanism</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh0747" target="_blank">6. Erratum for the Research Article “Acid-humidified CO 2 gas input for stable electrochemical CO 2 reduction reaction”</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> </div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文是对一篇关于酸湿化CO2气体输入用于稳定电化学CO2还原反应的研究文章的勘误，主要更正了能量消耗的单位错误并澄清了能量效率的计算方法，但不影响原始研究的科学结论。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>在S. Hao等人（2024年6月12日，10.1126/science.adr3834）的研究论文《用于稳定电化学CO2还原反应的酸湿化CO2气体输入》中，关于CO生产能耗的单位标注存在错误（正文第6页末段及方法部分第10页左中栏）。原报告中使用的单位为kWh，正确单位应为Wh。此错误仅限于单位标注；所有数值及科学结论均保持不变。此外，现对第10页所报告的能量效率值的推导过程进行澄清说明：虽然计算值正确，但原文描述可能引起歧义。能量效率可通过形成自由能及气体混合自由能（阳极室中CO2与O2的混合）进行更清晰的计算与描述，而非依据（1）中的煅烧循环（即研究论文中的参考文献47）。此澄清不影响本工作的任何实验结果、分析或结论。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>In the Research Article “Acid-humidified CO2 gas input for stable electrochemical CO2 reduction reaction,” by S. Hao et al. (12 June 2024, 10.1126/science.adr3834), the energy consumption associated with CO production was incorrectly reported in kWh (main text, page 6, final paragraph, and the methods section, page 10, left middle column). The correct unit is Wh. This was a unit-labeling error only; the numerical values and all scientific conclusions remain unchanged. Additionally, a clarification of the derivation of the energy-efficiency value reported on page 10 has been provided here: Although the calculated value is correct, the original narrative description may lead to ambiguity. The energy efficiency can be more clearly calculated and described using formation free energies and free energies of gas mixing (CO2 mixed with O2 in the anode chamber) rather than the calcination cycle in (1) (ref. 47 in the Research Article). This clarification does not affect any experimental results, analyses, or conclusions of the work.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是电化学CO2还原反应中的能量消耗和效率计算问题，属于化学工程和电化学领域，与医学图像分析、人工智能临床决策支持等医疗AI主题完全无关。所有关键词均涉及医疗影像和AI医疗应用，而论文内容是关于CO2电化学转化的技术校正，两者领域完全不同，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>electrochemical CO2 reduction, acid-humidified CO2, energy consumption, energy efficiency, correction, erratum, stable CO2RR</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adz9467" target="_blank">7. Ravens anticipate wolf kill sites across broad scales</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Matthias-Claudio Loretto, Kristina B. Beck, Douglas W. Smith, Daniel R. Stahler, Lauren E. Walker, M. Wikelski, Thomas Mueller, Kamran Safi, John M. Marzluff</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过卫星追踪发现，乌鸦并非通过直接跟随大型食肉动物来定位腐肉，而是依靠空间记忆和导航能力，远距离返回狼群常见的捕食地点寻找食物。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>食腐动物通常依赖分布零散且不可预测的动物尸体作为食物来源。一个长期存在的假说认为，渡鸦通过直接跟随大型食肉动物前往其猎杀地点，从而可靠地定位此类食物。然而，通过对黄石国家公园内的69只渡鸦、20只狼和11只美洲狮进行卫星追踪，我们发现渡鸦长距离跟随捕食者的现象极少发生。相反，渡鸦会定期重返狼群捕食频繁的区域——它们能从最远155公里外返回以寻找动物尸体。与导航至固定的人为补给点类似，渡鸦似乎能记住潜在的腐食来源，这些记忆源于先前与狼或其猎物的相遇经历。这些发现表明，在寻找短暂资源的过程中，空间记忆与导航能力在食腐动物乃至其他广域活动物种中所起的作用，远比先前假设的更为重要。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Scavengers generally rely on patchily distributed, unpredictable carrion. A long-standing hypothesis suggests scavenging ravens reliably locate such food by directly following large carnivores to their kills. However, by satellite tracking 69 ravens, 20 wolves, and 11 cougars in Yellowstone National Park, we found that following of predators over large distances rarely occurred. Instead, ravens routinely revisited sites where wolf kills were common—returning from distances of up to 155 kilometers to find carrion. Much like navigating to permanent anthropogenic subsidies, ravens appear to remember potential sources of carrion shaped by previous encounters with wolves or their kills. These findings suggest that spatial memory and navigation play a considerably greater role than previously assumed among scavengers, and possibly other wide-ranging species, in search of ephemeral resources.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是动物行为学（乌鸦的觅食策略和空间记忆），涉及生态学、野生动物追踪和行为科学。所有评分关键词均属于医学影像分析和人工智能在医疗领域的应用，与论文主题完全无关。论文未涉及任何医学影像、深度学习、疾病诊断、预后预测、手术规划或多模态医疗数据。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ravens, wolf kills, scavenging behavior, spatial memory, satellite tracking, Yellowstone National Park, carrion location, animal navigation</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh0738" target="_blank">8. Erratum for the Research Article “Efficient formation of single-copy human artificial chromosomes”</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> </div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文是对人类人工染色体形成研究的更正说明，确认了原始YAC-Mm-4q21LacO的功能性，并通过重建验证了其在人类细胞中形成功能性HACs的能力，不影响原论文的主要结论。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>在C.W. Gambogi等人（2024年3月21日，10.1126/science.adj3566）的研究论文《高效形成单拷贝人类人工染色体》中，发现携带YAC-Mm-4q21LacO的酵母菌株存在缺陷。该酵母菌株问题的根源尚不明确，但可能涉及两种情况：一是受到J. Craig Venter研究所早期另一独立人工染色体项目中其他菌株的污染；二是在初始引入时，宿主菌株已携带了来自该项目的酵母人工染色体（YAC）。经确认，在引入人类细胞后能形成功能性人类人工染色体（HAC）的YAC身份，正是所报道的YAC-Mm-4q21LacO。因此，论文的主要结论并未受到任何可能影响该酵母菌株的问题所干扰。研究团队从组成部分（原核填充DNA、编码荧光蛋白和抗生素筛选基因的哺乳动物表达盒、LacO位点阵列以及一段180 kb的人类4号染色体区域）重新构建了YAC-Mm-4q21LacO，并在宿主酵母菌株VL6-48N中完成组装。随后对携带重建YAC-Mm-4q21LacO的菌株进行了测序和测试。重建的YAC-Mm-4q21LacO能在最初测试的两种人类细胞系（HT1080和U2OS）中有效形成功能性HAC，且该过程受到LacI-HJURP初始瞬时表达的促进。相关发现已发表（1）。所有结果均与论文中的报道完全一致。携带重建YAC的菌株可根据合理要求向通讯作者索取。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>In the Research Article “Efficient formation of single-copy human artificial chromosomes” by C.W. Gambogi et al. (21 March 2024, 10.1126/science.adj3566), the yeast strain harboring YAC-Mm-4q21LacO was found to be compromised. The origin of the problem with the yeast strain is not clear but may have involved either contamination with another strain from an earlier and separate artificial chromosome project at the J. Craig Venter Institute or initial introduction into a strain already harboring a YAC from that project. The identity of the YAC that formed functional human artificial chromosomes upon introduction into human cells was confirmed to be the reported YAC-Mm-4q21LacO. Therefore, the main conclusions of the paper are not affected by any issues that may have compromised the yeast strain at the time of the experimentation reported in the paper. YAC-Mm-4q21LacO was remade, starting from its component parts (prokaryotic stuffer DNA, mammalian expression cassettes encoding fluorescent protein and antibiotic selection genes, an array of LacO sites, and a 180-kb region human chromosome 4), and assembled in the host yeast strain, VL6-48N. The resulting strain harboring the remade YAC-Mm-4q21LacO was then sequenced and tested. The remade YAC-Mm-4q21LacO readily forms functional HACs in the two originally tested human cell lines (HT1080 and U2OS) and in a manner stimulated by the initial, transient expression of LacI-HJURP. The findings have been published (1). All of this is directly in line with what was reported in the paper. The remade YAC-containing strain is available from the corresponding author upon reasonable request.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 该论文是关于人类人工染色体（HACs）的更正说明，涉及分子生物学、遗传工程和细胞生物学领域，主要讨论酵母菌株问题、YAC重建和功能验证。论文内容完全不涉及医学图像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学成像或医学影像基础模型等主题，因此所有关键词的相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>human artificial chromosomes, YAC-Mm-4q21LacO, yeast strain, functional HACs, chromosome 4, LacI-HJURP, cell lines HT1080 U2OS</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef6665" target="_blank">9. KRAShing pancreatic cancer before takeoff</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Benjamin G. Neel, Anirban Maitra</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了KRAS信号通路抑制剂能否延缓小鼠胰腺癌的发展，并发现这类药物确实能延迟疾病进展。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>抑制KRAS信号传导的药物可延缓小鼠胰腺癌的发展</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Drugs that inhibit KRAS signaling delay the development of pancreatic cancer in mice</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究KRAS抑制剂对小鼠胰腺癌发展的影响，属于基础医学和肿瘤学研究范畴。所有评分关键词均涉及医学影像分析、人工智能、深度学习、手术规划等方向，而该论文完全不涉及医学影像处理、AI模型、诊断预测或手术技术，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>KRAS, pancreatic cancer, drug inhibition, mouse model, cancer development, signaling pathway, therapeutic delay</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aea1341" target="_blank">10. Evolutionary adaptation to global change reduces sustainable fisheries yields</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jan Kozłowski, Dustin J. Marshall, Craig White</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了全球变暖如何通过驱动鱼类进化（如更早成熟和体型变小）来影响渔业产量，并预测这种进化会缓解气候变化对鱼类适应性的影响，但会使渔业产量损失加剧约50%。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>全球变暖正在改变支撑粮食安全的渔业体系，但当前对这些影响的预测通常未纳入进化过程。我们构建了一个模型，用于预测鱼类将如何适应未来气候以及这种进化对渔业产量的影响。我们预测，生活在较暖水域的鱼类生长速度将加快，但会进化出更早的成熟期，从而降低其最大体型。研究显示，进化会缓解气候变化对鱼类适应性的影响，但会加剧其对渔业产量的冲击——使损失恶化约50%。在所有排放情景下，忽略进化过程都会高估未来渔业产量，而在最极端的气候情景下，进化的影响最为显著。所有生命史特征都可能因全球变化而发生进化——在预测生态系统及其服务功能时，必须将这种进化纳入考量。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Global warming is altering the fisheries that underpin food security, but projections of these impacts generally exclude evolutionary processes. We describe a model that forecasts how fish will adapt to future climates and the consequences of that evolution for fisheries yields. We predict that fish in warmer waters will grow faster but evolve earlier maturation, decreasing their maximum size. We predict that evolution ameliorates the impacts of climate change on fish fitness but exacerbates its impacts on fisheries yields—worsening losses by ~50%. Excluding evolution overestimates future yields under all emissions scenarios, but evolution’s impacts are greatest under the most extreme scenarios. All life histories may evolve in response to global change—this evolution should be considered in projections of ecosystems and their services.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是全球变暖背景下鱼类进化对渔业产量的影响，属于生态学、进化生物学和渔业科学领域。所有评分关键词均涉及医学影像分析、人工智能在医疗诊断和手术规划中的应用，与论文主题完全无关。论文未涉及任何医学影像、深度学习、AI诊断、预后预测、手术规划或多模态医学影像内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>global warming, fisheries yields, evolutionary adaptation, climate change, fish maturation, sustainable fisheries, ecological modeling, life history evolution</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh0793" target="_blank">11. In Other Journals</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Joana Osório, Yevgeniya Nusinovich, Corinne Simonti, Mattia Maroso, Angela Hessler, Marc S. Lavine, Jake S. Yeston</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 这是一篇期刊编辑精选文章合集，而非针对特定医学影像分析或人工智能临床决策支持问题的原创研究论文。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>编者精选自当前科学文献</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Editors’ selections from the current scientific literature</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;In Other Journals&#x27;和摘要&#x27;Editors’ selections from the current scientific literature&#x27;表明这是一篇期刊编辑精选文章合集或目录，而非原创研究论文，因此与所有给定的医学影像分析、人工智能诊断、手术规划等关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>journal selections, scientific literature, editors&#x27; picks, research highlights, current publications</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh1091" target="_blank">12. How will we know if AI is smart enough to do science?</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Celina Zhao</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究如何评估大型语言模型是否具备利用其知识进行科学发现的能力，并提出了新的测试方法。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>新测试评估大型语言模型能否利用其海量知识库实现真正的科学发现</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>New tests gauge whether large language models can use their troves of knowledge to actually make discoveries</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;How will we know if AI is smart enough to do science?&#x27;，摘要讨论大型语言模型能否利用其知识库进行科学发现。研究背景要求医学影像分析、分割、深度学习医学影像、AI诊断、预后预测、手术规划、多模态医学影像和医学影像基础模型。论文内容完全聚焦于大型语言模型的科学发现能力评估，未涉及任何医学影像、临床决策支持、疾病诊断、手术规划或医疗AI模型。所有关键词与论文主题无任何关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>artificial intelligence, large language models, scientific discovery, AI evaluation, knowledge utilization, AI capabilities, science testing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg4335" target="_blank">13. The imminent collapse of the Great Salt Lake The Lake Abby Ellis, director Sandbox Films, 2026. 88 minutes.</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Gabrielle Kardon</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 这部纪录片探讨了大盐湖面临的环境崩溃危机，揭示了北美最大终端湖泊的严峻未来。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>一部新纪录片直面北美最大终端湖的严峻未来</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>A new documentary confronts the dire future of North America’s largest terminal lake</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文是关于大盐湖环境危机的纪录片，主题是环境科学、生态学和纪录片制作，与医学影像分析、人工智能、临床决策支持等医疗技术领域完全无关。所有关键词均涉及医疗AI和医学影像技术，而论文讨论的是湖泊生态危机，两者属于完全不同的学科领域，无任何相关性。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Great Salt Lake, environmental collapse, terminal lake, documentary, North America, ecological crisis, lake ecosystem</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh1092" target="_blank">14. ARPA-H bets big to foster drugs that thwart aging</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Mitch Leslie</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文报道了ARPA-H通过资助抗衰老药物研发来推动延长健康寿命疗法的监管审批进程。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>旨在为延长健康寿命疗法获批“铺设轨道”的奖项</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Awards intended to “build the train tracks” for approval of therapies to extend healthy life</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确讨论ARPA-H资助抗衰老药物研发以延长健康寿命，内容聚焦药物疗法、监管审批和生物医学研究，与所有评分关键词（均涉及医学影像分析、AI诊断、手术规划等）完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ARPA-H, aging, drug development, healthy life extension, therapy approval, biomedical research, funding initiative</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef5673" target="_blank">15. Journals can help protect animal welfare—Response</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Hugo Merchant, Vani G. Rajendran</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文探讨了期刊在促进动物福利保护方面的潜在作用，但具体研究问题和结果因摘要缺失无法详细总结。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，但根据标题&#x27;Journals can help protect animal welfare—Response&#x27;判断，该论文讨论的是期刊在保护动物福利方面的作用，属于动物伦理、科研伦理或出版伦理领域，与给定的医学影像分析、人工智能临床决策支持等关键词完全无关。所有关键词均评0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>animal welfare, journals, research ethics, scientific publishing, animal protection</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef5605" target="_blank">16. What’s the catch of the day?</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Joseph Travis, David N. Reznick</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了海洋变暖和鱼类进化如何共同导致鱼类捕获量减少的问题，发现这些因素使得鱼类更不容易被捕捞。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>海洋变暖与进化使鱼类更不易成为餐桌上的选择</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Warming oceans and evolution make fish less likely to be on the menu</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题《What’s the catch of the day?》和摘要《Warming oceans and evolution make fish less likely to be on the menu》表明这是一篇关于海洋生物学、气候变化和鱼类进化的研究，与医学影像分析、人工智能临床决策支持等关键词完全无关。所有关键词均未在标题或摘要中提及，也无相关主题暗示，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>warming oceans, evolution, fish, catch, climate change, marine biology, fisheries</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef8427" target="_blank">17. Evolution to the rescue</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Mark C. Urban, Laurinne J. Balstad</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨了野生花卉种群如何通过进化韧性从极端干旱中恢复的问题，并发现这种恢复揭示了隐藏的进化适应能力。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>极端干旱后野花种群的恢复揭示其隐藏的进化韧性</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Recovery of wildflower populations from extreme drought reveals hidden evolutionary resilience</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Evolution to the rescue&#x27;，摘要描述&#x27;Recovery of wildflower populations from extreme drought reveals hidden evolutionary resilience&#x27;，研究内容为野生花卉种群从极端干旱中恢复的进化韧性，属于生态学、进化生物学领域。所有评分关键词均围绕医学影像分析、人工智能临床决策支持、深度学习医学成像、疾病诊断与预后预测、手术规划、多模态医学成像等医学领域技术，与论文的生态进化研究主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>evolution, wildflower populations, extreme drought, recovery, evolutionary resilience, ecological adaptation</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg6303" target="_blank">18. Editor’s Note</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Sacha Vignieri</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文是期刊编辑的说明，不涉及具体研究问题或结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Editor&#x27;s Note&#x27;，作者为Sacha Vignieri，摘要内容为空，这表明该论文并非研究论文，而是期刊编辑的说明或前言，与给定的医学影像分析、人工智能诊断、预后预测、手术规划等研究主题完全无关。所有关键词均未在标题或摘要中提及，因此相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Editor&#x27;s Note, Sacha Vignieri</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aee7889" target="_blank">19. Antimicrobial resistance in India A World of Resistance Assa Doron and Alex Broom Belknap Press, 2026. 264 pp.</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Aashima Dogra-Freitag</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该社会学研究探讨了印度抗生素过度使用的社会文化原因，发现其并非源于无知，而是由更复杂的社会因素驱动。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>拒绝将无知视为抗生素滥用的原因，两位社会学家发现了更可能的解释</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Rejecting ignorance as the cause of antibiotic overuse, a pair of sociologists find more likely explanations</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文《Antimicrobial resistance in India》是社会学研究，探讨印度抗生素过度使用的社会文化原因，由两位社会学家撰写。研究内容完全不涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或基础模型等任何技术领域，与所有评分关键词完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>antimicrobial resistance, antibiotic overuse, India, sociology, social factors, public health, medical sociology, healthcare practices</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adt3439" target="_blank">20. Whole-embryo spatial transcriptomics at subcellular resolution from gastrulation to organogenesis</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Yinan Wan, Jakob El Kholtei, Ignatius Jenie, Mariona Colomer-Rosell, Jialin Liu, Qinghua Zhang, Joaquin Navajas Acedo, Lucia Y. Du, Mireia Codina-Tobias, Mengfan Wang, Wei Zheng, Edward Lin, Tzy-Harn Chuang, Oded Mayseless, Ahilya Sawh, Susan E. Mango, Guoqiang Yu, Bogdan Bintu, Alexander F. Schier</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了全胚胎空间转录组学成像平台（weMERFISH），在亚细胞分辨率下量化了斑马鱼胚胎发育过程中的基因表达，揭示了胚胎基因表达模式的调控机制和动态变化。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>基因表达模式是发育过程的基础，但对其在整个胚胎中的系统性检测仍存在困难。我们开发了一种利用多重容错荧光原位杂交技术（weMERFISH）的全胚胎成像平台。我们以亚细胞分辨率量化了斑马鱼胚胎中495个基因的表达，并构建了一个在线图谱，详细记录了胚胎发育过程中25,872个基因的表达模式以及294,954个染色质区域的可及性。表达模式通常对应于组织特异性可及性元件的组合，而表达变化则与细胞成熟和形态发生过程相一致。通过与活体成像技术结合，我们发现相似表达模式可通过不同的动态过程形成，并证明清晰的基因表达边界是通过基因表达的变化而非细胞分选机制建立的。这些成果建立了多重全胚胎空间转录组学方法，并揭示了胚胎基因表达模式的调控机制与动态特征。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Gene expression patterns underlie development, but their systematic detection in whole embryos has remained elusive. We introduce a whole-embryo imaging platform using multiplexed error-robust fluorescent in situ hybridization (weMERFISH). We quantified the expression of 495 genes in zebrafish embryos at subcellular resolution and generated an online atlas detailing the expression of 25,872 genes and accessibility of 294,954 chromatin regions during embryogenesis. Expression patterns often corresponded to composites of tissue-specific accessible elements, and expression changes aligned with cellular maturation and morphogenesis. Integration with live imaging revealed how similar expression patterns can emerge through different dynamics and showed that sharp boundaries develop through changes in gene expression rather than through cell sorting. These results establish multiplexed whole-embryo spatial transcriptomics and reveal the regulation and dynamics of embryonic gene expression patterns.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是斑马鱼胚胎发育过程中的空间转录组学技术（weMERFISH），属于发育生物学和基因组学领域，而非医学影像分析或临床决策支持。论文内容涉及基因表达图谱、胚胎成像、转录组学技术，与所有评分关键词（医学影像分析、分割、深度学习、AI诊断、预后预测、手术规划、多模态医学影像、基础模型）均无直接关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>spatial transcriptomics, whole-embryo imaging, zebrafish embryogenesis, gene expression patterns, weMERFISH, subcellular resolution, developmental biology, multiplexed imaging</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeb6999" target="_blank">21. Microglia Rank signaling regulates GnRH neuronal function and the hypothalamic-pituitary-gonadal axis</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Alejandro Collado-Solé, Nozha Borjini, Jing Zhai, Francisco Ruíz-Pino, Gonzalo Soria-Alcaide, Cintia Folgueira, Celia García-Vilela, Beatriz Romero-de la Rosa, Víctor López, Yassine Zouaghi, An Jacobs, Bella Mora-Romero, Alexandra Barranco, Guillermo Yoldi, Karine Rizzoti, Guadalupe Sabio, Gema Pérez-Chacón, Patricia G. Santamaria, José A. Esteban, Nathalie Journiac</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现下丘脑小胶质细胞通过Rank信号通路调控GnRH神经元功能，从而影响下丘脑-垂体-性腺轴，揭示了生殖成熟和生育能力的新机制。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>下丘脑-垂体-性腺轴（HPG轴）调控青春期发育、性成熟与生殖能力。本研究揭示了下丘脑小胶质细胞通过核因子κB受体活化因子（Rank）信号通路调控HPG轴的作用机制。全身性及小胶质细胞特异性敲除Rank均会导致促性腺激素释放激素（GnRH）神经元功能改变，从而引发低促性腺激素性性腺功能减退症（HH）。此外，我们在HH患者中发现了罕见的RANK基因变异。Rank缺失后的转录谱分析显示，正中隆起区小胶质细胞激活缺陷并发生形态学改变，减少了对GnRH末梢投射的接触与吞噬作用，从而损害了GnRH神经元对吻素（kisspeptin）的反应能力。总体而言，我们的数据揭示了小胶质细胞通过Rank信号通路调控GnRH神经元功能的新机制，这对理解生殖成熟与生育能力具有潜在意义。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The hypothalamic-pituitary-gonadal axis (HPG) controls pubertal development, sexual maturation, and fertility. We identified a role of hypothalamic microglia in controlling the HPG axis through receptor activator of nuclear factor κβ (Rank) signaling. Whole-body and microglia Rank depletion led to hypogonadotropic hypogonadism (HH) resulting from an alteration in gonadotropin-releasing hormone (GnRH) neuron function. In addition, we identified rare gene variants of RANK in patients with HH. Transcriptional profiling upon Rank loss revealed defective microglia activation and morphological alterations in the median eminence, decreasing the contacts and engulfment of GnRH terminal projections and impairing GnRH neuronal responses to kisspeptin. Overall, our data uncover the microglia as regulator of GnRH neuronal function through Rank signaling, with potential implications for reproductive maturation and fertility.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是神经内分泌学领域，具体探讨下丘脑-垂体-性腺轴（HPG）的调控机制，聚焦于小胶质细胞通过Rank信号通路对GnRH神经元功能的影响。所有评分关键词均涉及医学影像分析、人工智能、深度学习在医疗影像中的应用、疾病诊断/预后预测、手术规划、多模态医学影像及基础模型等方向。该论文完全未涉及任何医学影像技术、AI算法、影像分析或相关临床应用，而是使用分子生物学、遗传学和神经科学方法研究生殖内分泌的细胞机制。因此，所有关键词的相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>hypothalamic-pituitary-gonadal axis, microglia, Rank signaling, GnRH neurons, hypogonadotropic hypogonadism, reproductive maturation, kisspeptin, median eminence</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef8482" target="_blank">22. From field experiments to policy interventions at scale</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Imran Rasul</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探讨如何将实地实验结果转化为大规模政策干预，并分析了在规模化过程中面临的挑战与解决方案。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;From field experiments to policy interventions at scale&#x27;和摘要内容表明，该研究聚焦于社会科学领域的实地实验与大规模政策干预，涉及行为经济学、政策评估和规模化实施。所有评分关键词均围绕医学影像分析、人工智能医疗应用、手术规划等医学技术主题，与论文的研究领域（社会科学、政策研究）完全无关，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>field experiments, policy interventions, scale, behavioral economics, policy evaluation, implementation, social science</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adu9988" target="_blank">23. Strong and brittle lithium dendrites</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Qing Ai, B. Zhang, Xing Liu, Bongki Shin, Wenhua Guo, Guanhui Gao, Lihong Zhao, Xintong Weng, Qiyi Fang, Tianshu Zhai, Doug Steinbach, Yifan Zhu, Yifeng Liu, Fan Wang, Xiaoyin Tian, Hao Guo, Youtian Zhang, Xuan Zhao, Yimo Han, Ming Tang</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现锂枝晶具有高强度（&gt;150 MPa）和脆性，不同于延展性的块体锂金属，这源于固态电解质界面约束和纳米尺度强化，为理解枝晶穿透机制和设计高性能锂金属电池提供了新见解。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>锂枝晶在电解质与隔膜中的生长与穿透，仍是实现高能量密度锂金属电池面临的关键挑战。基于普遍认为锂质地柔软的认知，采用机械强度高的电解质和隔膜被视为一种有前景的应对策略。然而，在坚硬的固态电解质中枝晶依然形成，这暗示了其独特的力学行为。我们采用无空气操作流程测量了单个锂枝晶的力学性能，发现锂枝晶具有出人意料的强脆性，其断裂应力大于约150兆帕，与具有延展性的块体金属截然不同。冷冻透射电子显微镜分析与力学建模表明，这种行为源于固态电解质界面（SEI）的约束作用及纳米尺度强化效应。这些发现为理解枝晶穿透与死锂形成提供了新的机制解释，并为锂金属电池的设计策略提供了指导。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The growth and penetration of lithium dendrites through electrolytes and separators remain key challenges to realizing high–energy density lithium-metal batteries. Using mechanically strong electrolytes and separators has been considered a promising strategy based on the commonly believed softness of lithium. However, dendrite formation persists in stiff solid electrolytes, suggesting distinct mechanical behaviors. We measured the mechanical properties of individual lithium dendrites using an air-free protocol. We found that lithium dendrites are unexpectedly strong and brittle, with fracture stress greater than ~150 megapascals, unlike the ductile bulk metal. Cryo–transmission electron microscopy and mechanical modeling showed that this behavior arises from solid electrolyte interface constraints and nanoscale strengthening. These findings provide alternative mechanisms for dendrite penetration and dead lithium formation as well as guidance for design strategies for lithium-metal batteries.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是锂金属电池中锂枝晶的机械性能（强度、脆性）及其对电池性能的影响，属于材料科学和电化学领域。所有评分关键词均涉及医学影像分析、人工智能在医疗诊断/手术规划中的应用，与论文主题完全无关。论文未涉及任何医学影像、AI诊断、手术规划或医疗数据相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>lithium dendrites, mechanical properties, fracture stress, solid electrolyte interface, cryo-TEM, lithium-metal batteries, dendrite penetration, dead lithium</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aef9956" target="_blank">24. Extending the reach of a classic oncogene</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Alexander Pfannenstein, Tobias Meyer</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现Src癌基因通过外泌作用暴露于癌细胞表面，为靶向治疗提供了新策略。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>外泌作用使Src暴露于癌细胞外表面，为治疗靶向提供契机</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Exocytosis exposes Src at the outer surface of cancer cells, poised for therapeutic targeting</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究癌症细胞外泌作用中Src癌基因的表面暴露及其治疗靶向潜力，属于分子肿瘤学/细胞生物学领域。标题、摘要和内容均未涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态影像或基础模型等关键词。所有关键词与论文主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>oncogene, Src, exocytosis, cancer cells, therapeutic targeting, cell surface, molecular biology</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adt8983" target="_blank">25. A deep-time landscape of plant cis-regulatory sequence evolution</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Kirk Amundson, Anat Hendelman, Danielle Ciren, Hailong Yang, Amber E de Neve, Shai Tal, Adar Sulema, D. I. Jackson, Madelaine Bartlett, Zachary B. Lippman, Idan Efroni</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究开发了Conservatory算法，通过微共线性和迭代比对，在284种植物中发现了约230万个保守非编码序列（CNS），揭示了CNS在进化中的保留、丢失和重组模式，并验证了其与发育基因的关联及突变表型效应。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>发育基因功能在漫长演化过程中常保持保守，但顺式调控序列的保守性难以识别。快速的序列更替、古多倍化事件、结构变异以及有限的系统基因组取样，一直阻碍着保守非编码序列的发现。通过使用Conservatory算法——该算法利用微共线性及迭代比对来追踪演化过程中CNS与基因的关联，我们从涵盖3亿年分化历史的284种植物中，鉴定了约230万个CNS，其中包含3000多个早于被子植物起源的古老CNS。古老CNS富集于发育调控因子附近，且对同源异型盒基因邻近的CNS进行诱变可产生强烈表型。追溯CNS演化揭示了关键规律：CNS间距存在差异，但排列顺序保持保守；基因组重排会形成新的CNS-基因关联；古老CNS在旁系同源基因间优先保留，但常以集群形式丢失，或演化为谱系特异性CNS。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Developmental gene function is often conserved over deep time, but cis-regulatory sequence conservation is difficult to identify. Rapid sequence turnover, paleopolyploidy, structural variation, and limited phylogenomic sampling have impeded conserved non-coding sequence (CNS) discovery. Using Conservatory, an algorithm that leverages microsynteny and iterative alignments to map CNS-gene associations over evolution, we uncovered ~2.3 million CNSs, including over 3,000 predating angiosperms, from 284 plant species spanning 300 million years of diversification. Ancient CNSs were enriched near developmental regulators, and mutating CNSs near HOMEOBOX genes produced strong phenotypes. Tracing CNS evolution uncovered key principles: CNS spacing varies, but order is conserved; genomic rearrangements form new CNS-gene associations; and ancient CNSs are preferentially retained among paralogs, but are often lost as cohorts or evolve into lineage-specific CNSs.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要明确表明这是一篇植物基因组学和进化生物学研究，涉及植物顺式调控序列（CNS）的进化分析、算法开发（Conservatory）和表型验证。所有评分关键词均聚焦于医学影像分析、人工智能临床决策支持、疾病诊断/预后、手术规划等医学领域，与论文的植物基因组学主题完全无关。论文未涉及任何医学影像、医疗AI、诊断或手术相关内容。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>cis-regulatory sequences, plant evolution, conserved non-coding sequences, microsynteny, genomic alignment, developmental genes, HOMEOBOX genes, paralog retention</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeg4691" target="_blank">26. Releasing agriculture from the food security mandate</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Christoph Müller</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文认为粮食安全本质上是分配正义问题，而非农业生产不足，并指出将农业研究与粮食安全挂钩既不公平也难以成功，反而分散了应对可持续性挑战的科研能力。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>食物安全状态的实现，意味着无人需要担忧能否以及如何获取——通常指购买——健康且营养的膳食。理论上，食物安全可从两方面着手解决：提升家庭购买力或降低食品价格。然而在实践中，食物不安全是现行政治经济体系的副产品。农业生产的卡路里和营养素已超过人类所需，因此这本质上属于分配正义问题——地理条件、教育水平、族裔、性别及其他边缘化机制通过影响财富获取途径，决定着个体的食物安全状况。但人类始终未能消除贫困，农业研究与实务并未针对食物不安全的社会经济根源采取行动，反而被要求对此进行补偿。这不仅不公，也注定失败。同时，这还将农业系统本应应对的一系列紧迫可持续性挑战所亟需的科研力量引向了歧途。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>The state of food security is achieved if no one has to worry whether or how they can acquire—typically purchase—healthy and nutritious meals. In theory, food security could be addressed from two sides: increasing households’ purchasing power or lowering food prices. However, in practice, food insecurity is a by-product of prevailing political and economic systems. Agriculture produces more calories and nutrients than needed to feed humanity, so it is fundamentally an issue of distributive justice, where geography, education, ethnicity, gender, and other mechanisms of marginalization determine one’s food security—through access to wealth. Yet humanity has failed to eliminate poverty and instead of addressing socioeconomic causes of food insecurity, agricultural research and practice are called upon to compensate. This is not only unfair but bound to fail. It also diverts muchneeded scientific capacity from the long list of sustainability challenges that agricultural production systems must address.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题为&#x27;Releasing agriculture from the food security mandate&#x27;，摘要讨论的是粮食安全、农业政策、社会经济不平等和可持续农业挑战。研究领域属于农业政策、粮食安全和可持续发展，与给定的医学影像分析、人工智能临床决策支持等关键词完全无关。所有关键词均未在标题或摘要中出现，也未涉及相关概念，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>food security, agriculture, distributive justice, socioeconomic inequality, sustainability challenges, agricultural research, poverty, political economic systems</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aec1778" target="_blank">27. Autophagolysosomal exocytosis inverts Src kinase onto the cell surface in cancer</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Corleone S. Delaveris, R. W. Loudermilk, Apurva Pandey, Soumya G. Remesh, Trenton M. Peters-Clarke, Snehal D. Ganjave, William J. N. Dougherty, Henry M. Delavan, Chunyue Wang, Jesse Ling, J. Camara Serrano, Fernando Salangsang, Chien-Kuang Cornelia Ding, Nancy Greenland, Carissa E. Chu, Sima P. Porten, Veronica Steri, Jonathan Chou, Mark D. Evans, Kevin K. Leung</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究发现癌症中Src蛋白通过自噬溶酶体胞吐作用非经典易位并倒置到细胞表面，形成细胞外膜相关Src（eSrc），并证明抗Src抗体疗法在细胞培养和小鼠异种移植模型中能有效杀伤肿瘤细胞。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>原癌基因Src的过表达在多种癌症中普遍存在。本研究发现，在体外和体内实验中，Src在癌细胞中均以非经典方式易位并拓扑反转至细胞表面。我们确定自噬溶酶体胞吐作用（autophagolysosomal exocytosis, ALE）是癌细胞系中一种显著的分泌机制。Src代表了一类通过此过程转运的膜锚定蛋白的典型范例。此外，这种细胞外膜相关Src（eSrc）在原发肿瘤中被发现，且基于抗Src抗体的疗法在细胞培养系统和小鼠异种移植模型中实现了肿瘤细胞杀伤。因此，以Src为代表的细胞内N-豆蔻酰化蛋白可在癌症中拓扑反转至细胞表面，并成为抗体疗法的靶点。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Overexpression of the proto-oncogene Src is common to a wide variety of cancers. In this work, we found that Src is noncanonically translocated and inverted onto the cell surface in cancer, both in vitro and in vivo. We identified autophagolysosomal exocytosis (ALE) as a secretory mechanism prominent in cancer cell lines. Src represents the prototypical example of a family of membrane-anchored proteins that are transported by this process. Furthermore, this extracellular membrane–associated Src (eSrc) was found in primary tumors, and anti-Src antibody-based therapies mediated tumor cell killing in cell culture systems and in mouse xenograft models. Thus, intracellular N -myristoylated proteins, prototypically Src, can be topologically inverted onto the cell surface in cancer and targeted with antibody therapeutics.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究癌症中Src蛋白通过自噬溶酶体胞吐作用（ALE）非经典易位并倒置到细胞表面的机制，以及针对细胞外Src（eSrc）的抗体治疗潜力。所有评分关键词均涉及医学影像分析、人工智能、深度学习、诊断、预后、手术规划、多模态影像或基础模型在医学影像中的应用，而该论文专注于细胞生物学、癌症机制和抗体治疗，未涉及任何医学影像技术、AI算法或临床决策支持系统，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>Src kinase, autophagolysosomal exocytosis, cancer, cell surface inversion, antibody therapeutics, tumor cell killing, membrane-anchored proteins, xenograft models</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh1093" target="_blank">28. HIV cure bid has virus trip immune alarm</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Jon Cohen</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究探索了一种通过触发免疫警报来清除HIV病毒的治疗策略，并在细胞研究和感染者中取得了有希望的结果。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>策略在细胞研究与感染者中展现出前景广阔的结果</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Strategy produces promising results in cell studies and infected people</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要显示该研究是关于HIV治疗策略的，涉及细胞研究和人体试验，重点在免疫系统激活和病毒清除。所有评分关键词均围绕医学影像分析、深度学习、AI诊断、手术规划等医学影像AI领域，而该论文完全不涉及医学影像、图像处理、AI模型或任何影像相关技术，因此所有关键词相关度均为0。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>HIV cure, immune alarm, virus clearance, cell studies, infected people, treatment strategy, promising results</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.ady0066" target="_blank">29. The fiscal impact of biodiversity loss and a pathway for conservation finance</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Anya Nakhmurina, Dale T. Manning, Eli P. Fenichel</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了生物多样性损失对财政的影响，并提出通过调整市政债券投资来支持保护行动的融资途径。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>逐利型投资者可通过调整市政债券投资组合与生态保护行动实现协同</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Profit-seeking investors could align their muncipal bond investments with conservation actions</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是生物多样性损失对财政的影响以及保护融资途径，属于环境经济学和金融学领域，与医学影像分析、人工智能临床决策支持等医疗技术主题完全无关。所有关键词均未在标题或摘要中出现，也没有任何间接关联。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>biodiversity loss, fiscal impact, conservation finance, municipal bonds, profit-seeking investors, conservation actions</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aee6178" target="_blank">30. Journals can help protect animal welfare</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Larry Carbone</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文探讨期刊在保护动物福利方面的作用，但具体研究问题和结果因摘要缺失无法确定。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要均未提供，但根据标题&#x27;Journals can help protect animal welfare&#x27;判断，该论文主题为动物福利保护，与给定的医学影像分析、人工智能临床决策支持等关键词完全无关。所有关键词均得0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>animal welfare, journals, protection, ethical standards, research oversight</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.adu0995" target="_blank">31. Rapid evolution predicts demographic recovery after extreme drought</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Daniel N. Anstett, Julia Anstett, Seema N. Sheth, Dylan R. Moxley, Haley A. Branch, Mojtaba Jahani, Kaichi Huang, Marco Todesco, Rebecca Jordan, José M. Lázaro-Guevara, Loren H. Rieseberg, Amy L. Angert</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究通过全基因组测序和种群动态追踪，证明了猩红猴面花在极端干旱期间发生了快速进化，并且种群恢复能力可以通过适应性位点的遗传变异和快速进化来预测，为野外进化拯救提供了实证。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>因气候变化而衰退的种群可能需要通过进化才能持续生存。尽管进化拯救已在理论和实验室中得到验证，但其与面临气候变化的自然种群的相关性仍不明确。本研究以猩红猴面花（Mimulus cardinalis）为对象，在极端干旱期间将快速进化与种群动态进行关联分析。我们通过对55个种群进行全基因组测序，鉴定了与气候相关的基因位点。同时，我们追踪了整个干旱期间的人口统计数据和等位基因频率变化。研究发现，干旱期间该物种出现全分布区范围内的种群衰退，地理差异显著的快速进化，以及种群恢复程度的差异——这种差异可通过气候相关基因位点的既有遗传变异和快速进化进行预测。这些发现证明了野外进化拯救的可能性，表明适应性基因位点（而非中性位点）的遗传变异能够预测种群恢复能力。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Populations that are declining as a result of climate change may need to evolve to persist. Although evolutionary rescue has been demonstrated in theory and in the laboratory, its relevance to natural populations facing climate change remains unknown. Here we link rapid evolution and population dynamics in scarlet monkeyflower, Mimulus cardinalis , during exceptional drought. We leverage whole-genome sequencing across 55 populations to identify climate-associated loci. Simultaneously we track demography and allele frequency change throughout the drought. We establish range-wide population decline during the drought, geographically variable rapid evolution, and variable population recovery that is predictable by standing genetic variation in, and rapid evolution at, climate-associated loci. These findings demonstrate the possibility of evolutionary rescue in the wild, showing that genetic variation at adaptive, but not neutral, loci predicts population recovery.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文研究的是植物种群（猩红猴面花）在极端干旱条件下的进化遗传学和种群动态恢复，属于进化生物学、生态学和遗传学领域。所有评分关键词均涉及医学影像分析、人工智能医疗应用、手术规划等医学技术主题，与论文的植物生态进化研究完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>evolutionary rescue, extreme drought, rapid evolution, population dynamics, genetic variation, climate change, Mimulus cardinalis, whole-genome sequencing</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh1090" target="_blank">32. Plan to break up iconic U.S. climate lab moves ahead</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Paul Voosen</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文报道了美国国家大气研究中心（NCAR）的重组计划正在推进，已有竞标者排队准备接管其部分机构。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>竞标者已排队等候接管美国国家大气研究中心的部分资产</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Bidders have lined up to take over pieces of the National Center for Atmospheric Research</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题和摘要讨论的是美国国家大气研究中心（NCAR）的重组和竞标过程，属于大气科学、气候研究和机构管理领域，与医学图像分析、人工智能临床决策支持、深度学习医学成像、疾病诊断、预后预测、手术规划、多模态医学成像或医学成像基础模型等主题完全无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>National Center for Atmospheric Research, NCAR, climate research, reorganization, bidders, takeover, atmospheric science, institutional management</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh0163" target="_blank">33. My new apprentice</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Ariel Rosenfeld</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 无法总结，因为论文摘要为空，无法确定研究问题和结果。</div>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文标题&#x27;My new apprentice&#x27;和摘要内容完全缺失，无法判断论文的研究内容、方法或应用领域。由于没有任何信息表明论文涉及医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态医学影像或医学影像基础模型等主题，所有关键词的相关度均为0分。</p>
+</div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aeh0790" target="_blank">34. Frozen witness</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Evan Howell</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该论文研究了阿拉斯加海岸线融化的古代冰川冰如何为北半球提供关键气候章节的唯一记录。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>阿拉斯加侵蚀海岸线融化的远古冰川冰，可能为北半球提供窥探关键气候篇章的唯一窗口。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Ancient glacial ice melting out of Alaska’s eroding coastline may offer the Northern Hemisphere’s only glimpse into a pivotal climate chapter</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 论文《Frozen witness》研究的是阿拉斯加冰川融化与古气候记录，属于气候科学/环境科学领域，而所有评分关键词均针对医学影像分析、人工智能临床决策支持等医疗AI领域，两者在研究对象、方法、应用上完全不同，因此所有关键词相关度均为0分。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>ancient glacial ice, Alaska coastline, climate chapter, Northern Hemisphere, glacial melting, pivotal climate, eroding coastline, frozen witness</p></div></details>
+</div>
+<div class="card fail">
+<div class="card-title"><a href="https://doi.org/10.1126/science.aec7929" target="_blank">35. Cancer interception with KRAS inhibitors in preclinical models of pancreatic ductal adenocarcinoma</a>
+<span class="badge fail">FAIL</span></div>
+<div class="field"><span class="field-label">Score:</span> <span class="score">0.0</span> / 29.0</div>
+<div class="field"><span class="field-label">Authors:</span> Minh T. Than, Lucie Dequiedt, Rina Sor, Shreya Nair, Nune Markosyan, Emma E. Furth, Chao Yang, Courtney Ray-Fofana, Marie Ménard, Elsa Quintana, A. Cole Edwards, Connor J. Hennessey, Austin L. Good, Liz Quinones, Yunseo Hwang, Cynthia Clendenin, Ashley L. Kiemen, Robert H. Vonderheide, Ben Z. Stanger</div>
+<div class="field"><span class="field-label">Published:</span> 2026-03-12</div>
+<div class="tldr"><strong>TL;DR:</strong> 该研究在胰腺导管腺癌小鼠模型中测试了RAS(ON)抑制剂对癌前病变的拦截效果，发现拦截治疗能显著延缓肿瘤发生并提高生存率。</div>
+<details open><summary>摘要翻译</summary>
+<div class="analysis-content"><p>胰腺上皮细胞向恶性胰腺导管腺癌（PDAC）的转化通常涉及携带致癌性KRAS突变的前驱病变——胰腺上皮内瘤变（PanINs）的进展。本研究在PDAC小鼠模型中测试了使用RAS(ON)多选择性或RAS(ON) G12D选择性药理抑制剂[RAS(ON)抑制剂]进行PDAC干预的效果。对携带PanINs的小鼠使用RAS(ON)抑制剂治疗，促使癌前病变消退，进而延迟了肿瘤发生并提高了总生存期（OS）。在易发肿瘤的小鼠中长期进行干预，其中位OS超过1年，而未干预对照组小鼠的中位OS不足5个月（P &lt; 0.0001）。通过比较RAS(ON)抑制用于癌症干预与用于癌症治疗所带来的生存获益，我们发现干预策略为小鼠提供了更大的生存益处。这些研究结果表明，药理学方法可能减轻PDAC的癌前病变负荷并提高生存率。</p></div></details>
+<details><summary>Abstract</summary>
+<div class="analysis-content"><p>Transformation of pancreatic epithelial cells to malignant pancreatic ductal adenocarcinoma (PDAC) typically involves the progression of precancerous pancreatic intraepithelial neoplasia (PanINs) bearing oncogenic KRAS mutations. Here, we tested the impact of PDAC interception using either RAS(ON) multiselective or RAS(ON) G12D-selective pharmacological inhibitors [RAS(ON) inhibitors] in mouse models of PDAC. Treatment of PanIN-bearing mice with RAS(ON) inhibitors prompted regression of premalignant lesions that translated into a delay in tumor onset and an increase in overall survival (OS). Long-term interception in tumor-prone mice resulted in a median OS of more than 1 year compared with less than 5 months in nonintercepted control mice ( P &amp;lt; 0.0001). Comparing the survival benefits of RAS(ON) inhibition for cancer interception versus RAS(ON) inhibition for cancer treatment, we found that interception provided a greater survival benefit to mice. These findings suggest that a pharmacological approach may reduce premalignant burden and increase survival in PDAC.</p></div></details>
+<details><summary>评分详情</summary>
+<div class="analysis-content">
+<table style="width:100%;border-collapse:collapse;font-size:0.85em;">
+<tr style="border-bottom:2px solid var(--color-border);"><th style="text-align:left;padding:4px 8px;">关键词</th><th style="text-align:center;padding:4px 8px;">权重</th><th style="text-align:center;padding:4px 8px;">相关度</th><th style="text-align:center;padding:4px 8px;">得分</th></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image analysis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">medical image segmentation</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">deep learning medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">AI for diagnosis</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">prognosis prediction</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">surgical planning</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">multimodal medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+<tr style="border-bottom:1px solid var(--color-border);"><td style="padding:4px 8px;">foundation models medical imaging</td><td style="text-align:center;padding:4px 8px;">1.0</td><td style="text-align:center;padding:4px 8px;">0.0/10</td><td style="text-align:center;padding:4px 8px;">0.0</td></tr>
+</table>
+<p style="margin-top:8px;"><strong>评分理由:</strong> 该论文研究胰腺导管腺癌（PDAC）的癌症拦截策略，使用RAS(ON)抑制剂在临床前小鼠模型中治疗癌前病变（PanINs），评估其对肿瘤发生和生存率的影响。论文内容完全聚焦于癌症生物学、药理学和临床前动物模型研究，未涉及任何医学影像分析、深度学习、AI诊断、预后预测、手术规划、多模态影像或基础模型等主题。所有评分关键词均与论文内容无关。</p>
+</div></details>
+<details><summary>关键词</summary>
+<div class="analysis-content"><p>pancreatic ductal adenocarcinoma, KRAS inhibitors, cancer interception, premalignant lesions, RAS(ON) inhibitors, survival benefit, preclinical models, PanIN regression</p></div></details>
+</div>
+<p class="meta" style="margin-top:24px;border-top:1px solid #e5e7eb;padding-top:12px;">Token 消耗: <strong>301,442</strong> tokens（输入 207,844 / 输出 93,598）</p>
+</body></html>
