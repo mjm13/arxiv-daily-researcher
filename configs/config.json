@@ -14,7 +14,12 @@
   "data_sources": {
     "enabled": [
       "arxiv",
-      "prl"
+      "prl",
+      "nature",
+      "nature_communications",
+      "science",
+      "science_advances",
+      "npj_quantum_information"
     ],
     "journals": [],
     "reports_by_source": true
@@ -25,7 +30,11 @@
   // ==================================================
   "target_domains": {
     "domains": [
-      "quant-ph"
+      "cs.CV",
+      "cs.LG",
+      "quant-ph",
+      "eess.IV",
+      "q-bio.QM"
     ]
   },
 
@@ -35,7 +44,16 @@
   "keywords": {
     "primary_keywords": {
       "weight": 1.0,
-      "keywords": []
+      "keywords": [
+        "medical image analysis",
+        "medical image segmentation",
+        "deep learning medical imaging",
+        "AI for diagnosis",
+        "prognosis prediction",
+        "surgical planning",
+        "multimodal medical imaging",
+        "foundation models medical imaging"
+      ]
     },
     "enable_reference_extraction": true,
     "reference_keywords_config": {
@@ -56,7 +74,7 @@
         }
       }
     },
-    "research_context": ""
+    "research_context": "Research area: medical image analysis and artificial intelligence for clinical decision support.\nFocus topics include:\n- Medical image segmentation and anatomical structure modeling\n- Deep learning for CT, MRI, and ultrasound imaging\n- AI-based disease diagnosis and prognosis prediction\n- Image-based surgical planning and surgical guidance\n- Multimodal medical data fusion\n- Robust and generalizable AI models for healthcare"
   },
 
   // ==================================================
@@ -114,7 +132,7 @@
     },
     "report": {
       "enabled": true,
-      "frequency": "weekly"
+      "frequency": "daily"
     }
   },
 
@@ -124,15 +142,15 @@
   "notifications": {
     "enabled": true,
     "on_success": true,
-    "on_failure": true,
-    "attach_reports": false,
+    "on_failure": false,
+    "attach_reports": true,
     "top_n": 5,
     "channels": {
       "email": {
-        "enabled": false
+        "enabled": true
       },
       "wechat_work": {
-        "enabled": true
+        "enabled": false
       },
       "dingtalk": {
         "enabled": false
@@ -170,7 +188,7 @@
   // Concurrency Configuration
   // ==================================================
   "concurrency": {
-    "enabled": true,
+    "enabled": false,
     "workers": 2
   },
 
@@ -220,6 +238,11 @@
       "html"
     ],
     "enabled_skills": [
+      "temporal_evolution",
+      "hot_topics",
+      "key_authors",
+      "research_gaps",
+      "methodology_trends",
       "comprehensive_analysis"
     ]
   }
