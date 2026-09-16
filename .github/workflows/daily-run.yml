@@ -55,6 +55,7 @@ jobs:
           SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}
           SMTP_FROM=${{ secrets.SMTP_FROM }}
           SMTP_TO=${{ secrets.SMTP_TO }}
+          SMTP_USE_TLS=${{ secrets.SMTP_USE_TLS }}
           WECHAT_WEBHOOK_URL=${{ secrets.WECHAT_WEBHOOK_URL }}
           DINGTALK_WEBHOOK_URL=${{ secrets.DINGTALK_WEBHOOK_URL }}
           DINGTALK_SECRET=${{ secrets.DINGTALK_SECRET }}
@@ -86,10 +87,7 @@ jobs:
                    data/reference_pdfs data/downloaded_pdfs logs runtime
 
       - name: Prepare runtime config
-        run: |
-          if [ -f configs/config.json ] && [ ! -f runtime/config.json ]; then
-            cp configs/config.json runtime/config.json
-          fi
+        run: cp configs/config.json runtime/config.json
 
       - name: Run research pipeline
         run: python main.py

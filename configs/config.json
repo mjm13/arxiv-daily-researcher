@@ -194,7 +194,7 @@
   },
   "daily_research": {
     "enable_deep_analysis": true,
-    "max_papers_per_run": 0,
+    "max_papers_per_run": 80,
     "run_time": "08:00",
     "db_path": "data/daily_research/daily_research.db"
   },
@@ -215,7 +215,7 @@
   },
 
   "pdf_parser": {
-    "mode": "mineru",
+    "mode": "pymupdf",
     "mineru_model_version": "pipeline",
     "poll_interval": 3,
     "poll_timeout": 300,

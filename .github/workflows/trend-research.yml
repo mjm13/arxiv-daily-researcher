@@ -101,7 +101,10 @@ jobs:
         run: |
           mkdir -p data/reports/trend_research/markdown \
                    data/reports/trend_research/html \
-                   data/keywords data/daily_research data/run logs
+                   data/keywords data/daily_research data/run logs runtime
+
+      - name: Prepare runtime config
+        run: cp configs/config.json runtime/config.json
 
       - name: Run trend research
         run: |
