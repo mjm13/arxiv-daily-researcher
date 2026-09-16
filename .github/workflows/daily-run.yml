@@ -1,12 +1,9 @@
 name: ArXiv Daily Research
 
 on:
-  # ⚠️  定时触发默认关闭，防止 Fork 后未配置 Secrets 就自动运行报错。
-  # 完成 Secrets 配置后，取消下方注释即可开启每日自动运行。
-  #
-  # schedule:
-  #   # 每天 UTC 00:00 运行 (= 北京时间 08:00)
-  #   - cron: '0 0 * * *'
+  # 每天 UTC 00:00 运行 (= 北京时间 08:00，DeepSeek 非高峰)
+  schedule:
+    - cron: '0 0 * * *'
 
   # 支持手动触发。v4.2 固定回看最近 3 天；更早日期请使用过去日报队列。
   workflow_dispatch:
@@ -86,7 +83,13 @@ jobs:
                    data/reports/keyword_trend/markdown \
                    data/reports/keyword_trend/html \
                    data/keywords data/daily_research data/run \
-                   data/reference_pdfs data/downloaded_pdfs logs
+                   data/reference_pdfs data/downloaded_pdfs logs runtime
+
+      - name: Prepare runtime config
+        run: |
+          if [ -f configs/config.json ] && [ ! -f runtime/config.json ]; then
+            cp configs/config.json runtime/config.json
+          fi
 
       - name: Run research pipeline
         run: python main.py

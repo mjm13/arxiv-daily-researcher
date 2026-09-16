@@ -1,0 +1,287 @@
+{
+  // ==================================================
+  // Data Source Configuration
+  // ==================================================
+  "data_sources": {
+    "enabled": [
+      "arxiv",
+      "prl",
+      "nature",
+      "nature_communications",
+      "science",
+      "science_advances",
+      "npj_quantum_information"
+    ],
+    "extra_sources": {
+      "enabled": true,
+      "definitions": []
+    },
+    "reports_by_source": true,
+    "arxiv": {
+      "fetch_timeout_seconds": 180,
+      "announcement_lookback_grace_days": 2
+    },
+    "huggingface_papers": {
+      "availability_lag_days": 2,
+      "lookback_grace_days": 2,
+      "request_timeout_seconds": 30,
+      "request_interval_seconds": 0.25
+    }
+  },
+
+  "run_lock": {
+    "max_age_hours": 12
+  },
+
+  "target_domains": {
+    "domains": [
+      "cs.CV",
+      "cs.LG",
+      "quant-ph",
+      "eess.IV",
+      "q-bio.QM"
+    ]
+  },
+
+  "keywords": {
+    "primary_keywords": {
+      "weight": 1.0,
+      "keywords": [
+        "medical image analysis",
+        "medical image segmentation",
+        "deep learning medical imaging",
+        "AI for diagnosis",
+        "prognosis prediction",
+        "surgical planning",
+        "multimodal medical imaging",
+        "foundation models medical imaging"
+      ]
+    },
+    "enable_reference_extraction": true,
+    "reference_keywords_config": {
+      "max_keywords": 10,
+      "similarity_threshold": 0.75,
+      "weight_distribution": {
+        "high_importance": {
+          "weight": 1.0,
+          "count": 3
+        },
+        "medium_importance": {
+          "weight": 0.2,
+          "count": 5
+        },
+        "low_importance": {
+          "weight": 0.1,
+          "count": 2
+        }
+      }
+    },
+    "research_context": "Research area: medical image analysis and artificial intelligence for clinical decision support.\nFocus topics include:\n- Medical image segmentation and anatomical structure modeling\n- Deep learning for CT, MRI, and ultrasound imaging\n- AI-based disease diagnosis and prognosis prediction\n- Image-based surgical planning and surgical guidance\n- Multimodal medical data fusion\n- Robust and generalizable AI models for healthcare"
+  },
+
+  "scoring_settings": {
+    "keyword_relevance_score": {
+      "max_score_per_keyword": 10
+    },
+    "author_bonus": {
+      "enabled": false,
+      "expert_authors": [],
+      "bonus_points": 5.0
+    },
+    "passing_score_formula": {
+      "base_score": 5.0,
+      "weight_coefficient": 3.0
+    },
+    "include_all_in_report": true,
+    "strategy": {
+      "id": "legacy_weighted_keyword_v1",
+      "core_relevance_threshold": 6.0,
+      "core_keyword_min_score": 7.0,
+      "reference_ranking_weight": 0.25,
+      "learned_weight_dampening": 0.5,
+      "learned_term_weight_cap": 2.0
+    }
+  },
+
+  "paths": {
+    "data_dir": "data",
+    "reference_pdfs": "data/reference_pdfs",
+    "reports": "data/reports",
+    "downloaded_pdfs": "data/downloaded_pdfs",
+    "history_dir": "data/history"
+  },
+
+  "keyword_tracker": {
+    "enabled": true,
+    "database": {
+      "path": "data/keywords/keywords.db"
+    },
+    "normalization": {
+      "enabled": true,
+      "batch_size": 25
+    },
+    "trend_view": {
+      "default_days": 30
+    },
+    "charts": {
+      "bar_chart": {
+        "top_n": 15
+      },
+      "trend_chart": {
+        "top_n": 5
+      }
+    },
+    "report": {
+      "enabled": true,
+      "frequency": "daily"
+    }
+  },
+
+  "notifications": {
+    "enabled": true,
+    "on_success": true,
+    "on_failure": false,
+    "attach_reports": true,
+    "top_n": 5,
+    "channels": {
+      "email": {
+        "enabled": true
+      },
+      "wechat_work": {
+        "enabled": false
+      },
+      "dingtalk": {
+        "enabled": false
+      },
+      "telegram": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "generic_webhook": {
+        "enabled": false
+      }
+    }
+  },
+
+  "retry": {
+    "max_attempts": 3,
+    "min_wait": 2,
+    "max_wait": 30
+  },
+
+  "logging": {
+    "rotation_type": "time",
+    "keep_days": 30
+  },
+
+  "concurrency": {
+    "enabled": false,
+    "workers": 2
+  },
+  "llm_request_pool": {
+    "enabled": true,
+    "requests_per_minute": 30,
+    "log_slow_wait_seconds": 5.0
+  },
+  "llm": {
+    "timeout_seconds": 300.0,
+    "sdk_max_retries": 1,
+    "retry_max_attempts": 5,
+    "retry_min_wait": 5,
+    "retry_max_wait": 120
+  },
+  "daily_research": {
+    "enable_deep_analysis": true,
+    "max_papers_per_run": 0,
+    "run_time": "08:00",
+    "db_path": "data/daily_research/daily_research.db"
+  },
+
+  "favorites": {
+    "auto_favorite_qualified_papers": false
+  },
+
+  "history_maintenance": {
+    "max_papers_per_run": 3,
+    "run_mode": "idle",
+    "time_window_start": "00:00",
+    "time_window_end": "06:00"
+  },
+
+  "legacy_history": {
+    "full_repair_enabled": false
+  },
+
+  "pdf_parser": {
+    "mode": "mineru",
+    "mineru_model_version": "pipeline",
+    "poll_interval": 3,
+    "poll_timeout": 300,
+    "download_max_bytes": 26214400
+  },
+
+  "report_settings": {
+    "enable_html_report": true,
+    "enable_markdown_report": true
+  },
+
+  "auto_update": {
+    "enabled": true
+  },
+
+  "token_tracking": {
+    "enabled": true
+  },
+
+  "proxy": {
+    "enabled": false,
+    "url": "",
+    "no_proxy": "localhost,127.0.0.1",
+    "scope": {
+      "arxiv": true,
+      "openalex": false,
+      "huggingface_papers": false,
+      "semantic_scholar": false,
+      "llm_api": false,
+      "notifications": false,
+      "webdav": true,
+      "update_check": false
+    }
+  },
+
+  "webdav": {
+    "enabled": false,
+    "remote_path": "/arxiv-daily-researcher/",
+    "sync_mode": "after_report",
+    "cron_schedule": "0 23 * * *",
+    "sync_configs": false,
+    "sync_history": false,
+    "sync_keywords": false,
+    "sync_reports": false
+  },
+
+  "backup": {
+    "enabled": true,
+    "local_retention_days": 7,
+    "same_day_max_count": 0
+  },
+
+  "trend_research": {
+    "default_date_range_days": 365,
+    "max_results": 200,
+    "sort_order": "ascending",
+    "report_position": "end",
+    "generate_tldr": true,
+    "tldr_batch_size": 10,
+    "output_formats": [
+      "markdown",
+      "html"
+    ],
+    "enabled_skills": [
+      "comprehensive_analysis"
+    ],
+    "analysis_prompt": ""
+  }
+}
