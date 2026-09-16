@@ -1429,9 +1429,13 @@ class DailyResearchPipeline:
                         try:
                             NotifierAgent().notify(receipt_fail_result)
                             NotifierAgent().notify_error(
-                                "source_scan_receipt",
-                                "数据源扫描收据持久化失败；本次日报已终止，"
-                                "以避免将无完整扫描证据的结果标记为成功。",
+                                "error_generic",
+                                error_type="数据源扫描收据",
+                                error_detail=(
+                                    "数据源扫描收据持久化失败；本次日报已终止，"
+                                    "以避免将无完整扫描证据的结果标记为成功。"
+                                ),
+                                suggestion="请检查 SQLite 数据目录权限与磁盘空间。",
                             )
                         except Exception as ne:
                             logger.warning("发送扫描收据错误通知失败: %s", ne)
@@ -1451,8 +1455,13 @@ class DailyResearchPipeline:
                         try:
                             NotifierAgent().notify(fetch_fail_result)
                             NotifierAgent().notify_error(
-                                "arxiv_fetch",
-                                f"ArXiv 论文抓取失败\n\n错误详情：{error_detail}\n\n建议检查网络连接及 ArXiv 服务状态。",
+                                "error_network",
+                                service="ArXiv",
+                                error_detail=error_detail,
+                                suggestion=(
+                                    "系统会在下次运行自动重试失败领域并扩展恢复窗口。"
+                                    "若持续出现 429，可减少 target_domains 中的领域数量。"
+                                ),
                             )
                         except Exception as ne:
                             logger.warning(f"发送错误通知失败: {ne}")
@@ -1475,10 +1484,10 @@ class DailyResearchPipeline:
                         try:
                             NotifierAgent().notify(fetch_fail_result)
                             NotifierAgent().notify_error(
-                                "huggingface_papers_fetch",
-                                "Hugging Face Papers 抓取失败\n\n"
-                                f"错误详情：{error_detail}\n\n"
-                                "已终止本次日报，以避免产生不完整的数据源结果。",
+                                "error_network",
+                                service="Hugging Face Papers",
+                                error_detail=error_detail,
+                                suggestion="已终止本次日报。下次运行将重试完整抓取。",
                             )
                         except Exception as ne:
                             logger.warning("发送错误通知失败: %s", ne)
@@ -1502,10 +1511,13 @@ class DailyResearchPipeline:
                         try:
                             NotifierAgent().notify(fetch_fail_result)
                             NotifierAgent().notify_error(
-                                "openalex_fetch",
-                                "OpenAlex 期刊论文抓取失败\n\n"
-                                f"错误详情：{error_detail}\n\n"
-                                "已终止本次日报，以避免产生不完整的期刊数据源结果。",
+                                "error_network",
+                                service="OpenAlex",
+                                error_detail=error_detail,
+                                suggestion=(
+                                    "已终止本次日报。请检查 OPENALEX_API_KEY 与网络连接，"
+                                    "下次运行将重试完整抓取。"
+                                ),
                             )
                         except Exception as ne:
                             logger.warning("发送错误通知失败: %s", ne)
