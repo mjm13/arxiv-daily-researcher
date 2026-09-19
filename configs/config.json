@@ -194,7 +194,7 @@
   },
   "daily_research": {
     "enable_deep_analysis": true,
-    "max_papers_per_run": 80,
+    "max_papers_per_run": 0,
     "run_time": "08:00",
     "db_path": "data/daily_research/daily_research.db"
   },

@@ -552,6 +552,58 @@ class DailyResearchStore:
             )
 
     @staticmethod
+    def _reconcile_paper_json_identity(
+        row: sqlite3.Row, canonical_id: str, version: int
+    ) -> Optional[Dict[str, Any]]:
+        """Return an updated ``paper_json`` payload when column identity diverges.
+
+        Older releases normalized ``canonical_id`` in place but left legacy
+        DOI URL values inside ``paper_json``.  ``select_pending_papers`` treats
+        that mismatch as a hard failure, so every connect must resync payloads.
+        """
+        try:
+            payload = json.loads(row["paper_json"])
+        except (TypeError, ValueError, json.JSONDecodeError):
+            return None
+        if not isinstance(payload, dict):
+            return None
+
+        try:
+            from sources.base_source import PaperMetadata
+
+            paper = PaperMetadata.from_dict(payload)
+        except ValueError:
+            return None
+
+        source = str(row["source"] or "").strip().lower()
+        paper_id = str(row["paper_id"] or "").strip()
+        desired_version = max(0, int(version or 0))
+        expected_identity = (source, canonical_id, desired_version)
+        actual_identity = (
+            paper.source,
+            paper.canonical_id or paper.paper_id,
+            paper.version or 0,
+        )
+        if paper.paper_id == paper_id and actual_identity == expected_identity:
+            return None
+
+        payload["source"] = source
+        payload["paper_id"] = paper_id
+        payload["canonical_id"] = canonical_id
+        if source == "arxiv" and desired_version:
+            payload["version"] = desired_version
+        elif source != "arxiv":
+            payload["version"] = None
+
+        normalized_doi = DailyResearchStore._normalized_doi(canonical_id)
+        if normalized_doi is not None:
+            existing_doi = payload.get("doi")
+            if not existing_doi or DailyResearchStore._normalized_doi(existing_doi) != normalized_doi:
+                payload["doi"] = canonical_id if canonical_id.startswith("10.") else existing_doi
+
+        return payload
+
+    @staticmethod
     def _migrate_paper_identity(conn):
         """Add identity columns to databases created by the first persistence patch."""
         columns = {
@@ -572,8 +624,9 @@ class DailyResearchStore:
             return
 
         rows = conn.execute(
-            "SELECT source, paper_id, canonical_id, version FROM daily_papers"
+            "SELECT source, paper_id, canonical_id, version, paper_json FROM daily_papers"
         ).fetchall()
+        json_updates: list[tuple[str, str, str]] = []
         for row in rows:
             canonical_id, desired_version = DailyResearchStore._migration_identity(
                 row["source"],
@@ -588,6 +641,24 @@ class DailyResearchStore:
                     "WHERE source = ? AND paper_id = ?",
                     (canonical_id, desired_version, row["source"], row["paper_id"]),
                 )
+
+            updated_payload = DailyResearchStore._reconcile_paper_json_identity(
+                row, canonical_id, desired_version
+            )
+            if updated_payload is not None:
+                json_updates.append(
+                    (
+                        json.dumps(updated_payload, ensure_ascii=False),
+                        row["source"],
+                        row["paper_id"],
+                    )
+                )
+
+        if json_updates:
+            conn.executemany(
+                "UPDATE daily_papers SET paper_json = ? WHERE source = ? AND paper_id = ?",
+                json_updates,
+            )
 
     @staticmethod
     def _migrate_paper_queue_scope(conn):

@@ -452,6 +452,41 @@ class IdentityStoreTests(unittest.TestCase):
             self.assertEqual(previous["paper_id"], "2501.12345v1")
             self.assertEqual(previous["version"], 1)
 
+    def test_migrate_resyncs_paper_json_after_doi_canonical_backfill(self):
+        """Column-level DOI normalization must also repair persisted paper_json."""
+        doi_url = "https://doi.org/10.1103/y6z6-h16k"
+        bare_doi = "10.1103/y6z6-h16k"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            db_path = Path(temp_dir) / "daily.db"
+            store = DailyResearchStore(db_path)
+            run_id = store.start_run(0)
+            journal = PaperMetadata(
+                paper_id=doi_url,
+                title="Pending journal paper",
+                authors=["Author"],
+                abstract="abstract",
+                published_date=datetime.now(timezone.utc),
+                url=doi_url,
+                source="prl",
+                doi=bare_doi,
+            )
+            store.register_paper_candidates(run_id, {"prl": [journal]})
+            with store._connect() as conn:
+                conn.execute(
+                    "UPDATE daily_papers SET canonical_id = ? "
+                    "WHERE source = 'prl' AND paper_id = ?",
+                    (bare_doi, doi_url),
+                )
+
+            reopened = DailyResearchStore(db_path)
+            selected, total = reopened.select_pending_papers(["prl"], limit=0)
+
+            self.assertEqual(total, 1)
+            self.assertEqual(selected["prl"][0].canonical_id, bare_doi)
+            record = reopened.get_paper_record("prl", doi_url)
+            persisted = json.loads(record["paper_json"])
+            self.assertEqual(persisted["canonical_id"], bare_doi)
+
     def test_delivery_identity_migration_deduplicates_legacy_doi_aliases(self):
         """A DOI URL and bare DOI may merge after a legacy-history import."""
         with tempfile.TemporaryDirectory() as temp_dir:
