@@ -1,0 +1,125 @@
+name: Monthly Research Review
+
+on:
+  # 北京时间每月 1 日 00:00（UTC 16:00 每月 1 日）回顾上一自然月
+  schedule:
+    - cron: '0 16 1 * *'
+  workflow_dispatch:
+    inputs:
+      skip_keyword_report:
+        description: '跳过关键词趋势报告（仅跑 Trend 专题月报）'
+        required: false
+        default: false
+        type: boolean
+      skip_trend_review:
+        description: '跳过 Trend 专题月报（仅跑关键词趋势报告）'
+        required: false
+        default: false
+        type: boolean
+
+# 与 daily-run / trend-research 共享 SQLite 状态，禁止并发。
+concurrency:
+  group: research-state
+  cancel-in-progress: false
+
+jobs:
+  monthly-review:
+    runs-on: ubuntu-latest
+    # 8 个关键词 × 单次 Trend 可能较久；与 daily-run 同级上限。
+    timeout-minutes: 480
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: requirements-core.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-core.txt
+
+      - name: Create .env from secrets
+        run: |
+          cat > .env << 'ENVEOF'
+          CHEAP_LLM__API_KEY=${{ secrets.CHEAP_LLM_API_KEY }}
+          CHEAP_LLM__BASE_URL=${{ secrets.CHEAP_LLM_BASE_URL }}
+          CHEAP_LLM__MODEL_NAME=${{ secrets.CHEAP_LLM_MODEL_NAME }}
+          CHEAP_LLM__TEMPERATURE=${{ secrets.CHEAP_LLM_TEMPERATURE }}
+          SMART_LLM__API_KEY=${{ secrets.SMART_LLM_API_KEY }}
+          SMART_LLM__BASE_URL=${{ secrets.SMART_LLM_BASE_URL }}
+          SMART_LLM__MODEL_NAME=${{ secrets.SMART_LLM_MODEL_NAME }}
+          SMART_LLM__TEMPERATURE=${{ secrets.SMART_LLM_TEMPERATURE }}
+          OPENALEX_API_KEY=${{ secrets.OPENALEX_API_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY=${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          ENABLE_NOTIFICATIONS=${{ secrets.ENABLE_NOTIFICATIONS }}
+          SMTP_HOST=${{ secrets.SMTP_HOST }}
+          SMTP_PORT=${{ secrets.SMTP_PORT }}
+          SMTP_USER=${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM=${{ secrets.SMTP_FROM }}
+          SMTP_TO=${{ secrets.SMTP_TO }}
+          WECHAT_WEBHOOK_URL=${{ secrets.WECHAT_WEBHOOK_URL }}
+          DINGTALK_WEBHOOK_URL=${{ secrets.DINGTALK_WEBHOOK_URL }}
+          DINGTALK_SECRET=${{ secrets.DINGTALK_SECRET }}
+          TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
+          SLACK_WEBHOOK_URL=${{ secrets.SLACK_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL=${{ secrets.GENERIC_WEBHOOK_URL }}
+          ENVEOF
+
+      - name: Restore persisted SQLite state
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/keywords/
+            data/daily_research/
+          key: research-state-${{ github.run_id }}
+          restore-keys: |
+            research-state-
+
+      - name: Create data directories
+        run: |
+          mkdir -p data/reports/trend_research/markdown \
+                   data/reports/trend_research/html \
+                   data/reports/keyword_trend/markdown \
+                   data/reports/keyword_trend/html \
+                   data/keywords data/daily_research data/run logs runtime
+
+      - name: Prepare runtime config
+        run: cp configs/config.json runtime/config.json
+
+      - name: Keyword trend report (monthly)
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.skip_keyword_report != true }}
+        run: python -m modes.keyword_maintenance
+        env:
+          PYTHONUNBUFFERED: "1"
+
+      - name: Trend research monthly review
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.skip_trend_review != true }}
+        run: python scripts/run_monthly_trend_review.py
+        env:
+          PYTHONUNBUFFERED: "1"
+
+      - name: Upload reports as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monthly-review-${{ github.run_number }}
+          path: |
+            data/reports/trend_research/
+            data/reports/keyword_trend/
+            logs/
+          retention-days: 90
+
+      - name: Save persisted SQLite state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/keywords/
+            data/daily_research/
+          key: research-state-${{ github.run_id }}

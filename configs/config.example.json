@@ -337,7 +337,8 @@
   // Trend Research Mode Configuration
   // ==================================================
   "trend_research": {
-    "default_date_range_days": 365,
+    // Used when CLI omits --date-from/--date-to; monthly Actions compute the previous calendar month explicitly.
+    "default_date_range_days": 31,
     "max_results": 500,
     "sort_order": "ascending",
     "report_position": "end",
@@ -350,6 +351,12 @@
     "enabled_skills": [
       "comprehensive_analysis"
     ],
+    // One keyword per monthly trend run (AND semantics); align with daily primary keywords when possible.
+    "monthly_categories": ["quant-ph"],
+    "monthly_keywords": [
+      "quantum error correction"
+    ],
+    // Optional SMART_LLM instruction for comprehensive_analysis; empty uses the built-in skill template.
     "analysis_prompt": ""
   }
 }

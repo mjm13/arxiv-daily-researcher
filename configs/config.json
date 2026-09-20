@@ -137,7 +137,7 @@
     },
     "report": {
       "enabled": true,
-      "frequency": "daily"
+      "frequency": "monthly"
     }
   },
 
@@ -275,7 +275,7 @@
   },
 
   "trend_research": {
-    "default_date_range_days": 365,
+    "default_date_range_days": 31,
     "max_results": 200,
     "sort_order": "ascending",
     "report_position": "end",
@@ -288,6 +288,22 @@
     "enabled_skills": [
       "comprehensive_analysis"
     ],
-    "analysis_prompt": ""
+    "monthly_categories": [
+      "cs.CV",
+      "cs.LG",
+      "eess.IV",
+      "q-bio.QM"
+    ],
+    "monthly_keywords": [
+      "medical image analysis",
+      "medical image segmentation",
+      "deep learning medical imaging",
+      "AI for diagnosis",
+      "prognosis prediction",
+      "surgical planning",
+      "multimodal medical imaging",
+      "foundation models medical imaging"
+    ],
+    "analysis_prompt": "你是医学影像与人工智能领域的资深研究分析师。请基于检索到的本月全部论文（标题、作者、日期、分类、摘要与 TLDR），撰写一份结构化的「月度研究回顾」Markdown 报告。\n\n必须包含以下章节（使用二级标题）：\n1. **本月概览**：用 3–5 句话概括本月该主题的整体活跃度与主旋律。\n2. **热点话题与方法**：列出 3–5 个出现频率最高或影响最大的技术方向、模型范式或数据集；说明它们之间的关联。\n3. **时间演变**：按提交时间顺序，指出月内早期与晚期的关注重心是否发生转移（若有）。\n4. **代表工作与突破**：点名 3–5 篇值得精读的代表作（给出 arXiv ID 或标题），说明理由。\n5. **核心研究者与机构**：归纳重复出现的作者或团队（如有）。\n6. **研究空白与未来方向**：基于摘要信息指出尚未充分覆盖的问题、或可跟进的方向。\n7. **与临床/应用的衔接**：若涉及诊断、预后、手术规划等，单独简要评述临床转化信号。\n\n写作要求：\n- 使用中文，语气客观、信息密度高，避免空洞形容词。\n- 不要编造论文中未出现的方法、数值或结论；信息不足处明确写「本批摘要未体现」。\n- 若样本量很少（少于 10 篇），在概览中说明并相应缩短各节。"
   }
 }

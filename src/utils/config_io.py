@@ -264,6 +264,28 @@ def validate_config_document(config: object) -> Dict[str, Any]:
                 raise ValueError(
                     "data_sources.arxiv.max_results_per_domain 必须是非负整数（0 表示不限）"
                 )
+    trend_research = config.get("trend_research")
+    if trend_research is not None:
+        if not isinstance(trend_research, dict):
+            raise ValueError("trend_research 配置段必须是对象")
+        monthly_keywords = trend_research.get("monthly_keywords")
+        if monthly_keywords is not None:
+            if not isinstance(monthly_keywords, list):
+                raise ValueError("trend_research.monthly_keywords 必须是列表")
+            for item in monthly_keywords:
+                if not isinstance(item, str) or not item.strip():
+                    raise ValueError(
+                        "trend_research.monthly_keywords 中的每一项必须是非空字符串"
+                    )
+        monthly_categories = trend_research.get("monthly_categories")
+        if monthly_categories is not None:
+            if not isinstance(monthly_categories, list):
+                raise ValueError("trend_research.monthly_categories 必须是列表")
+            for item in monthly_categories:
+                if not isinstance(item, str) or not item.strip():
+                    raise ValueError(
+                        "trend_research.monthly_categories 中的每一项必须是非空字符串"
+                    )
     return config
 
 # ==================== Data Source Options ====================
