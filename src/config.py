@@ -197,6 +197,11 @@ class Settings(BaseSettings):
     ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS: int = 2
     # 0 = 不限；正整数表示每个 ArXiv 领域在一次扫描中最多登记的新候选数。
     ARXIV_MAX_RESULTS_PER_DOMAIN: int = 0
+    # domains = 按领域全扫；keywords = 主关键词 API 搜索（见 ARXIV_KEYWORD_OPERATOR）。
+    ARXIV_FETCH_MODE: str = "domains"
+    ARXIV_KEYWORD_OPERATOR: str = "and"
+    # 0 = 不限；keywords 模式下 OR/AND 合并后的 ArXiv 结果上限。
+    ARXIV_MAX_RESULTS_TOTAL: int = 0
 
     # Hugging Face Papers 配置。该日榜是可选的补充发现源，不是 arXiv
     # 分类的全量替代；默认延迟读取已形成的榜单，并对近期日期重扫以抵御
@@ -667,6 +672,37 @@ class Settings(BaseSettings):
                                 "必须是非负整数（0 表示不限）"
                             )
                         self.ARXIV_MAX_RESULTS_PER_DOMAIN = max_per_domain
+                        fetch_mode = str(
+                            arxiv_cfg.get("fetch_mode", self.ARXIV_FETCH_MODE)
+                        ).strip().lower()
+                        if fetch_mode not in {"domains", "keywords"}:
+                            raise ValueError(
+                                "data_sources.arxiv.fetch_mode 必须是 'domains' 或 'keywords'"
+                            )
+                        self.ARXIV_FETCH_MODE = fetch_mode
+                        keyword_operator = str(
+                            arxiv_cfg.get(
+                                "keyword_operator", self.ARXIV_KEYWORD_OPERATOR
+                            )
+                        ).strip().lower()
+                        if keyword_operator not in {"and", "or"}:
+                            raise ValueError(
+                                "data_sources.arxiv.keyword_operator 必须是 'and' 或 'or'"
+                            )
+                        self.ARXIV_KEYWORD_OPERATOR = keyword_operator
+                        max_results_total = arxiv_cfg.get(
+                            "max_results_total", self.ARXIV_MAX_RESULTS_TOTAL
+                        )
+                        if (
+                            isinstance(max_results_total, bool)
+                            or not isinstance(max_results_total, int)
+                            or max_results_total < 0
+                        ):
+                            raise ValueError(
+                                "data_sources.arxiv.max_results_total "
+                                "必须是非负整数（0 表示不限）"
+                            )
+                        self.ARXIV_MAX_RESULTS_TOTAL = max_results_total
                 if "huggingface_papers" in ds_config:
                     hf_cfg = ds_config["huggingface_papers"]
                     if isinstance(hf_cfg, dict):
@@ -993,6 +1029,18 @@ class Settings(BaseSettings):
                         "必须是非负整数（0 表示不放弃）"
                     )
                 self.DAILY_PENDING_RETENTION_DAYS = pending_retention_days
+                scan_window_days = daily_cfg.get(
+                    "scan_window_days", self.DAILY_SCAN_WINDOW_DAYS
+                )
+                if (
+                    isinstance(scan_window_days, bool)
+                    or not isinstance(scan_window_days, int)
+                    or scan_window_days < 1
+                ):
+                    raise ValueError(
+                        "daily_research.scan_window_days 必须是正整数"
+                    )
+                self.DAILY_SCAN_WINDOW_DAYS = scan_window_days
                 run_time = daily_cfg.get("run_time", self.DAILY_RUN_TIME)
                 if not isinstance(run_time, str) or not re.fullmatch(
                     r"\d{1,2}:\d{2}", run_time.strip()

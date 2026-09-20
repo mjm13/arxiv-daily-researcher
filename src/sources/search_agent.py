@@ -5,7 +5,7 @@
 """
 
 import logging
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable, List, Dict, Optional
 
@@ -388,22 +388,31 @@ class SearchAgent:
         self,
         days: int = 7,
         scan_receipt_callbacks: Optional[Dict[str, Callable[[Dict[str, Any]], None]]] = None,
+        arxiv_keywords: Optional[List[str]] = None,
     ) -> Dict[str, List[PaperMetadata]]:
         """
         从所有启用的数据源抓取论文。
 
         参数:
             days: 搜索最近 N 天的论文
-            scan_receipt_callbacks: 可选的报告来源→回调映射。ArXiv 写入
-                完整的领域级收据；Hugging Face Papers 和 OpenAlex 期刊写入
-                最小的来源级终态收据。任一收据持久化失败都会中止本次扫描。
+            scan_receipt_callbacks: 可选的报告来源→回调映射。ArXiv 领域模式
+                写入完整的领域级收据；ArXiv 关键词模式、Hugging Face Papers
+                和 OpenAlex 期刊写入最小的来源级终态收据。任一收据持久化失败
+                都会中止本次扫描。
+            arxiv_keywords: 可选主关键词列表；``ARXIV_FETCH_MODE=keywords`` 时
+                用于 OR/AND API 搜索（缺省回退到 settings.PRIMARY_KEYWORDS）。
 
         返回:
             Dict[str, List[PaperMetadata]]: {数据源名: 论文列表}
             例如: {"arxiv": [...], "prl": [...], "pra": [...]}
         """
+        from config import settings as _settings
+
         results = {}
         receipt_callbacks = scan_receipt_callbacks or {}
+        arxiv_fetch_mode = str(
+            getattr(_settings, "ARXIV_FETCH_MODE", "domains")
+        ).strip().lower()
 
         for source_name, source in self.sources.items():
             logger.info(f">>> 从 {source.display_name} 抓取论文...")
@@ -415,12 +424,60 @@ class SearchAgent:
 
             try:
                 if source_name == "arxiv":
-                    papers = source.fetch_papers(
-                        days=days,
-                        domains=self.arxiv_domains,
-                        scan_receipt_callback=receipt_callbacks.get("arxiv"),
-                    )
-                    results["arxiv"] = papers
+                    if arxiv_fetch_mode == "keywords":
+                        keywords = [
+                            str(keyword).strip()
+                            for keyword in (
+                                arxiv_keywords
+                                if arxiv_keywords is not None
+                                else getattr(_settings, "PRIMARY_KEYWORDS", [])
+                            )
+                            if str(keyword).strip()
+                        ]
+                        if not keywords:
+                            raise ValueError(
+                                "ArXiv 关键词抓取模式需要至少一个主关键词"
+                            )
+                        today = date.today()
+                        date_from = today - timedelta(days=max(1, int(days)))
+                        max_results = int(
+                            getattr(_settings, "ARXIV_MAX_RESULTS_TOTAL", 0) or 0
+                        )
+                        keyword_operator = str(
+                            getattr(_settings, "ARXIV_KEYWORD_OPERATOR", "and")
+                        ).strip().lower()
+                        logger.info(
+                            "[ArXiv] 关键词 %s 搜索: %d 个词, 窗口 %d 天, "
+                            "分类过滤 %d 个, 上限 %s",
+                            keyword_operator.upper(),
+                            len(keywords),
+                            days,
+                            len(self.arxiv_domains),
+                            max_results if max_results > 0 else "不限",
+                        )
+                        papers = source.search_by_keywords(
+                            keywords=keywords,
+                            date_from=date_from,
+                            date_to=today,
+                            categories=self.arxiv_domains,
+                            max_results=max_results,
+                            keyword_operator=keyword_operator,  # type: ignore[arg-type]
+                            sort_order="descending",
+                        )
+                        results["arxiv"] = papers
+                        self._emit_source_scan_receipt(
+                            receipt_callbacks.get("arxiv"),
+                            "arxiv",
+                            "succeeded",
+                            len(papers),
+                        )
+                    else:
+                        papers = source.fetch_papers(
+                            days=days,
+                            domains=self.arxiv_domains,
+                            scan_receipt_callback=receipt_callbacks.get("arxiv"),
+                        )
+                        results["arxiv"] = papers
 
                 elif source_name == "openalex":
                     # OpenAlex 返回的论文按期刊分组
@@ -457,9 +514,16 @@ class SearchAgent:
 
             except Exception as exc:
                 # 抓取错误不能被转换为空列表，否则上层会生成看似成功但实际
-                # 漏论文的日报。除 arXiv 外的来源由这里写失败终态收据；
-                # arXiv 已在其两个查询/领域循环内写入更细的失败收据。
-                if source_name != "arxiv":
+                # 漏论文的日报。ArXiv 领域模式在其两个查询/领域循环内写入
+                # 更细的失败收据；关键词模式与其他来源在此写来源级终态收据。
+                if source_name == "arxiv" and arxiv_fetch_mode == "keywords":
+                    self._emit_source_scan_receipt(
+                        receipt_callbacks.get("arxiv"),
+                        "arxiv",
+                        "failed",
+                        error=exc,
+                    )
+                elif source_name != "arxiv":
                     for report_source in receipt_sources:
                         self._emit_source_scan_receipt(
                             receipt_callbacks.get(report_source),

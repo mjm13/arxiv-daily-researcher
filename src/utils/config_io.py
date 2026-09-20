@@ -149,6 +149,13 @@ def validate_config_document(config: object) -> Dict[str, Any]:
             raise ValueError(
                 "daily_research.pending_retention_days 必须是非负整数（0 表示不放弃）"
             )
+        scan_window_days = daily_research.get("scan_window_days", 3)
+        if (
+            isinstance(scan_window_days, bool)
+            or not isinstance(scan_window_days, int)
+            or scan_window_days < 1
+        ):
+            raise ValueError("daily_research.scan_window_days 必须是正整数")
     history_maintenance = config.get("history_maintenance")
     if history_maintenance is not None:
         if not isinstance(history_maintenance, dict):
@@ -223,6 +230,40 @@ def validate_config_document(config: object) -> Dict[str, Any]:
         if not isinstance(extra_sources.get("enabled", False), bool):
             raise ValueError("data_sources.extra_sources.enabled 必须是布尔值")
         validate_source_definitions(extra_sources.get("definitions", []))
+        arxiv_cfg = data_sources.get("arxiv")
+        if arxiv_cfg is not None:
+            if not isinstance(arxiv_cfg, dict):
+                raise ValueError("data_sources.arxiv 必须是对象")
+            fetch_mode = str(arxiv_cfg.get("fetch_mode", "domains")).strip().lower()
+            if fetch_mode not in {"domains", "keywords"}:
+                raise ValueError(
+                    "data_sources.arxiv.fetch_mode 必须是 'domains' 或 'keywords'"
+                )
+            keyword_operator = str(
+                arxiv_cfg.get("keyword_operator", "and")
+            ).strip().lower()
+            if keyword_operator not in {"and", "or"}:
+                raise ValueError(
+                    "data_sources.arxiv.keyword_operator 必须是 'and' 或 'or'"
+                )
+            max_results_total = arxiv_cfg.get("max_results_total", 0)
+            if (
+                isinstance(max_results_total, bool)
+                or not isinstance(max_results_total, int)
+                or max_results_total < 0
+            ):
+                raise ValueError(
+                    "data_sources.arxiv.max_results_total 必须是非负整数（0 表示不限）"
+                )
+            max_per_domain = arxiv_cfg.get("max_results_per_domain", 0)
+            if (
+                isinstance(max_per_domain, bool)
+                or not isinstance(max_per_domain, int)
+                or max_per_domain < 0
+            ):
+                raise ValueError(
+                    "data_sources.arxiv.max_results_per_domain 必须是非负整数（0 表示不限）"
+                )
     return config
 
 # ==================== Data Source Options ====================

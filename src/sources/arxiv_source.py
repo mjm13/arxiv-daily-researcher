@@ -14,7 +14,7 @@ import signal
 import time
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
-from typing import Any, Callable, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Literal, Optional
 
 from .base_source import BasePaperSource, PaperMetadata
 
@@ -649,14 +649,16 @@ class ArxivSource(BasePaperSource):
         sort_order: str = "ascending",
         max_results: int = 500,
         categories: Optional[List[str]] = None,
+        keyword_operator: Literal["and", "or"] = "and",
     ) -> List[PaperMetadata]:
         """
-        按关键词和时间范围搜索 ArXiv 论文（研究趋势模式专用）。
+        按关键词和时间范围搜索 ArXiv 论文。
 
-        使用 all: 字段搜索（标题+摘要+全文），多个关键词用 AND 连接。
-        时间范围通过 submittedDate:[YYYYMMDD TO YYYYMMDD] 过滤。
-        可选地通过 cat: 限制搜索分类，多个分类用 OR 连接。
-        不查询历史记录，不去重，每次独立执行。
+        使用 all: 字段搜索（标题+摘要+全文）。多个关键词默认 AND 连接
+        （趋势模式）；Daily 关键词模式使用 OR。时间范围通过
+        submittedDate:[YYYYMMDD TO YYYYMMDD] 过滤。可选地通过 cat: 限制
+        搜索分类，多个分类用 OR 连接。不查询 JSON 历史；API 结果按
+        paper_id 去重（Daily 仍由 SQLite 交付账本过滤已推送论文）。
 
         参数:
             keywords: 搜索关键词列表
@@ -665,19 +667,32 @@ class ArxivSource(BasePaperSource):
             sort_order: 排序方向，"ascending"(旧→新) 或 "descending"(新→旧)
             max_results: 最大结果数（0 = 不限制）
             categories: ArXiv 分类列表，如 ["quant-ph", "cond-mat"]；空列表则不限制分类
+            keyword_operator: 关键词组合方式，"and" 或 "or"
 
         返回:
-            按发表时间排序的论文列表
+            按提交时间排序的论文列表（paper_id 去重）
         """
-        # 构建查询：多个关键词用 AND 连接，每个关键词用 all: 搜索
+        normalized_operator = str(keyword_operator or "and").strip().lower()
+        if normalized_operator not in {"and", "or"}:
+            raise ValueError("keyword_operator 必须是 'and' 或 'or'")
+
         keyword_parts = []
         for kw in keywords:
-            # 如果关键词包含空格，用引号包裹做短语匹配
-            if " " in kw:
-                keyword_parts.append(f'all:"{kw}"')
+            normalized_kw = str(kw or "").strip()
+            if not normalized_kw:
+                continue
+            if " " in normalized_kw:
+                keyword_parts.append(f'all:"{normalized_kw}"')
             else:
-                keyword_parts.append(f"all:{kw}")
-        keyword_query = " AND ".join(keyword_parts)
+                keyword_parts.append(f"all:{normalized_kw}")
+        if not keyword_parts:
+            raise ValueError("关键词搜索至少需要一个非空关键词")
+
+        joiner = " OR " if normalized_operator == "or" else " AND "
+        if len(keyword_parts) == 1:
+            keyword_query = keyword_parts[0]
+        else:
+            keyword_query = f"({joiner.join(keyword_parts)})"
 
         # 分类过滤（可选）：多个分类用 OR 连接
         if categories:
@@ -743,6 +758,20 @@ class ArxivSource(BasePaperSource):
                         )
                         papers.append(metadata)
 
+                deduped: List[PaperMetadata] = []
+                seen_ids: set[str] = set()
+                for paper in papers:
+                    if paper.paper_id in seen_ids:
+                        continue
+                    seen_ids.add(paper.paper_id)
+                    deduped.append(paper)
+                if len(deduped) != len(papers):
+                    logger.info(
+                        "[ArXiv] 关键词搜索 paper_id 去重: %s -> %s",
+                        len(papers),
+                        len(deduped),
+                    )
+                papers = deduped
                 logger.info(f"[ArXiv] 关键词搜索完成: 共 {len(papers)} 篇论文")
                 last_error = None
                 break

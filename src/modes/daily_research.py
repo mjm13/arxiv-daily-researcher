@@ -1163,12 +1163,33 @@ class DailyResearchPipeline:
             logger.info(">>> 阶段1: 加载配置...")
 
             logger.info(f"启用的数据源: {settings.ENABLED_SOURCES}")
+            arxiv_fetch_mode = str(
+                getattr(settings, "ARXIV_FETCH_MODE", "domains")
+            ).strip().lower()
             if "arxiv" in settings.ENABLED_SOURCES:
-                logger.info(f"ArXiv目标领域: {settings.TARGET_DOMAINS}")
+                if arxiv_fetch_mode == "keywords":
+                    keyword_operator = str(
+                        getattr(settings, "ARXIV_KEYWORD_OPERATOR", "or")
+                    ).strip().upper()
+                    max_total = int(getattr(settings, "ARXIV_MAX_RESULTS_TOTAL", 0) or 0)
+                    logger.info(
+                        "ArXiv抓取模式: 主关键词 %s 搜索（%d 个词，上限 %s）",
+                        keyword_operator,
+                        len(getattr(settings, "PRIMARY_KEYWORDS", [])),
+                        max_total if max_total > 0 else "不限",
+                    )
+                    logger.info(f"ArXiv分类过滤: {settings.TARGET_DOMAINS}")
+                else:
+                    logger.info(f"ArXiv目标领域: {settings.TARGET_DOMAINS}")
             if settings.TARGET_JOURNALS:
                 logger.info(f"目标期刊: {settings.TARGET_JOURNALS}")
             logger.info(f"搜索窗口: 最近 {settings.DAILY_SCAN_WINDOW_DAYS} 天（固定；过去日期由补跑处理）")
-            logger.info("日报抓取: 完整扫描时间窗口内的全部论文（由请求限速和重试保护服务）")
+            if arxiv_fetch_mode == "keywords":
+                logger.info(
+                    "日报 ArXiv 抓取: 关键词 API 搜索 + 分类过滤（不叠加 announcement grace）"
+                )
+            else:
+                logger.info("日报抓取: 完整扫描时间窗口内的全部论文（由请求限速和重试保护服务）")
             logger.info(f"启用Reference提取: {settings.ENABLE_REFERENCE_EXTRACTION}")
 
             # ==================== 阶段2: 关键词准备 ====================
@@ -1428,6 +1449,7 @@ class DailyResearchPipeline:
                     papers_by_source: Dict[str, List[PaperMetadata]] = search_agent.fetch_all_papers(
                         days=effective_scan_days,
                         scan_receipt_callbacks=scan_receipt_callbacks,
+                        arxiv_keywords=settings.PRIMARY_KEYWORDS,
                     )
                 except SourceScanReceiptError as sre:
                     error_detail = str(sre)

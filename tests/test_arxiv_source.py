@@ -1,7 +1,7 @@
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -360,6 +360,91 @@ class ArxivFetchTests(unittest.TestCase):
             proxy_dict=None,
             announcement_lookback_grace_days=4,
         )
+
+    def test_search_by_keywords_builds_or_query_with_categories_and_dates(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            source = ArxivSource(Path(temp_dir))
+            client = _FakeClient([], [])
+            source.client = client
+            source.search_by_keywords(
+                keywords=["medical image", "segmentation"],
+                date_from=date(2026, 1, 1),
+                date_to=date(2026, 1, 7),
+                categories=["cs.CV", "cs.LG"],
+                max_results=100,
+                keyword_operator="or",
+                sort_order="descending",
+            )
+
+        query = client.searches[0].query
+        self.assertIn('all:"medical image" OR all:segmentation', query)
+        self.assertIn("(cat:cs.CV OR cat:cs.LG)", query)
+        self.assertIn("submittedDate:[202601010000 TO 202601072359]", query)
+        self.assertEqual(arxiv.SortOrder.Descending, client.searches[0].sort_order)
+        self.assertEqual(100, client.searches[0].max_results)
+
+    def test_search_by_keywords_deduplicates_paper_ids(self):
+        now = datetime.now(timezone.utc)
+        submitted = [
+            _FakeResult("dup-v1", now, now),
+            _FakeResult("dup-v1", now, now),
+            _FakeResult("unique-v1", now, now),
+        ]
+        with tempfile.TemporaryDirectory() as temp_dir:
+            source = ArxivSource(Path(temp_dir))
+            source.client = _FakeClient(submitted, [])
+            papers = source.search_by_keywords(
+                keywords=["test"],
+                date_from=date(2026, 1, 1),
+                date_to=date(2026, 1, 7),
+            )
+
+        self.assertEqual(["dup-v1", "unique-v1"], [paper.paper_id for paper in papers])
+
+    @patch("sources.search_agent.ArxivSource")
+    def test_search_agent_keywords_mode_uses_search_by_keywords_and_emits_receipt(
+        self, arxiv_source_cls
+    ):
+        fake_settings = SimpleNamespace(
+            ARXIV_FETCH_MODE="keywords",
+            ARXIV_KEYWORD_OPERATOR="or",
+            ARXIV_MAX_RESULTS_TOTAL=100,
+            PRIMARY_KEYWORDS=["kw1", "kw2"],
+            ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS=2,
+            ARXIV_MAX_RESULTS_PER_DOMAIN=0,
+            get_proxy_dict=lambda _source: None,
+        )
+        fake_source = arxiv_source_cls.return_value
+        fake_source.display_name = "ArXiv"
+        fake_source.search_by_keywords.return_value = [
+            SimpleNamespace(paper_id="paper-1"),
+        ]
+        receipts = []
+        with tempfile.TemporaryDirectory() as temp_dir, patch("config.settings", fake_settings):
+            agent = SearchAgent(
+                history_dir=Path(temp_dir),
+                enabled_sources=["arxiv"],
+                arxiv_domains=["cs.CV"],
+                enable_semantic_scholar=False,
+            )
+            result = agent.fetch_all_papers(
+                days=7,
+                scan_receipt_callbacks={"arxiv": receipts.append},
+                arxiv_keywords=["kw1", "kw2"],
+            )
+
+        fake_source.fetch_papers.assert_not_called()
+        fake_source.search_by_keywords.assert_called_once()
+        kwargs = fake_source.search_by_keywords.call_args.kwargs
+        self.assertEqual(["kw1", "kw2"], kwargs["keywords"])
+        self.assertEqual(["cs.CV"], kwargs["categories"])
+        self.assertEqual("or", kwargs["keyword_operator"])
+        self.assertEqual("descending", kwargs["sort_order"])
+        self.assertEqual(100, kwargs["max_results"])
+        self.assertEqual(1, len(result["arxiv"]))
+        self.assertEqual("source_summary_v1", receipts[0]["receipt_kind"])
+        self.assertEqual("succeeded", receipts[0]["status"])
+        self.assertEqual(1, receipts[0]["total_new_candidates"])
 
     @patch("sources.search_agent.ArxivSource")
     def test_search_agent_can_bypass_legacy_history_when_sqlite_is_authoritative(
