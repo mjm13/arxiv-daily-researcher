@@ -1108,6 +1108,18 @@ class DailyResearchPipeline:
             store.record_run_phase(run_id, "prepare")
             logger.info(f"每日研究 SQLite 状态库已启用: {settings.DAILY_RESEARCH_DB_PATH}")
 
+            pending_retention_days = int(
+                getattr(settings, "DAILY_PENDING_RETENTION_DAYS", 0) or 0
+            )
+            if run_kind == "daily" and pending_retention_days > 0:
+                abandoned = store.abandon_stale_pending_papers(pending_retention_days)
+                if abandoned:
+                    logger.info(
+                        "已放弃 %s 篇超过 %s 天仍未完成的 daily pending 论文",
+                        abandoned,
+                        pending_retention_days,
+                    )
+
             # WebDAV is non-critical post-report maintenance. Retry old
             # uploads before the long scan without letting a remote outage
             # affect this run's paper identity or delivery state.

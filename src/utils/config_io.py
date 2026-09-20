@@ -144,6 +144,11 @@ def validate_config_document(config: object) -> Dict[str, Any]:
             raise ValueError(
                 "daily_research.max_papers_per_run 必须是非负整数（0 表示不限）"
             )
+        retention = daily_research.get("pending_retention_days", 0)
+        if isinstance(retention, bool) or not isinstance(retention, int) or retention < 0:
+            raise ValueError(
+                "daily_research.pending_retention_days 必须是非负整数（0 表示不放弃）"
+            )
     history_maintenance = config.get("history_maintenance")
     if history_maintenance is not None:
         if not isinstance(history_maintenance, dict):

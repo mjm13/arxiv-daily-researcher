@@ -195,7 +195,8 @@ class ArxivSource(BasePaperSource):
     def __init__(
         self,
         history_dir: Path,
-        max_results: int = 100,
+        max_results: Optional[int] = None,
+        max_results_per_domain: Optional[int] = None,
         proxy_dict: dict = None,
         announcement_lookback_grace_days: int = 2,
         load_legacy_history: bool = True,
@@ -205,19 +206,29 @@ class ArxivSource(BasePaperSource):
 
         参数:
             history_dir: 历史记录存储目录
-            max_results: 兼容旧配置的参数。日报抓取不再按数量截断，始终扫描时间窗口内的全部结果。
+            max_results: 兼容旧配置的每领域上限别名。
+            max_results_per_domain: 每个领域在一次扫描中最多登记的新候选数；
+                ``0``/``None`` 表示不限，仍完整分页扫描时间窗口。
             proxy_dict: 代理配置字典，如 {"http": "...", "https": "..."}
             announcement_lookback_grace_days: 为公告/API 索引延迟额外回看的天数。
         """
         super().__init__(
             "arxiv", history_dir, load_legacy_history=load_legacy_history
         )
-        self.max_results = max_results
+        configured_cap = (
+            max_results_per_domain
+            if max_results_per_domain is not None
+            else max_results
+        )
+        if configured_cap is None or int(configured_cap) <= 0:
+            self.max_results_per_domain = 0
+        else:
+            self.max_results_per_domain = int(configured_cap)
+        # Backward-compatible alias for older callers/tests.
+        self.max_results = self.max_results_per_domain or None
         self.announcement_lookback_grace_days = max(
             0, int(announcement_lookback_grace_days)
         )
-        # arXiv API 对分页请求有严格的速率要求。max_results 只保留用于兼容旧配置，
-        # 日报查询使用 max_results=None，不能因为候选数量达到配置值而漏掉论文。
         self.client = arxiv.Client(page_size=100, delay_seconds=6.0, num_retries=3)
 
         # 注入代理配置到 arxiv.Client 的内部 requests.Session
@@ -402,7 +413,18 @@ class ArxivSource(BasePaperSource):
             self.announcement_lookback_grace_days,
             effective_days,
         )
-        logger.info("  抓取策略: 按提交时间和最后更新时间完整分页（不受 max_results 限制）")
+        domain_cap = int(
+            kwargs.get("max_results_per_domain", self.max_results_per_domain) or 0
+        )
+        if domain_cap > 0:
+            logger.info(
+                "  抓取策略: 提交/更新双查询；每个领域最多登记 %s 篇新候选",
+                domain_cap,
+            )
+        else:
+            logger.info(
+                "  抓取策略: 按提交时间和最后更新时间完整分页（不受 max_results 限制）"
+            )
 
         scan_receipt_callback = kwargs.get("scan_receipt_callback")
         domain_receipts: List[Dict[str, Any]] = []
@@ -460,7 +482,11 @@ class ArxivSource(BasePaperSource):
                     skipped_already_collected = 0
                     duplicate_within_domain = 0
                     active_query_kind = None
+                    domain_cap_reached = False
                     for query_kind, search, boundary_field in searches:
+                        if domain_cap > 0 and len(domain_papers) >= domain_cap:
+                            domain_cap_reached = True
+                            break
                         active_query_kind = query_kind
                         domain_receipt["queries"][query_kind]["attempts"] += 1
                         query_results, query_receipt = self._fetch_query_results(
@@ -494,6 +520,11 @@ class ArxivSource(BasePaperSource):
                                 continue
 
                             domain_papers[paper_id] = self._metadata_from_result(result)
+                            if domain_cap > 0 and len(domain_papers) >= domain_cap:
+                                domain_cap_reached = True
+                                break
+                        if domain_cap_reached:
+                            break
 
                     all_papers.update(domain_papers)
                     count = len(domain_papers)
@@ -514,7 +545,15 @@ class ArxivSource(BasePaperSource):
                     )
 
                     # 增强诊断日志
-                    logger.info(f"    领域 {domain}: 发现 {count} 篇新论文（提交/更新查询 API 结果 {api_total} 条）")
+                    cap_note = (
+                        f"，已达每领域上限 {domain_cap} 篇"
+                        if domain_cap > 0 and domain_cap_reached
+                        else ""
+                    )
+                    logger.info(
+                        f"    领域 {domain}: 发现 {count} 篇新论文"
+                        f"（提交/更新查询 API 结果 {api_total} 条{cap_note}）"
+                    )
                     if api_total > 0 and count == 0:
                         logger.info(
                             f"    诊断信息: API 返回 {api_total} 篇，"

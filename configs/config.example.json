@@ -18,7 +18,8 @@
     "reports_by_source": true,
     "arxiv": {
       "fetch_timeout_seconds": 180,
-      "announcement_lookback_grace_days": 2
+      "announcement_lookback_grace_days": 2,
+      "max_results_per_domain": 0
     },
     // Optional curated supplementary feed; it does not replace arXiv's
     // complete category scan and remains disabled in "enabled" by default.
@@ -218,6 +219,8 @@
     // 0 = process every pending paper; positive values are useful for tests.
     // Fetching is never truncated: excess candidates stay queued in SQLite.
     "max_papers_per_run": 3,
+    // 0 = keep all pending rows; N drops incomplete daily queue rows older than N days.
+    "pending_retention_days": 0,
     "run_time": "12:00",
     "db_path": "data/daily_research/daily_research.db"
   },

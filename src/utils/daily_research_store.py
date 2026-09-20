@@ -4326,6 +4326,59 @@ class DailyResearchStore:
             ).fetchone()["n"] or 0
         return {"total": total, "failed_retry": failed, "fresh": total - failed}
 
+    def abandon_stale_pending_papers(
+        self,
+        max_age_days: int,
+        *,
+        queue_scope: str = "daily",
+        now: Optional[datetime] = None,
+    ) -> int:
+        """Drop incomplete queue rows older than ``max_age_days``.
+
+        This is an explicit operator choice for deployments that prefer fresh
+        daily reports over draining an unbounded backlog. Delivered ledger rows
+        in ``paper_deliveries`` are untouched, so abandoned papers are not
+        re-reported unless a future scan discovers a new exact version.
+        """
+        if isinstance(max_age_days, bool) or not isinstance(max_age_days, int):
+            raise ValueError("max_age_days must be a non-negative integer")
+        if max_age_days <= 0:
+            return 0
+        normalized_scope = str(queue_scope or "").strip().lower()
+        if normalized_scope not in {"daily", "backfill"}:
+            raise ValueError("queue scope must be 'daily' or 'backfill'")
+
+        now_dt = now or datetime.now(timezone.utc)
+        if now_dt.tzinfo is None:
+            now_dt = now_dt.replace(tzinfo=timezone.utc)
+        cutoff_dt = now_dt - timedelta(days=max_age_days)
+
+        with self._lock, self._connect() as conn:
+            rows = conn.execute(
+                """
+                SELECT source, paper_id, first_seen_at
+                FROM daily_papers
+                WHERE completed_at IS NULL AND queue_scope = ?
+                """,
+                (normalized_scope,),
+            ).fetchall()
+            stale_keys: list[tuple[str, str]] = []
+            for row in rows:
+                first_seen = self._parse_checkpoint_timestamp(row["first_seen_at"])
+                if first_seen is None:
+                    continue
+                if first_seen.tzinfo is None:
+                    first_seen = first_seen.replace(tzinfo=timezone.utc)
+                if first_seen < cutoff_dt:
+                    stale_keys.append((row["source"], row["paper_id"]))
+            if not stale_keys:
+                return 0
+            conn.executemany(
+                "DELETE FROM daily_papers WHERE source = ? AND paper_id = ?",
+                stale_keys,
+            )
+            return len(stale_keys)
+
     def list_delivered_papers(self, limit: int = 50) -> list[Dict[str, Any]]:
         """Recently completed papers (newest first) for preference marking."""
         with self._connect() as conn:
@@ -5695,18 +5748,20 @@ class DailyResearchStore:
             for field in ("score_status", "translation_status", "analysis_status")
         )
         first_seen = DailyResearchStore._parse_checkpoint_timestamp(row["first_seen_at"])
-        first_seen_key = first_seen.timestamp() if first_seen is not None else float("inf")
+        first_seen_key = (
+            -first_seen.timestamp() if first_seen is not None else float("inf")
+        )
         published = paper.published_date
         if published.tzinfo is None:
             published = published.astimezone()
-        published_key = published.timestamp()
+        published_key = -published.timestamp()
         return (
             0 if failed_or_retried else 1,
             first_seen_key,
             published_key,
             row["source"],
             row["canonical_id"],
-            int(row["version"] or 0),
+            -int(row["version"] or 0),
             row["paper_id"],
         )
 
@@ -5721,7 +5776,8 @@ class DailyResearchStore:
         """Return the deterministic pending queue and its total size.
 
         ``limit == 0`` means all pending papers.  Failed/retried records are
-        attempted first, followed by older queued records and publication time.
+        attempted first, followed by the newest queued records (``first_seen_at``,
+        publication date, and arXiv version descending).
         Only currently enabled report sources are selected; disabling a source
         preserves its backlog without processing it unexpectedly. The default
         is the ordinary daily queue; historical backfill candidates are only

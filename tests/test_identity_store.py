@@ -77,12 +77,64 @@ class IdentityStoreTests(unittest.TestCase):
             self.assertEqual(total, 3)
             self.assertEqual(
                 [paper.paper_id for paper in selected["arxiv"]],
-                ["2501.12345v3", "2501.12345v1"],
+                ["2501.12345v3", "2501.12345v2"],
             )
             self.assertEqual(
                 [row["version"] for row in store.get_version_records("arxiv", "2501.12345")],
                 [1, 2, 3],
             )
+
+    def test_abandon_stale_pending_papers_drops_old_daily_queue_rows(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            store = DailyResearchStore(Path(temp_dir) / "daily.db")
+            run_id = store.start_run(0)
+            stale = _paper("2501.11111v1")
+            fresh = _paper("2501.22222v1")
+            store.register_paper_candidates(run_id, {"arxiv": [stale, fresh]})
+            with store._connect() as conn:
+                conn.execute(
+                    "UPDATE daily_papers SET first_seen_at = ? "
+                    "WHERE source = 'arxiv' AND paper_id = ?",
+                    ("2026-09-01T08:00:00+00:00", stale.paper_id),
+                )
+                conn.execute(
+                    "UPDATE daily_papers SET first_seen_at = ? "
+                    "WHERE source = 'arxiv' AND paper_id = ?",
+                    ("2026-09-19T08:00:00+00:00", fresh.paper_id),
+                )
+
+            removed = store.abandon_stale_pending_papers(
+                7,
+                now=datetime(2026, 9, 20, 8, tzinfo=timezone.utc),
+            )
+
+            self.assertEqual(removed, 1)
+            self.assertIsNone(store.get_paper_record("arxiv", stale.paper_id))
+            self.assertIsNotNone(store.get_paper_record("arxiv", fresh.paper_id))
+
+    def test_pending_queue_prefers_newest_first_seen_records(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            store = DailyResearchStore(Path(temp_dir) / "daily.db")
+            run_id = store.start_run(0)
+            older = _paper("2501.11111v1")
+            newer = _paper("2501.22222v1")
+            store.register_paper_candidates(run_id, {"arxiv": [older, newer]})
+            with store._connect() as conn:
+                conn.execute(
+                    "UPDATE daily_papers SET first_seen_at = ? "
+                    "WHERE source = 'arxiv' AND paper_id = ?",
+                    ("2026-09-18T08:00:00+00:00", older.paper_id),
+                )
+                conn.execute(
+                    "UPDATE daily_papers SET first_seen_at = ? "
+                    "WHERE source = 'arxiv' AND paper_id = ?",
+                    ("2026-09-20T08:00:00+00:00", newer.paper_id),
+                )
+
+            selected, total = store.select_pending_papers(["arxiv"], limit=1)
+
+            self.assertEqual(total, 2)
+            self.assertEqual(selected["arxiv"][0].paper_id, newer.paper_id)
 
     def test_candidate_batch_registration_is_atomic(self):
         with tempfile.TemporaryDirectory() as temp_dir:

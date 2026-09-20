@@ -220,6 +220,9 @@ class SearchAgent:
                 "announcement_lookback_grace_days": getattr(
                     _settings, "ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS", 2
                 ),
+                "max_results_per_domain": getattr(
+                    _settings, "ARXIV_MAX_RESULTS_PER_DOMAIN", 0
+                ),
             }
             if not self.use_legacy_history_filter:
                 arxiv_kwargs["load_legacy_history"] = False

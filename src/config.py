@@ -195,6 +195,8 @@ class Settings(BaseSettings):
     # arXiv 公告和 API 索引偶尔会晚于论文的 submittedDate。日报在正常
     # 扫描窗口之外额外回看这段时间；精确版本交付账本会去除重叠结果。
     ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS: int = 2
+    # 0 = 不限；正整数表示每个 ArXiv 领域在一次扫描中最多登记的新候选数。
+    ARXIV_MAX_RESULTS_PER_DOMAIN: int = 0
 
     # Hugging Face Papers 配置。该日榜是可选的补充发现源，不是 arXiv
     # 分类的全量替代；默认延迟读取已形成的榜单，并对近期日期重扫以抵御
@@ -322,6 +324,8 @@ class Settings(BaseSettings):
     # stays queued and is drained by subsequent runs, after which a normal
     # day's new papers all fit below the cap.
     DAILY_MAX_PAPERS_PER_RUN: int = 200
+    # 0 = 不自动放弃；正整数表示 daily pending 超过该天数未完成的论文会被删除。
+    DAILY_PENDING_RETENTION_DAYS: int = 0
     # 每日研究运行时间（HH:MM，本地时区）。entrypoint 在容器启动时据此安装
     # cron；显式设置的 CRON_SCHEDULE 环境变量优先于该值。
     DAILY_RUN_TIME: str = "12:00"
@@ -518,11 +522,20 @@ class Settings(BaseSettings):
 
             # 加载搜索设置
             if "search_settings" in config:
-                # ``search_days``/``max_results``/``max_results_per_source``
-                # are accepted in legacy files but deliberately ignored.  The
-                # daily window is a fixed 3-day lookback; older papers are
-                # handled by the past-date backfill mode.
-                pass
+                # ``search_days`` is legacy; the daily window is a fixed
+                # lookback with backfill for older dates.  ``max_results`` may
+                # still seed ``ARXIV_MAX_RESULTS_PER_DOMAIN`` when the v4 arxiv
+                # block omits an explicit per-domain cap.
+                legacy_settings = config["search_settings"]
+                if isinstance(legacy_settings, dict):
+                    legacy_max = legacy_settings.get("max_results")
+                    if (
+                        self.ARXIV_MAX_RESULTS_PER_DOMAIN == 0
+                        and isinstance(legacy_max, int)
+                        and not isinstance(legacy_max, bool)
+                        and legacy_max > 0
+                    ):
+                        self.ARXIV_MAX_RESULTS_PER_DOMAIN = legacy_max
 
             # 加载目标领域
             if "target_domains" in config:
@@ -642,6 +655,18 @@ class Settings(BaseSettings):
                             "announcement_lookback_grace_days",
                             self.ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS,
                         )
+                        max_per_domain = arxiv_cfg.get(
+                            "max_results_per_domain",
+                            self.ARXIV_MAX_RESULTS_PER_DOMAIN,
+                        )
+                        if isinstance(max_per_domain, bool) or not isinstance(
+                            max_per_domain, int
+                        ) or max_per_domain < 0:
+                            raise ValueError(
+                                "data_sources.arxiv.max_results_per_domain "
+                                "必须是非负整数（0 表示不限）"
+                            )
+                        self.ARXIV_MAX_RESULTS_PER_DOMAIN = max_per_domain
                 if "huggingface_papers" in ds_config:
                     hf_cfg = ds_config["huggingface_papers"]
                     if isinstance(hf_cfg, dict):
@@ -955,6 +980,19 @@ class Settings(BaseSettings):
                         "daily_research.max_papers_per_run 必须是非负整数（0 表示不限）"
                     )
                 self.DAILY_MAX_PAPERS_PER_RUN = max_papers_per_run
+                pending_retention_days = daily_cfg.get(
+                    "pending_retention_days", self.DAILY_PENDING_RETENTION_DAYS
+                )
+                if (
+                    isinstance(pending_retention_days, bool)
+                    or not isinstance(pending_retention_days, int)
+                    or pending_retention_days < 0
+                ):
+                    raise ValueError(
+                        "daily_research.pending_retention_days "
+                        "必须是非负整数（0 表示不放弃）"
+                    )
+                self.DAILY_PENDING_RETENTION_DAYS = pending_retention_days
                 run_time = daily_cfg.get("run_time", self.DAILY_RUN_TIME)
                 if not isinstance(run_time, str) or not re.fullmatch(
                     r"\d{1,2}:\d{2}", run_time.strip()
