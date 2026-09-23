@@ -14,7 +14,55 @@
     ],
     "extra_sources": {
       "enabled": true,
-      "definitions": []
+      "definitions": [
+        {
+          "type": "openalex_journal",
+          "code": "nature",
+          "display_name": "Nature",
+          "full_name": "Nature",
+          "issn": [
+            "0028-0836",
+            "1476-4687"
+          ]
+        },
+        {
+          "type": "openalex_journal",
+          "code": "nature_communications",
+          "display_name": "Nat. Commun.",
+          "full_name": "Nature Communications",
+          "issn": [
+            "2041-1723"
+          ]
+        },
+        {
+          "type": "openalex_journal",
+          "code": "science",
+          "display_name": "Science",
+          "full_name": "Science",
+          "issn": [
+            "0036-8075",
+            "1095-9203"
+          ]
+        },
+        {
+          "type": "openalex_journal",
+          "code": "science_advances",
+          "display_name": "Sci. Adv.",
+          "full_name": "Science Advances",
+          "issn": [
+            "2375-2548"
+          ]
+        },
+        {
+          "type": "openalex_journal",
+          "code": "npj_quantum_information",
+          "display_name": "npj QI",
+          "full_name": "npj Quantum Information",
+          "issn": [
+            "2056-6387"
+          ]
+        }
+      ]
     },
     "reports_by_source": true,
     "arxiv": {
