@@ -95,6 +95,21 @@ class ModernWebUIAppTests(unittest.TestCase):
             response.text.count('preview.className = "report-preview-host";'), 2
         )
 
+    def test_direct_report_html_is_browser_sandboxed(self) -> None:
+        self.env["WEBUI_AUTH_ENABLED"] = "false"
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "legacy.html"
+            path.write_text("<script>window.parent.location='/'</script>", encoding="utf-8")
+            with patch.object(
+                modern_app.backend, "report_file", return_value=(path, "text/html")
+            ):
+                response = self.client.get("/api/reports/legacy/file")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.headers["content-security-policy"], "sandbox")
+        self.assertEqual(response.headers["x-content-type-options"], "nosniff")
+        self.assertEqual(response.headers["cache-control"], "private, no-store")
+
     def test_report_navigation_follows_each_report_batch_not_calendar_dates(self) -> None:
         script = self.client.get("/assets/app.js").text
         start = script.index("function findAdjacentDailyReport")
@@ -272,9 +287,8 @@ class ModernWebUIAppTests(unittest.TestCase):
         self.assertIn("cached_prompt", analytics)
         self.assertIn("缓存输入 Token", analytics)
         self.assertIn("Non-cached input tokens", analytics)
-        self.assertIn('linePoints("cached_prompt")', analytics)
-        self.assertIn(".trend-line.cached_prompt", stylesheet)
-        self.assertIn(".trend-point.cached_prompt", stylesheet)
+        self.assertIn('class="trend-bar ${key}"', analytics)
+        self.assertIn(".trend-bar.cached_prompt", stylesheet)
 
     def test_analytics_trend_legend_reserves_width_for_cjk_labels(self) -> None:
         script = self.client.get("/assets/app.js").text
@@ -686,7 +700,7 @@ class ModernWebUIAppTests(unittest.TestCase):
         self.assertIn("select:not([multiple]) {", stylesheet)
         self.assertIn("-webkit-appearance: none;", stylesheet)
         self.assertIn("background-image: var(--select-chevron);", stylesheet)
-        self.assertIn(".pager select { box-sizing: border-box; min-width: 86px; min-height: 27px;", stylesheet)
+        self.assertIn(".pager select { box-sizing: border-box; min-width: 86px; min-height: 28px;", stylesheet)
         self.assertIn(".pager select:hover { background-image: var(--select-chevron-active); }", stylesheet)
         self.assertIn("text-align-last: center;", stylesheet)
 
