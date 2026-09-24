@@ -84,6 +84,14 @@ class IdentityStoreTests(unittest.TestCase):
             registered = store.register_paper_candidates(
                 run_id, {"arxiv": [v3, v1, v2]}
             )
+            # Registration order assigns distinct first_seen_at values; align
+            # them so the limit test exercises version-aware tie-breaking.
+            with store._connect() as conn:
+                conn.execute(
+                    "UPDATE daily_papers SET first_seen_at = ? "
+                    "WHERE source = 'arxiv' AND canonical_id = ?",
+                    ("2026-09-20T08:00:00+00:00", "2501.12345"),
+                )
             selected, total = store.select_pending_papers(["arxiv"], limit=2)
 
             self.assertEqual(registered, 3)

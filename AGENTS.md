@@ -58,3 +58,10 @@
 - 先运行与改动直接相关的定向测试；影响面较大时运行 `pytest -q`。将环境、网络或第三方服务故障与代码缺陷区分说明。
 - WebUI、任务队列、历史维护和通知改动需要做实际可操作的端到端路径检查，不能只依赖静态阅读。
 - 交付时说明：改了什么、验证了什么、已知限制，以及提交 SHA；未做的外部发布或部署必须明确说明。
+
+## Fork 定制：上游合并、CI 与 GHA
+
+本仓库在 upstream 基础上保留了 Actions 调度、ArXiv 关键词抓取、队列上限等定制；合并 `upstream/main` 后必须跑全量 `pytest -q` 再 push，不能假设 upstream 测试与本 fork 默认配置兼容。
+
+- **回归测试**：`SearchAgent`/`ArXivSource` 相关测试需显式 patch `config.settings`（尤其 `ARXIV_FETCH_MODE`、`ARXIV_MAX_RESULTS_PER_DOMAIN`）；`max_results_per_domain=0` 才表示不限抓取。pending 队列测试若验证版本取舍，需统一 `first_seen_at` 后再断言 limit。细则见 `.cursor/rules/fork-ci-and-tests.mdc`。
+- **GHA 配置**：`.github/workflows/daily-run.yml` 从仓库内 `configs/config.json` 复制到 `runtime/`；仅改本地 `runtime/config.json` 不会改变 Actions 行为。OpenAlex 期刊须同时在 `data_sources.enabled` 与 `extra_sources.definitions` 中声明，否则运行时只会剩 arxiv + prl。细则见 `.cursor/rules/fork-gha-config.mdc`。

@@ -1,0 +1,37 @@
+---
+description: GitHub Actions 配置与 OpenAlex 期刊源启用约定
+globs: configs/**, .github/workflows/**, runtime/**
+alwaysApply: false
+---
+
+# GitHub Actions 与期刊源配置
+
+## GHA 如何加载配置
+
+- `daily-run.yml` 执行 `cp configs/config.json runtime/config.json`，再跑 `python main.py`。
+- 因此 **推送到 GitHub 的 `configs/config.json` 内容** 决定 Actions 实际行为；仅改本地 `runtime/config.json` 不会影响 CI。
+- 该文件虽在 `.gitignore` 中，但本 fork **刻意 force-track** 供 GHA 使用；修改期刊/抓取模式后必须 commit 并 push 才会在下次调度生效。
+
+## OpenAlex 期刊源：enabled 不够
+
+v4 配置下，期刊要同时满足：
+
+1. `data_sources.enabled` 含期刊 code（如 `nature`、`science`）
+2. `extra_sources.enabled: true`
+3. `extra_sources.definitions` 中有对应 `openalex_journal` 定义（含 `code`、`issn`）
+
+仅有 `enabled` 名、definitions 为空时，运行时只会启用 **arxiv + prl**。日志特征：
+
+```
+启用的数据源: ['arxiv', 'prl']
+已启用 OpenAlex 数据源，期刊: ['prl']
+```
+
+完整启用后应看到 7 个源及 6 个 OpenAlex 期刊 code。
+
+## 修改配置后的验证清单
+
+- [ ] `configs/config.json` 与 `configs/config.example.json` 结构一致（示例不含密钥）
+- [ ] 本地或 Actions 日志中 `启用的数据源` 与预期一致
+- [ ] 新增期刊：同时更新 `enabled` 与 `extra_sources.definitions`
+- [ ] push 后再手动触发 workflow 验证，不要只看本地 runtime

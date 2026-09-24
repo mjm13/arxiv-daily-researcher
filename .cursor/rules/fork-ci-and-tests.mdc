@@ -1,0 +1,37 @@
+---
+description: Fork 定制行为与回归测试约定（ArXiv 抓取、SearchAgent、pending 队列）
+globs: tests/**/*.py, src/sources/**/*.py, src/utils/daily_research_store.py
+alwaysApply: false
+---
+
+# Fork 定制行为与回归测试
+
+本 fork 在 upstream 基础上增加了 ArXiv 关键词抓取、每域上限、pending 队列排序等定制。合并 upstream 后若只改实现不改测试，CI 会失败。
+
+## SearchAgent / ArXiv 测试
+
+- `fetch_all_papers()` 读取 `config.settings.ARXIV_FETCH_MODE`。仓库内 `configs/config.json` 默认为 `keywords`，**未 patch settings 的测试不会走 `fetch_papers()`**。
+- 测 **domains 领域模式** 时，必须 patch `config.settings`，至少包含：
+  - `ARXIV_FETCH_MODE="domains"`
+  - `ARXIV_MAX_RESULTS_PER_DOMAIN=0`
+  - `get_proxy_dict=lambda _source: None`
+- `SearchAgent` 构造 `ArxivSource` 时会传入 `max_results_per_domain`（来自 settings，默认 `0`）。断言 `assert_called_once_with` 时必须带上该参数。
+- 参考写法见 `tests/test_arxiv_source.py` 中 `test_search_agent_keywords_mode_*` 与 `test_search_agent_uses_default_domain_only_when_omitted`。
+
+## ArXiv 每域上限语义
+
+- `max_results_per_domain=0` 或 `None`：**不限**，API 仍 `max_results=None` 全分页。
+- `max_results` / `max_results_per_domain > 0`：每个领域最多登记 N 篇新候选。
+- 测「完整分页不受限」时，用 `max_results_per_domain=0`，**不要**用 `max_results=1` 表示“legacy 别名仍不限”——本 fork 已改为正数即生效。
+
+## Pending 队列排序
+
+- `select_pending_papers()` 排序：失败/重试优先 → `first_seen_at` 新者优先 → 发布日期 → **版本降序**。
+- 同一批次注册的多版本论文会有不同 `first_seen_at`；若测试要验证「limit 按版本取舍」，注册后应统一 `first_seen_at`，再测 limit。
+- 见 `tests/test_identity_store.py::test_pending_queue_limit_preserves_exact_arxiv_versions`。
+
+## 合并 upstream 后必做
+
+1. `git merge upstream/main` 后运行 `python -m pytest -q`（或至少上述相关测试文件）。
+2. 重点 diff：`src/sources/arxiv_source.py`、`search_agent.py`、`daily_research_store.py` 及对应 `tests/`。
+3. 修复测试后再 push；不要假设 upstream 测试与本 fork 默认配置兼容。

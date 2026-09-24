@@ -90,10 +90,18 @@ class ArxivFetchTests(unittest.TestCase):
 
     @patch("sources.search_agent.ArxivSource")
     def test_search_agent_uses_default_domain_only_when_omitted(self, arxiv_source_cls):
+        fake_settings = SimpleNamespace(
+            ARXIV_FETCH_MODE="domains",
+            ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS=2,
+            ARXIV_MAX_RESULTS_PER_DOMAIN=0,
+            get_proxy_dict=lambda _source: None,
+        )
         fake_source = arxiv_source_cls.return_value
         fake_source.display_name = "ArXiv"
         fake_source.fetch_papers.return_value = []
-        with tempfile.TemporaryDirectory() as temp_dir:
+        with tempfile.TemporaryDirectory() as temp_dir, patch(
+            "config.settings", fake_settings
+        ):
             agent = SearchAgent(
                 history_dir=Path(temp_dir),
                 enabled_sources=["arxiv"],
@@ -123,7 +131,9 @@ class ArxivFetchTests(unittest.TestCase):
             # This regression exercises the normal scan boundary itself.  The
             # delayed-announcement grace behaviour is covered separately.
             source = ArxivSource(
-                Path(temp_dir), max_results=1, announcement_lookback_grace_days=0
+                Path(temp_dir),
+                max_results_per_domain=0,
+                announcement_lookback_grace_days=0,
             )
             source.history = {f"new-{index}": "complete" for index in range(60)}
             fake_client = _FakeClient(submitted, updated)
@@ -346,6 +356,7 @@ class ArxivFetchTests(unittest.TestCase):
     def test_search_agent_passes_announcement_grace_to_arxiv_source(self, arxiv_source_cls):
         fake_settings = SimpleNamespace(
             ARXIV_ANNOUNCEMENT_LOOKBACK_GRACE_DAYS=4,
+            ARXIV_MAX_RESULTS_PER_DOMAIN=0,
             get_proxy_dict=lambda _source: None,
         )
         with tempfile.TemporaryDirectory() as temp_dir, patch("config.settings", fake_settings):
@@ -359,6 +370,7 @@ class ArxivFetchTests(unittest.TestCase):
             history_dir=Path(temp_dir),
             proxy_dict=None,
             announcement_lookback_grace_days=4,
+            max_results_per_domain=0,
         )
 
     def test_search_by_keywords_builds_or_query_with_categories_and_dates(self):
