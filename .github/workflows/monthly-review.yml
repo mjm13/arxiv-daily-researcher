@@ -96,12 +96,14 @@ jobs:
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.skip_keyword_report != true }}
         run: python -m modes.keyword_maintenance
         env:
+          PYTHONPATH: src
           PYTHONUNBUFFERED: "1"
 
       - name: Trend research monthly review
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.skip_trend_review != true }}
         run: python scripts/run_monthly_trend_review.py
         env:
+          PYTHONPATH: src
           PYTHONUNBUFFERED: "1"
 
       - name: Upload reports as artifacts
